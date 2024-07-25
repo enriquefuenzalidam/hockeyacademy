@@ -53,17 +53,17 @@ export function Navigation() {
     };
 
     return (
-        <nav className="block font-Cabin font-semibold text-lg leading-8 bg-[#12214d]  h-screen">
+        <nav className="flex flex-grow font-Cabin font-semibold text-lg leading-8 bg-[#12214d] h-screen ">
 
-            <div className="w-32 inline-grid grid-cols-1 grid-rows-[auto_1fr_auto]"> {/* this block should cover the entire height of the screen */}
+            <div className="w-32 h-full inline-flex flex-col">{/* this block should cover the entire height of the screen */}
 
-                <div className=" w-full aspect-1 p-2"> {/* this one has a given with and height */}
-                    <Image src={identityLogo} alt="" />
+                <div className=" aspect-1 p-2">{/* this one has a given with and height */}
+                    <Image className="w-full object-contain" src={identityLogo} alt="" />
                 </div>
-                <div className=" w-full flex items-center justify-center"> {/* this one should cover all the rest of the height, and have its elements centered in the middle*/}
+                <div className=" h-auto flex flex-grow items-center justify-center">{/* this one should cover all the rest of the height, and have its elements centered in the middle*/}
                     <span className=' font-Cabin text-white text-lg uppercase'>Menú</span>
                 </div>
-                <div className=" w-full aspect-1 grid grid-cols-2 grid-rows-2 gap-6 p-7"> {/* this one has also a given with and height */}
+                <div className=" aspect-1 grid grid-cols-2 grid-rows-2 gap-6 p-7">{/* this one has also a given with and height */}
                     <Link href="" className="inline-block "><Image src={facebookIcon} alt="" /></Link>
                     <Link href="" className="inline-block "><Image src={instagramIcon} alt="" /></Link>
                     <Link href="" className="inline-block "><Image src={tiktokIcon} alt="" /></Link>
@@ -100,7 +100,8 @@ export function Navigation() {
                         </li>
                     ))}
                 </ul>
-            )}
+            )} {/* */}
+            
         </nav>
     );
 }
