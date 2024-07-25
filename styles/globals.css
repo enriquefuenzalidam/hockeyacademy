@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 
@@ -13,4 +12,61 @@
     margin: 0.125rem 0;
  }
 
-  
+ @keyframes qbmiBarraSupOpenRot {
+    0% {
+        transform: rotate(0);
+    }
+    84% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0.79rad);
+    }
+ }
+@keyframes qbmiBarraSupCloseRot {
+    0% {
+        transform: rotate(0.79rad);
+    }
+    16% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+.queverguenzaMenuIconoBarraSupOpen {
+    animation: qbmiBarraSupOpenRot .5s ease-in-out forwards;
+}
+.queverguenzaMenuIconoBarraSupClose {
+    animation: qbmiBarraSupCloseRot .5s ease-in-out forwards;
+}
+
+
+@keyframes qbmiBarraSupInfRotOpen {
+    0% {
+        transform: rotate(0);
+    }
+    84% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-0.79rad);
+    }
+}
+@keyframes qbmiBarraSupInfRotClose {
+    0% {
+        transform: rotate(-0.79rad);
+    }
+    16% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+.queverguenzaMenuIconoBarraInfClose {
+    animation: qbmiBarraSupInfRotClose .5s ease-in-out forwards;
+}
+.queverguenzaMenuIconoBarraInfOpen {
+    animation: qbmiBarraSupInfRotOpen .5s ease-in-out forwards;
+}

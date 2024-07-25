@@ -39,7 +39,12 @@ export function Navigation() {
     const [activePath, setActivePath] = useState(pathname);
     const [openSubMenu, setOpenSubMenu] = useState(null); 
     const subMenuRefs = useRef([]);
+    const [menuOpen, setMenuOpen] = useState(false);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+    
     useEffect(() => {
         setActivePath(pathname);
     }, [pathname]);
@@ -116,12 +121,12 @@ export function Navigation() {
                     <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
                 </div>
                 <div className=" queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center ">
-                    <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col'>
+                    <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col' onClick={toggleMenu}>
                         <div className="inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0">Menú</div>
-                        <div className=' queverguenzaMenuIcono inline-grid grid-rows-3 gap-1.5 h-min cursor-pointer transition-all ease-in-out duration-200     md:grid md:w-full md:m-0'>
-                            <div className='block mx-auto w-7 h-1 bg-white '></div>
-                            <div className='block mx-auto w-7 h-1 bg-white '></div>
-                            <div className='block mx-auto w-7 h-1 bg-white '></div>
+                        <div className={`  ${menuOpen ? ' ' : ''} inline-flex h-6 w-7 relative cursor-pointer transition-all ease-in-out duration-200    md:m-auto `}>
+                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-500 bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraSupOpen' : ' top-0 queverguenzaMenuIconoBarraSupClose'} `}></div> 
+                            <div className={`      mx-auto w-7 h-1 absolute top-2.5 left-0 z-10 transition-all ease-in-out duration-500            ${menuOpen ? ' bg-[#12214d]' : ' bg-white'} `}></div> 
+                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-500 bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraInfOpen' : ' top-5 queverguenzaMenuIconoBarraInfClose'} `}></div> 
                         </div>
                     </div>
                 </div>
@@ -133,10 +138,10 @@ export function Navigation() {
                 </div>
 
             </div>
-
- {/* from 'w-min inline-flex flex-col px-8' to 'w-0 overflow-hidden' */}{/**/}
+            
+ {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className="h-screen w-min bg-[#12214d]  inline-flex flex-col px-8 text-right font-semibold text-lg items-end justify-center leading-relaxed ">
+                <ul className={` h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed transition-all ease-in-out duration-700 inline-flex flex-col ${menuOpen ? 'w-min px-8' : 'w-0 overflow-hidden'}  `}>
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
@@ -151,7 +156,7 @@ export function Navigation() {
                                     </div>
                                     <ul ref={el => subMenuRefs.current[index] = el} className={`h-0 opacity-0 leading-tight transition-all overflow-hidden `}>
                                         {item.subTitulos.map((subItem, subIndex) => (
-                                            <li key={subIndex} className={` mr-3 `}>
+                                            <li key={subIndex} className={` ml-3 md:mr-3 `}>
                                                 <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
                                                     {subItem.linkText}
                                                 </Link>
