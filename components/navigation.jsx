@@ -2,6 +2,13 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import identityLogo from 'public/images/identitylogo.png';
+import facebookIcon from 'public/images/facebook.svg';
+import instagramIcon from 'public/images/instagram.svg';
+import tiktokIcon from 'public/images/tiktok.svg';
+import youtubeIcon from 'public/images/youtube.svg';
 
 const navItems = [
     { linkText: 'Inicio', href: '/' },
@@ -31,14 +38,42 @@ export function Navigation() {
         setActivePath(pathname);
     }, [pathname]);
 
-    const getLinkClass = (path) => (
-        path === activePath ? 'text-[#d11e82]' : 'text-white'
-    );
+    const isSubItemActive = (subTitulos) => {
+        return subTitulos.some(subItem => subItem.href === activePath);
+    };
+
+    const getLinkClass = (path, subTitulos) => {
+        if (path === activePath) {
+            return 'text-[#d11e82]';
+        }
+        if (subTitulos && isSubItemActive(subTitulos)) {
+            return 'text-[#d11e82]';
+        }
+        return 'text-white';
+    };
 
     return (
-        <nav className="h-screen font-Cabin font-semibold text-lg leading-8 bg-[#12214d]">
+        <nav className="block font-Cabin font-semibold text-lg leading-8 bg-[#12214d]  h-screen">
+
+            <div className="w-32 inline-grid grid-cols-1 grid-rows-[auto_1fr_auto]"> {/* this block should cover the entire height of the screen */}
+
+                <div className=" w-full aspect-1 p-2"> {/* this one has a given with and height */}
+                    <Image src={identityLogo} alt="" />
+                </div>
+                <div className=" w-full flex items-center justify-center"> {/* this one should cover all the rest of the height, and have its elements centered in the middle*/}
+                    <span className=' font-Cabin text-white text-lg uppercase'>Menú</span>
+                </div>
+                <div className=" w-full aspect-1 grid grid-cols-2 grid-rows-2 gap-6 p-7"> {/* this one has also a given with and height */}
+                    <Link href="" className="inline-block "><Image src={facebookIcon} alt="" /></Link>
+                    <Link href="" className="inline-block "><Image src={instagramIcon} alt="" /></Link>
+                    <Link href="" className="inline-block "><Image src={tiktokIcon} alt="" /></Link>
+                    <Link href="" className="inline-block "><Image src={youtubeIcon} alt="" /></Link>
+                </div>
+
+            </div>
+
             {!!navItems?.length && (
-                <ul className="h-screen">
+                <ul className="h-screen inline-block">
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
@@ -48,7 +83,7 @@ export function Navigation() {
                             )}
                             {item.subTitulos && (
                                 <details className='details-reset'>
-                                    <summary className={`${getLinkClass(item.href)} hover:text-[#d11e82] cursor-pointer`}>
+                                    <summary className={`${getLinkClass(item.href, item.subTitulos)} hover:text-[#d11e82] cursor-pointer`}> 
                                         {item.linkText}
                                     </summary>
                                     <ul className="ml-3">

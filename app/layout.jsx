@@ -13,12 +13,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" >
             <head>
-                <link rel="icon" href="/favicon.svg" sizes="any" />
             </head>
             <body className="antialiased text-black bg-white">
                 <Navigation />
-                <div className="grow">{children}</div>
-                <Footer />
+                {children}
             </body>
         </html>
     );
