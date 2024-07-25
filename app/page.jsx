@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 export default function Page() {
     return (
-        <main className="">
+        <main className="inline-block">
+            sdfsdf
         </main>
     );
 }

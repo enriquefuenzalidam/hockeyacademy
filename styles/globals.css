@@ -7,16 +7,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css */
-.details-reset {
-    position: relative;
-    cursor: pointer;
-}
 
-.details-reset > summary {
-    list-style: none;
-}
+.queverguenzaMenu:hover .queverguenzaMenuIcono {
+     gap: 0.25rem;
+    margin: 0.125rem 0;
+ }
 
-.details-reset > summary::-webkit-details-marker {
-    display: none;
-}
+
+ /* styles.css */
+@keyframes unfold {
+    from {
+      height: 0;
+      margin-bottom: 0;
+    }
+    to {
+      height: auto; /* Adjust based on your content */
+      margin-bottom: 0.75rem;
+    }
+  }
+  
+  @keyframes fold {
+    from {
+      height: auto; /* Adjust based on your content */
+      margin-bottom: 0.75rem;
+    }
+    to {
+      height: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  .expand {
+    overflow: hidden;
+    animation: unfold 0.5s ease-out forwards;
+  }
+  
+  .collapse {
+    overflow: hidden;
+    animation: fold 0.5s ease-in forwards;
+  }

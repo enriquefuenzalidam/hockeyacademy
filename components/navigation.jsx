@@ -27,16 +27,21 @@ const navItems = [
     { linkText: 'Nosotros', href: '/nosotros' },
     { linkText: '¿Qué es un campus deportivo?', href: '/queesuncampodeportivo' },
     { linkText: 'Novedades', href: '/novedades' },
-    { linkText: 'Classics', href: '/classics' }
+    { linkText: 'Contacto', href: '/contacto' }
 ];
 
 export function Navigation() {
     const pathname = usePathname();
     const [activePath, setActivePath] = useState(pathname);
+    const [openSubMenu, setOpenSubMenu] = useState(null)
 
     useEffect(() => {
         setActivePath(pathname);
     }, [pathname]);
+
+    const handleSubMenuToggle = (index) => {
+        setOpenSubMenu(openSubMenu === index ? null : index);
+    };
 
     const isSubItemActive = (subTitulos) => {
         return subTitulos.some(subItem => subItem.href === activePath);
@@ -53,55 +58,63 @@ export function Navigation() {
     };
 
     return (
-        <nav className="flex flex-grow font-Cabin font-semibold text-lg leading-8 bg-[#12214d] h-screen ">
+        <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen ">
 
-            <div className="w-32 h-full inline-flex flex-col">{/* this block should cover the entire height of the screen */}
+            <div className="w-full h-min inline-flex flex-row  md:pb-6 md:w-32 md:h-full md:flex-col  bg-[#12214d] ">
 
-                <div className=" aspect-1 p-2">{/* this one has a given with and height */}
-                    <Image className="w-full object-contain" src={identityLogo} alt="" />
+                <div className=" py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full">
+                    <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
                 </div>
-                <div className=" h-auto flex flex-grow items-center justify-center">{/* this one should cover all the rest of the height, and have its elements centered in the middle*/}
-                    <span className=' font-Cabin text-white text-lg uppercase'>Menú</span>
+                <div className=" queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center ">
+                    <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col'>
+                        <div className="inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0">Menú</div>
+                        <div className=' queverguenzaMenuIcono inline-grid grid-rows-3 gap-1.5 h-min cursor-pointer transition-all ease-in-out duration-200     md:grid md:w-full md:m-0'>
+                            <div className='block mx-auto w-7 h-1 bg-white '></div>
+                            <div className='block mx-auto w-7 h-1 bg-white '></div>
+                            <div className='block mx-auto w-7 h-1 bg-white '></div>
+                        </div>
+                    </div>
                 </div>
-                <div className=" aspect-1 grid grid-cols-2 grid-rows-2 gap-6 p-7">{/* this one has also a given with and height */}
-                    <Link href="" className="inline-block "><Image src={facebookIcon} alt="" /></Link>
-                    <Link href="" className="inline-block "><Image src={instagramIcon} alt="" /></Link>
-                    <Link href="" className="inline-block "><Image src={tiktokIcon} alt="" /></Link>
-                    <Link href="" className="inline-block "><Image src={youtubeIcon} alt="" /></Link>
+                <div className=" hidden grid-cols-2 grid-rows-2 gap-6 p-7    md:grid md:aspect-1 md:w-32">
+                    <Link href="https://www.facebook.com/identity.campus.arg/" className="inline-block "><Image src={facebookIcon} alt="" className=' mx-auto' /></Link>
+                    <Link href="https://www.instagram.com/identity.campus/" className="inline-block "><Image src={instagramIcon} alt="" className=' mx-auto' /></Link>
+                    <Link href="https://www.tiktok.com/@identitycampus" className="inline-block "><Image src={tiktokIcon} alt="" className=' mx-auto' /></Link>
+                    <Link href="https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A" className="inline-block "><Image src={youtubeIcon} alt="" className=' mx-auto' /></Link>
                 </div>
 
             </div>
 
+ {/* from 'w-min inline-flex flex-col px-8' to 'w-0 overflow-hidden' */}{/**/}
             {!!navItems?.length && (
-                <ul className="h-screen inline-block">
+                <ul className="h-screen w-min bg-[#12214d]  inline-flex flex-col px-8 text-right font-semibold text-lg items-end justify-center leading-relaxed ">
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
-                                <Link href={item.href} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline`}>
+                                <Link href={item.href} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline whitespace-nowrap`}>
                                     {item.linkText}
                                 </Link>
                             )}
                             {item.subTitulos && (
-                                <details className='details-reset'>
-                                    <summary className={`${getLinkClass(item.href, item.subTitulos)} hover:text-[#d11e82] cursor-pointer`}> 
+                                <div>{/* the submenues */}
+                                    <div onClick={() => handleSubMenuToggle(index)} className={`${getLinkClass(item.href, item.subTitulos)} hover:text-[#d11e82] cursor-pointer whitespace-nowrap `}> 
                                         {item.linkText}
-                                    </summary>
-                                    <ul className="ml-3">
+                                    </div>
+                                    <ul className={`leading-tight overflow-hidden ${openSubMenu === index ? 'expand' : 'collapse '} `}>
                                         {item.subTitulos.map((subItem, subIndex) => (
-                                            <li key={subIndex}>
-                                                <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-base`}>
+                                            <li key={subIndex} className={` mr-3 `}>
+                                                <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
                                                     {subItem.linkText}
                                                 </Link>
                                             </li>
                                         ))}
                                     </ul>
-                                </details>
+                                </div>
                             )}
                         </li>
                     ))}
                 </ul>
-            )} {/* */}
-            
+            )} 
+             
         </nav>
     );
 }
