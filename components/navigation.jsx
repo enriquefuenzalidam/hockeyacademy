@@ -115,7 +115,7 @@ export function Navigation() {
     return (
         <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen ">
 
-            <div className="w-full h-min inline-flex flex-row  md:pb-6 md:w-32 md:h-full md:flex-col  bg-[#12214d] ">
+            <div className="w-full h-min inline-flex flex-row bg-[#12214d] z-20  md:pb-6 md:w-32 md:h-full md:flex-col  ">
 
                 <div className=" py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full">
                     <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
@@ -141,7 +141,7 @@ export function Navigation() {
             
  {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className={` h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed transition-all ease-in-out duration-700 inline-flex flex-col ${menuOpen ? 'w-min px-8' : 'w-0 overflow-hidden'}  `}>
+                <ul className={`z-10 h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed inline-flex flex-col px-8 w-min  `}>
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
