@@ -4,8 +4,8 @@ import { Navigation } from '../components/navigation';
 
 export const metadata = {
     title: {
-        template: '%s | Netlify',
-        default: 'Netlify Starter'
+        template: '%s | Identity',
+        default: 'Identity'
     }
 };
 

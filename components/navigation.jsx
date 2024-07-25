@@ -72,7 +72,7 @@ export function Navigation() {
         // const initialHeight = ; // Add the margin to the height
         subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
         requestAnimationFrame(() => {
-            subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
+            subMenu.style.transition = 'height 0.3ss ease-in-out, opacity 0.3ss ease-in-out';
             subMenu.style.height = '0';
             subMenu.style.opacity = '0';
         });
@@ -85,7 +85,7 @@ export function Navigation() {
         requestAnimationFrame(() => {
             const marginBottomPixels = remToPixels(0.75); // Convert 0.75rem to pixels
             // const targetHeight = ; // Add the margin to the height
-            subMenu.style.transition = 'height 0.618ss ease-in-out, opacity 0.618ss ease-in-out';
+            subMenu.style.transition = 'height 0.3ss ease-in-out, opacity 0.3ss ease-in-out';
             subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
             subMenu.style.opacity = '1';
         });
