@@ -1,10 +1,10 @@
 
 export const metadata = {
-    title: 'Classics'
+    title: 'Nosotros'
 }
   
 
-export default function classics() {
+export default function nosotros() {
     return (
         <main className="">
         </main>

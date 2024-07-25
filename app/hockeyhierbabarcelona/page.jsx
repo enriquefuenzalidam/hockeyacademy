@@ -1,10 +1,10 @@
 
 export const metadata = {
-    title: 'Classics'
+    title: 'Hockey Hierba Valencia'
 }
   
 
-export default function classics() {
+export default function hockeyhierbabarcelona() {
     return (
         <main className="">
         </main>

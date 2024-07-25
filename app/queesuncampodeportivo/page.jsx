@@ -1,10 +1,10 @@
 
 export const metadata = {
-    title: 'Classics'
+    title: 'Qué es un Campo Deportivo'
 }
   
 
-export default function classics() {
+export default function queesuncampodeportivo() {
     return (
         <main className="">
         </main>
