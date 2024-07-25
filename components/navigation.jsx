@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -30,17 +30,65 @@ const navItems = [
     { linkText: 'Contacto', href: '/contacto' }
 ];
 
+const remToPixels = (rem) => {
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+};
+
 export function Navigation() {
     const pathname = usePathname();
     const [activePath, setActivePath] = useState(pathname);
-    const [openSubMenu, setOpenSubMenu] = useState(null)
+    const [openSubMenu, setOpenSubMenu] = useState(null); 
+    const subMenuRefs = useRef([]);
 
     useEffect(() => {
         setActivePath(pathname);
     }, [pathname]);
 
     const handleSubMenuToggle = (index) => {
-        setOpenSubMenu(openSubMenu === index ? null : index);
+        if (openSubMenu === index) {
+            // Close the submenu
+            closeSubMenu(index);
+            setOpenSubMenu(null);
+        } else {
+            // Open the new submenu
+            if (openSubMenu !== null) {
+                closeSubMenu(openSubMenu);
+            }
+            openSubMenuAnimated(index);
+            setOpenSubMenu(index);
+        }
+    };
+
+    const handleLinkClick = () => {
+        if (openSubMenu !== null) {
+            closeSubMenu(openSubMenu);
+            setOpenSubMenu(null);
+        }
+    };
+
+    const closeSubMenu = (index) => {
+        const subMenu = subMenuRefs.current[index];
+        const marginBottomPixels = remToPixels(0.75); // Convert 0.75rem to pixels
+        // const initialHeight = ; // Add the margin to the height
+        subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
+        requestAnimationFrame(() => {
+            subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
+            subMenu.style.height = '0';
+            subMenu.style.opacity = '0';
+        });
+    };
+
+    const openSubMenuAnimated = (index) => {
+        const subMenu = subMenuRefs.current[index];
+        subMenu.style.height = '0';
+        subMenu.style.opacity = '0';
+        requestAnimationFrame(() => {
+            const marginBottomPixels = remToPixels(0.75); // Convert 0.75rem to pixels
+            // const targetHeight = ; // Add the margin to the height
+            subMenu.style.transition = 'height 0.618ss ease-in-out, opacity 0.618ss ease-in-out';
+            subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
+            subMenu.style.opacity = '1';
+        });
     };
 
     const isSubItemActive = (subTitulos) => {
@@ -56,6 +104,8 @@ export function Navigation() {
         }
         return 'text-white';
     };
+
+    
 
     return (
         <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen ">
@@ -90,7 +140,7 @@ export function Navigation() {
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
-                                <Link href={item.href} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline whitespace-nowrap`}>
+                                <Link href={item.href} onClick={handleLinkClick} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline whitespace-nowrap`}>
                                     {item.linkText}
                                 </Link>
                             )}
@@ -99,7 +149,7 @@ export function Navigation() {
                                     <div onClick={() => handleSubMenuToggle(index)} className={`${getLinkClass(item.href, item.subTitulos)} hover:text-[#d11e82] cursor-pointer whitespace-nowrap `}> 
                                         {item.linkText}
                                     </div>
-                                    <ul className={`leading-tight overflow-hidden ${openSubMenu === index ? 'expand' : 'collapse '} `}>
+                                    <ul ref={el => subMenuRefs.current[index] = el} className={`h-0 opacity-0 leading-tight transition-all overflow-hidden `}>
                                         {item.subTitulos.map((subItem, subIndex) => (
                                             <li key={subIndex} className={` mr-3 `}>
                                                 <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
