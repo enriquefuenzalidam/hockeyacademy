@@ -132,10 +132,9 @@ export function Navigation() {
         return 'text-white';
     };
 
-    
 
     return (
-        <nav className=" fixed top-0 left-0 flex font-Cabin w-full h-min  md:w-min md:h-screen">
+        <nav className=" bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20  md:w-min md:h-screen">
 
             <div className={`  h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
 
@@ -160,10 +159,10 @@ export function Navigation() {
                 </div>
 
             </div>
-            
+
  {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className={` font-semibold text-lg text-left md:text-right w-min px-8 inline-flex z-40 h-screen     bg-[#12214d] items-start md:items-end justify-center leading-relaxed flex-col transition-all ease-in-out duration-[620ms] ${menuOpen ? 'mx-0 opacity-100' : ' opacity-0 -mr-96 md:-ml-96'} `}>
+                <ul className={` inline-flex  font-semibold text-lg text-left md:text-right w-min px-8 z-40 h-screen     bg-[#12214d] items-start md:items-end justify-center transition-all ease-linear duration-[620ms] leading-relaxed flex-col ${menuOpen ? 'mx-0 opacity-100 ' : 'opacity-0 -mr-96 md:-ml-96'} `}  >
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
@@ -191,7 +190,7 @@ export function Navigation() {
                     ))}
                 </ul>
             )} 
-             
+
         </nav>
     );
 }

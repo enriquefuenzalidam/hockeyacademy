@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <html lang="en" >
             <head>
             </head>
-            <body className="antialiased text-black bg-white">
+            <body className="antialiased text-black bg-[#12214d] font-Cabin ">
                 {children}
                 <Navigation />
             </body>
