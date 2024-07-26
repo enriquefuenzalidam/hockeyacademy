@@ -98,7 +98,7 @@ export function Navigation() {
         
         subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
         requestAnimationFrame(() => {
-            subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
+            subMenu.style.transition = 'height 0.382s ease-in-out, opacity 0.382s ease-in-out';
             subMenu.style.height = '0';
             subMenu.style.opacity = '0';
         });
@@ -111,7 +111,7 @@ export function Navigation() {
         requestAnimationFrame(() => {
             const marginBottomPixels = remToPixels(0.75); 
            
-            subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
+            subMenu.style.transition = 'height 0.382s ease-in-out, opacity 0.382s ease-in-out';
             subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
             subMenu.style.opacity = '1';
         });
@@ -144,7 +144,7 @@ export function Navigation() {
                 <div className=" queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center ">
                     <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col' onClick={toggleMenu}>
                         <div className="inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0">Menú</div>
-                        <div className={`  ${menuOpen ? ' ' : ''} inline-flex h-6 w-7 relative cursor-pointer transition-all ease-in-out duration-200    md:m-auto `}>
+                        <div className={` inline-flex h-6 w-7 relative cursor-pointer transition-all ease-in-out duration-200    md:m-auto `}>
                             <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-[380ms] bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraSupOpen' : ' top-0 queverguenzaMenuIconoBarraSupClose'} `}></div> 
                             <div className={`      mx-auto w-7 h-1 absolute top-2.5 left-0 z-10 transition-all ease-in-out duration-[380ms]            ${menuOpen ? ' bg-[#12214d]' : ' bg-white'} `}></div> 
                             <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-[380ms] bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraInfOpen' : ' top-5 queverguenzaMenuIconoBarraInfClose'} `}></div> 
