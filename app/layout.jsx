@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
             <head>
             </head>
             <body className="antialiased text-black bg-white">
-                <Navigation />
                 {children}
+                <Navigation />
             </body>
         </html>
     );

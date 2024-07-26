@@ -35,10 +35,10 @@
     }
 }
 .queverguenzaMenuIconoBarraSupOpen {
-    animation: qbmiBarraSupOpenRot .5s ease-in-out forwards;
+    animation: qbmiBarraSupOpenRot .38s ease-in-out forwards;
 }
 .queverguenzaMenuIconoBarraSupClose {
-    animation: qbmiBarraSupCloseRot .5s ease-in-out forwards;
+    animation: qbmiBarraSupCloseRot .38s ease-in-out forwards;
 }
 
 
@@ -65,44 +65,8 @@
     }
 }
 .queverguenzaMenuIconoBarraInfClose {
-    animation: qbmiBarraSupInfRotClose .5s ease-in-out forwards;
+    animation: qbmiBarraSupInfRotClose .38s ease-in-out forwards;
 }
 .queverguenzaMenuIconoBarraInfOpen {
-    animation: qbmiBarraSupInfRotOpen .5s ease-in-out forwards;
+    animation: qbmiBarraSupInfRotOpen .38s ease-in-out forwards;
 }
-    @keyframes menuApertura {
-        0% {
-            width: 0;
-        }
-
-        16% {
-            width: 0;
-        }
-
-        100% {
-            width: min-content;
-        }
-    }
-
-    @keyframes menuCierre {
-        0% {
-            width: min-content;
-        }
-
-        84% {
-            width: 0;
-        }
-
-        100% {
-            width: 0;
-        }
-    }
-
-    .navMenuApertura {
-        animation: menuApertura .5s ease-in-out forwards;
-    }
-
-    .navMenuCierre {
-        animation: menuCierre .5s ease-in-out forwards;
-    }
-

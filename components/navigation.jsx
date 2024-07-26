@@ -38,24 +38,45 @@ export function Navigation() {
     const pathname = usePathname();
     const [activePath, setActivePath] = useState(pathname);
     const [openSubMenu, setOpenSubMenu] = useState(null); 
-    const subMenuRefs = useRef([]);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-    
+    const subMenuRefs = useRef([]);
+    const navMenuRef = useRef(null); // Ref for the nav menu
+
     useEffect(() => {
         setActivePath(pathname);
     }, [pathname]);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+        // if (menuOpen) closeMenu();
+        // else openMenu();
+    };
+
+/*
+    const openMenu = () => {
+        const navMenu = navMenuRef.current;
+        navMenu.style.transform = 'translateX(-100%)';
+        requestAnimationFrame(() => {
+            navMenu.style.transition = 'transform 0.62s ease-in-out';
+            navMenu.style.transform = 'translateX(0)';
+        });
+    };
+    const closeMenu = () => {
+        const navMenu = navMenuRef.current;
+        navMenu.style.transform = 'translateX(0)';
+        requestAnimationFrame(() => {
+            navMenu.style.transition = 'transform 0.62s ease-in-out';
+            navMenu.style.transform = 'translateX(-100%)';
+        });
+    };
+*/
     const handleSubMenuToggle = (index) => {
         if (openSubMenu === index) {
-            // Close the submenu
             closeSubMenu(index);
             setOpenSubMenu(null);
         } else {
-            // Open the new submenu
+            
             if (openSubMenu !== null) {
                 closeSubMenu(openSubMenu);
             }
@@ -73,8 +94,8 @@ export function Navigation() {
 
     const closeSubMenu = (index) => {
         const subMenu = subMenuRefs.current[index];
-        const marginBottomPixels = remToPixels(0.75); // Convert 0.75rem to pixels
-        // const initialHeight = ; // Add the margin to the height
+        const marginBottomPixels = remToPixels(0.75);
+        
         subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
         requestAnimationFrame(() => {
             subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
@@ -88,13 +109,14 @@ export function Navigation() {
         subMenu.style.height = '0';
         subMenu.style.opacity = '0';
         requestAnimationFrame(() => {
-            const marginBottomPixels = remToPixels(0.75); // Convert 0.75rem to pixels
-            // const targetHeight = ; // Add the margin to the height
+            const marginBottomPixels = remToPixels(0.75); 
+           
             subMenu.style.transition = 'height 0.618s ease-in-out, opacity 0.618s ease-in-out';
             subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
             subMenu.style.opacity = '1';
         });
     };
+
 
     const isSubItemActive = (subTitulos) => {
         return subTitulos.some(subItem => subItem.href === activePath);
@@ -113,9 +135,9 @@ export function Navigation() {
     
 
     return (
-        <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen ">
+        <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen fixed top-0 left-0">
 
-            <div className="w-full h-min inline-flex flex-row bg-[#12214d] z-20  md:pb-6 md:w-32 md:h-full md:flex-col  ">
+            <div className="w-full h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col  transition-all ease-in-out duration-[620]">
 
                 <div className=" py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full">
                     <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
@@ -124,9 +146,9 @@ export function Navigation() {
                     <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col' onClick={toggleMenu}>
                         <div className="inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0">Menú</div>
                         <div className={`  ${menuOpen ? ' ' : ''} inline-flex h-6 w-7 relative cursor-pointer transition-all ease-in-out duration-200    md:m-auto `}>
-                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-500 bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraSupOpen' : ' top-0 queverguenzaMenuIconoBarraSupClose'} `}></div> 
-                            <div className={`      mx-auto w-7 h-1 absolute top-2.5 left-0 z-10 transition-all ease-in-out duration-500            ${menuOpen ? ' bg-[#12214d]' : ' bg-white'} `}></div> 
-                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-500 bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraInfOpen' : ' top-5 queverguenzaMenuIconoBarraInfClose'} `}></div> 
+                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-[380ms] bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraSupOpen' : ' top-0 queverguenzaMenuIconoBarraSupClose'} `}></div> 
+                            <div className={`      mx-auto w-7 h-1 absolute top-2.5 left-0 z-10 transition-all ease-in-out duration-[380ms]            ${menuOpen ? ' bg-[#12214d]' : ' bg-white'} `}></div> 
+                            <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-[380ms] bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraInfOpen' : ' top-5 queverguenzaMenuIconoBarraInfClose'} `}></div> 
                         </div>
                     </div>
                 </div>
@@ -141,7 +163,7 @@ export function Navigation() {
             
  {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className={`z-10 h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed inline-flex flex-col px-8 w-min  `}>
+                <ul className={`z-40 h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed inline-flex flex-col transition-all ease-in-out duration-[620] ${menuOpen ? 'translate-x-0 px-8 w-min opacity-100' : 'opacity-0 w-0 px-0 translate-x-full md:-translate-x-full '} `}>
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
