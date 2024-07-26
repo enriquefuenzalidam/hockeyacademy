@@ -135,9 +135,9 @@ export function Navigation() {
     
 
     return (
-        <nav className="inline-flex font-Cabin w-full   md:w-min md:h-screen fixed top-0 left-0">
+        <nav className=" fixed top-0 left-0 flex font-Cabin w-full h-min  md:w-min md:h-screen">
 
-            <div className="w-full h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col  transition-all ease-in-out duration-[620]">
+            <div className={`  h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
 
                 <div className=" py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full">
                     <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
@@ -163,7 +163,7 @@ export function Navigation() {
             
  {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className={`z-40 h-screen bg-[#12214d] font-semibold text-lg text-left md:text-right items-start md:items-end justify-center leading-relaxed inline-flex flex-col transition-all ease-in-out duration-[620] ${menuOpen ? 'translate-x-0 px-8 w-min opacity-100' : 'opacity-0 w-0 px-0 translate-x-full md:-translate-x-full '} `}>
+                <ul className={` font-semibold text-lg text-left md:text-right w-min px-8 inline-flex z-40 h-screen     bg-[#12214d] items-start md:items-end justify-center leading-relaxed flex-col transition-all ease-in-out duration-[620ms] ${menuOpen ? 'mx-0 opacity-100' : ' opacity-0 -mr-96 md:-ml-96'} `}>
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
