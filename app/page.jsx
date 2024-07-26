@@ -21,21 +21,21 @@ export default function Page() {
                 Torneos Internacionales
             </Link>
         </div>
-        <div className=" relative md:absolute md:top-0 md:left-0 w-screen md:w-full md:h-full z-10">
+        <div className=" hidden relative md:absolute md:top-0 md:left-0 w-screen h-screen md:w-full md:h-full z-10">
             <Image src={proximamente} className='object-cover object-center w-full h-full' alt="" />
         </div>
-        <div className="hidden relative md:absolute md:top-0 md:left-0 w-screen md:w-full md:h-full z-10">
-            <video className='object-cover object-center w-full h-full' preload="auto" autoplay muted loop playsInline>
+        <div className=" hidden relative md:absolute md:top-0 md:left-0 w-screen h-screen md:w-full md:h-full z-10">
+            <video poster='images/3.jpg' className='object-cover object-center w-full h-full' preload="auto" autoplay="autoplay" muted loop playsInline>
                 <source src='images/Capsula-Tecnificacion.mp4' type="video/mp4" />
             </video>
         </div>
-        <div className="hidden relative md:absolute md:top-0 md:left-0 w-screen md:w-full md:h-full z-10">
-            <video className='object-cover object-center w-full h-full' preload="auto" autoplay muted loop playsInline>
+        <div className=" hidden relative md:absolute md:top-0 md:left-0 w-screen h-screen md:w-full md:h-full z-10">
+            <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoplay="autoplay" muted loop playsInline>
                 <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
             </video>
         </div>
-        <div className="hidden relative md:absolute md:top-0 md:left-0 w-screen md:w-full md:h-full z-10">
-            <video className='object-cover object-center w-full h-full' preload="auto" autoplay muted loop playsInline>
+        <div className=" relative md:absolute md:top-0 md:left-0 w-screen h-screen md:w-full md:h-full z-10">
+            <video poster='images/Hockey-22-Entrenamiento.jpg' className='object-cover object-center w-full h-full' preload="auto" autoplay="autoplay" muted loop playsInline>
                 <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
             </video>
         </div>
