@@ -1,11 +1,10 @@
 import '../styles/globals.css';
-import { Footer } from '../components/footer';
 import { Navigation } from '../components/navigation';
 
 export const metadata = {
     title: {
-        template: '%s | Identity',
-        default: 'Identity'
+        template: '%s | Identity Campus',
+        default: 'Identity Campus'
     }
 };
 

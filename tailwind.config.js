@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
 
 module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -40,5 +41,6 @@ module.exports = {
     },
     plugins: [
         require('daisyui'),
-        require('@tailwindcss/aspect-ratio')]
+        require('@tailwindcss/aspect-ratio'),
+        addDynamicIconSelectors(),]
 };

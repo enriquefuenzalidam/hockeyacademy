@@ -21,7 +21,7 @@ const navItems = [
     { linkText: 'Campus de Tecnificación',
         subTitulos: [
             { linkText: 'Hockey Hierba Barcelona', href: '/hockeyhierbabarcelona' },
-            { linkText: 'Hockey  Hierba Valencia', href: '/hockeyhierbavalencia' }
+            { linkText: 'Hockey Hierba Valencia', href: '/hockeyhierbavalencia' }
         ]
      },
     { linkText: 'Nosotros', href: '/nosotros' },
@@ -37,11 +37,11 @@ const remToPixels = (rem) => {
 export function Navigation() {
     const pathname = usePathname();
     const [activePath, setActivePath] = useState(pathname);
-    const [openSubMenu, setOpenSubMenu] = useState(null); 
+    const [subMenuOpening, setOpenSubMenu] = useState(null); 
     const [menuOpen, setMenuOpen] = useState(false);
 
     const subMenuRefs = useRef([]);
-    const navMenuRef = useRef(null); // Ref for the nav menu
+    // const navMenuRef = useRef(null); 
 
     useEffect(() => {
         setActivePath(pathname);
@@ -49,8 +49,8 @@ export function Navigation() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        // if (menuOpen) closeMenu();
-        // else openMenu();
+        // if (!menuOpen) openMenu();
+        // else closeMenu();
     };
 
 /*
@@ -72,22 +72,22 @@ export function Navigation() {
     };
 */
     const handleSubMenuToggle = (index) => {
-        if (openSubMenu === index) {
+        if (subMenuOpening === index) {
             closeSubMenu(index);
             setOpenSubMenu(null);
         } else {
             
-            if (openSubMenu !== null) {
-                closeSubMenu(openSubMenu);
+            if (subMenuOpening !== null) {
+                closeSubMenu(subMenuOpening);
             }
-            openSubMenuAnimated(index);
+            openSubMenu(index);
             setOpenSubMenu(index);
         }
     };
 
     const handleLinkClick = () => {
-        if (openSubMenu !== null) {
-            closeSubMenu(openSubMenu);
+        if (subMenuOpening !== null) {
+            closeSubMenu(subMenuOpening);
             setOpenSubMenu(null);
         }
     };
@@ -95,7 +95,6 @@ export function Navigation() {
     const closeSubMenu = (index) => {
         const subMenu = subMenuRefs.current[index];
         const marginBottomPixels = remToPixels(0.75);
-        
         subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
         requestAnimationFrame(() => {
             subMenu.style.transition = 'height 0.382s ease-in-out, opacity 0.382s ease-in-out';
@@ -104,19 +103,17 @@ export function Navigation() {
         });
     };
 
-    const openSubMenuAnimated = (index) => {
+    const openSubMenu = (index) => {
         const subMenu = subMenuRefs.current[index];
         subMenu.style.height = '0';
         subMenu.style.opacity = '0';
         requestAnimationFrame(() => {
             const marginBottomPixels = remToPixels(0.75); 
-           
             subMenu.style.transition = 'height 0.382s ease-in-out, opacity 0.382s ease-in-out';
             subMenu.style.height = `${subMenu.scrollHeight + marginBottomPixels}px`;
             subMenu.style.opacity = '1';
         });
     };
-
 
     const isSubItemActive = (subTitulos) => {
         return subTitulos.some(subItem => subItem.href === activePath);
@@ -134,16 +131,16 @@ export function Navigation() {
 
 
     return (
-        <nav className=" bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20  md:w-min md:h-screen">
+        <nav className={` bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20  md:w-min md:h-screen `}>
 
-            <div className={`  h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
+            <div className={` h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
 
-                <div className=" py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full">
-                    <Image src={identityLogo} alt="" className="w-24 object-cover object-center h-14    md:w-full md:h-auto" />
+                <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
+                    <Image src={identityLogo} alt={` `} className={` w-24 object-cover object-center h-14    md:w-full md:h-auto `} />
                 </div>
-                <div className=" queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center ">
-                    <div className=' flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col' onClick={toggleMenu}>
-                        <div className="inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0">Menú</div>
+                <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>
+                    <div className={` flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col `} onClick={toggleMenu}>
+                        <div className={` inline-block mx-3 font-semibold text-white text-lg uppercase md:my-1.5      md:block md:mx-0 `}>Menú</div>
                         <div className={` inline-flex h-6 w-7 relative cursor-pointer transition-all ease-in-out duration-200    md:m-auto `}>
                             <div className={`block mx-auto w-7 h-1 absolute         left-0 z-20 transition-all ease-in-out duration-[380ms] bg-white ${menuOpen ? 'top-2.5 queverguenzaMenuIconoBarraSupOpen' : ' top-0 queverguenzaMenuIconoBarraSupClose'} `}></div> 
                             <div className={`      mx-auto w-7 h-1 absolute top-2.5 left-0 z-10 transition-all ease-in-out duration-[380ms]            ${menuOpen ? ' bg-[#12214d]' : ' bg-white'} `}></div> 
@@ -151,18 +148,17 @@ export function Navigation() {
                         </div>
                     </div>
                 </div>
-                <div className=" hidden grid-cols-2 grid-rows-2 gap-6 p-7    md:grid md:aspect-1 md:w-32">
-                    <Link href="https://www.facebook.com/identity.campus.arg/" className="inline-block "><Image src={facebookIcon} alt="" className=' mx-auto' /></Link>
-                    <Link href="https://www.instagram.com/identity.campus/" className="inline-block "><Image src={instagramIcon} alt="" className=' mx-auto' /></Link>
-                    <Link href="https://www.tiktok.com/@identitycampus" className="inline-block "><Image src={tiktokIcon} alt="" className=' mx-auto' /></Link>
-                    <Link href="https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A" className="inline-block "><Image src={youtubeIcon} alt="" className=' mx-auto' /></Link>
+                <div className={` hidden grid-cols-2 grid-rows-2 gap-6 p-7    md:grid md:aspect-1 md:w-32 `}>
+                    <Link href={` https://www.facebook.com/identity.campus.arg/ `} className={`inline-block `}><Image src={facebookIcon} alt={` `} className={` mx-auto `} /></Link>
+                    <Link href={` https://www.instagram.com/identity.campus/ `} className={`inline-block `}><Image src={instagramIcon} alt={` `} className={` mx-auto `} /></Link>
+                    <Link href={` https://www.tiktok.com/@identitycampus `} className={`inline-block `}><Image src={tiktokIcon} alt={` `} className={` mx-auto `} /></Link>
+                    <Link href={` https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A `} className={` inline-block `}><Image src={youtubeIcon} alt={` `} className={` mx-auto `} /></Link>
                 </div>
 
             </div>
 
- {/* from '' to '' */}{/**/}
             {!!navItems?.length && (
-                <ul className={` inline-flex  font-semibold text-lg text-left md:text-right w-min px-8 z-40 h-screen     bg-[#12214d] items-start md:items-end justify-center transition-all ease-linear duration-[620ms] leading-relaxed flex-col ${menuOpen ? 'mx-0 opacity-100 ' : 'opacity-0 -mr-96 md:-ml-96'} `}  >
+                <ul className={` inline-flex  font-semibold text-lg text-left md:text-right w-min px-8 z-40 h-screen     bg-[#12214d] items-start md:items-end justify-center transition-all ease-in-out duration-[382ms] leading-relaxed flex-col ${menuOpen ? 'mx-0 opacity-100 ' : 'opacity-0 -mr-96 md:-ml-96'} `}  >
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
@@ -171,7 +167,7 @@ export function Navigation() {
                                 </Link>
                             )}
                             {item.subTitulos && (
-                                <div>{/* the submenues */}
+                                <div>
                                     <div onClick={() => handleSubMenuToggle(index)} className={`${getLinkClass(item.href, item.subTitulos)} hover:text-[#d11e82] cursor-pointer whitespace-nowrap `}> 
                                         {item.linkText}
                                     </div>
