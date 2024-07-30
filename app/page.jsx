@@ -1,5 +1,5 @@
 import { Portadacabecera } from '../components/portadaCabecera';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/footer';
 import chevronRight from 'public/images/chevronRight.svg';
 import Link from 'next/link';
 import Image from 'next/image';
