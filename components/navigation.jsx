@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -41,7 +42,6 @@ export function Navigation() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const subMenuRefs = useRef([]);
-    // const navMenuRef = useRef(null); 
 
     useEffect(() => {
         setActivePath(pathname);
@@ -49,28 +49,8 @@ export function Navigation() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        // if (!menuOpen) openMenu();
-        // else closeMenu();
     };
 
-/*
-    const openMenu = () => {
-        const navMenu = navMenuRef.current;
-        navMenu.style.transform = 'translateX(-100%)';
-        requestAnimationFrame(() => {
-            navMenu.style.transition = 'transform 0.62s ease-in-out';
-            navMenu.style.transform = 'translateX(0)';
-        });
-    };
-    const closeMenu = () => {
-        const navMenu = navMenuRef.current;
-        navMenu.style.transform = 'translateX(0)';
-        requestAnimationFrame(() => {
-            navMenu.style.transition = 'transform 0.62s ease-in-out';
-            navMenu.style.transform = 'translateX(-100%)';
-        });
-    };
-*/
     const handleSubMenuToggle = (index) => {
         if (subMenuOpening === index) {
             closeSubMenu(index);

@@ -1,5 +1,8 @@
 import { Portadacabecera } from '../components/portadaCabecera';
 import { Footer } from '../components/footer';
+import { Partners } from 'components/partners';
+import { Novedades } from 'components/novedades';
+
 import chevronRight from 'public/images/chevronRight.svg';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,28 +10,6 @@ import Image from 'next/image';
 import proximoEvento2024A from 'public/images/proximoEvento2024_hockeyTecnificacionBarcelona.jpg';
 import proximoEvento2024B from 'public/images/proximoEvento2024_hockeyTecnificacion.jpg';
 import proximoEvento2024C from 'public/images/proximoEvento2024_hockeyBarcelonaYParis.jpg';
-
-import partnersA from 'public/images/partnersSBHotels.png';
-import partnersB from 'public/images/partnersRealClubDePoloBarcelona.png';
-import partnersC from 'public/images/partnersOrbital.png';
-import partnersD from 'public/images/partnersMundoAbra.png';
-import partnersE from 'public/images/partnersMBP.png';
-import partnersF from 'public/images/partnersLetsGoUsa.png';
-import partnersG from 'public/images/partnersHockeyAcademy.png';
-import partnersH from 'public/images/partnersFarmaciasBriera.png';
-import partnersI from 'public/images/partnersEfeSur.png';
-import partnersJ from 'public/images/partnersBeggiaTurismo.png';
-import partnersK from 'public/images/partnersAsistCard.png';
-
-import novedadesA from 'public/images/novedadesBarcelona2024.webp';
-import novedadesB from 'public/images/novedadesLeonas2024.webp';
-import novedadesC from 'public/images/novedadesValencia2024.webp';
-
-const partnersLogos = [
-    partnersA, partnersB, partnersC, partnersD, partnersE, partnersF, partnersG, partnersH, partnersI, partnersJ, partnersK ]
-
-
-
 
 export default function Page() {
     return (
@@ -115,35 +96,14 @@ export default function Page() {
                             <h2 className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Novedades</h2>
                             <hr className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
                             <div className={`  mt-16 mx-8 grid grid-cols-1 md:grid-cols-3 gap-2 max-w-7xl `}>
-                                <div className={`flex flex-col p-4 bg-white bg-opacity-80 border-solid border-2 border-black border-opacity-5 shadow-md shadow-neutral-300`}>
-                                    <p><Image src={novedadesA} alt='' /></p>
-                                    <h3 className={` font-Cabin font-bold text-2xl my-6 `}>Hockey con <br className={` hidden md:inline `} />¡Comienza la participación de Las Leonas en los Juegos Olímpicos!</h3>
-                                    <p className={`  flex-grow font-Roboto text-md leading-relaxed mb-4 `} >El hockey sobre césped femenino argentino, representado por las emblemáticas Leonas, se encuentra en la cúspide del deporte mundial.</p>
-                                    <p><Link className={` font-semibold `} href=''>Leer más</Link></p>
-                                </div>
-                                <div className={`flex flex-col p-4 bg-white bg-opacity-80 border-solid border-2 border-black border-opacity-5 shadow-md shadow-neutral-300 `}>
-                                <p><Image src={novedadesB} alt='' /></p>
-                                    <h3 className={` font-Cabin font-bold text-2xl my-6 `}>Campus IDentity Barcelona 2024: una experiencia inolvidable en la cuna del hockey español</h3>
-                                    <p className={`  flex-grow font-Roboto text-md leading-relaxed mb-4 `} >Del 8 al 16 de julio de 2024, Barcelona, la capital mundial del hockey sobre césped, vibró al ritmo del talento y la pasión en el Campus IDentity.</p>
-                                    <p><Link className={` font-semibold `} href=''>Leer más</Link></p>
-                                </div>
-                                <div className={`flex flex-col p-4 bg-white bg-opacity-80 border-solid border-2 border-black border-opacity-5 shadow-md shadow-neutral-300 `}>
-                                <p><Image src={novedadesC} alt='' /></p>
-                                    <h3 className={` font-Cabin font-bold text-2xl my-6 `}>Campus de Valencia: un verano de aprendizaje, crecimiento y pasión por el hockey</h3>
-                                    <p className={`  flex-grow font-Roboto text-md leading-relaxed mb-4 `} >Del 1 al 6 de julio, el Polideportivo Virgen del Carmen-Beteró en Valencia se convirtió en el epicentro del talento y la pasión por el hockey sobre césped, gracias al Campus IDentity.</p>
-                                    <p><Link className={` font-semibold `} href=''>Leer más</Link></p>
-                                </div>
+                                <Novedades />
                             </div>
                         </section>
                         <section className={` relative mx-auto mt-20 max-w-5xl z-30 pb-32`}>
                             <h2 className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Nuestros partners</h2>
                             <hr className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
                             <div className={` mx-auto text-center overflow-visible `}>
-                                {partnersLogos.map((src, index) => (
-                                    <span key={index} className={` relative inline-block aspect-1 bg-white rounded-full w-36 overflow-hidden m-8`}>
-                                        <Image className={` w-full h-full object-contain object-center `} src={src} alt='' />
-                                    </span>
-                                ))}
+                                <Partners />
                             </div>
                         </section>
                     </div>

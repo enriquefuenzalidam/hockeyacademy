@@ -3,8 +3,8 @@ import { Navigation } from '../components/navigation';
 
 export const metadata = {
     title: {
-        template: '%s | Identity Campus',
-        default: 'Identity Campus'
+        template: '%s | IDentity Campus',
+        default: 'IDentity Campus'
     }
 };
 
