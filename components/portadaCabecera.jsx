@@ -45,7 +45,7 @@ export function Portadacabecera() {
     };
 
     const links = [
-        { text: 'Viaje Hockey con Evento', href: '/' },
+        { text: 'Viaje Hockey con Evento', href: '/eurohockey' },
         { text: 'Viaje Hockey Tecnificación', href: '/' },
         { text: 'Tecnificaciones España', href: '/' },
         { text: 'Torneos Internacionales', href: '/' },
@@ -86,7 +86,7 @@ export function Portadacabecera() {
                 <div key={index} ref={el => fondoRefs.current[index] = el} className={`opacity-0 transition-all ease-linear duration-[382ms] absolute top-0 left-0 w-full h-full z-10 ${index === 0 ? 'opacity-100' : ''}`}>
                     {index < 3 ? (
                         <video poster={`images/${src}`} className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                            <source src={`images/IDentity-Campus-${index === 0 ? 'Tecnificacion-2023' : index === 1 ? 'Eurohockey-2023' : 'Capsula-Tecnificacion'}.mp4`} type="video/mp4" />
+                            <source src={`images/IDentity-Campus-${index === 0 ? 'Eurohockey-2023' : index === 1 ? 'Tecnificacion-2023' : 'Capsula-Tecnificacion'}.mp4`} type="video/mp4" />
                         </video>
                     ) : (
                         <Image src={src} className='object-cover object-center w-full h-full' alt="" />
