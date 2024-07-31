@@ -43,6 +43,27 @@ const allInclusiveExperienci = [
     { titulo: 'Equipaje Sugerido', contenido: 'Brindaremos un KIT de viaje en el cual se incluye camisetas, shorts, mochila y sudadera para la actividad deportiva (solo restará llevar medias y calzado apropiado). Se recomienda llevar una valija grande (con candado o identificación) y una mochila o equipaje de mano. Es recomendable incluir en el equipaje en cuanto sea posible, trajes de baño, calzado de playa, protector, gorra o sombrero, ropa casual y shorts, camisetas, jeans, abrigo, campera, indumentaria de tu equipo favorito, medias de algodón y ropa interior cómoda.' }
 ]
 
+
+import equipamientoA from 'public/images/equipamientoA.png';
+import equipamientoB from 'public/images/equipamientoB.png';
+
+
+import pagoCondicionesSaldo from 'public/images/pagoCondicionesSaldo.svg';
+import pagoCondicionesPlane from 'public/images/pagoCondicionesPlane.svg';
+import pagoCondicionesPen from 'public/images/pagoCondicionesPen.svg';
+import pagoCondicionesCard from 'public/images/pagoCondicionesCard.svg';
+import pagoCondicionesBill from 'public/images/pagoCondicionesBill.svg';
+
+const pagoCondiciones = [
+    { icono: pagoCondicionesPen, titulo: 'Seña', descripcion: 'Permite reservar el cupo del deportista contra la firma del contrato.' },
+    { icono: pagoCondicionesPlane, titulo: 'Aereo', descripcion: 'No incluido. Debe contratarse 90 días antes de la fecha del viaje.' },
+    { icono: pagoCondicionesSaldo, titulo: 'Saldo', descripcion: 'Financiación en cuotas sin interés. Cancelación hasta 30 días antes del viaje.' },
+    { icono: pagoCondicionesCard, titulo: 'Medios de pago', descripcion: 'Efectivo, transferencia/deposito bancario y transferencia internacional.' },
+    { icono: pagoCondicionesBill, titulo: 'Flexibilidad', descripcion: 'Posibilidad de abonar el 100% del Campus en cuotas fijas acordadas en el contrato.' },
+]
+
+
+
 const remToPixels = (rem) => {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 };
@@ -133,7 +154,7 @@ export default function Eurohockey() {
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey 2025 | Alemania</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><Image className={` mx-auto w-8 `} src={calendarioIcono} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 19 de agosto</h2>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
@@ -146,7 +167,7 @@ export default function Eurohockey() {
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="">
                                 Agendá tu reunión <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
                     </div>
-                    <p className={` gx:w-4/12 relative w-full mt-6 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
+                    <p className={` gx:w-4/12 relative w-full mt-12 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
 
                         {imagenesCuadro.map((item, index) => (
                             <Image className={`text-blue-950 object-cover absolute top-0 lef-0 w-full h-full transition-opacity ease-in-out duration-[618ms] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} `} key={index} src={item} alt='' />
@@ -158,7 +179,7 @@ export default function Eurohockey() {
 
             <section className={`  max-w-5xl w-full mx-auto `}>
                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>La mejor experiencia de hockey de vida</h2>
-                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
+                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                 <div className={` grid sm:grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 px-4 gx:px-0`}>
                     {mejorExperienciaImgs.map((item, index) => (
                         <p key={index} className={` inline-block `} >
@@ -171,7 +192,7 @@ export default function Eurohockey() {
             <section className={` bg-neutral-100 my-12 `}>
                 <div className={` max-w-5xl w-full mx-auto `}>
                     <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Experiencia All Inclusive</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                 </div> 
                 <ul className={` max-w-5xl w-full mx-auto px-4 gx:px-0 grid grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 pb-12`}>
                     {allInclusiveExperienci.map((item, index) => (
@@ -183,6 +204,55 @@ export default function Eurohockey() {
                         </div>
                     ))}
                 </ul>
+            </section>
+
+            <section className={` max-w-5xl w-full mx-auto `}>
+                <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
+                    <div className={` w-full md:w-6/12 justify-start items-start`}>
+                        <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                        <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
+                    </div>
+                    <p className={` w-full md:w-6/12 flex justify-center items-center`}>
+                        <Image className={` max-w-md w-full `} src={equipamientoA} alt='' />
+                    </p>
+                </div>
+                <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
+                    <p className={` w-full md:w-6/12 flex justify-center items-center`}>
+                        <Image className={` max-w-sm w-full `} src={equipamientoB} alt='' />
+                    </p>
+                    <div className={` w-full md:w-6/12 justify-start items-start`}>
+                        <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                        <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className={` bg-neutral-100 `}>
+                <div className={` max-w-5xl w-full mx-auto `}>
+                    <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Condiciones de pago</h2>
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                </div>
+                <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center `}>
+
+                    {pagoCondiciones.map((item, index) => (
+                        <div className={` inline-block w-full md:w-1/2 lg:w-1/3 mx-auto align-top my-6 `}>
+                            <div className={` mx-2`}>
+                                <p className={` my-4 `}><Image className={` mx-auto w-8 h-auto `} src={item.icono} alt='' /></p>
+                                <h4 className={` text-3xl font-BebasNeue text-blue-950 my-4 `}>{item.titulo}</h4>
+                                <p className={` mx-auto w-60 md:w-full font-Roboto text-lg text-neutral-500 leading-relaxed `}>{item.descripcion}</p>
+                            </div>
+                        </div>
+
+                    ))}
+
+                </div>
+                <p className={` font-Roboto font-normal text-md py-12 text-center text-white`}>
+                    <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="">
+                        Reservá tú lugar <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
             </section>
 
             <div className={` relative bg-fucsiaAzulFondoDos clear-both `}>
