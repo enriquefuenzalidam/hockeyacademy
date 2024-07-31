@@ -48,7 +48,7 @@ const remToPixels = (rem) => {
 };
 
 
-export default function eurohockey() {
+export default function Eurohockey() {
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
