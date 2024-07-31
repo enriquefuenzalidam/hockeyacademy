@@ -130,7 +130,6 @@ export default function Eurohockey() {
             </section>
 
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
-
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey 2025 | Alemania</h2>
@@ -144,7 +143,7 @@ export default function Eurohockey() {
                             Una oportunidad única para mejorar tu hockey, convivir con una deportista Olímpica, conocer Europa y vivir el Eurohockey 2025 desde dentro.
                         </p>
                         <p className={` font-Roboto font-normal text-md mt-6 text-center text-white`}>
-                            <Link className={` inline-block mx-auto py-2 px-8 bg-fucsiaAzulRatioFondo hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="">
+                            <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="">
                                 Agendá tu reunión <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
                     </div>
                     <p className={` gx:w-4/12 relative w-full mt-6 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
@@ -155,19 +154,17 @@ export default function Eurohockey() {
 
                     </p>
                 </div>
-
             </section>
+
             <section className={`  max-w-5xl w-full mx-auto `}>
                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>La mejor experiencia de hockey de vida</h2>
                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
                 <div className={` grid sm:grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 px-4 gx:px-0`}>
-
                     {mejorExperienciaImgs.map((item, index) => (
                         <p key={index} className={` inline-block `} >
                             <Image data-aos-once="true" data-aos="fade" className={` w-full h-full `} src={item} alt='' />
                         </p>
                     ))}
-
                 </div>
             </section>
 
