@@ -63,7 +63,6 @@ const pagoCondiciones = [
 ]
 
 
-
 const citasEurohockey2025 = [
 	{ autor: 'Laura, mamá de Delfi', cita: 'El trabajo de coordinar el viaje fue impecable..no solo el disfrute del deporte en sí, sino los paseos alternativos para que no desperdiciaran un solo segundo de su estadía…¡Gracias por la calidez como personas!' },
 	{ autor: 'Carolina Van Bebber, mamá de Martu', cita: 'Soy mamá de Martina de Chile. Les quería contar que lo que vi ayer al ir a buscar a Marti fue increíble. Las chicas felices de la experiencia, todas muy cariñosas entre ellas. Despidieron a Marti como si hubiesen sido compañeras del colegio o el club de toda la vida…Martina lloró en el taxi y me decía: “mamá fue maravilloso, una experiencia que jamás pensé que iba a ser así…gracias por regalármela' },
@@ -140,8 +139,6 @@ export default function Eurohockey() {
         });
     };
 
-
-
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagenesCuadro.length);
@@ -153,7 +150,6 @@ export default function Eurohockey() {
     const toggleOpen = (index) => {
         setOpenIndex(openIndex === index ? null : index);
       };
-
 
       useEffect(() => {
         const interval = setInterval(() => {
@@ -276,7 +272,6 @@ export default function Eurohockey() {
                                 <p className={` mx-auto w-60 md:w-full font-Roboto text-lg text-neutral-500 leading-relaxed `}>{item.descripcion}</p>
                             </div>
                         </div>
-
                     ))}
 
                 </div>
@@ -285,12 +280,15 @@ export default function Eurohockey() {
                         Reservá tú lugar <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
             </section>
 
-            <section className={` relative bg-citasFondo transition-all ease-in-out duration-[618ms] py-12 gx:py-20 min-h-80 gx:min-h-80 flex flex-grow items-center justify-center `}>
+            <section className={` relative bg-citasFondo transition-all ease-in-out duration-[618ms] min-h-80 gx:min-h-80 flex flex-grow items-center justify-center `}>
                 <div className={` absolute top-0 left-0 inset-0 z-10 opacity-20`}>
                     <Image src={citasFondo} className={` object-center object-cover w-full h-full `} alt='' />
                 </div>
+                <div className={` absolute top-0 left-0 inset-0 z-10 opacity-50`}>
+                    <p className={`mx-auto max-w-3xl font-NotoSerif italic font-light text-[15rem] leading-[12rem] text-blue-950 `}>“</p>
+                </div>
                 <div className={` relative z-20 max-w-5xl mx-auto `}>
-                        <p className={` text-center font-NotoSerif italic text-white text-md gx:text-xl leading-relaxed mx-12 transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>{cita} <span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>—{autor}</span></p>
+                    <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br/><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
                 </div>
             </section>
 
