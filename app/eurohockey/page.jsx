@@ -77,8 +77,8 @@ const remToPixels = (rem) => {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 };
 
-
 export default function Eurohockey() {
+
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
@@ -241,12 +241,12 @@ export default function Eurohockey() {
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <Image className={` max-w-md w-full `} src={equipamientoA} alt='' />
+                        <Image data-aos-once="true" data-aos="fade-left" className={` max-w-md w-full `} src={equipamientoA} alt='' />
                     </p>
                 </div>
                 <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <Image className={` max-w-sm w-full `} src={equipamientoB} alt='' />
+                        <Image data-aos-once="true" data-aos="fade-right" className={` max-w-sm w-full `} src={equipamientoB} alt='' />
                     </p>
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
@@ -288,7 +288,7 @@ export default function Eurohockey() {
                     <p className={`mx-auto max-w-3xl font-NotoSerif italic font-light text-[15rem] leading-[12rem] text-blue-950 `}>“</p>
                 </div>
                 <div className={` relative z-20 max-w-5xl mx-auto `}>
-                    <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br/><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
+                    <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-[618ms] ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br/><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
                 </div>
             </section>
 
