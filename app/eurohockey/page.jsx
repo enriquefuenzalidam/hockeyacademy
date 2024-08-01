@@ -269,7 +269,7 @@ export default function Eurohockey() {
                 <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center `}>
 
                     {pagoCondiciones.map((item, index) => (
-                        <div className={` inline-block w-full md:w-1/2 lg:w-1/3 mx-auto align-top my-6 `}>
+                        <div key={index} className={` inline-block w-full md:w-1/2 lg:w-1/3 mx-auto align-top my-6 `}>
                             <div className={` mx-2`}>
                                 <p className={` my-4 `}><Image className={` mx-auto w-8 h-auto `} src={item.icono} alt='' /></p>
                                 <h4 className={` text-3xl font-BebasNeue text-blue-950 my-4 `}>{item.titulo}</h4>
