@@ -226,8 +226,8 @@ export default function Eurohockey() {
                 </div> 
                 <ul className={` max-w-5xl w-full mx-auto px-4 gx:px-0 grid grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 pb-12`}>
                     {allInclusiveExperienci.map((item, index) => (
-                        <div key={index} data-aos-once="true" data-aos="zoom-out" >
-                            <li key={item.id} className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
+                        <div key={item.id} data-aos-once="true" data-aos="zoom-out" >
+                            <li className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
                                 <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[rgb(211,0,126)]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4> 
                                 <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 `}>{item.contenido}</p> 
                             </li>
