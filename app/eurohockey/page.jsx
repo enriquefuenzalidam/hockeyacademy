@@ -148,7 +148,7 @@ export default function Eurohockey() {
       }, 1618); 
   
       return () => clearInterval(interval); 
-    }, [imagenesCuadro.length]);
+    }, []);
 
     const toggleOpen = (index) => {
         setOpenIndex(openIndex === index ? null : index);
