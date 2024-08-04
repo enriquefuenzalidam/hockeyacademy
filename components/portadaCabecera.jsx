@@ -7,6 +7,11 @@ import proximamente from 'public/images/proximamente.jpg';
 import chevronLeft from 'public/images/chevronLeft.svg';
 import chevronRight from 'public/images/chevronRight.svg';
 
+import eurohockey2023 from 'public/images/IDentity-Campus-Eurohockey-2023.mp4';
+import tecnificacion2023 from 'public/images/IDentity-Campus-Tecnificacion-2023.mp4';
+import capsulaTecnificacioin from 'public/images/IDentity-Campus-Capsula-Tecnificacion.mp4';
+
+
 export function Portadacabecera() {
     const enlaceRefs = useRef([]);
     const enlaceRefsB = useRef([]);
@@ -25,14 +30,16 @@ export function Portadacabecera() {
     useEffect(() => {
 
         enlaceRefsB.current.forEach((linkRef, idx) => {
-            linkRef && (   
+            linkRef && (
                 linkRef.classList.toggle('opacity-100', idx === currentIndex),
-                linkRef.classList.toggle('opacity-0', idx !== currentIndex) ) });
+                linkRef.classList.toggle('opacity-0', idx !== currentIndex))
+        });
 
         fondoRefs.current.forEach((videoRef, idx) => {
             videoRef && (
                 videoRef.classList.toggle('opacity-100', idx === currentIndex),
-                videoRef.classList.toggle('opacity-0', idx !== currentIndex) ) });
+                videoRef.classList.toggle('opacity-0', idx !== currentIndex))
+        });
 
     }, [currentIndex]);
 
@@ -86,7 +93,7 @@ export function Portadacabecera() {
                 <div key={index} ref={el => fondoRefs.current[index] = el} className={`opacity-0 transition-all ease-linear duration-[382ms] absolute top-0 left-0 w-full h-full z-10 ${index === 0 ? 'opacity-100' : ''}`}>
                     {index < 3 ? (
                         <video poster={`images/${src}`} className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                            <source src={`images/IDentity-Campus-${index === 0 ? 'Eurohockey-2023' : index === 1 ? 'Tecnificacion-2023' : 'Capsula-Tecnificacion'}.mp4`} type="video/mp4" />
+                            <source src={`${index === 0 ? eurohockey2023 : index === 1 ? tecnificacion2023 : capsulaTecnificacioin}`} type="video/mp4" />
                         </video>
                     ) : (
                         <Image src={src} className='object-cover object-center w-full h-full' alt="" />

@@ -7,6 +7,7 @@ import { Footer } from 'components/footer';
 import calendarioIcono from 'public/images/calendar-days.svg';
 import calendarioCheckIcono from 'public/images/calendar-check.svg';
 
+import eurohockey2023 from 'public/images/IDentity-Campus-Eurohockey-2023.mp4';
 
 
 import euroHockey2025A from 'public/images/euroHockey2025A.webp';
@@ -64,10 +65,10 @@ const pagoCondiciones = [
 
 
 const citasEurohockey2025 = [
-	{ autor: 'Laura, mamá de Delfi', cita: 'El trabajo de coordinar el viaje fue impecable..no solo el disfrute del deporte en sí, sino los paseos alternativos para que no desperdiciaran un solo segundo de su estadía…¡Gracias por la calidez como personas!' },
-	{ autor: 'Carolina Van Bebber, mamá de Martu', cita: 'Soy mamá de Martina de Chile. Les quería contar que lo que vi ayer al ir a buscar a Marti fue increíble. Las chicas felices de la experiencia, todas muy cariñosas entre ellas. Despidieron a Marti como si hubiesen sido compañeras del colegio o el club de toda la vida…Martina lloró en el taxi y me decía: “mamá fue maravilloso, una experiencia que jamás pensé que iba a ser así…gracias por regalármela' },
-	{ autor: 'Romi Piazze, mamá de Mía', cita: 'Mi hija hizo un cambio enorme, volvió con más ganas y fuerzas de entrenar, pidió ir más días al club a practicar. Siempre repite que la leona le dijo que el secreto de todo es practicar, practicar, practicar. Quiero felicitarlos porque mi hija dice que fue un viaje increíble, todo organizado, que nada falló y el grupo humano fue excelente' },
-	{ autor: 'Maca Bustos, mamá de Martina', cita: 'Martina volvió encantada con el viaje, me mostraba el vídeo y me ponía en contexto todo lo que había ocurrido en el entreno o la grabación. Cuando vea que el próximo viaje es a París, ya estaría arriba del avión' }
+    { autor: 'Laura, mamá de Delfi', cita: 'El trabajo de coordinar el viaje fue impecable..no solo el disfrute del deporte en sí, sino los paseos alternativos para que no desperdiciaran un solo segundo de su estadía…¡Gracias por la calidez como personas!' },
+    { autor: 'Carolina Van Bebber, mamá de Martu', cita: 'Soy mamá de Martina de Chile. Les quería contar que lo que vi ayer al ir a buscar a Marti fue increíble. Las chicas felices de la experiencia, todas muy cariñosas entre ellas. Despidieron a Marti como si hubiesen sido compañeras del colegio o el club de toda la vida…Martina lloró en el taxi y me decía: “mamá fue maravilloso, una experiencia que jamás pensé que iba a ser así…gracias por regalármela' },
+    { autor: 'Romi Piazze, mamá de Mía', cita: 'Mi hija hizo un cambio enorme, volvió con más ganas y fuerzas de entrenar, pidió ir más días al club a practicar. Siempre repite que la leona le dijo que el secreto de todo es practicar, practicar, practicar. Quiero felicitarlos porque mi hija dice que fue un viaje increíble, todo organizado, que nada falló y el grupo humano fue excelente' },
+    { autor: 'Maca Bustos, mamá de Martina', cita: 'Martina volvió encantada con el viaje, me mostraba el vídeo y me ponía en contexto todo lo que había ocurrido en el entreno o la grabación. Cuando vea que el próximo viaje es a París, ya estaría arriba del avión' }
 ]
 
 import citasFondo from 'public/images/citasFondo.jpg';
@@ -83,19 +84,19 @@ export default function Eurohockey() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
 
-    const [infoBoxOpening, setOpenInfoBox] = useState(null); 
+    const [infoBoxOpening, setOpenInfoBox] = useState(null);
     const infoBoxRefs = useRef([]);
 
     const [currentCitaIndex, setCurrentCitaIndex] = useState(0);
     const [fade, setFade] = useState(true); // State to manage fade effect
-  
+
 
     const infoBoxToggle = (index) => {
         if (infoBoxOpening === index) {
             closeInfoBox(index);
             setOpenInfoBox(null);
         } else {
-            
+
             if (infoBoxOpening !== null) {
                 closeInfoBox(infoBoxOpening);
             }
@@ -108,8 +109,8 @@ export default function Eurohockey() {
     const closeInfoBox = (index) => {
         toggleOpen(index);
         const infoBox = infoBoxRefs.current[index];
-        const paddingPixels = remToPixels(3); 
-        infoBox.style.height = `${infoBox.scrollHeight+paddingPixels}px`;
+        const paddingPixels = remToPixels(3);
+        infoBox.style.height = `${infoBox.scrollHeight + paddingPixels}px`;
         infoBox.style.opacity = '1';
         infoBox.style.paddingTop = '1.5rem';
         infoBox.style.paddingBottom = '1.5rem';
@@ -125,14 +126,14 @@ export default function Eurohockey() {
     const openInfoBox = (index) => {
         toggleOpen(index);
         const infoBox = infoBoxRefs.current[index];
-        const paddingPixels = remToPixels(3); 
+        const paddingPixels = remToPixels(3);
         infoBox.style.height = '0';
         infoBox.style.opacity = '0';
         infoBox.style.paddingTop = '0';
         infoBox.style.paddingBottom = '0';
         requestAnimationFrame(() => {
             infoBox.style.transition = 'height 0.382s ease-in-out, opacity 0.382s ease-in-out, padding 0.382s ease-in-out';
-            infoBox.style.height = `${infoBox.scrollHeight+paddingPixels}px`;
+            infoBox.style.height = `${infoBox.scrollHeight + paddingPixels}px`;
             infoBox.style.opacity = '1';
             infoBox.style.paddingTop = '1.5rem';
             infoBox.style.paddingBottom = '1.5rem';
@@ -140,38 +141,38 @@ export default function Eurohockey() {
     };
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagenesCuadro.length);
-      }, 1618); 
-  
-      return () => clearInterval(interval); 
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagenesCuadro.length);
+        }, 1618);
+
+        return () => clearInterval(interval);
     }, []);
 
     const toggleOpen = (index) => {
         setOpenIndex(openIndex === index ? null : index);
-      };
+    };
 
-      useEffect(() => {
+    useEffect(() => {
         const interval = setInterval(() => {
-          setFade(false); // Start fade out
-          setTimeout(() => {
-            setCurrentCitaIndex((prevIndex) => (prevIndex + 1) % citasEurohockey2025.length);
-            setFade(true); // Start fade in
-          }, 382); // Duration of fade out before changing text
+            setFade(false); // Start fade out
+            setTimeout(() => {
+                setCurrentCitaIndex((prevIndex) => (prevIndex + 1) % citasEurohockey2025.length);
+                setFade(true); // Start fade in
+            }, 382); // Duration of fade out before changing text
         }, 4618); // Change the interval to your preference
-    
+
         return () => clearInterval(interval);
-      }, []);
-    
-      const { autor, cita } = citasEurohockey2025[currentCitaIndex];
-    
+    }, []);
+
+    const { autor, cita } = citasEurohockey2025[currentCitaIndex];
+
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
             <section className={` block relative w-full h-screen bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
+                        <source src={eurohockey2023} type="video/mp4" />
                     </video>
                 </div>
             </section>
@@ -193,43 +194,47 @@ export default function Eurohockey() {
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="">
                                 Agendá tu reunión <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
                     </div>
-                    <p className={` gx:w-4/12 relative w-full mt-12 gx:mt-0 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
+                    {!!imagenesCuadro?.length && (
+                        <p className={` gx:w-4/12 relative w-full mt-12 gx:mt-0 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
 
-                        {imagenesCuadro.map((item, index) => (
-                            <Image className={`text-blue-950 object-cover absolute top-0 lef-0 w-full h-full transition-opacity ease-in-out duration-[618ms] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} `} key={index} src={item} alt='' />
-                        ))}
+                            {imagenesCuadro.map((item, index) => (
+                                <Image className={`text-blue-950 object-cover absolute top-0 lef-0 w-full h-full transition-opacity ease-in-out duration-[618ms] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} `} key={index} src={item} alt='' />
+                            ))}
 
-                    </p>
+                        </p>
+                    )}
                 </div>
             </section>
 
             <section className={`  max-w-5xl w-full mx-auto `}>
                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>La mejor experiencia de hockey de vida</h2>
                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                <div className={` grid sm:grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 px-4 gx:px-0`}>
-                    {mejorExperienciaImgs.map((item, index) => (
-                        <p key={index} className={` inline-block `} >
-                            <Image data-aos-once="true" data-aos="fade" className={` w-full h-full `} src={item} alt='' />
-                        </p>
-                    ))}
-                </div>
+                {!!mejorExperienciaImgs?.length && (
+                    <div className={` grid sm:grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 px-4 gx:px-0`}>
+                        {mejorExperienciaImgs.map((item, index) => (
+                            <p key={index} className={` inline-block `} >
+                                <Image data-aos-once="true" data-aos="fade" className={` w-full h-full `} src={item} alt='' />
+                            </p>
+                        ))}
+                    </div>)}
             </section>
 
             <section className={` bg-neutral-100 my-12 `}>
                 <div className={` max-w-5xl w-full mx-auto `}>
                     <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Experiencia All Inclusive</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                </div> 
-                <ul className={` max-w-5xl w-full mx-auto px-4 gx:px-0 grid grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 pb-12`}>
-                    {allInclusiveExperienci.map((item, index) => (
-                        <div key={item.id} data-aos-once="true" data-aos="zoom-out" >
-                            <li className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
-                                <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[rgb(211,0,126)]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4> 
-                                <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 `}>{item.contenido}</p> 
-                            </li>
-                        </div>
-                    ))}
-                </ul>
+                </div>
+                {!!allInclusiveExperienci?.length && (
+                    <ul className={` max-w-5xl w-full mx-auto px-4 gx:px-0 grid grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 pb-12`}>
+                        {allInclusiveExperienci.map((item, index) => (
+                            <div key={item.id} data-aos-once="true" data-aos="zoom-out" >
+                                <li className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
+                                    <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[rgb(211,0,126)]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
+                                    <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 `}>{item.contenido}</p>
+                                </li>
+                            </div>
+                        ))}
+                    </ul>)}
             </section>
 
             <section className={` max-w-5xl w-full mx-auto `}>
@@ -262,19 +267,18 @@ export default function Eurohockey() {
                     <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Condiciones de pago</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                 </div>
-                <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center `}>
-
-                    {pagoCondiciones.map((item, index) => (
-                        <div key={index} className={` inline-block w-full md:w-1/2 lg:w-1/3 mx-auto align-top my-6 `}>
-                            <div className={` mx-2`}>
-                                <p className={` my-4 `}><Image className={` mx-auto w-8 h-auto `} src={item.icono} alt='' /></p>
-                                <h4 className={` text-3xl font-BebasNeue text-blue-950 my-4 `}>{item.titulo}</h4>
-                                <p className={` mx-auto w-60 md:w-full font-Roboto text-lg text-neutral-500 leading-relaxed `}>{item.descripcion}</p>
+                {!!pagoCondiciones?.length && (
+                    <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center `}>
+                        {pagoCondiciones.map((item, index) => (
+                            <div key={index} className={` inline-block w-full md:w-1/2 lg:w-1/3 mx-auto align-top my-6 `}>
+                                <div className={` mx-2`}>
+                                    <p className={` my-4 `}><Image className={` mx-auto w-8 h-auto `} src={item.icono} alt='' /></p>
+                                    <h4 className={` text-3xl font-BebasNeue text-blue-950 my-4 `}>{item.titulo}</h4>
+                                    <p className={` mx-auto w-60 md:w-full font-Roboto text-lg text-neutral-500 leading-relaxed `}>{item.descripcion}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-
-                </div>
+                        ))}
+                    </div>)}
                 <p className={` font-Roboto font-normal text-md py-12 text-center text-white`}>
                     <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="">
                         Reservá tú lugar <Image className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link></p>
@@ -288,7 +292,7 @@ export default function Eurohockey() {
                     <p className={`mx-auto max-w-3xl font-NotoSerif italic font-light text-[15rem] leading-[12rem] text-blue-950 `}>“</p>
                 </div>
                 <div className={` relative z-20 max-w-5xl mx-auto `}>
-                    <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-[618ms] ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br/><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
+                    <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-[618ms] ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br /><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
                 </div>
             </section>
 
