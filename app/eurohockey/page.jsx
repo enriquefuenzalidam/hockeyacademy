@@ -296,6 +296,17 @@ export default function Eurohockey() {
                 </div>
             </section>
 
+            <section className={` bg-neutral-100 `}>
+                <div className={` max-w-5xl w-full mx-auto `}>
+                    <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Galería de nuestros viajes</h2>
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                </div>
+                    <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center `}>
+                    
+
+                    
+                    </div>
+            </section>
 
             <div className={` relative bg-fucsiaAzulFondoDos clear-both `}>
                 <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
