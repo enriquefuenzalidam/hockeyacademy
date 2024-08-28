@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
             <head>
             </head>
             <body className="antialiased text-black bg-[#12214d] font-Cabin ">
+                <AOSInitializer />
                 {children}
                 <Navigation />
             </body>

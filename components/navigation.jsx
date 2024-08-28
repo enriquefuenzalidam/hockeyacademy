@@ -11,9 +11,6 @@ import instagramIcon from 'public/images/instagram.svg';
 import tiktokIcon from 'public/images/tiktok.svg';
 import youtubeIcon from 'public/images/youtube.svg';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 const navItems = [
     { linkText: 'Inicio', href: '/' },
     { linkText: 'Viajes Deportivos',
@@ -111,12 +108,6 @@ export function Navigation() {
         }
         return 'text-white';
     };
-
-    useEffect(() => {
-        AOS.init({
-          duration: 1200,
-        });
-      }, []);
 
     return (
         <nav className={` bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20  md:w-min md:h-screen `}>

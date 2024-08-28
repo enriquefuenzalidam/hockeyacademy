@@ -11,6 +11,58 @@ import eurohockey2023 from 'public/images/IDentity-Campus-Eurohockey-2023.mp4';
 import tecnificacion2023 from 'public/images/IDentity-Campus-Tecnificacion-2023.mp4';
 import capsulaTecnificacioin from 'public/images/IDentity-Campus-Capsula-Tecnificacion.mp4';
 
+import eurohockeyviajesgaleria01 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria01.webp';
+import eurohockeyviajesgaleria02 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria02.webp';
+import eurohockeyviajesgaleria03 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria03.webp';
+import eurohockeyviajesgaleria04 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria04.webp';
+import eurohockeyviajesgaleria05 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria05.webp';
+import eurohockeyviajesgaleria06 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria06.webp';
+import eurohockeyviajesgaleria07 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria07.webp';
+import eurohockeyviajesgaleria08 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria08.webp';
+import eurohockeyviajesgaleria09 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria09.webp';
+import eurohockeyviajesgaleria10 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria10.webp';
+import eurohockeyviajesgaleria11 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria11.webp';
+import eurohockeyviajesgaleria12 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria12.webp';
+import eurohockeyviajesgaleria13 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria13.webp';
+import eurohockeyviajesgaleria14 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria14.webp';
+import eurohockeyviajesgaleria15 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria15.webp';
+import eurohockeyviajesgaleria16 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria16.webp';
+import eurohockeyviajesgaleria17 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria17.webp';
+import eurohockeyviajesgaleria18 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria18.webp';
+import eurohockeyviajesgaleria19 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria19.webp';
+import eurohockeyviajesgaleria20 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria20.webp';
+import eurohockeyviajesgaleria21 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria21.webp';
+import eurohockeyviajesgaleria22 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria22.webp';
+import eurohockeyviajesgaleria23 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria23.webp';
+import eurohockeyviajesgaleria24 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria24.webp';
+
+const eurohockeyviajesgaleria = [
+    eurohockeyviajesgaleria01,
+    eurohockeyviajesgaleria02,
+    eurohockeyviajesgaleria03,
+    eurohockeyviajesgaleria04,
+    eurohockeyviajesgaleria05,
+    eurohockeyviajesgaleria06,
+    eurohockeyviajesgaleria07,
+    eurohockeyviajesgaleria08,
+    eurohockeyviajesgaleria09,
+    eurohockeyviajesgaleria10,
+    eurohockeyviajesgaleria11,
+    eurohockeyviajesgaleria12,
+    eurohockeyviajesgaleria13,
+    eurohockeyviajesgaleria14,
+    eurohockeyviajesgaleria15,
+    eurohockeyviajesgaleria16,
+    eurohockeyviajesgaleria17,
+    eurohockeyviajesgaleria18,
+    eurohockeyviajesgaleria19,
+    eurohockeyviajesgaleria20,
+    eurohockeyviajesgaleria21,
+    eurohockeyviajesgaleria22,
+    eurohockeyviajesgaleria23,
+    eurohockeyviajesgaleria24
+]
+
 
 export function Portadacabecera() {
     const enlaceRefs = useRef([]);
@@ -23,8 +75,24 @@ export function Portadacabecera() {
     };
 
     useEffect(() => {
-        enlaceRefs.current.forEach((linkRef, index) => linkRef && linkRef.addEventListener('mouseover', fondoCambio(index)));
-        return () => enlaceRefs.current.forEach((linkRef, index) => linkRef && linkRef.removeEventListener('mouseover', fondoCambio(index)));
+        const currentRefs = enlaceRefs.current; // Store the current value of enlaceRefs.current
+
+        currentRefs.forEach((linkRef, index) => {
+            if (linkRef) {
+                const changeBackground = fondoCambio(index); // Create the handler once
+                linkRef.addEventListener('mouseover', changeBackground);
+                // Store the handler function on the element, so it can be used in cleanup
+                linkRef._changeBackground = changeBackground;
+            }
+        });
+
+        return () => {
+            currentRefs.forEach((linkRef) => {
+                if (linkRef && linkRef._changeBackground) {
+                    linkRef.removeEventListener('mouseover', linkRef._changeBackground);
+                }
+            });
+        };
     }, []);
 
     useEffect(() => {
