@@ -1,6 +1,7 @@
 
 import '../styles/globals.css';
 import { Navigation } from '../components/navigation';
+import AOSInitializer from '../components/AOSInitializer';
 
 export const metadata = {
     title: {
