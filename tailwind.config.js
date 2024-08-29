@@ -57,5 +57,22 @@ module.exports = {
     plugins: [
         require('daisyui'),
         require('@tailwindcss/aspect-ratio'),
-        addDynamicIconSelectors(),]
+        addDynamicIconSelectors(),
+        function ({ addUtilities }) {
+          const newUtilities = {
+            '.no-scrollbar': {
+              /* Hide scrollbar for WebKit browsers */
+              '-webkit-overflow-scrolling': 'touch',
+              'scrollbar-width': 'none',
+              '&::-webkit-scrollbar': {
+                display: 'none',
+              },
+            },
+            '.scroll-smooth': {
+              'scroll-behavior': 'smooth',
+            },
+          };
+          addUtilities(newUtilities, ['responsive']);
+        },
+    ]
 };
