@@ -141,7 +141,7 @@ export function Navigation() {
                     {navItems.map((item, index) => (
                         <li key={index}>
                             {item.href && (
-                                <Link href={item.href} onClick={handleLinkClick && toggleMenu} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline whitespace-nowrap`}>
+                                <Link href={item.href} onClick={handleLinkClick} className={`${getLinkClass(item.href)} hover:text-[#d11e82] no-underline whitespace-nowrap`}>
                                     {item.linkText}
                                 </Link>
                             )}
@@ -153,7 +153,7 @@ export function Navigation() {
                                     <ul ref={el => subMenuRefs.current[index] = el} className={`h-0 opacity-0 leading-tight transition-all overflow-hidden `}>
                                         {item.subTitulos.map((subItem, subIndex) => (
                                             <li key={subIndex} className={` ml-3 md:mr-3 `}>
-                                                <Link href={subItem.href} onClick={toggleMenu} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
+                                                <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
                                                     {subItem.linkText}
                                                 </Link>
                                             </li>
