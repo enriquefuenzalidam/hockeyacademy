@@ -70,7 +70,7 @@ export function Portadacabecera() {
     const links = [
         { text: 'Viaje Hockey con Evento', href: './eurohockey' },
         { text: 'Viaje Hockey Tecnificación', href: './hockeytecnificacion' },
-        { text: 'Tecnificaciones España', href: '/' },
+        { text: 'Tecnificaciones España', href: './hockeyespagna' },
         { text: 'Torneos Internacionales', href: '/' },
     ];
 
@@ -83,7 +83,8 @@ export function Portadacabecera() {
                         href={link.href}
                         key={index}
                         ref={el => enlaceRefs.current[index] = el}
-                        className={`pb-8 text-opacity-100 border-opacity-40 hover:pb-24 hover:text-opacity-50 transition-all ease-linear duration-200 px-6 font-semibold text-left text-white text-2xl flex items-end justify-center leading-tight ${index !== 0 ? 'border-opacity-4 border-l-2 border-solid border-white' : ''}`}
+                        className={` hover:bg-transparentBlackFondo pb-8 border-opacity-40 hover:pb-28 text-opacity-60 hover:text-opacity-100 transition-all ease-linear duration-200 px-6 font-bold text-left text-white text-2xl flex items-end justify-center leading-tight ${index !== 0 ? 'border-opacity-4 border-l-2 border-solid border-white' : ''}`}
+                        
                     >
                         {link.text}
                     </Link>
@@ -91,15 +92,15 @@ export function Portadacabecera() {
             </div>
 
             <div className="relative md:hidden w-full h-full z-30">
-                <span onClick={handlePrev} className="z-20 transition-all ease-linear duration-[236ms] cursor-pointer flex items-center justify-center absolute md:hidden left-0 top-1/2 -translate-y-1/2 h-24 w-auto opacity-60 hover:opacity-100">
+                <span onClick={handlePrev} className="z-30 transition-all ease-linear duration-[236ms] cursor-pointer flex items-center justify-center absolute md:hidden left-0 top-1/2 -translate-y-1/2 h-24 w-auto opacity-60 hover:opacity-100">
                     <Image src={chevronLeft} className="h-24 w-auto" alt='' />
                 </span>
-                <span onClick={handleNext} className="z-20 transition-all ease-linear duration-[236ms] cursor-pointer flex items-center justify-center absolute md:hidden right-0 top-1/2 -translate-y-1/2 h-24 w-auto opacity-60 hover:opacity-100">
+                <span onClick={handleNext} className="z-30 transition-all ease-linear duration-[236ms] cursor-pointer flex items-center justify-center absolute md:hidden right-0 top-1/2 -translate-y-1/2 h-24 w-auto opacity-60 hover:opacity-100">
                     <Image src={chevronRight} className="h-24 w-auto" alt='' />
                 </span>
 
                 {links.map((link, index) => (
-                    <Link key={index} href={link.href} ref={el => enlaceRefsB.current[index] = el} className={`z-10 absolute left-0 top-0 p-8 text-opacity-100 transition-all ease-linear duration-[236ms] font-semibold text-left text-white text-2xl w-full h-full flex items-end justify-start leading-tight ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
+                    <Link key={index} href={link.href} ref={el => enlaceRefsB.current[index] = el} className={` absolute left-0 top-0 p-8 text-opacity-100 transition-all ease-linear duration-[236ms] font-semibold text-left text-white text-2xl w-full h-full flex items-end justify-start leading-tight ${index === currentIndex ? 'opacity-100 z-20' : 'opacity-0 z-10'}`}>
                         {link.text}
                     </Link>
                 ))}

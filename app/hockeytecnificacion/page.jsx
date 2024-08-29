@@ -45,11 +45,8 @@ const imagenesCuadro = [
 
 
 import mejorExperienciaA from 'public/images/mejorExperienciaA.png';
-import mejorExperienciaB from 'public/images/mejorExperienciaB.png';
 import mejorExperienciaC from 'public/images/mejorExperienciaC.png';
 import mejorExperienciaD from 'public/images/mejorExperienciaD.png';
-import mejorExperienciaE from 'public/images/mejorExperienciaE.png';
-import mejorExperienciaF from 'public/images/mejorExperienciaF.png';
 import mejorExperienciaG from 'public/images/mejorExperienciaG.png';
 import mejorExperienciaH from 'public/images/mejorExperienciaH.png';
 import mejorExperienciaI from 'public/images/mejorExperienciaI.png';
@@ -74,7 +71,6 @@ const allInclusiveExperienci = [
 
 
 import equipamientoA from 'public/images/equipamientoA.png';
-import equipamientoB from 'public/images/equipamientoB.png';
 
 
 import pagoCondicionesSaldo from 'public/images/pagoCondicionesSaldo.svg';

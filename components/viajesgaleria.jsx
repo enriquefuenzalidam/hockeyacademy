@@ -1,7 +1,7 @@
 'use Client';
 import { useRef, useState, useEffect } from 'react';
 
-const ViajesGaleria = ({ viajesgalerialist = [] }) => {
+const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros viajes' }) => {
 
     const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
     const viajesGaleriaRefs = useRef([]);
@@ -38,8 +38,9 @@ const ViajesGaleria = ({ viajesgalerialist = [] }) => {
     return (
 
         <section className={` bg-neutral-200 `}>
+
             <div className={` max-w-5xl w-full mx-auto `}>
-                <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Galería de nuestros viajes</h2>
+                <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>{titulo}</h2>
                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
             </div>
 
@@ -47,7 +48,7 @@ const ViajesGaleria = ({ viajesgalerialist = [] }) => {
                 {!!viajesgalerialist?.length && (
                     <div ref={galleryRef} className={` relative block h-96 overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar`}>
                         {viajesgalerialist.map((item, index) => (
-                            <img key={index} ref={el => viajesGaleriaRefs.current[index] = el} className={` inline-block mx-1 h-full w-auto ${index === currentGalleryIndex ? 'opacity-100' : 'opacity-50'} transition-opacity duration-500`} src={item.src} alt='' />
+                            <img key={index} ref={el => viajesGaleriaRefs.current[index] = el} className={` inline-block mx-1 h-full w-auto transition-opacity duration-500`} src={item.src} alt='' />
                         ))}
                     </div>
                 )}
