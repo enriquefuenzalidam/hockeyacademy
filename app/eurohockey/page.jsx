@@ -148,7 +148,7 @@ export default function Eurohockey() {
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
             <section className={` block relative w-full h-screen bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
-                    <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                    <video poster='images/Hockey-22-Entrenamiento.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
                         <source src={eurohockey2023} type="video/mp4" />
                     </video>
                 </div>
