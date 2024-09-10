@@ -8,6 +8,7 @@ import PagoCondiciones from 'components/pagocondiciones';
 import AllInclusiveExperiencia from 'components/allinclusiveexperiencia';
 import CitasBlock from 'components/citasblock';
 import ViajesGaleria from 'components/viajesgaleria';
+import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 
 import calendarioIcono from 'public/images/calendar-days.svg';
 import calendarioCheckIcono from 'public/images/calendar-check.svg';
@@ -140,23 +141,15 @@ export default function Eurohockey() {
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://calendly.com/identity-campus">
                                 Agendá tu reunión <img className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link></p>
                     </div>
-                    {!!imagenesCuadro?.length && (
-                        <p className={` gx:w-4/12 relative w-full mt-12 gx:mt-0 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
+                    <LateralImagenesCuadro imagenesCuadro={imagenesCuadro} />
 
-                            {imagenesCuadro.map((item, index) => (
-                                <img className={`text-blue-950 object-cover absolute top-0 lef-0 w-full h-full transition-opacity ease-in-out duration-[618ms] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} `} key={index} src={item.src} alt='' />
-                            ))}
-
-                        </p>
-                    )}
                 </div>
             </section>
 
             <ExperienciaGaleria
                 ExperienciaImgs={mejorExperienciaImgs}
                 title="La mejor experiencia de hockey de vida"
-                introtext="En nuestro campus de hockey nos enfocamos en mejorar la performance de juego. Trabajaremos en gestos de definición tanto de área chica como área grande, quites para potenciar la recuperación, gestos de despido tanto para definir cómo pasar bola, y el contenido estelar del desarrollo y perfeccionamiento de la arrastrada. Sin dudas será una oportunidad de crecimiento técnico personal para las deportistas en grupos reducidos y nivelados para lograr un mayor enfoque en la corrección y así asegurarnos una mejora."
-            />
+                introtext="En nuestro campus de hockey nos enfocamos en mejorar la performance de juego. Trabajaremos en gestos de definición tanto de área chica como área grande, quites para potenciar la recuperación, gestos de despido tanto para definir cómo pasar bola, y el contenido estelar del desarrollo y perfeccionamiento de la arrastrada. Sin dudas será una oportunidad de crecimiento técnico personal para las deportistas en grupos reducidos y nivelados para lograr un mayor enfoque en la corrección y así asegurarnos una mejora." />
 
             <section data-aos-once="true" data-aos="fade-up" className={` block relative z-30 py-12 bg-center bg-cover clip-triangle `} style={{ backgroundImage: `url('images/hockey05.jpg')`, clipPath: 'polygon(0 0, calc(50% - 25px) 0, 50% 10%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%)' }}>
                 <div className={` absolute inset-0 opacity-90 z-40 bg-fucsiaAzulRatioFondo bg-center bg-cover `} />
@@ -164,7 +157,8 @@ export default function Eurohockey() {
                 <p className={` relative z-50 text-center font-Roboto font-bold text-md text-white leading-loose mt-6`}><Link className={` mx-auto inline-block py-1 px-6 hover:bg-[rgb(141,0,91)] bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-sm shadow-black transition-all ease-in-out duration-300 `} href="">Contáctanos</Link></p>
             </section>
 
-            <AllInclusiveExperiencia list={allInclusiveExperienci} />
+            <AllInclusiveExperiencia
+                list={allInclusiveExperienci} />
 
             <section className={` max-w-5xl w-full mx-auto `}>
                 <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
@@ -180,11 +174,15 @@ export default function Eurohockey() {
                 </div>
             </section>
 
-            <PagoCondiciones pagoCondiciones={pagoCondiciones} />
+            <PagoCondiciones
+                pagoCondiciones={pagoCondiciones} />
 
-            <CitasBlock citaslista={citasTecnificacion} citasfondo={citasFondo} />
+            <CitasBlock
+                citaslista={citasTecnificacion}
+                citasfondo={citasFondo} />
             
-            <ViajesGaleria viajesgalerialist={imagenesCuadro} />
+            <ViajesGaleria
+                viajesgalerialist={imagenesCuadro} />
 
             <section className={` bg-white py-0 px-0 gx:px-4 `}>
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>

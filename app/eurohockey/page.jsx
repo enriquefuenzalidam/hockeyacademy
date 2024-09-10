@@ -8,6 +8,7 @@ import PagoCondiciones from 'components/pagocondiciones';
 import AllInclusiveExperiencia from 'components/allinclusiveexperiencia';
 import CitasBlock from 'components/citasblock';
 import ViajesGaleria from 'components/viajesgaleria';
+import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 
 import calendarioIcono from 'public/images/calendar-days.svg';
 import calendarioCheckIcono from 'public/images/calendar-check.svg';
@@ -171,21 +172,18 @@ export default function Eurohockey() {
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://calendly.com/identity-campus">
                                 Agendá tu reunión <img className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link></p>
                     </div>
-                    {!!imagenesCuadro?.length && (
-                        <p className={` gx:w-4/12 relative w-full mt-12 gx:mt-0 gx:ml-12 gx:aspect-[3/5] aspect-[5/2] overflow-hidden `} data-aos-once="true" data-aos="fade-left">
+                    <LateralImagenesCuadro
+                        imagenesCuadro={imagenesCuadro} />
 
-                            {imagenesCuadro.map((item, index) => (
-                                <img className={`text-blue-950 object-cover absolute top-0 lef-0 w-full h-full transition-opacity ease-in-out duration-[618ms] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} `} key={index} src={item.src} alt='' />
-                            ))}
-
-                        </p>
-                    )}
                 </div>
             </section>
 
-            <ExperienciaGaleria ExperienciaImgs={mejorExperienciaImgs} title="La mejor experiencia de hockey de vida" />
+            <ExperienciaGaleria
+                ExperienciaImgs={mejorExperienciaImgs}
+                title="La mejor experiencia de hockey de vida" />
 
-            <AllInclusiveExperiencia list={allInclusiveExperienci} />
+            <AllInclusiveExperiencia
+                list={allInclusiveExperienci} />
 
             <section className={` max-w-5xl w-full mx-auto `}>
                 <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
@@ -212,11 +210,15 @@ export default function Eurohockey() {
                 </div>
             </section>
 
-            <PagoCondiciones pagoCondiciones={pagoCondiciones} />
+            <PagoCondiciones
+                pagoCondiciones={pagoCondiciones} />
 
-            <CitasBlock citaslista={citasEurohockey2025} citasfondo={citasFondo} />
+            <CitasBlock
+                citaslista={citasEurohockey2025}
+                citasfondo={citasFondo} />
             
-            <ViajesGaleria viajesgalerialist={eurohockeyviajesgaleria} />
+            <ViajesGaleria
+                viajesgalerialist={eurohockeyviajesgaleria} />
 
             <section className={` bg-white py-0 px-0 gx:px-4 `}>
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>

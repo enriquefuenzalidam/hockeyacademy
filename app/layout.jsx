@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" >
+        <html lang="es" >
             <head>
             </head>
             <body className="antialiased text-black bg-[#12214d] font-Cabin ">

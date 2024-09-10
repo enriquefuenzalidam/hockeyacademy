@@ -93,8 +93,7 @@ export default function Eurohockey() {
 
             <ExperienciaGaleria
                 ExperienciaImgs={mejorExperienciaImgs}
-                title="La mejor experiencia de hockey de vida"
-            />
+                title="La mejor experiencia de hockey de vida" />
 
             <section className={` relative pb-0 gx:pb-24`}>
                 <div className={` max-w-5xl w-full mx-auto `}>

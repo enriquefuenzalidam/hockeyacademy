@@ -110,9 +110,9 @@ export function Navigation() {
     };
 
     return (
-        <nav className={` bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20  md:w-min md:h-screen `}>
+        <nav className={` bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20 md:w-min md:h-screen `}>
 
-            <div className={` h-min inline-flex flex-row bg-[#12214d] z-50  md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
+            <div className={` h-min inline-flex flex-row bg-[#12214d] z-50 md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
 
                 <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
                     <Image src={identityLogo} alt={` `} className={` w-24 object-cover object-center h-14    md:w-full md:h-auto `} />
