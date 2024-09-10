@@ -113,6 +113,7 @@ export default function Eurohockey() {
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
+{/*
             <section className={` block relative w-full h-screen bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
@@ -120,6 +121,7 @@ export default function Eurohockey() {
                     </video>
                 </div>
             </section>
+*/}
 
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
@@ -187,7 +189,7 @@ export default function Eurohockey() {
             <ViajesGaleria
                 viajesgalerialist={imagenesCuadro} />
 
-            <section className={` bg-white py-0 px-0 gx:px-4 `}>
+            <section id='reservas' className={` bg-white py-0 px-0 gx:px-4 `}>
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
