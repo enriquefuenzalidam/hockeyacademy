@@ -150,7 +150,7 @@ export default function Eurohockey() {
             <section className={` block relative w-full h-screen bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/Hockey-22-Entrenamiento.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src={eurohockey2023} type="video/mp4" />
+                        <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
                     </video>
                 </div>
             </section>
@@ -191,7 +191,7 @@ export default function Eurohockey() {
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
+                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
                         <img data-aos-once="true" data-aos="fade-left" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />

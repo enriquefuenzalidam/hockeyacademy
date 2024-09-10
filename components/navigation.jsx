@@ -70,6 +70,8 @@ export function Navigation() {
             closeSubMenu(subMenuOpening);
             setOpenSubMenu(null);
         }
+        // Close the entire menu when a link is clicked
+        setMenuOpen(false);
     };
 
     const closeSubMenu = (index) => {
@@ -100,12 +102,8 @@ export function Navigation() {
     };
 
     const getLinkClass = (path, subTitulos) => {
-        if (path === activePath) {
-            return 'text-[#d11e82]';
-        }
-        if (subTitulos && isSubItemActive(subTitulos)) {
-            return 'text-[#d11e82]';
-        }
+        if (path === activePath) return 'text-[#d11e82]';
+        if (subTitulos && isSubItemActive(subTitulos)) return 'text-[#d11e82]';
         return 'text-white';
     };
 
@@ -115,7 +113,9 @@ export function Navigation() {
             <div className={` h-min inline-flex flex-row bg-[#12214d] z-50 md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-[380] w-full `}>
 
                 <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
-                    <Image src={identityLogo} alt={` `} className={` w-24 object-cover object-center h-14    md:w-full md:h-auto `} />
+                    <Link href='.\'>
+                        <Image src={identityLogo} alt={` `} className={` w-24 object-cover object-center h-14    md:w-full md:h-auto `} />
+                    </Link>
                 </div>
                 <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>
                     <div className={` flex flex-raw cursor-pointer m-1.5   md:m-0 md:flex-col `} onClick={toggleMenu}>
@@ -153,7 +153,7 @@ export function Navigation() {
                                     <ul ref={el => subMenuRefs.current[index] = el} className={`h-0 opacity-0 leading-tight transition-all overflow-hidden `}>
                                         {item.subTitulos.map((subItem, subIndex) => (
                                             <li key={subIndex} className={` ml-3 md:mr-3 `}>
-                                                <Link href={subItem.href} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
+                                                <Link href={subItem.href} onClick={handleLinkClick} className={`${getLinkClass(subItem.href)} hover:text-[#d11e82] no-underline text-sm whitespace-nowrap `}>
                                                     {subItem.linkText}
                                                 </Link>
                                             </li>

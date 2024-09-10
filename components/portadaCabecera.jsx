@@ -110,7 +110,7 @@ export function Portadacabecera() {
                 <div key={index} ref={el => fondoRefs.current[index] = el} className={`opacity-0 transition-all ease-linear duration-[382ms] absolute top-0 left-0 w-full h-full z-10 ${index === 0 ? 'opacity-100' : ''}`}>
                     {index < 3 ? (
                         <video poster={`images/${src}`} className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                            <source src={`${index === 0 ? eurohockey2023 : index === 1 ? tecnificacion2023 : capsulaTecnificacioin}`} type="video/mp4" />
+                            <source src={`${index === 0 ? `images/IDentity-Campus-Eurohockey-2023.mp4` : index === 1 ? `images/IDentity-Campus-Tecnificacion-2023.mp4` : `images/IDentity-Campus-Capsula-Tecnificacion.mp4` }`} type="video/mp4" />
                         </video>
                     ) : (
                         <Image src={src} className='object-cover object-center w-full h-full' alt="" />
