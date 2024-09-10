@@ -170,7 +170,10 @@ export default function Eurohockey() {
                         </p>
                         <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://calendly.com/identity-campus">
-                                Agendá tu reunión <img className={` inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link></p>
+                                Agendá tu reunión 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className={` inline-block h-4 w-auto ml-2`} fill="currentColor">
+                                <path fill="white" d="M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                                </Link></p>
                     </div>
                     <LateralImagenesCuadro
                         imagenesCuadro={imagenesCuadro} />
@@ -235,7 +238,7 @@ export default function Eurohockey() {
                             <p className={` block align-bottom mt-8 text-center `}><input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:bg-none hover:border-opacity-10 `} value='Enviar mensaje' /></p>
                         </form>
                     </div>
-                    <p className={` w-full max-h-60 gx:min-h-full overflow-hidden `}>
+                    <p className={` w-full h-60 gx:h-auto overflow-hidden `}>
                         <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm.src} alt='' /></p>
                 </div>
             </section>
