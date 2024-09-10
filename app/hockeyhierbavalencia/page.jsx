@@ -88,7 +88,7 @@ const hockeyhierbavalencia = () => {
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                         <strong>Nuestro Campus de verano cuenta con sesiones de entrenamiento exclusivas para porteros/as dictadas por Mariana Scandura (Selección Argentina)</strong></p>
                         <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-6 `}>
-                            <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://identitycampus.com/campus-hockey/barcelona/#reservas">
+                            <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
                                 Información <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
                             <Link className={` inline-block mx-8 text-[#25D366] hover:text-sky-900 transition-all ease-in-out duration-200 `} href='https://api.whatsapp.com/send/?phone=34653783576' >
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className={`inline-block h-14 w-auto `} fill="currentColor">
@@ -126,7 +126,7 @@ const hockeyhierbavalencia = () => {
                     </video>
                 </div>
                 <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-8 `}>
-                    <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://identitycampus.com/campus-hockey/barcelona/#reservas">
+                    <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
                         Información <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
                 </p>
             </section>
@@ -135,7 +135,7 @@ const hockeyhierbavalencia = () => {
                 viajesgalerialist={imagenesCuadro}
                 titulo='Nuestros campus en imágenes' />
 
-            <section className={` bg-white py-0 px-0 gx:px-4 `}>
+            <section id='reservas' className={` bg-white py-0 px-0 gx:px-4 `}>
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
@@ -151,7 +151,7 @@ const hockeyhierbavalencia = () => {
                             <p className={` block align-bottom mt-8 text-center `}><input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:bg-none hover:border-opacity-10 `} value='Enviar mensaje' /></p>
                         </form>
                     </div>
-                    <p className={` w-full flex h-60 gx:h-full`}>
+                    <p className={` w-full max-h-60 gx:min-h-full overflow-hidden `}>
                         <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
                 </div>
             </section>
