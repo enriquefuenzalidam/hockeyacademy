@@ -10,7 +10,7 @@ import ViajesGaleria from 'components/viajesgaleria';
 import calendarioIcono from 'public/images/calendar-days.svg';
 import calendarioCheckIcono from 'public/images/calendar-check.svg';
 
-import hockeyTecnificacionForm from 'public/images/proximoEvento2024_hockeyTecnificacionBarcelonaJulio2024.jpg';
+import hockeyTecnificacionForm from 'public/images/Portada-Campus-Hockey-Valencia-2024.jpg';
 
 import hockeytecnificacion01 from 'public/hockeytecnificacion/hockeytecnificacion01.webp';
 import hockeytecnificacion02 from 'public/hockeytecnificacion/hockeytecnificacion02.webp';
