@@ -19,7 +19,8 @@ module.exports = {
                 'dsfsd': 'linear-gradient(to bottom, rgb(211, 0, 126), rgb(18, 33, 77), rgb(211, 0, 126), rgb(18, 33, 77), rgb(211, 0, 126), rgb(18, 33, 77))',
                 'fucsiaAzulRatioFondo': 'radial-gradient(ellipse at 0 0 , rgb(211, 0, 126), rgb(18, 33, 77))',
                 'citasFondo': 'linear-gradient(240deg, rgb(246, 187, 14) 0%, rgb(242, 41, 91) 100%)',
-                'nosotrosGradient': 'linear-gradient(220deg, rgb(18, 33, 77) 44%, rgb(242, 41, 91) 80%)'
+                'nosotrosGradient': 'linear-gradient(220deg, rgb(18, 33, 77) 44%, rgb(242, 41, 91) 80%)',
+                'contactoGradient': 'linear-gradient(230deg, #12214D 49%, #f2295b 95%)'
             },
             colors: {
                 'fucsiaFundo': 'rgb(211, 0, 126)',
