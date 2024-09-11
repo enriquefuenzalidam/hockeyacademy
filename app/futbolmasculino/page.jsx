@@ -13,36 +13,36 @@ import ViajesGaleria from 'components/viajesgaleria';
 import Link from "next/link";
 
 
-    import mejorExperienciaP from 'public/images/mejorExperienciaP.webp';
-    import mejorExperienciaQ from 'public/images/mejorExperienciaQ.webp';
-    import mejorExperienciaR from 'public/images/mejorExperienciaR.webp';
-    import mejorExperienciaS from 'public/images/mejorExperienciaS.webp';
-    import mejorExperienciaT from 'public/images/mejorExperienciaT.webp';
-    import mejorExperienciaU from 'public/images/mejorExperienciaU.webp';
-    
-    const mejorExperienciaImgs = [
-        mejorExperienciaP,
-        mejorExperienciaQ,
-        mejorExperienciaR,
-        mejorExperienciaS,
-        mejorExperienciaT,
-        mejorExperienciaU
-    ]
+import mejorExperienciaP from 'public/images/mejorExperienciaP.webp';
+import mejorExperienciaQ from 'public/images/mejorExperienciaQ.webp';
+import mejorExperienciaR from 'public/images/mejorExperienciaR.webp';
+import mejorExperienciaS from 'public/images/mejorExperienciaS.webp';
+import mejorExperienciaT from 'public/images/mejorExperienciaT.webp';
+import mejorExperienciaU from 'public/images/mejorExperienciaU.webp';
 
-    const allInclusiveExperienci = [
-        { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
-        { id: 1, titulo: 'Transporte', contenido: 'Desde nuestra llegada al aeropuerto de El Prat, en las afueras de la ciudad Condal, contamos con un transfer privado a exclusiva disposición que nos transportará de manera segura y rápida hacia el alojamiento. También durante toda la estadía en Barcelona y en París, ya sea para acudir a los puntos turísticos, los eventos deportivos, entrenamientos, etc. nos trasladaremos en transporte privado (24 hs. disponible).' },
-        { id: 2, titulo: 'Asistencia Médica', contenido: 'Nuestros campus cuentan con un cuerpo médico encabezado por el Dr. Hernán Santiago Boccolini especializados en el área deportiva y traumatología. A diario, al margen de la actividad estrictamente deportiva, el médico visitará nuestro alojamiento a los fines de atender cualquier tipo de necesidad que se presente en los días del viaje. Nos complace contar con el apoyo de Farmacias Briera para cualquier imprevisto o necesidad de medicamentos.' },
-        { id: 3, titulo: 'Documentación', contenido: 'A los efectos de ingresar a la Unión Europea (zona Schengen) sin inconvenientes se requiere contar con la siguiente documentación: Pasaporte al día (con fecha de vencimiento no menor a 6 meses); Autorización de viaje del menor de edad ante Escribano Público suscripta por ambos padres, y/o tutor (quien ejerza la patria potestad), y Seguro al Viajero (Cobertura mínima de €60.000) para los días del viaje. La misma deberá ser presentada con 30 días de antelación a la fecha del viaje, sin excepciones.' },
-        { id: 4, titulo: 'Autorización Médica', contenido: 'Como en todo Campus deportivo, es menester requerir previamente el alta médica para la actividad física, la cual deberá ser entregada en papel y suscripta por el profesional correspondiente. Asimismo se entregará a cada viajero una Ficha Médica que deberá completar con sus padres y también ser suscripta por el médico. Dicha información se cargará digitalmente, conjuntamente con las preferencias alimenticias y los números de contactos en las pulseras de monitoreo de cada pasajero a los efectos de poder contar con ella en todo momento.' },
-        { id: 5, titulo: 'Equipaje Sugerido', contenido: 'Brindaremos un KIT de viaje en el cual se incluye camisetas, shorts, mochila y sudadera para la actividad deportiva (solo restará llevar medias y calzado apropiado). Se recomienda llevar una valija grande (con candado o identificación) y una mochila o equipaje de mano. Es recomendable incluir en el equipaje en cuanto sea posible, trajes de baño, calzado de playa, protector, gorra o sombrero, ropa casual y shorts, camisetas, jeans, abrigo, campera, indumentaria de tu equipo favorito, medias de algodón y ropa interior cómoda.' }
-    ]
-    
+const mejorExperienciaImgs = [
+    mejorExperienciaP,
+    mejorExperienciaQ,
+    mejorExperienciaR,
+    mejorExperienciaS,
+    mejorExperienciaT,
+    mejorExperienciaU
+]
 
-    import equipamientoA from 'public/images/equipamientoA.png';
-    import equipamientoB from 'public/images/equipamientoB.png';
-    import equipamientoC from 'public/images/equipamientoC.webp';
-    
+const allInclusiveExperienci = [
+    { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
+    { id: 1, titulo: 'Transporte', contenido: 'Desde nuestra llegada al aeropuerto de El Prat, en las afueras de la ciudad Condal, contamos con un transfer privado a exclusiva disposición que nos transportará de manera segura y rápida hacia el alojamiento. También durante toda la estadía en Barcelona y en París, ya sea para acudir a los puntos turísticos, los eventos deportivos, entrenamientos, etc. nos trasladaremos en transporte privado (24 hs. disponible).' },
+    { id: 2, titulo: 'Asistencia Médica', contenido: 'Nuestros campus cuentan con un cuerpo médico encabezado por el Dr. Hernán Santiago Boccolini especializados en el área deportiva y traumatología. A diario, al margen de la actividad estrictamente deportiva, el médico visitará nuestro alojamiento a los fines de atender cualquier tipo de necesidad que se presente en los días del viaje. Nos complace contar con el apoyo de Farmacias Briera para cualquier imprevisto o necesidad de medicamentos.' },
+    { id: 3, titulo: 'Documentación', contenido: 'A los efectos de ingresar a la Unión Europea (zona Schengen) sin inconvenientes se requiere contar con la siguiente documentación: Pasaporte al día (con fecha de vencimiento no menor a 6 meses); Autorización de viaje del menor de edad ante Escribano Público suscripta por ambos padres, y/o tutor (quien ejerza la patria potestad), y Seguro al Viajero (Cobertura mínima de €60.000) para los días del viaje. La misma deberá ser presentada con 30 días de antelación a la fecha del viaje, sin excepciones.' },
+    { id: 4, titulo: 'Autorización Médica', contenido: 'Como en todo Campus deportivo, es menester requerir previamente el alta médica para la actividad física, la cual deberá ser entregada en papel y suscripta por el profesional correspondiente. Asimismo se entregará a cada viajero una Ficha Médica que deberá completar con sus padres y también ser suscripta por el médico. Dicha información se cargará digitalmente, conjuntamente con las preferencias alimenticias y los números de contactos en las pulseras de monitoreo de cada pasajero a los efectos de poder contar con ella en todo momento.' },
+    { id: 5, titulo: 'Equipaje Sugerido', contenido: 'Brindaremos un KIT de viaje en el cual se incluye camisetas, shorts, mochila y sudadera para la actividad deportiva (solo restará llevar medias y calzado apropiado). Se recomienda llevar una valija grande (con candado o identificación) y una mochila o equipaje de mano. Es recomendable incluir en el equipaje en cuanto sea posible, trajes de baño, calzado de playa, protector, gorra o sombrero, ropa casual y shorts, camisetas, jeans, abrigo, campera, indumentaria de tu equipo favorito, medias de algodón y ropa interior cómoda.' }
+]
+
+
+import equipamientoA from 'public/images/equipamientoA.png';
+import equipamientoB from 'public/images/equipamientoB.png';
+import equipamientoC from 'public/images/equipamientoC.webp';
+
 import pagoCondicionesSaldo from 'public/images/pagoCondicionesSaldo.svg';
 import pagoCondicionesPlane from 'public/images/pagoCondicionesPlane.svg';
 import pagoCondicionesPen from 'public/images/pagoCondicionesPen.svg';
@@ -96,7 +96,7 @@ const futbolViajesCuadro = [
     futbolViajes12,
     futbolViajes13,
     futbolViajes14,
-    futbolViajes15 ];
+    futbolViajes15];
 
 
 
@@ -105,7 +105,7 @@ import diapoForm02 from 'public/images/DIAPO-02.jpg.webp';
 import diapoForm03 from 'public/images/DIAPO-03.jpg.webp';
 
 const formDiapos = [
-    diapoForm01, diapoForm02, diapoForm03 ]
+    diapoForm01, diapoForm02, diapoForm03]
 
 
 const Futbolmasculino = () => {
@@ -113,13 +113,13 @@ const Futbolmasculino = () => {
     const [visibleIndex, setVisibleIndex] = useState(0);
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        setVisibleIndex((prevIndex) => (prevIndex + 1) % formDiapos.length); // Iterate over the images
-      }, 2000);
-  
-      return () => clearInterval(interval); // Cleanup the interval on component unmount
+        const interval = setInterval(() => {
+            setVisibleIndex((prevIndex) => (prevIndex + 1) % formDiapos.length); // Iterate over the images
+        }, 2000);
+
+        return () => clearInterval(interval); // Cleanup the interval on component unmount
     }, []);
-  
+
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
 
@@ -136,10 +136,10 @@ const Futbolmasculino = () => {
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Fútbol Masculino<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barça Clinics</span></h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Fútbol Masculino<br /><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barça Clinics</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5`} >
-                        Nuestro Campus es un viaje a las ciudades de Barcelona y Madrid, España de 11 días y 9 noches. Una experiencia de vida, orientada a jóvenes (entre 12 y 17 años) con interés en enriquecerse a nivel deportivo, cultural y turístico. Proponemos un Campus inolvidable, donde conjugaremos la práctica deportiva en “La Masia”, con las entradas al Camp Nou y al Santiago Bernabeú para ver al F.C. Barcelona y al Real Madrid respectivamente por La Liga. Visitaremos también los principales puntos turísticos de ambas ciudades, eventos deportivos, charlas, actividades y muchas sorpresas más.
+                            Nuestro Campus es un viaje a las ciudades de Barcelona y Madrid, España de 11 días y 9 noches. Una experiencia de vida, orientada a jóvenes (entre 12 y 17 años) con interés en enriquecerse a nivel deportivo, cultural y turístico. Proponemos un Campus inolvidable, donde conjugaremos la práctica deportiva en “La Masia”, con las entradas al Camp Nou y al Santiago Bernabeú para ver al F.C. Barcelona y al Real Madrid respectivamente por La Liga. Visitaremos también los principales puntos turísticos de ambas ciudades, eventos deportivos, charlas, actividades y muchas sorpresas más.
                         </p>
                         <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-6 `}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
@@ -157,15 +157,15 @@ const Futbolmasculino = () => {
 
             <section data-aos-once="true" data-aos="fade-up" className={` relative max-w-5xl w-full mx-auto `}>
                 <p className={` font-Roboto font-normal text-md text-white pb-8 text-center mb-6 `}>
-                            <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
-                                Reservá tu lugar <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
-                    </p>
+                    <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
+                        Reservá tu lugar <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
+                </p>
             </section>
 
             <AllInclusiveExperiencia
                 list={allInclusiveExperienci} />
 
-<section className={` max-w-5xl w-full mx-auto `}>
+            <section className={` max-w-5xl w-full mx-auto `}>
                 <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
@@ -196,11 +196,11 @@ const Futbolmasculino = () => {
             <CitasBlock
                 citaslista={citasFutbolMasculino}
                 citasfondo={citasFondo} />
-            
+
             <ViajesGaleria
                 viajesgalerialist={futbolViajesCuadro} />
 
-<section id='reservas' className={` bg-white py-0 px-0 gx:px-4 `}>
+            <section id='reservas' className={` bg-white py-0 px-0 gx:px-4 `}>
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
@@ -215,13 +215,13 @@ const Futbolmasculino = () => {
                             <p className={` block align-bottom mt-8 text-center `}><input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:bg-none hover:border-opacity-10 `} value='Enviar mensaje' /></p>
                         </form>
                     </div>
-                        {!!formDiapos?.length && (
-                            <p className={` relative w-full h-72 gx:min-h-full overflow-scroll `}>
+                    {!!formDiapos?.length && (
+                        <p className={` relative w-full h-72 gx:min-h-full overflow-scroll `}>
                             {formDiapos.map((item, index) => (
                                 <img key={index} className={`${index === visibleIndex ? 'opacity-100' : 'opacity-0'}  absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 `} src={item.src} alt='' />
                             ))}
-                            </p>
-                        )}
+                        </p>
+                    )}
                 </div>
             </section>
 
