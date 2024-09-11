@@ -108,14 +108,14 @@ const formDiapos = [
     diapoForm01, diapoForm02, diapoForm03]
 
 
-    import futbolProximasSalidas01 from 'public/images/futbolProximasSalidas01.webp';
-    import futbolProximasSalidas02 from 'public/images/futbolProximasSalidas02.webp';
-    import futbolProximasSalidas03 from 'public/images/futbolProximasSalidas03.webp';
-    import futbolProximasSalidas04 from 'public/images/futbolProximasSalidas04.webp';
+import futbolProximasSalidas01 from 'public/images/futbolProximasSalidas01.webp';
+import futbolProximasSalidas02 from 'public/images/futbolProximasSalidas02.webp';
+import futbolProximasSalidas03 from 'public/images/futbolProximasSalidas03.webp';
+import futbolProximasSalidas04 from 'public/images/futbolProximasSalidas04.webp';
     
-    const futbolProximasSalidas = [
-        futbolProximasSalidas02,futbolProximasSalidas04,futbolProximasSalidas03,futbolProximasSalidas01
-    ]
+const futbolProximasSalidas = [
+    futbolProximasSalidas02,futbolProximasSalidas04,futbolProximasSalidas03,futbolProximasSalidas01
+]
 
 const Futbolmasculino = () => {
 
