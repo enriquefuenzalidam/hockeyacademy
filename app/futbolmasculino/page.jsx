@@ -108,6 +108,15 @@ const formDiapos = [
     diapoForm01, diapoForm02, diapoForm03]
 
 
+    import futbolProximasSalidas01 from 'public/images/futbolProximasSalidas01.webp';
+    import futbolProximasSalidas02 from 'public/images/futbolProximasSalidas02.webp';
+    import futbolProximasSalidas03 from 'public/images/futbolProximasSalidas03.webp';
+    import futbolProximasSalidas04 from 'public/images/futbolProximasSalidas04.webp';
+    
+    const futbolProximasSalidas = [
+        futbolProximasSalidas02,futbolProximasSalidas04,futbolProximasSalidas03,futbolProximasSalidas01
+    ]
+
 const Futbolmasculino = () => {
 
     const [visibleIndex, setVisibleIndex] = useState(0);
@@ -160,6 +169,20 @@ const Futbolmasculino = () => {
                     <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
                         Reservá tu lugar <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
                 </p>
+            </section>
+
+            <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-12`}>
+                            <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Próximos eventos deportivos</h2>
+                            <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
+                            {!!futbolProximasSalidas?.length && (
+                            <div className={` mx-auto text-center overflow-hidden pb-6 px-6 gx:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gx:grid-cols-4 gap-8 md:gap-8 lg:gap-4`}>
+                                {futbolProximasSalidas.map((item, index) => (
+                                    <span key={index} className={` inline-block rounded-full w-full overflow-hidden `}>
+                                        <img src={item.src} alt='' />
+                                    </span>
+
+                                ))}
+                            </div>)}
             </section>
 
             <AllInclusiveExperiencia
