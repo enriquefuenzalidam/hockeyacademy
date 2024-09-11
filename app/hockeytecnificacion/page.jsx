@@ -126,7 +126,7 @@ export default function Eurohockey() {
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación | Barcelona 2025</h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barcelona 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 12 al miércoles 23 de julio</h2>

@@ -159,14 +159,14 @@ export default function Eurohockey() {
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey 2025 | Alemania</h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Alemania 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 19 de agosto</h2>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                             Nuestro Campus de Hockey con Evento, está orientado a jóvenes de 12 a 17 años. Proponemos un viaje inolvidable a Barcelona (España) y Monchengladbach (Alemania), donde combinamos 9 tecnificaciones deportivas con las asistencia al principal Torneo de Hockey de toda Europa.
                         </p>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                             Una oportunidad única para mejorar tu hockey, convivir con una deportista Olímpica, conocer Europa y vivir el Eurohockey 2025 desde dentro.
                         </p>
                         <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
@@ -195,7 +195,7 @@ export default function Eurohockey() {
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
+                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
                         <img data-aos-once="true" data-aos="fade-left" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
@@ -209,7 +209,7 @@ export default function Eurohockey() {
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
+                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
                     </div>
                 </div>
             </section>

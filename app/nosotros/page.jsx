@@ -154,11 +154,11 @@ export default function nosotros() {
                 </div>
             </section>
 
-
             <div className={` relative bg-fucsiaAzulFondoDos clear-both mt-16 `}>
                 <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
                 <Footer />
             </div>
+
         </main>
     );
 }
