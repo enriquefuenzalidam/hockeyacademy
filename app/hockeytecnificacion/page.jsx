@@ -100,17 +100,6 @@ const citasTecnificacion = [
 
 export default function Eurohockey() {
 
-
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
- 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagenesCuadro.length);
-        }, 1618);
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
 {/*

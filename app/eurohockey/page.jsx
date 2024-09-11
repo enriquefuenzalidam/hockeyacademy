@@ -17,6 +17,8 @@ import eurohockey2023 from 'public/images/IDentity-Campus-Eurohockey-2023.mp4';
 
 import citasFondo from 'public/images/citasFondoEuroHockey.jpg';
 
+import euroHockeyForm from 'public/images/euroHockeyForm.webp';
+
 import euroHockey2025A from 'public/images/euroHockey2025A.webp';
 import euroHockey2025B from 'public/images/euroHockey2025B.webp';
 import euroHockey2025C from 'public/images/euroHockey2025C.webp';
@@ -24,8 +26,6 @@ import euroHockey2025D from 'public/images/euroHockey2025D.webp';
 import euroHockey2025E from 'public/images/euroHockey2025E.webp';
 import euroHockey2025F from 'public/images/euroHockey2025F.webp';
 import euroHockey2025G from 'public/images/euroHockey2025G.webp';
-
-import euroHockeyForm from 'public/images/euroHockeyForm.webp';
 
 const imagenesCuadro = [
     euroHockey2025A, euroHockey2025B, euroHockey2025C, euroHockey2025D, euroHockey2025E, euroHockey2025F, euroHockey2025G
@@ -133,17 +133,6 @@ const citasEurohockey2025 = [
 
 
 export default function Eurohockey() {
-
-
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
- 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagenesCuadro.length);
-        }, 1618);
-
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>

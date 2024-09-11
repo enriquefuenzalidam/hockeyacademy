@@ -23,9 +23,9 @@ export default function queesuncampodeportivo() {
                         <img data-aos-once="true" data-aos="zoom-in" className={` w-full h-auto`} src='images/identitylogoblanco.png' alt=''/>
                     </p>
                     <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl mx-8`}>Campus deportivos en Europa</h2>
-                    <p data-aos-once="true" data-aos="fade-down" className={`block mb-10 `}>
+                    <p data-aos-once="true" data-aos="fade" className={`block mb-10 `}>
                        <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Hockey</Link>
-                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Fútbol masculino</Link>
+                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href='./futbolmasculino'>Fútbol masculino</Link>
                     </p>
 
                 </div>
