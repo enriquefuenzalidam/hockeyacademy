@@ -40,14 +40,12 @@ export default function nosotros() {
                         <NosotrosFoto
                             nombre='Facundo'
                             foto='nosotros/FACUNDO.webp'
-                            linkedinEnlace='https://www.linkedin.com/in/facubattaglino/'
-                        />
+                            linkedinEnlace='https://www.linkedin.com/in/facubattaglino/' />
 
                         <NosotrosFoto
                             nombre='Ezequiel'
                             foto='nosotros/EZEQUIEL.webp'
-                            linkedinEnlace='https://www.linkedin.com/in/moronezequiel/'
-                        />
+                            linkedinEnlace='https://www.linkedin.com/in/moronezequiel/' />
 
                     </div>
                 </div>
@@ -61,13 +59,11 @@ export default function nosotros() {
 
                         <NosotrosFoto
                             nombre='Gina'
-                            foto='nosotros/GINA.webp'
-                        />
+                            foto='nosotros/GINA.webp' />
 
                         <NosotrosFoto
                             nombre='Pedro'
-                            foto='nosotros/PEDRO.webp'
-                        />
+                            foto='nosotros/PEDRO.webp' />
 
                     </div>
                 </div>
@@ -80,18 +76,15 @@ export default function nosotros() {
                     <div className={` block text-center `}>
 
                         <NosotrosFoto
-                            nombre='Sebastián'
-                        />
+                            nombre='Sebastián' />
 
                         <NosotrosFoto
                             nombre='Ale'
-                            foto='nosotros/ALE.webp'
-                        />
+                            foto='nosotros/ALE.webp' />
 
                         <NosotrosFoto
                             nombre='Matías'
-                            foto='nosotros/JMP.jpg.webp'
-                        />
+                            foto='nosotros/JMP.jpg.webp' />
 
                     </div>
                 </div>
@@ -105,30 +98,24 @@ export default function nosotros() {
 
                         <NosotrosFoto
                             nombre='Fernanda'
-                            foto='nosotros/FERNANDA.jpg.webp'
-                        />
+                            foto='nosotros/FERNANDA.jpg.webp' />
 
                         <NosotrosFoto
                             nombre='Paco'
-                            foto='nosotros/PACO.jpg.webp'
-                        />
+                            foto='nosotros/PACO.jpg.webp' />
 
                         <NosotrosFoto
                             nombre='Federico'
-                            foto='nosotros/FEDE.jpg.webp'
-                        />
+                            foto='nosotros/FEDE.jpg.webp' />
 
                         <NosotrosFoto
-                            nombre='Vicente'
-                        />
+                            nombre='Vicente' />
 
                         <NosotrosFoto
-                            nombre='Macarena'
-                        />
+                            nombre='Macarena' />
 
                         <NosotrosFoto
-                            nombre='Matías'
-                        />
+                            nombre='Matías' />
 
                     </div>
                 </div>
@@ -142,33 +129,26 @@ export default function nosotros() {
 
                         <NosotrosFoto
                             nombre='Xavi'
-                            foto='nosotros/XAVI.webp'
-                        />
+                            foto='nosotros/XAVI.webp' />
 
                         <NosotrosFoto
                             nombre='David'
-                            foto='nosotros/David.webp'
-                        />
+                            foto='nosotros/David.webp' />
 
                         <NosotrosFoto
-                            nombre='Jill'
-                        />
+                            nombre='Jill' />
 
                         <NosotrosFoto
-                            nombre='Julia'
-                        />
+                            nombre='Julia' />
 
                         <NosotrosFoto
-                            nombre='Lidewik'
-                        />
+                            nombre='Lidewik' />
 
                         <NosotrosFoto
-                            nombre='Gigi'
-                        />
+                            nombre='Gigi' />
 
                         <NosotrosFoto
-                            nombre='Julieta'
-                        />
+                            nombre='Julieta' />
 
                     </div>
                 </div>

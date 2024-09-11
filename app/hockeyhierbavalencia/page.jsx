@@ -151,7 +151,7 @@ const hockeyhierbavalencia = () => {
                             <p className={` block align-bottom mt-8 text-center `}><input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:bg-none hover:border-opacity-10 `} value='Enviar mensaje' /></p>
                         </form>
                     </div>
-                    <p className={` w-full  h-60 gx:h-auto overflow-hidden `}>
+                    <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
                         <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
                 </div>
             </section>
