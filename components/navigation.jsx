@@ -27,7 +27,7 @@ const navItems = [
      },
     { linkText: 'Nosotros', href: '/nosotros' },
     { linkText: '¿Qué es un campus deportivo?', href: '/queesuncampodeportivo' },
-    { linkText: 'Novedades', href: '/novedades' },
+//    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }
 ];
 

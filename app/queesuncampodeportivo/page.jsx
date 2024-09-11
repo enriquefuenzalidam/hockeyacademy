@@ -16,22 +16,22 @@ export default function queesuncampodeportivo() {
                         <source src='images/IDentity-Campus-Hockey-2022.mp4' type="video/mp4" />
                     </video>
                 </div>
-                <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-30 `} />
-                <div className={` relative z-30 flex flex-col justify-end items-center w-full h-full `}>
+                <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
+                <div className={` relative z-30 flex flex-col justify-end items-center w-full h-full max-w-5xl mx-auto `}>
 
-                    <p className={` block relative text-center mx-auto w-4/12 aspect-h-1 aspect-w-8 overflow-hidden mb-3`}>
-                        <img className={` object-center object-cover `} src='images/identitylogoblanco.png' alt=''/>
+                    <p className={` inline-block relative text-center mx-auto w-[21rem] lg:w-[28rem] gx:w-[35rem] mb-4`}>
+                        <img data-aos-once="true" data-aos="zoom-in" className={` w-full h-auto`} src='images/identitylogoblanco.png' alt=''/>
                     </p>
-                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-6xl mx-8`}>Campus deportivos en Europa</h2>
+                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl mx-8`}>Campus deportivos en Europa</h2>
                     <p data-aos-once="true" data-aos="fade-down" className={`block mb-10 `}>
-                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 `} href=''>Hockey</Link>
-                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 `} href=''>Fútbol masculino</Link>
+                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Hockey</Link>
+                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Fútbol masculino</Link>
                     </p>
 
                 </div>
             </section>
 
-            <section className={`block`}>
+            <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Qué es un campus deportivo</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
@@ -41,7 +41,7 @@ export default function queesuncampodeportivo() {
                 </div>
             </section>
 
-            <section className={`block`}>
+            <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Enseñanzas y valores positivos</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
@@ -51,7 +51,7 @@ export default function queesuncampodeportivo() {
                 </div>
             </section>
 
-            <section className={`block`}>
+            <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Amistad</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
@@ -61,7 +61,7 @@ export default function queesuncampodeportivo() {
                 </div>
             </section>
 
-            <section className={`block`}>
+            <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Una experiencia inolvidable</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />

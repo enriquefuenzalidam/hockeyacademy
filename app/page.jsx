@@ -92,6 +92,7 @@ export default function Page() {
                             <h2 data-aos-once="true" data-aos="zoom-out-down" className={` relative z-50 text-center tracking-wide font-BebasNeue text-white text-5xl italic mx-8`}>¿Querés saber más?</h2>
                             <p className={` relative z-50 text-center font-Roboto font-bold text-md text-white leading-loose mt-6`}><Link className={` mx-auto inline-block py-1 px-6 hover:bg-[rgb(141,0,91)] bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-sm shadow-black transition-all ease-in-out duration-300 `} href="">Contáctanos</Link></p>
                         </section>
+                        {/*
                         <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 py-6`}>
                             <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Novedades</h2>
                             <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
@@ -99,6 +100,7 @@ export default function Page() {
                                 <Novedades />
                             </div>
                         </section>
+                        */}
                         <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-32`}>
                             <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Nuestros partners</h2>
                             <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
