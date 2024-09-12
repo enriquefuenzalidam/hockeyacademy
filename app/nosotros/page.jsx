@@ -133,7 +133,7 @@ export default function nosotros() {
 
                         <NosotrosFoto
                             nombre='David'
-                            foto='nosotros/David.webp' />
+                            foto='nosotros/DAVID.webp' />
 
                         <NosotrosFoto
                             nombre='Jill' />
