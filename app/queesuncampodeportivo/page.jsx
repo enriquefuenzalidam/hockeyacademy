@@ -19,10 +19,10 @@ export default function queesuncampodeportivo() {
                 <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                 <div className={` relative z-30 flex flex-col justify-end items-center w-full h-full max-w-5xl mx-auto `}>
 
-                    <p className={` inline-block relative text-center mx-auto w-[21rem] lg:w-[28rem] gx:w-[35rem] mb-4`}>
+                    <p className={` inline-block relative text-center mx-auto w-[21rem] lg:w-[28rem] gx:w-[35rem] mb-4 transition-all ease-in-out duration-100`}>
                         <img data-aos-once="true" data-aos="zoom-in" className={` w-full h-auto`} src='images/identitylogoblanco.png' alt=''/>
                     </p>
-                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl mx-8`}>Campus deportivos en Europa</h2>
+                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl mx-8 transition-all ease-in-out duration-100 `}>Campus deportivos en Europa</h2>
                     <p data-aos-once="true" data-aos="fade" className={`block mb-10 `}>
                        <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Hockey</Link>
                        <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href='./futbolmasculino'>Fútbol masculino</Link>
