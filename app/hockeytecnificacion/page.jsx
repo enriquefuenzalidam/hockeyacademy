@@ -101,16 +101,16 @@ const citasTecnificacion = [
 export default function Eurohockey() {
 
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
-{/*
-            <section className={` block relative w-full h-screen bg-black z-30 mb-12 `}>
+        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0 `}>
+
+            <section className={` block relative w-full aspect-[16/7] bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
                         <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
                     </video>
                 </div>
             </section>
-*/}
+
 
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>

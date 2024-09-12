@@ -130,9 +130,9 @@ const Futbolmasculino = () => {
     }, []);
 
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
+        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0`}>
 
-            <section className={` block relative w-full h-screen bg-black z-30 `}>
+            <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
 
                     <video poster='images/Campus-BCN-2019-futbol.webp' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>

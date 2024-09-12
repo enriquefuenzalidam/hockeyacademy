@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function queesuncampodeportivo() {
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>
+        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0 `}>
 
-            <section className={` block relative w-full h-screen bg-black z-30 `}>
+            <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/euroHockey2025F.webp' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
                         <source src='images/IDentity-Campus-Hockey-2022.mp4' type="video/mp4" />
