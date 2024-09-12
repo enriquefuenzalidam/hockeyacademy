@@ -119,13 +119,13 @@ export default function Eurohockey() {
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 12 al miércoles 23 de julio</h2>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                             Experiencia orientada a deportistas de 12 a 18 años. Realizamos 14 sesiones de entrenamientos intensivos de perfeccionamiento técnico a cargo de entrenadores  y formadores europeos a los cuáles los avala mucha experiencia en la corrección analítica y de reconocimiento internacional.
                         </p>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                             El Campus se desarrolla en las instalaciones del Real Club de Polo de Barcelona y con la participación de 4 deportistas olímpicos.
                         </p>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 `} >
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                         Una oportunidad única de crecimiento técnico, compartir y hacer amistades con deportistas de Argentina, Chile, Uruguay, España, EEUU y diversos países y visitar las principales atracciones de la ciudad Condal.
                         </p>
                         <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>

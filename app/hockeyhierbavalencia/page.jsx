@@ -75,7 +75,7 @@ const hockeyhierbavalencia = () => {
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus de Verano Hockey Hierba<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Valencia 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del lunes 30 de junio al sábado 5 de julio</h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-0 `}>Del lunes 30 de junio al sábado 5 de julio</h2>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>9 sesiones de entrenamiento</h2>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5`} >
                         Nuestro Campus es una experiencia orientada a deportistas de 12 a 18 años, con el interés de mejorar su técnica individual y la comprensión integral del deporte.</p>
