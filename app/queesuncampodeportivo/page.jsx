@@ -10,7 +10,7 @@ export default function queesuncampodeportivo() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0 `}>
 
-            <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
+            <section className={` block relative w-full aspect-[9/10] sm:aspect-[16/7] bg-black z-30 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/euroHockey2025F.webp' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
                         <source src='images/IDentity-Campus-Hockey-2022.mp4' type="video/mp4" />
@@ -19,13 +19,13 @@ export default function queesuncampodeportivo() {
                 <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                 <div className={` relative z-30 flex flex-col justify-end items-center w-full h-full max-w-5xl mx-auto `}>
 
-                    <p className={` inline-block relative text-center mx-auto w-[21rem] lg:w-[28rem] gx:w-[35rem] mb-4 transition-all ease-in-out duration-100`}>
+                    <p className={` inline-block relative text-center mx-auto w-[16rem] lg:w-[28rem] gx:w-[35rem] mb-4 transition-all ease-in-out duration-100`}>
                         <img data-aos-once="true" data-aos="zoom-in" className={` w-full h-auto`} src='images/identitylogoblanco.png' alt=''/>
                     </p>
-                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl mx-8 transition-all ease-in-out duration-100 `}>Campus deportivos en Europa</h2>
-                    <p data-aos-once="true" data-aos="fade" className={`block mb-10 `}>
-                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href=''>Hockey</Link>
-                       <Link className={` rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-lg font-Roboto font-bold px-8 py-2 mx-3 transition-all ease-in-out duration-300 `} href='./futbolmasculino'>Fútbol masculino</Link>
+                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>Campus deportivos en Europa</h2>
+                    <p data-aos-once="true" data-aos="fade" className={`block mb-10 text-center `}>
+                       <Link className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `} href=''>Hockey</Link>
+                       <Link className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `} href='./futbolmasculino'>Fútbol masculino</Link>
                     </p>
 
                 </div>

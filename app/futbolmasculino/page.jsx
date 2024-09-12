@@ -197,12 +197,12 @@ const Futbolmasculino = () => {
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <img data-aos-once="true" data-aos="fade-left" className={` max-w-md w-full `} src={equipamientoC.src} alt='' />
+                        <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoC.src} alt='' />
                     </p>
                 </div>
                 <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <img data-aos-once="true" data-aos="fade-right" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
+                        <img data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
                     </p>
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>

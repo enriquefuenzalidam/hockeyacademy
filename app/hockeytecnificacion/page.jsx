@@ -163,7 +163,7 @@ export default function Eurohockey() {
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>Queremos que tu viaje sea inolvidable, y lleno de recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (shorts / faldas, camisetas de entreno, buzo, mochila). En la cena despedida llevaremos a cabo distintos sorteos. <strong className={` whitespace-nowrap `}>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <img data-aos-once="true" data-aos="fade-left" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
+                        <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
                     </p>
                 </div>
             </section>
