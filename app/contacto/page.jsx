@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function Classics() {
     return (
-        <main className={`relative z-0 w-full pl-0 md:pl-32 mt-16 md:mt-0`}>
+        <main className={`relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
             {/* Overlay Color 
              bg-cover bg-center bg-no-repeat

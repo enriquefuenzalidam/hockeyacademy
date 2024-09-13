@@ -75,7 +75,7 @@ export function Portadacabecera() {
     ];
 
     return (
-        <section className='block relative w-full h-screen bg-black'>
+        <section className='block relative w-full h-[calc(100vh-4.4rem)] md:h-screen bg-black'>
 
             <div className="relative hidden md:grid md:grid-cols-4 w-full h-full z-30">
                 {links.map((link, index) => (

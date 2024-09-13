@@ -59,7 +59,7 @@ const mejorExperienciaImgs = [
 const hockeyhierbavalencia = () => {
 
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0 `}>
+        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
             <section className={` block relative w-full aspect-[16/7] bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>

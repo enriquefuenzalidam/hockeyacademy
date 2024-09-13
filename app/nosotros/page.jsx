@@ -5,7 +5,7 @@ import { Footer } from 'components/footer';
 
 export default function nosotros() {
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-16 md:mt-0 `}>
+        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
             <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
                 <div className={` absolute z-10 top-0 left-0 w-full h-full bg-[url('/images/6.jpg')] bg-center bg-cover`} />

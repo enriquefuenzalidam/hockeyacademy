@@ -14,7 +14,7 @@ import proximoEvento2024C from 'public/images/proximoEvento2024_hockeyBarcelonaY
 export default function Page() {
     return (
 
-            <main className={`block relative z-0 w-full pl-0 md:pl-32`}>
+            <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
                 <Portadacabecera />
                 <div className={` relative bg-fucsiaAzulFondo `}>
                     <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
