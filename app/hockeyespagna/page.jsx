@@ -102,9 +102,9 @@ export default function Eurohockey() {
                     </h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                 </div>
-                <div className={` max-w-5xl w-full mx-auto `}>
-                    <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-auto' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src={hockeytecnificacionVid} type="video/mp4" />
+                <div className={`relative max-w-5xl w-full mx-auto aspect-[16/9] overflow-hidden `}>
+                    <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center transition-opacity duration-700' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <source src={hockeytecnificacionVid} type="video/mp4" /> 
                     </video>
                     </div>
             </section>

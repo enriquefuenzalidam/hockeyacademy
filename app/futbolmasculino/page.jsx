@@ -245,7 +245,7 @@ const Futbolmasculino = () => {
                         </form>
                     </div>
                     {!!formDiapos?.length && (
-                        <p className={` relative w-full h-72 gx:min-h-full overflow-scroll `}>
+                        <p className={` relative w-full h-72 gx:min-h-full overflow-hidden `}>
                             {formDiapos.map((item, index) => (
                                 <img key={index} className={`${index === visibleIndex ? 'opacity-100' : 'opacity-0'}  absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 `} src={item.src} alt='' />
                             ))}
