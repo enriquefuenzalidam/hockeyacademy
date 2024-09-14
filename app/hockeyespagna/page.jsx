@@ -71,7 +71,7 @@ export default function Eurohockey() {
                 <section data-aos-once="true" data-aos="fade-up" className={` relative z-30 text-white text-center max-w-5xl mx-auto py-24`} >
                     <h2 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-5xl text-white mx-8 mb-6`}>Campus de Hockey Hierba en España</h2>
                     <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
-                    <p className={` mx-auto max-w-lg font-Roboto text-2xl leading-normal mb-4 text-justify hyphens-auto indent-5 `} >Si estas en Europa y queres ser parte del mejor Campus de Hockey esta es tu oportunidad</p>
+                    <p className={` mx-auto max-w-lg font-RobotoCondensed text-2xl leading-normal mb-4 text-center hyphens-none tracking-tight indent-5 `} >Si estas en Europa y queres ser parte del mejor Campus de Hockey esta es tu oportunidad</p>
                     <div className={` my-16 mx-8 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 max-w-7xl `}>
                         <div>
                             <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey Hierba Valencia</h3>
