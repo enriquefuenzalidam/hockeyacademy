@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-size: 16px;
+}
 
 .queverguenzaMenu:hover .queverguenzaMenuIcono {
     gap: 0.25rem;
