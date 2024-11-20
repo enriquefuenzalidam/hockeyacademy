@@ -137,30 +137,30 @@ export default function Page() {
                     <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-10`}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
-                        {/*
+                        
                             <div className={`grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-2 px-4 gx:px-0`}>
                                 <div>
-                                        <video className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                                        <video className=' w-full aspect-[9/16]' preload="auto" autoPlay="autoplay" muted loop playsInline>
                                             <source src='hockeyacademycamp/hockeyacademycamp_video_01.mp4' type="video/mp4" />
                                         </video>
                                 </div>
                                 <div>
-                                        <video className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                                        <video className=' w-full aspect-[9/16]' preload="auto" autoPlay="autoplay" muted loop playsInline>
                                             <source src='hockeyacademycamp/hockeyacademycamp_video_02.mp4' type="video/mp4" />
                                         </video>
                                 </div>
                                 <div>
-                                        <video className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                                        <video className=' w-full aspect-[9/16]' preload="auto" autoPlay="autoplay" muted loop playsInline>
                                             <source src='hockeyacademycamp/hockeyacademycamp_video_03.mp4' type="video/mp4" />
                                         </video>
                                 </div>
                                 <div>
-                                        <video className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                                        <video className=' w-full aspect-[9/16]' preload="auto" autoPlay="autoplay" muted loop playsInline>
                                             <source src='hockeyacademycamp/hockeyacademycamp_video_04.mp4' type="video/mp4" />
                                         </video>
                                 </div>
                             </div>
-                            */}
+                            {/**/}
                     </section>
 
                     <ViajesGaleria

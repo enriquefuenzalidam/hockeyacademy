@@ -56,7 +56,7 @@ const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros 
 
             <></>
 
-            <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center py-10`}>
+            <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center py-10 relative `}>
                 {!!viajesgalerialist?.length && (
                     <div>
                         {viajesgalerialist.map((_, index) => (
