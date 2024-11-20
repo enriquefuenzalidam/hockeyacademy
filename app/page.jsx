@@ -8,6 +8,8 @@ import { Partners } from 'components/partners';
 import { Novedades } from 'components/novedades';
 
 import chevronRight from 'public/images/chevronRight.svg';
+import envelope from 'public/images/envelope.svg';
+import calendarDays from 'public/images/calendar-days.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -145,6 +147,14 @@ export default function Page() {
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Agosto de 2025 desde 9 hasta el 20.</p>
                             </div>
                         </div>
+
+                        <p className={` font-RobotoCondensed font-bold text-xl uppercase leading-loose mt-6 mb-24 `}>
+                            <Link className={` text-white text-opacity-80 hover:text-opacity-100 inline-block py-1 px-6 bg-blue-950 hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="mailto:hockeyacademychile@gmail.com">
+                            Escríbenos y reserva tu cupo 
+                            <svg className={` inline-block w-12 ml-4`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                                <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></Link></p>
+
+
                     </section>
                 </div>
                 <div className={`  bg-whiteFadedFondo`}>
