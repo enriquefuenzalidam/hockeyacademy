@@ -115,7 +115,7 @@ export function Navigation() {
 
                 <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
                     <Link href='.\'>
-                        <Image src={hockeyAcademyLogo} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto `} />
+                        <Image src={hockeyAcademyLogo} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
                     </Link>
                 </div>
                 <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>
