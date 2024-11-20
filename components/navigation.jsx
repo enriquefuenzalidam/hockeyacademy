@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import identityLogo from 'public/images/identitylogo.png';
+import hockeyAcademyLogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import facebookIcon from 'public/images/facebook.svg';
 import instagramIcon from 'public/images/instagram.svg';
 import tiktokIcon from 'public/images/tiktok.svg';
@@ -114,7 +115,7 @@ export function Navigation() {
 
                 <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
                     <Link href='.\'>
-                        <Image src={identityLogo} alt={` `} className={` w-24 object-cover object-center h-14    md:w-full md:h-auto `} />
+                        <Image src={hockeyAcademyLogo} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto `} />
                     </Link>
                 </div>
                 <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>

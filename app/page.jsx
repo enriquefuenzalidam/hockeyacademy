@@ -75,15 +75,15 @@ const hockeyacademycampimagenes = [
 ]
 
 
-import hockeyacademycampsponsor01 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_01.png';
-import hockeyacademycampsponsor02 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_02.png';
-import hockeyacademycampsponsor03 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_03.png';
-import hockeyacademycampsponsor04 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_04.png';
-import hockeyacademycampsponsor05 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_05.png';
-import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_06.png';
-import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_07.png';
-import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_08.png';
-import hockeyacademycampsponsor09 from 'public/hockeyacademycamp/ockeyacademycamp_sponsor_09.png';
+import hockeyacademycampsponsor01 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_01.png';
+import hockeyacademycampsponsor02 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_02.png';
+import hockeyacademycampsponsor03 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_03.png';
+import hockeyacademycampsponsor04 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_04.png';
+import hockeyacademycampsponsor05 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_05.png';
+import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_06.png';
+import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_07.png';
+import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_08.png';
+import hockeyacademycampsponsor09 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
 const sponsors = [
     hockeyacademycampsponsor01,
