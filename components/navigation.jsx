@@ -12,13 +12,14 @@ import instagramIcon from 'public/images/instagram.svg';
 import tiktokIcon from 'public/images/tiktok.svg';
 import youtubeIcon from 'public/images/youtube.svg';
 
+// { linkText: 'Eurohockey 2025', href: '/eurohockey' },
+// { linkText: 'Hockey Tecnificación', href: '/hockeytecnificacion' }
+
 const navItems = [
     { linkText: 'Inicio', href: '/' },
     { linkText: 'Viajes Deportivos',
         subTitulos: [
-            { linkText: 'Eventos Próximos', href: '/eventosproximos' },
-            { linkText: 'Eurohockey 2025', href: '/eurohockey' },
-            { linkText: 'Hockey Tecnificación', href: '/hockeytecnificacion' }
+            { linkText: 'Eventos Próximos', href: '/eventosproximos' }
         ]
      },
     { linkText: 'Campus de Tecnificación',
