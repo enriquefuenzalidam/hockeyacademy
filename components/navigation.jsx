@@ -16,6 +16,7 @@ const navItems = [
     { linkText: 'Inicio', href: '/' },
     { linkText: 'Viajes Deportivos',
         subTitulos: [
+            { linkText: 'Eventos Próximos', href: '/eventosproximos' },
             { linkText: 'Eurohockey 2025', href: '/eurohockey' },
             { linkText: 'Hockey Tecnificación', href: '/hockeytecnificacion' }
         ]

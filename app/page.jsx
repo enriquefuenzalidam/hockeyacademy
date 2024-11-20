@@ -94,7 +94,7 @@ const sponsors = [
     hockeyacademycampsponsor07,
     hockeyacademycampsponsor08,
     hockeyacademycampsponsor09
-]
+];
 
 
 
