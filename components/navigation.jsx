@@ -17,20 +17,16 @@ import youtubeIcon from 'public/images/youtube.svg';
 
 const navItems = [
     { linkText: 'Inicio', href: '/' },
-    { linkText: 'Viajes Deportivos',
-        subTitulos: [
-            { linkText: 'Eventos Próximos', href: '/eventosproximos' }
-        ]
-     },
+    { linkText: 'Eventos próximos', href: '/eventosproximos' },
     { linkText: 'Campus de Tecnificación',
-        subTitulos: [
-            { linkText: 'Hockey Hierba Barcelona', href: '/hockeyhierbabarcelona' },
-            { linkText: 'Hockey Hierba Valencia', href: '/hockeyhierbavalencia' }
+        subTitulos: [,
+            { linkText: 'Campus Eurohockey', href: '/eurohockey' },
+            { linkText: 'Campus de tecnificación', href: '/hockeytecnificacion' }
         ]
      },
     { linkText: 'Quiénes somos', href: '/nosotros' },
     { linkText: 'Staff', href: '/staff' },
-    { linkText: '¿Qué es un campus deportivo?', href: '/queesuncampodeportivo' },
+    { linkText: 'Qué es Hockey Academy', href: '/queeshockeyacademy' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }
 ];
