@@ -21,10 +21,10 @@ const navItems = [
     { linkText: 'Campus de Tecnificación',
         subTitulos: [,
             { linkText: 'Campus Eurohockey', href: '/eurohockey' },
-            { linkText: 'Campus de tecnificación', href: '/hockeytecnificacion' }
+            { linkText: 'Hockey de Tecnificación', href: '/hockeytecnificacion' }
         ]
      },
-    { linkText: 'Quiénes somos', href: '/nosotros' },
+    { linkText: 'Quiénes somos', href: '/quienessomos' },
     { linkText: 'Staff', href: '/staff' },
     { linkText: 'Sponsors', href: '/sponsors' },
     { linkText: 'Qué es Hockey Academy', href: '/queeshockeyacademy' },

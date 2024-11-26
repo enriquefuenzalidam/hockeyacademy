@@ -1,6 +1,62 @@
-import Hockeyhierbabarcelona from "./Hockeyhierbabarcelona";
+"use client";
+import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 
-const Page = () => {
+import { Footer } from 'components/footer';
+import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
+import ExperienciaGaleria from 'components/experienciaGaleria';
+import ViajesGaleria from 'components/viajesgaleria';
+
+import calendarioIcono from 'public/images/calendar-days.svg';
+import calendarioCheckIcono from 'public/images/calendar-check.svg';
+
+import hockeyTecnificacionForm from 'public/images/Portada-Campus-Hockey-Valencia-2024.jpg';
+
+import hockeytecnificacion01 from 'public/hockeytecnificacion/hockeytecnificacion01.webp';
+import hockeytecnificacion02 from 'public/hockeytecnificacion/hockeytecnificacion02.webp';
+import hockeytecnificacion03 from 'public/hockeytecnificacion/hockeytecnificacion03.webp';
+import hockeytecnificacion04 from 'public/hockeytecnificacion/hockeytecnificacion04.webp';
+import hockeytecnificacion05 from 'public/hockeytecnificacion/hockeytecnificacion05.webp';
+import hockeytecnificacion06 from 'public/hockeytecnificacion/hockeytecnificacion06.webp';
+import hockeytecnificacion07 from 'public/hockeytecnificacion/hockeytecnificacion07.webp';
+import hockeytecnificacion08 from 'public/hockeytecnificacion/hockeytecnificacion08.webp';
+import hockeytecnificacion09 from 'public/hockeytecnificacion/hockeytecnificacion09.webp';
+import hockeytecnificacion10 from 'public/hockeytecnificacion/hockeytecnificacion10.webp';
+import hockeytecnificacion11 from 'public/hockeytecnificacion/hockeytecnificacion11.webp';
+
+const imagenesCuadro = [
+    hockeytecnificacion01,
+    hockeytecnificacion02,
+    hockeytecnificacion03,
+    hockeytecnificacion04,
+    hockeytecnificacion05,
+    hockeytecnificacion06,
+    hockeytecnificacion07,
+    hockeytecnificacion08,
+    hockeytecnificacion09,
+    hockeytecnificacion10,
+    hockeytecnificacion11]
+
+
+import mejorExperienciaJ from 'public/images/mejorExperienciaJ.png';
+import mejorExperienciaK from 'public/images/mejorExperienciaK.png';
+import mejorExperienciaL from 'public/images/mejorExperienciaL.png';
+import mejorExperienciaM from 'public/images/mejorExperienciaM.png';
+import mejorExperienciaN from 'public/images/mejorExperienciaN.png';
+import mejorExperienciaO from 'public/images/mejorExperienciaO.png';
+
+const mejorExperienciaImgs = [
+    mejorExperienciaO,
+    mejorExperienciaN,
+    mejorExperienciaM,
+    mejorExperienciaL,
+    mejorExperienciaK,
+    mejorExperienciaJ
+]
+
+
+
+const Hockeyhierbavalencia = () => {
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
@@ -16,23 +72,21 @@ const Page = () => {
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus de Verano Hockey Hierba<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barcelona 2025</span></h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus de Verano Hockey Hierba<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Valencia 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-0 `}>Del lunes 14 al martes 22 de julio</h2>
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>12 sesiones de entrenamiento</h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-0 `}>Del lunes 30 de junio al sábado 5 de julio</h2>
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>9 sesiones de entrenamiento</h2>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5`} >
-                            Nuestro Campus de hockey sobre hierba, es una experiencia orientada a deportistas de 12 a 18 años, con el interés de mejorar su técnica individual y la comprensión integral del juego.
-                        </p>
+                        Nuestro Campus es una experiencia orientada a deportistas de 12 a 18 años, con el interés de mejorar su técnica individual y la comprensión integral del deporte.</p>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
-                            Brindamos un Campus de verano con 12 sesiones de entrenamientos, y una jornada de destrezas a cargo de entrenadores de selección y la participación especial de  4 jugadoras internacionales olímpicas con sus selecciones, en las instalaciones del Real Club Polo de Barcelona.
-                        </p>
+                        Brindamos un Campus de 9 sesiones de entrenamientos a cargo de entrenadores internacionales y la participación especial de 3 deportistas olímpicos con sus selecciones,  en las instalaciones del Polideportivo Virgen del Carmen Beteró, Valencia.</p>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
-                            Proponemos una experiencia inolvidable con el objetivo principal de lograr motivar la formación integral en los deportistas. Procuramos que los mismos mejoren su técnica individual bajo un proceso de entrenamiento intensivo. Dentro de los contenidos que se desarrollan, contamos con gestos de habilidades aéreas y suelo, de definición en área chica y grande, de despido y como contenido estelar el desarrollo y perfeccionamiento de la arrastrada.
-                        </p>
+                        Proponemos una experiencia inolvidable con el objetivo principal de lograr motivar la formación integral en los deportistas. Procuramos que los mismos mejoren su técnica individual bajo un proceso de entrenamiento intensivo.</p>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
-                            Nuestro campus de verano de hockey cuentan con <strong>Sesiones exclusivas para los porteros a cargo de Alberto Ruiz, entrenador de la selección absoluta de España, “Las Red Stick”.</strong>
-                        </p>
+                        Dentro de los contenidos que se desarrollan, contamos con gestos de habilidades aéreas y suelo, de definición en área chica y grande, de despido y como contenido estelar el desarrollo y perfeccionamiento de la arrastrada.</p>
+                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
+                        <strong>Nuestro Campus de verano cuenta con sesiones de entrenamiento exclusivas para porteros/as dictadas por Mariana Scandura (Selección Argentina)</strong></p>
                         <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-6 `}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
                                 Información <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
@@ -54,8 +108,8 @@ const Page = () => {
             <section data-aos-once="true" data-aos="fade-up" className={` relative max-w-5xl w-full mx-auto `}>
                 <p className={` font-Roboto font-normal text-md text-white pb-8 text-center mt-6 `}>
                     <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `}
-                        href='Programa-IDentity-Campus-Hockey-Valencia-Julio-2024.pdf'
-                        download='Programa-IDentity-Campus-Hockey-Valencia-Julio-2024.pdf'
+                        href='ID-Campus-tecnificacion-Barcelona-2024.pdf'
+                        download='ID-Campus-tecnificacion-Barcelona-2024.pdf'
                         type='application/pdf'
                         alt=''>
                         Descargá el Programa de Actividades <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={`inline-block h-4 w-auto ml-4 `} fill="currentColor"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z" /></svg>
@@ -104,7 +158,7 @@ const Page = () => {
                         </form>
                     </div>
                     <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                        <img className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
+                        <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
                 </div>
             </section>
 
@@ -116,5 +170,5 @@ const Page = () => {
     );
 }
 
-export default Page;
+export default Hockeyhierbavalencia;
 

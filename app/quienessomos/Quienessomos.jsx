@@ -3,7 +3,7 @@ import NosotrosFoto from 'components/nosotrosFoto';
 import { Footer } from 'components/footer';
 
 
-export default function nosotros() {
+export default function Quienessomos() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 

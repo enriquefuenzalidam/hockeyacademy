@@ -1,6 +1,62 @@
-import Hockeyhierbabarcelona from "./Hockeyhierbabarcelona";
+"use client";
+import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 
-const Page = () => {
+import { Footer } from 'components/footer';
+import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
+import ExperienciaGaleria from 'components/experienciaGaleria';
+import ViajesGaleria from 'components/viajesgaleria';
+
+import calendarioIcono from 'public/images/calendar-days.svg';
+import calendarioCheckIcono from 'public/images/calendar-check.svg';
+
+import hockeyTecnificacionForm from 'public/images/proximoEvento2024_hockeyTecnificacionBarcelonaJulio2024.jpg';
+
+import hockeytecnificacion01 from 'public/hockeytecnificacion/hockeytecnificacion01.webp';
+import hockeytecnificacion02 from 'public/hockeytecnificacion/hockeytecnificacion02.webp';
+import hockeytecnificacion03 from 'public/hockeytecnificacion/hockeytecnificacion03.webp';
+import hockeytecnificacion04 from 'public/hockeytecnificacion/hockeytecnificacion04.webp';
+import hockeytecnificacion05 from 'public/hockeytecnificacion/hockeytecnificacion05.webp';
+import hockeytecnificacion06 from 'public/hockeytecnificacion/hockeytecnificacion06.webp';
+import hockeytecnificacion07 from 'public/hockeytecnificacion/hockeytecnificacion07.webp';
+import hockeytecnificacion08 from 'public/hockeytecnificacion/hockeytecnificacion08.webp';
+import hockeytecnificacion09 from 'public/hockeytecnificacion/hockeytecnificacion09.webp';
+import hockeytecnificacion10 from 'public/hockeytecnificacion/hockeytecnificacion10.webp';
+import hockeytecnificacion11 from 'public/hockeytecnificacion/hockeytecnificacion11.webp';
+
+const imagenesCuadro = [
+    hockeytecnificacion01,
+    hockeytecnificacion02,
+    hockeytecnificacion03,
+    hockeytecnificacion04,
+    hockeytecnificacion05,
+    hockeytecnificacion06,
+    hockeytecnificacion07,
+    hockeytecnificacion08,
+    hockeytecnificacion09,
+    hockeytecnificacion10,
+    hockeytecnificacion11]
+
+
+import mejorExperienciaJ from 'public/images/mejorExperienciaJ.png';
+import mejorExperienciaK from 'public/images/mejorExperienciaK.png';
+import mejorExperienciaL from 'public/images/mejorExperienciaL.png';
+import mejorExperienciaM from 'public/images/mejorExperienciaM.png';
+import mejorExperienciaN from 'public/images/mejorExperienciaN.png';
+import mejorExperienciaO from 'public/images/mejorExperienciaO.png';
+
+const mejorExperienciaImgs = [
+    mejorExperienciaO,
+    mejorExperienciaN,
+    mejorExperienciaM,
+    mejorExperienciaL,
+    mejorExperienciaK,
+    mejorExperienciaJ
+]
+
+
+
+const Hockeyhierbabarcelona = () => {
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
@@ -116,5 +172,5 @@ const Page = () => {
     );
 }
 
-export default Page;
+export default Hockeyhierbabarcelona;
 
