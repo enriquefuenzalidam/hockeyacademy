@@ -5,8 +5,8 @@ import AOSInitializer from '../components/AOSInitializer';
 
 export const metadata = {
     title: {
-        template: '%s | IDentity Campus',
-        default: 'IDentity Campus'
+        template: '%s | Hockey Academy',
+        default: 'Hockey Academy'
     }
 };
 
