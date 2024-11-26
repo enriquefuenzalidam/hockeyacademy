@@ -7,7 +7,7 @@ const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto'
     return (
 
         <div className={`inline-block w-80 m-2  `}>
-            <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-gray-100 overflow-hidden `}>
+            <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-gray-100 overflow-hidden bg-[linear-gradient(to_top,#eee,#999)]`}>
             {!!foto ? (
                 <img className={` absolute ${dimension} `} src={foto} alt='' />
                 ):
