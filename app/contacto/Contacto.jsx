@@ -1,9 +1,5 @@
 import { Footer } from "components/footer";
 
-export const metadata = {
-    title: 'Contacto'
-};
-
 export default function Contacto() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white`}>

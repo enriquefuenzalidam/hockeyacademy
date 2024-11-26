@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { Footer } from "components/footer";
 
-export const metadata = {
-    title: 'Qué es Hockey Academy'
-}
-  
 
 export default function Queeshockeyacademy() {
     return (

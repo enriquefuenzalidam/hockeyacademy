@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { Footer } from "components/footer";
 
-export const metadata = {
-    title: 'Qué es un Campo Deportivo'
-}
-  
 
 export default function queesuncampodeportivo() {
     return (
