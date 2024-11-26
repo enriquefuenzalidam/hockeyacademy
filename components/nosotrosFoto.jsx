@@ -2,14 +2,14 @@ import Link from "next/link";
 
 
 
-const NosotrosFoto = ({nombre, foto, linkedinEnlace}) => {
+const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto' }) => {
 
     return (
 
         <div className={`inline-block w-80 m-2  `}>
             <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-gray-100 overflow-hidden `}>
             {!!foto ? (
-                <img className={` absolute inset-0 h-full aspect-1 `} src={foto} alt='' />
+                <img className={` absolute ${dimension} `} src={foto} alt='' />
                 ):
             (
                 <img className={` absolute inset-0 h-full aspect-1 `} src='nosotros/avatar.jpg' alt='' />

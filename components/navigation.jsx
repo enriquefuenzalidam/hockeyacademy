@@ -28,7 +28,8 @@ const navItems = [
             { linkText: 'Hockey Hierba Valencia', href: '/hockeyhierbavalencia' }
         ]
      },
-    { linkText: 'Nosotros', href: '/nosotros' },
+    { linkText: 'Quiénes somos', href: '/nosotros' },
+    { linkText: 'Staff', href: '/staff' },
     { linkText: '¿Qué es un campus deportivo?', href: '/queesuncampodeportivo' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }
