@@ -98,7 +98,7 @@ const citasTecnificacion = [
 ]
 
 
-export default function Eurohockey() {
+export default function hockeytecnificacion() {
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
@@ -112,7 +112,7 @@ export default function Eurohockey() {
             </section>
 
 
-            <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
+            <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0 text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barcelona 2025</span></h2>

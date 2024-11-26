@@ -54,7 +54,7 @@ const mejorExperienciaImgs = [
 ]
 
 
-export default function Eurohockey() {
+export default function Hockeyespagna() {
 
 
     return (

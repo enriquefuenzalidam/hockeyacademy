@@ -26,6 +26,7 @@ const navItems = [
      },
     { linkText: 'Quiénes somos', href: '/nosotros' },
     { linkText: 'Staff', href: '/staff' },
+    { linkText: 'Sponsors', href: '/sponsors' },
     { linkText: 'Qué es Hockey Academy', href: '/queeshockeyacademy' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }

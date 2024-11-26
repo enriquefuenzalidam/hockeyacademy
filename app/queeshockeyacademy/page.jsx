@@ -6,7 +6,7 @@ export const metadata = {
 }
   
 
-export default function queesuncampodeportivo() {
+export default function Queeshockeyacademy() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
