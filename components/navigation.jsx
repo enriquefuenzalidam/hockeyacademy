@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import identityLogo from 'public/images/identitylogo.png';
+import hockeyAcademyLogoB from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 import hockeyAcademyLogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import facebookIcon from 'public/images/facebook.svg';
 import instagramIcon from 'public/images/instagram.svg';
@@ -116,7 +116,7 @@ export function Navigation() {
 
                 <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
                     <Link href='.\'>
-                        <Image src={hockeyAcademyLogo} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
+                        <Image src={hockeyAcademyLogoB} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
                     </Link>
                 </div>
                 <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>
@@ -131,8 +131,8 @@ export function Navigation() {
                 </div>
                 <div className={` hidden grid-cols-2 grid-rows-2 gap-6 p-7    md:grid md:aspect-1 md:w-32 `}>
                     <Link href={` https://www.facebook.com/identity.campus.arg/ `} className={`inline-block `}><Image src={facebookIcon} alt={` `} className={` mx-auto `} /></Link>
-                    <Link href={` https://www.instagram.com/identity.campus/ `} className={`inline-block `}><Image src={instagramIcon} alt={` `} className={` mx-auto `} /></Link>
-                    <Link href={` https://www.tiktok.com/@identitycampus `} className={`inline-block `}><Image src={tiktokIcon} alt={` `} className={` mx-auto `} /></Link>
+                    <Link href={` https://www.instagram.com/hockeyacademyok/ `} className={`inline-block `}><Image src={instagramIcon} alt={` `} className={` mx-auto `} /></Link>
+                    <Link href={` https://www.tiktok.com/@hockeyacademyok `} className={`inline-block `}><Image src={tiktokIcon} alt={` `} className={` mx-auto `} /></Link>
                     <Link href={` https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A `} className={` inline-block `}><Image src={youtubeIcon} alt={` `} className={` mx-auto `} /></Link>
                 </div>
 
