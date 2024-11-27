@@ -5,13 +5,7 @@ import Link from 'next/link';
 import { Footer } from 'components/footer';
 import Image from 'next/image';
 
-import ExperienciaGaleria from 'components/experienciaGaleria';
 import ViajesGaleria from 'components/viajesgaleria';
-
-import hockeytecnificacionVid from 'public/images/IDentity-Campus-Tecnificacion-2023.mp4';
-
-import cabeceraFoto from 'public/images/Hockey-22-Entrenamiento.jpg';
-import chevronRight from 'public/images/chevronRight.svg';
 
 import hockeyacademycampimagen01 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_01.jpg';
 import hockeyacademycampimagen02 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_02.jpg';
@@ -77,7 +71,6 @@ import hockeyacademycampsponsor05 from 'public/hockeyacademycamp/hockeyacademyca
 import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_06.png';
 import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_07.png';
 import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_08.png';
-import hockeyacademycampsponsor09 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
 const sponsors = [
     hockeyacademycampsponsor01,
@@ -87,8 +80,7 @@ const sponsors = [
     hockeyacademycampsponsor05,
     hockeyacademycampsponsor06,
     hockeyacademycampsponsor07,
-    hockeyacademycampsponsor08,
-    hockeyacademycampsponsor09
+    hockeyacademycampsponsor08
 ];
 
 
@@ -107,7 +99,7 @@ export default function Eventosproximos() {
                 </div>
             </section>
 
-            <div className={` relative bg-fucsiaAzulFondo `}>
+            <div className={` relative bg-otoFondo `}>
                 <div className={` absolute inset-0 opacity-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
@@ -115,26 +107,26 @@ export default function Eventosproximos() {
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
                         <div className={` flex flex-col gap-24 md:gap-5 mb-24 items-center justify-center `}>
                             <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6`}>Eventos próximos</h2>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-6 `} />
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] `}>Summer Camp sub-13</h2>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Eventos próximos</h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Diciembre de 2024 desde 16 hasta el 19.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mt-6 `}>Summer Camp +13</h2>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Diciembre de 2024 desde 20 hasta el 22.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mt-6 `}>Summer Camp</h2>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Enero de 2025 desde 10 hasta el 13.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mt-6 `}>Actividad Especial</h2>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Actividad Especial</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Febrero de 2025 desde 17 en adelante.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mt-6 `}>Comienzo Academia 2025</h2>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto indent-5 `} >Marzo de 2025, lunes 3.</p>
                             </div>
                         </div>
 
                         <p className={` font-RobotoCondensed font-bold text-xl uppercase leading-loose mt-6 mb-24 `}>
-                            <Link className={` text-white text-opacity-80 hover:text-opacity-100 inline-block py-1 px-6 bg-blue-950 hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="mailto:hockeyacademychile@gmail.com">
-                            Escríbenos y reserva tu cupo 
-                            <svg className={` inline-block w-12 ml-4`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
-                                <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></Link></p>
+                            <Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#5fd2ff] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="mailto:hockeyacademychile@gmail.com">
+                                Escríbenos y reserva tu cupo
+                                <svg className={` inline-block w-12 ml-4`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></svg></Link></p>
 
 
                     </section>
@@ -142,7 +134,7 @@ export default function Eventosproximos() {
                 <div className={`  bg-whiteFadedFondo`}>
                     <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-10`}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
 
                         <div className={` grid grid-cols-1 grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-2 px-4 gx:px-0 `}>
 
@@ -161,10 +153,10 @@ export default function Eventosproximos() {
 
                     <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-32`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy Camp Sponsors</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
                         <div className={` mx-auto text-center overflow-visible `}>
                             {sponsors.map((src, index) => (
-                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-neutral-500 rounded-full w-36 overflow-hidden m-8`}>
+                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-8`}>
                                     <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                 </span>
                             ))}

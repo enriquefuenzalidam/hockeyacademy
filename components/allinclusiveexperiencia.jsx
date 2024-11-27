@@ -69,14 +69,14 @@ const AllInclusiveExperiencia = ({ list = [] }) => {
     <section className={` bg-neutral-100 mb-12 `}>
     <div className={` max-w-5xl w-full mx-auto `}>
         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Experiencia All Inclusive</h2>
-        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
     </div>
     {!!list?.length && (
         <ul className={` max-w-5xl w-full mx-auto px-4 gx:px-0 grid grid-cols-1 md:grid-cols-2 gx:grid-cols-3 gap-4 pb-12`}>
             {list.map((item, index) => (
                 <li key={item.id} data-aos-once="true" data-aos="zoom-out" >
                     <div className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
-                        <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[rgb(211,0,126)]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
+                        <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[#2aade1]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
                         <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 `}>{item.contenido}</p>
                     </div>
                 </li>

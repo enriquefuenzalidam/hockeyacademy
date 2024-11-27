@@ -2,21 +2,21 @@ import Link from "next/link";
 
 
 
-const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto' }) => {
+const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto', soy = 'Soy' }) => {
 
     return (
 
         <div className={`inline-block w-80 m-2  `}>
-            <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-gray-100 overflow-hidden bg-[linear-gradient(to_top,#eee,#999)]`}>
+            <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-[#257caa] overflow-hidden bg-otoFondoDos`}>
             {!!foto ? (
                 <img className={` absolute ${dimension} `} src={foto} alt='' />
                 ):
             (
                 <img className={` absolute inset-0 h-full aspect-1 `} src='nosotros/avatar.jpg' alt='' />
             )}
-                <div className={` absolute inset-0 h-full aspect-1 backdrop-grayscale `} />
             </div>
-            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-3xl text-gray-500 mt-6 `}>{nombre}</p>
+            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-3xl text-black mt-6 `}>{nombre}</p>
+            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-3xl text-[#299dca] mt-0 mb-10 `}>{soy}</p>
             <p className={`  block w-full text-center mt-3`}>
                 {!!linkedinEnlace && (
                 <Link className={` inline-flex items-center justify-center text-white bg-sky-600 hover:bg-sky-900 mx-auto w-12 h-12 rounded-full transition-all ease-in-out duration-300`} href={linkedinEnlace}>

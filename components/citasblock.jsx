@@ -23,7 +23,7 @@ const CitasBlock = ({ citaslista = [], citasfondo }) => {
     return (
 
 
-        <section className={` relative bg-citasFondo transition-all ease-in-out duration-[618ms] min-h-80 gx:min-h-80 flex flex-grow items-center justify-center `}>
+        <section className={` relative bg-otoFondoCitasFondo transition-all ease-in-out duration-[618ms] min-h-80 gx:min-h-80 flex flex-grow items-center justify-center `}>
             {citasfondo && (
             <div className={` absolute top-0 left-0 inset-0 z-10 opacity-20`}>
                 <img src={citasfondo.src} className={` object-center object-cover w-full h-full `} alt='' />

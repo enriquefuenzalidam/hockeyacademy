@@ -30,7 +30,7 @@ export default function queesuncampodeportivo() {
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Qué es un campus deportivo</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                     Los Campus deportivos son una experiencia de vida inolvidable para cualquier joven deportista. El objetivo principal de estas prácticas es mantener a los jóvenes ligados a la práctica deportiva, y cultivarlos a nivel cultural y turístico. En la actualidad consideramos de suma importancia brindarle herramientas para motivar la actividad física como tarea prioritaria en sus vidas cotidianas, generando hábitos positivos, buenas costumbres y favoreciendo la salud tanto física como mental.
                     </div>
@@ -40,7 +40,7 @@ export default function queesuncampodeportivo() {
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Enseñanzas y valores positivos</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                     Asimismo, podemos confirmar por nuestra experiencia personal, que a través del deporte se aprenden innumerables enseñanzas y valores positivos muy útiles para cualquier ámbito de la vida. El trabajo en equipo, el bien común por encima del triunfo personal, la solidaridad, saber perder, el valor al esfuerzo, aceptar el liderazgo de un entrenador, son algunas de esas enseñanzas importantes tanto dentro como fuera del campo de juego. En nuestros Campus deportivos se hace especialmente hincapié en ello, gracias a la profesionalidad de los técnicos de primer nivel que dictan los entrenamientos y sesiones diarias.
                     </div>
@@ -50,7 +50,7 @@ export default function queesuncampodeportivo() {
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Amistad</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                     Otros aspectos a destacar es la posibilidad de generar nuevas amistades (niños de otras ciudades y colegios), comprender nuevas culturas y costumbres (en este caso las catalanas), ver a sus ídolos deportivos en acción (Messi) y conocer la historia europea en primera persona, enriqueciendo su mente de forma única. También nos importa que todos los concurrentes a nuestro Campus se lleven la idea de que se puede vivir de distintas profesiones dentro del deporte, brindándoles casos reales de este fenómeno, en un ambiente deportivo super desarrollado como el europeo.
                     </div>
@@ -60,7 +60,7 @@ export default function queesuncampodeportivo() {
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Una experiencia inolvidable</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                     En fin, por todos estos aspectos y muchos más, nuestros Campus Deportivos son una vivencia inolvidable y muy recomendable para la vida y desarrollo de cualquier niño apasionado al deporte.
                     </div>

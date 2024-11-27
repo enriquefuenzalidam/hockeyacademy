@@ -15,7 +15,7 @@ export default function Contacto() {
                             <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-yellow-400 text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-12 mx-8 mb-6 uppercase`}>
                                 Contacto
                             </h2>
-                            <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8`} />
+                            <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8`} />
                             <form className={`pb-12 px-6 gx:px-0  text-white font-Roboto text-base gx:text-lg`}>
                                 <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5`}>
                                     <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none`} type='text' placeholder='Nombre' />

@@ -146,7 +146,7 @@ const Futbolmasculino = () => {
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Fútbol Masculino<br /><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barça Clinics</span></h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5`} >
                             Nuestro Campus es un viaje a las ciudades de Barcelona y Madrid, España de 11 días y 9 noches. Una experiencia de vida, orientada a jóvenes (entre 12 y 17 años) con interés en enriquecerse a nivel deportivo, cultural y turístico. Proponemos un Campus inolvidable, donde conjugaremos la práctica deportiva en “La Masia”, con las entradas al Camp Nou y al Santiago Bernabeú para ver al F.C. Barcelona y al Real Madrid respectivamente por La Liga. Visitaremos también los principales puntos turísticos de ambas ciudades, eventos deportivos, charlas, actividades y muchas sorpresas más.
                         </p>
@@ -173,7 +173,7 @@ const Futbolmasculino = () => {
 
             <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-12`}>
                             <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Próximos eventos deportivos</h2>
-                            <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-12 `} />
+                            <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-12 `} />
                             {!!futbolProximasSalidas?.length && (
                             <div className={` mx-auto text-center overflow-hidden pb-6 px-6 gx:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gx:grid-cols-4 gap-8 md:gap-8 lg:gap-4`}>
                                 {futbolProximasSalidas.map((item, index) => (
@@ -193,7 +193,7 @@ const Futbolmasculino = () => {
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#72efdd] mb-8 `} />
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
@@ -207,7 +207,7 @@ const Futbolmasculino = () => {
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
                         <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#72efdd] mb-8 `} />
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
                     </div>
                 </div>
@@ -227,7 +227,7 @@ const Futbolmasculino = () => {
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
                         <form className={` pb-12 px-6 gx:px-0 font-Roboto text-lg text-neutral-500`}>
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />

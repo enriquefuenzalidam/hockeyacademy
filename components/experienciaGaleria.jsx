@@ -4,7 +4,7 @@ const ExperienciaGaleria = ({ ExperienciaImgs = [], title = 'Galería', introtex
     
     <section className={`  max-w-5xl w-full mx-auto `}>
     <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>{title}</h2>
-    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
+    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
 
     { introtext && <p className={`  text-neutral-700 font-Roboto text-md leading-relaxed mb-12 px-4 text-justify indent-5 hyphens-auto`} >
       {introtext}
