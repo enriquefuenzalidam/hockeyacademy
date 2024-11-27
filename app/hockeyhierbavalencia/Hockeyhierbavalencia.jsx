@@ -73,7 +73,7 @@ const Hockeyhierbavalencia = () => {
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus de Verano Hockey Hierba<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Valencia 2025</span></h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-0 `}>Del lunes 30 de junio al sábado 5 de julio</h2>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>9 sesiones de entrenamiento</h2>
@@ -118,7 +118,7 @@ const Hockeyhierbavalencia = () => {
 
             <section className={` block relative w-full h-auto mb-12 `}>
                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Conocé más sobre nuestro campus de verano hockey hierba</h2>
-                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
 
                 <div className={` relative max-w-5xl mx-auto `}>
                     <video poster='images/Hockey-tecificacion-barcelona-2023.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
@@ -139,7 +139,7 @@ const Hockeyhierbavalencia = () => {
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                         <form className={` pb-12 px-6 gx:px-0 font-Roboto text-lg text-neutral-500`}>
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
