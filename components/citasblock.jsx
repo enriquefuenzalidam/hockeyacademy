@@ -33,7 +33,7 @@ const CitasBlock = ({ citaslista = [], citasfondo }) => {
                 <p className={`mx-auto max-w-3xl font-NotoSerif italic font-light text-[15rem] leading-[12rem] text-blue-950 `}>“</p>
             </div>
             <div className={` relative z-20 max-w-5xl mx-auto `}>
-                <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-[618ms] ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br /><span className={` font-Cabin text-blue-950 text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
+                <p className={` text-center font-NotoSerif italic text-white text-md lg:text-lg gx:text-xl mx-12 transition-opacity duration-[618ms] ${fade ? 'opacity-100' : 'opacity-0'}`} style={{ lineHeight: '1.8em' }}>{cita}<br /><span className={` font-Cabin text-black text-md gx:text-xl font-bold leading-relaxed mt-4`}>{autor}</span></p>
             </div>
         </section>
 

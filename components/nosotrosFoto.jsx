@@ -2,7 +2,7 @@ import Link from "next/link";
 
 
 
-const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto', soy = 'Soy' }) => {
+const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto', soy, otoSoy = '\u00A0' }) => {
 
     return (
 
@@ -15,8 +15,9 @@ const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto'
                 <img className={` absolute inset-0 h-full aspect-1 `} src='nosotros/avatar.jpg' alt='' />
             )}
             </div>
-            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-3xl text-black mt-6 `}>{nombre}</p>
-            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-3xl text-[#299dca] mt-0 mb-10 `}>{soy}</p>
+            <p className={`  block w-full text-center font-RobotoCondensed font-bold text-4xl text-black mt-6 `}>{nombre}</p>
+            <p className={`  block w-full text-center font-RobotoCondensed font-semibold text-2xl text-[#299dca] mt-0 `}>{soy}</p>
+            <p className={`  block w-full text-center font-RobotoCondensed font-semibold text-2xl text-[#299dca] mt-0 mb-10 `}>{otoSoy}</p>
             <p className={`  block w-full text-center mt-3`}>
                 {!!linkedinEnlace && (
                 <Link className={` inline-flex items-center justify-center text-white bg-sky-600 hover:bg-sky-900 mx-auto w-12 h-12 rounded-full transition-all ease-in-out duration-300`} href={linkedinEnlace}>

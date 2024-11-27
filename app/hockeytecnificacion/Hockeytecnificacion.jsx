@@ -115,8 +115,8 @@ export default function Hockeytecnificacion() {
             <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0 text-neutral-700 mx-auto `}>
                 <div className={` flex flex-col gx:flex-row `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación<br/><span className={` text-nowrap text-[rgb(211,0,126)] `}>Barcelona 2025</span></h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación<br/><span className={` text-nowrap text-[#3998be] `}>Barcelona 2025</span></h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                         <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 12 al miércoles 23 de julio</h2>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
@@ -128,12 +128,12 @@ export default function Hockeytecnificacion() {
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                         Una oportunidad única de crecimiento técnico, compartir y hacer amistades con deportistas de Argentina, Chile, Uruguay, España, EEUU y diversos países y visitar las principales atracciones de la ciudad Condal.
                         </p>
-                        <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
+                        {/*<p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://calendly.com/identity-campus">
                                 Agendá tu reunión 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className={` inline-block h-4 w-auto ml-2`}  fill="currentColor">
                                     <path fill="white" d="M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                                </Link></p>
+                                </Link></p> */}
                     </div>
                     <LateralImagenesCuadro imagenesCuadro={imagenesCuadro} />
 
@@ -146,9 +146,9 @@ export default function Hockeytecnificacion() {
                 introtext="En nuestro campus de hockey nos enfocamos en mejorar la performance de juego. Trabajaremos en gestos de definición tanto de área chica como área grande, quites para potenciar la recuperación, gestos de despido tanto para definir cómo pasar bola, y el contenido estelar del desarrollo y perfeccionamiento de la arrastrada. Sin dudas será una oportunidad de crecimiento técnico personal para las deportistas en grupos reducidos y nivelados para lograr un mayor enfoque en la corrección y así asegurarnos una mejora." />
 
             <section data-aos-once="true" data-aos="fade-up" className={` block relative z-30 py-12 bg-center bg-cover clip-triangle `} style={{ backgroundImage: `url('images/hockey05.jpg')`, clipPath: 'polygon(0 0, calc(50% - 25px) 0, 50% 10%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%)' }}>
-                <div className={` absolute inset-0 opacity-90 z-40 bg-fucsiaAzulRatioFondo bg-center bg-cover `} />
+                <div className={` absolute inset-0 opacity-90 z-40 bg-otoFondoRatioFondo bg-center bg-cover `} />
                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` relative z-50 text-center tracking-wide font-BebasNeue text-white text-5xl italic mx-8`}>Si eres un club o una institución deportiva,<br className={` hidden gx:inline `} /> armámos tu experiencia a medida</h2>
-                <p className={` relative z-50 text-center font-Roboto font-bold text-md text-white leading-loose mt-6`}><Link className={` mx-auto inline-block py-1 px-6 hover:bg-[rgb(141,0,91)] bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-sm shadow-black transition-all ease-in-out duration-300 `} href="/contacto">Contactanos</Link></p>
+                <p className={` relative z-50 text-center font-Roboto font-bold text-md text-white leading-loose mt-6`}><Link className={` mx-auto text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="/contacto">Contactanos</Link></p>
             </section>
 
             <AllInclusiveExperiencia
@@ -157,9 +157,9 @@ export default function Hockeytecnificacion() {
             <section className={` max-w-5xl w-full mx-auto `}>
                 <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
                     <div className={` w-full md:w-6/12 justify-start items-start`}>
-                        <h4 className={` text-left font-BebasNeue text-[#F6BB0E] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                        <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                         <h3 className={` text-left font-BebasNeue text-blue-950 text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#72efdd] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
                         <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12  `}>Queremos que tu viaje sea inolvidable, y lleno de recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (shorts / faldas, camisetas de entreno, buzo, mochila). En la cena despedida llevaremos a cabo distintos sorteos. <strong className={` whitespace-nowrap `}>¡No te lo puedes perder!</strong></p>
                     </div>
                     <p className={` w-full md:w-6/12 flex justify-center items-center`}>
@@ -182,7 +182,7 @@ export default function Hockeytecnificacion() {
                 <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                     <div className={`  w-full `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                         <form className={` pb-12 px-6 gx:px-0 font-Roboto text-lg text-neutral-500 `}>
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
                             <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
@@ -195,7 +195,7 @@ export default function Hockeytecnificacion() {
                                 <span className={`block hyphens-auto font-RobotoCondensed leading-tight `}>
                                     Sí, acepto la política de privacidad y los términos y condiciones.</span></label>
                             <p className={` block align-bottom mt-8 text-center `}>
-                                <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:bg-none hover:border-opacity-10 `} value='Enviar mensaje' /></p>
+                                <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
 
                         </form>
                     </div>
@@ -204,7 +204,7 @@ export default function Hockeytecnificacion() {
                 </div>
             </section>
 
-            <div className={` relative bg-fucsiaAzulFondoDos clear-both `}>
+            <div className={` relative bg-otoFondoDos clear-both `}>
                 <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
                 <Footer />
             </div>

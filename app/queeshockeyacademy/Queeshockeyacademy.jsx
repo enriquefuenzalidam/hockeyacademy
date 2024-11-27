@@ -26,7 +26,7 @@ export default function Queeshockeyacademy() {
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Qué es Hockey Academy</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                     <p className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                         Hockey Academy es una institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey. Nos enfocamos en mejorar de manera personalizada y detallada tanto la técnica individual como las capacidades físicas, lo que garantiza un avance significativo en el rendimiento y ejecución de cada uno de nuestros participantes.
                     </p>
@@ -42,7 +42,7 @@ export default function Queeshockeyacademy() {
                 </div>
             </section>
 
-            <div className={` relative bg-fucsiaAzulFondoDos clear-both mt-28 `}>
+            <div className={` relative bg-otoFondoDos clear-both mt-28 `}>
                 <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
                 <Footer />
             </div>
