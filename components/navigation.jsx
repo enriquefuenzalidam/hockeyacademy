@@ -24,7 +24,7 @@ const navItems = [
             { linkText: 'Hockey de Tecnificación', href: '/hockeytecnificacion' }
         ]
      },
-    { linkText: 'Benefecios HA CARD', href: '/' },
+    { linkText: 'Benefecios HA Card', href: '/beneficioshacard' },
     { linkText: 'Quiénes somos', href: '/quienessomos' },
     { linkText: 'Staff', href: '/staff' },
     { linkText: 'Alianzas Estratégicas', href: '/sponsors' },
