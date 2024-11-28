@@ -10,7 +10,7 @@ const ExperienciaGaleria = ({ ExperienciaImgs = [], title = 'Galería', introtex
       {introtext}
     </p> }
     {!!ExperienciaImgs?.length && (
-        <div className={` grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gx:grid-cols-3 gap-2 px-4 gx:px-0 pb-12 transition-all ease-in-out duration-300`}>
+        <div className={` grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gx:grid-cols-3 gap-2 px-4 gx:px-0 pb-12 transition-all ease-in-out duration-300`}>
             {ExperienciaImgs.map((item, index) => (
                 <p key={index} className={` inline-block `} >
                     <img data-aos-once="true" data-aos="fade" className={` w-full h-full `} src={item.src} alt='' />
