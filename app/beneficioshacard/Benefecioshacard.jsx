@@ -2,11 +2,6 @@
 import { Footer } from 'components/footer';
 import Image from 'next/image';
 
-import BeneficiosImage from 'public/hacard/beneficios.png';
-import FiestaHaCierre from 'public/hacard/fiestacierreha.png';
-import HolaSoyHaCard from 'public/hacard/holasoyhacard.png';
-import Tarjeta from 'public/hacard/tarjeta.png';
-
 import HACard01 from 'public/hacard/hacard_01.png';
 import HACard02 from 'public/hacard/hacard_02.png';
 
@@ -37,16 +32,16 @@ export default function BenefeciosHaCard() {
 
             <div className={` relative bg-otoFondo `}>
 
-            <section className={` block relative w-full aspect-[16/5] z-30 `}>
-                <div className={` absolute z-10 top-0 left-0 w-full h-full bg-[url('/hacard/fiestacierreha.png')] bg-center bg-cover `} />
+                <section className={` block relative w-full aspect-[16/5] z-30 `}>
+                    <div className={` absolute z-10 top-0 left-0 w-full h-full bg-[url('/hacard/fiestacierreha.png')] bg-center bg-cover `} />
 
-                <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
+                    <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
 
-                    <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl sm:text-5xl md:text-6xl mx-8` } style={{ textShadow: `0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black` }}>Beneficios HA Card</h2>
+                        <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl sm:text-5xl md:text-6xl mx-8`} style={{ textShadow: `0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black` }}>Beneficios HA Card</h2>
 
 
-                </div>
-            </section>
+                    </div>
+                </section>
 
                 <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
@@ -58,18 +53,17 @@ export default function BenefeciosHaCard() {
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-3 `} />
                         <div className={` block text-center `}>
 
-
-                        <div className={` mx-auto max-w-2xl p-6 items-start justify-start align-top `}>
-                        <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-justify hyphens-auto `}>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Productos de nuestras alianzas estratégicas, todas nuestr@s jugador@s que tengan la <span className={` font-extrabold  text-sky-600 `}>HA Card</span> podrán disfrutar de descuentos exclusivos con nuestros aliados.</p>
-                        </div>
-                        <div className={` mx-auto text-center overflow-visible `}>
-                            {sponsors.map((src, index) => (
-                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
-                                    <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
-                                </span>
-                            ))}
-                        </div>
+                            <div className={` mx-auto max-w-2xl p-6 items-start justify-start align-top `}>
+                                <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-justify hyphens-auto `}>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Productos de nuestras alianzas estratégicas, todas nuestr@s jugador@s que tengan la <span className={` font-extrabold  text-sky-600 `}>HA Card</span> podrán disfrutar de descuentos exclusivos con nuestros aliados.</p>
+                            </div>
+                            <div className={` mx-auto text-center overflow-visible `}>
+                                {sponsors.map((src, index) => (
+                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                        <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </section>
 
@@ -79,16 +73,16 @@ export default function BenefeciosHaCard() {
                         <div className={` block text-center `}>
 
 
-                        <div className={` mx-auto max-w-2xl p-6 items-start justify-start align-top `}>
-                            <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-justify hyphens-auto `}>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>La credencial <span className={` font-extrabold  text-sky-600 `}>HA Card</span> será un premio que las jugadoras obtendrán luego de tener 5 meses de antigüedad en la academia.</p>
-                        </div>
+                            <div className={` mx-auto max-w-2xl p-6 items-start justify-start align-top `}>
+                                <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-justify hyphens-auto `}>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>La credencial <span className={` font-extrabold  text-sky-600 `}>HA Card</span> será un premio que las jugadoras obtendrán luego de tener 5 meses de antigüedad en la academia.</p>
+                            </div>
 
-                        <div className={` grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-6 p-6`}>
-                            <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={HACard01} alt='Beneficios' />
-                            <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={HACard02} alt='Fiesta HA ' />
-                        </div>
- 
+                            <div className={` grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-6 p-6`}>
+                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={HACard01} alt='Beneficios' />
+                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={HACard02} alt='Fiesta HA ' />
+                            </div>
+
                         </div>
                     </section>
 
@@ -100,5 +94,3 @@ export default function BenefeciosHaCard() {
 
     );
 }
-
-

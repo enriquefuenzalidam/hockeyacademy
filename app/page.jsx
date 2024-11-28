@@ -165,6 +165,7 @@ export default function Page() {
                     </section>
                 </div>
                 {/*
+
                 <div className={` relative z-30 pt-24 `}>
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6`}>Campus de Hockey Hierba en Europa y EEUU</h2>
@@ -248,9 +249,8 @@ export default function Page() {
                         </div>
                     </section>
 
-
-
-                </div>*/}
+                </div>
+                */}
                 <Footer />
             </div>
         </main>
