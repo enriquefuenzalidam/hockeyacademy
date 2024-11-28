@@ -1,4 +1,4 @@
-import BenefeciosHaCard from "./BenefeciosHaCard";
+import BenefeciosHaCard from "./Benefecioshacard";
 
 export const metadata = {
     title: 'Benefecios HA Card'
