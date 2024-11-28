@@ -53,7 +53,7 @@ export default function BenefeciosHaCard() {
 
                 <div className={`  bg-whiteFadedFondo`}>
 
-                    <section className={` relative mx-auto max-w-5xl z-30 pb-16 pt-32`}>
+                    <section className={` relative mx-auto max-w-5xl z-30 pb-16 pt-24`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Beneficios</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-3 `} />
                         <div className={` block text-center `}>

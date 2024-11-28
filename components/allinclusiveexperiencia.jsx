@@ -77,7 +77,7 @@ const AllInclusiveExperiencia = ({ list = [] }) => {
                 <li key={item.id} data-aos-once="true" data-aos="zoom-out" >
                     <div className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
                         <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[#2aade1]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
-                        <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 `}>{item.contenido}</p>
+                        <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 indent-5 hyphens-auto text-justify tracking-tight `}>{item.contenido}</p>
                     </div>
                 </li>
             ))}

@@ -3,18 +3,9 @@ import VerticalVideo from 'components/verticalvideo';
 
 import { Portadacabecera } from '../components/portadaCabecera';
 import { Footer } from '../components/footer';
-import { Partners } from 'components/partners';
-import { Novedades } from 'components/novedades';
 
-import chevronRight from 'public/images/chevronRight.svg';
-import envelope from 'public/images/envelope.svg';
-import calendarDays from 'public/images/calendar-days.svg';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import proximoEvento2024A from 'public/images/proximoEvento2024_hockeyTecnificacionBarcelona.jpg';
-import proximoEvento2024B from 'public/images/proximoEvento2024_hockeyTecnificacion.jpg';
-import proximoEvento2024C from 'public/images/proximoEvento2024_hockeyBarcelonaYParis.jpg';
 
 
 import ViajesGaleria from 'components/viajesgaleria';
