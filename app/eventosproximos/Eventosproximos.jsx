@@ -104,7 +104,8 @@ export default function Eventosproximos() {
 
 
                 <div className={` relative z-30 pt-16 `}>
-                    <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
+                    <div className={` absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent `} />
+                    <section className={` relative text-white text-center max-w-5xl mx-auto `} >
                         <div className={` flex flex-col gap-24 md:gap-5 mb-24 items-center justify-center `}>
                             <div>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Eventos próximos</h2>

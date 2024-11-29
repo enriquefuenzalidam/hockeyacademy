@@ -3,10 +3,12 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 
+/*
+
   output: 'export',
-  images: {
-   unoptimized: true, // Disable Image Optimization API for static export
-  },
+  images: { unoptimized: true, }, // Disable Image Optimization API for static export
+  
+*/
 
   // Webpack custom configuration
   webpack(config, options) {

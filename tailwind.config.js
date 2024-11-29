@@ -17,6 +17,7 @@ module.exports = {
                 'otoFondoCitasFondo': 'linear-gradient(240deg, rgb(119, 172, 212) 0%, rgb(88, 119, 155) 100%)',
                 'otoFondoNosotrosGradient': 'linear-gradient(220deg, rgb(119, 172, 212) 44%, rgb(88, 119, 155) 100%)',
                 'otoContactoGradient': 'linear-gradient(230deg, #B3DAFF 49%, #006BA8 95%)',
+                'otoBlackTransparenteFondo': 'linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 3%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
 
                 'fucsiaAzulFondo': 'linear-gradient(to bottom, rgb(211, 0, 126), rgb(18, 33, 77), rgb(211, 0, 126), rgb(18, 33, 77), rgb(211, 0, 126), rgb(18, 33, 77), rgb(211, 0, 126), rgb(18, 33, 77))',
                 'fucsiaAzulFondoDos': 'linear-gradient(to bottom, rgb(211, 0, 126), rgb(18, 33, 77))',
