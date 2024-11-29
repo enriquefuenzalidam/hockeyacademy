@@ -94,7 +94,8 @@ export default function Page() {
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
             <Portadacabecera />
             <div className={` relative bg-otoFondo `}>
-                <div className={` absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent `} />
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
+                <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
                 <div className={` absolute inset-0 opacity-15 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
                 <div className={` relative z-30 pt-16 `}>

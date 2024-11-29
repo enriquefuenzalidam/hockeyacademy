@@ -100,11 +100,12 @@ export default function Eventosproximos() {
             </section>
 
             <div className={` relative bg-otoFondo `}>
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
+                <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
                 <div className={` absolute inset-0 opacity-15 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
                 <div className={` relative z-30 pt-16 `}>
-                    <div className={` absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent `} />
                     <section className={` relative text-white text-center max-w-5xl mx-auto `} >
                         <div className={` flex flex-col gap-24 md:gap-5 mb-24 items-center justify-center `}>
                             <div>
