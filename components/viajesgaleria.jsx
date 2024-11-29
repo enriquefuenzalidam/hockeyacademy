@@ -48,7 +48,7 @@ const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros 
                 {!!viajesgalerialist?.length && (
                     <div ref={galleryRef} className={`  block h-96 overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar`}>
                         {viajesgalerialist.map((item, index) => (
-                            <img key={index} ref={el => viajesGaleriaRefs.current[index] = el} className={` inline-block mx-1 h-full w-auto transition-opacity duration-500`} src={item.src} alt='' />
+                            <img key={index} ref={el => viajesGaleriaRefs.current[index] = el} className={` inline-block mx-1 h-96 w-auto max-w-max transition-opacity duration-500 `} src={item.src} alt='' />
                         ))}
                     </div>
                 )}
