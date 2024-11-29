@@ -31,7 +31,7 @@ export function Footer() {
 
             <div className={` max-w-5xl p-8 mx-auto `}>
                 <div className={` text-white text-left mx-auto `}>
-                    Todos los derechos reservados a IDentity Campus 2023
+                    Todos los derechos reservados a Hockey Academy 2024
                 </div>
             </div>
 
