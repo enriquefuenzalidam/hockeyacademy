@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Hockey Academy" />
                 <meta name="twitter:description" content="Hockey Academy. Institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey." />
-                <meta name="twitter:image" content="/hockeyacademycamp/hockeyacademycamp_sponsor_09.png" />
+                <meta name="twitter:image" content="/hockeyacademycamp/hockeyacademycamp_ogimage.png" />
 
                 <link rel="apple-touch-icon" sizes="230x230" href="/images/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/images/hockeyacademy_h_logo_16x16.png" />
