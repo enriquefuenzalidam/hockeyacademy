@@ -4,11 +4,11 @@ const nextConfig = {
   reactStrictMode: true,
 
 /*
-
+*/
   output: 'export',
   images: { unoptimized: true, }, // Disable Image Optimization API for static export
   
-*/
+
 
   // Webpack custom configuration
   webpack(config, options) {
