@@ -33,7 +33,7 @@ const navItems = [
       },
     { linkText: 'Benefecios HA Card', href: '/beneficioshacard' },
     { linkText: 'Imágenes de HA', href: '/haenimagenes' },
-    { linkText: 'Capacitaciones', href: '/' },
+    { linkText: 'Capacitaciones', href: '/capacitaciones' },
     { linkText: 'Sponsors y Alianzas', href: '/sponsors' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }

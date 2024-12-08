@@ -101,7 +101,7 @@ export default function HAenimagenes() {
 
                         </div>
                     </section>
-                    <section className={` relative mx-auto max-w-5xl z-30 pb-32 pt-32`}>
+                    <section className={` relative mx-auto max-w-5xl z-30 pt-32`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
 
@@ -116,8 +116,28 @@ export default function HAenimagenes() {
                             </div>
 
                         )}
-
                     </section>
+
+                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-32 `}>
+                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<br/>Hockey Academy</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
+
+                        <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-center px-6 w-3xl mx-auto mb-8`}>
+                            Disfruta de Hockey Academy en imágenes de alta definición.</p>
+
+                        <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/15xdClWddp3us1h7s5f3qItpNh9aH2tYE?usp=sharing' className={`flex items-center justify-center bg-white bg-opacity-60 w-2/5 md:w-1/5 aspect-1 mx-auto cursor-pointer rounded-full border-8 border-[#00b3f9] `} >
+                            <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
+                                <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />
+                                <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335" />
+                                <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d" />
+                                <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc" />
+                                <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00" />
+                            </svg>
+                        </Link>
+                            
+                    </section>
+
                 </div>
                 <Footer />
             </div>

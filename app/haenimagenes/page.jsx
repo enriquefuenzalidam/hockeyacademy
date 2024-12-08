@@ -2,7 +2,7 @@
 import HAenimagenes from "./HAenimagenes";
 
 export const metadata = {
-    title: 'Staff'
+    title: 'Imágenes y Videos'
 };
   
 
