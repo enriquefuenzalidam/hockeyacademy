@@ -72,14 +72,17 @@ import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/hockeyacademyca
 import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_07.png';
 import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_08.png';
 
-const sponsors = [
+const sponsorsha = [
     hockeyacademycampsponsor01,
     hockeyacademycampsponsor02,
     hockeyacademycampsponsor03,
     hockeyacademycampsponsor04,
     hockeyacademycampsponsor05,
     hockeyacademycampsponsor06,
-    hockeyacademycampsponsor07,
+    hockeyacademycampsponsor07
+];
+
+const alianzestrtgha = [
     hockeyacademycampsponsor08
 ];
 
@@ -102,22 +105,24 @@ export default function Eventosproximos() {
             <div className={` relative bg-otoFondo `}>
                 <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
                 <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
-                <div className={` absolute inset-0 opacity-15 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
+                <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
                 <div className={` relative z-30 pt-16 `}>
                     <section className={` relative text-white text-center max-w-5xl mx-auto `} >
-                        <div className={` flex flex-col gap-24 md:gap-5 mb-24 items-center justify-center `}>
-                            <div>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Eventos próximos</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
+                        <div className={` flex flex-col md:flex-row gap-0 md:gap-5 mb-24 items-center md:items-start justify-center `}>
+                            <div>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 20 hasta el 22.</p>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Enero de 2025<br />desde 10 hasta el 13.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Actividad Especial</h2>
+                                </div>
+                                <div>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Actividad Especial</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Febrero de 2025<br />desde 17 en adelante.</p>
                                 <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Marzo de 2025, lunes 3.</p>
@@ -152,17 +157,33 @@ export default function Eventosproximos() {
                         viajesgalerialist={hockeyacademycampimagenes}
                         titulo="Hockey Academy Camp en Imágenes" />
 
-                    <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-32`}>
-                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy Camp Sponsors</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-                        <div className={` mx-auto text-center overflow-visible `}>
-                            {sponsors.map((src, index) => (
-                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8 `}>
-                                    <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
-                                </span>
-                            ))}
-                        </div>
+<section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto max-w-5xl z-30 pt-32`}>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Sponsors Hockey Academy</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-5 `} />
+                        {!!alianzestrtgha && (
+                            <div className={` mx-auto text-center overflow-visible `}>
+                                {sponsorsha.map((src, index) => (
+                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                        <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </section>
+                    <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto max-w-5xl z-30 pb-32 pt-24 `}>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Alianzas Estratégicas</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-5 `} />
+                        {!!alianzestrtgha && (
+                            <div className={` mx-auto text-center overflow-visible `}>
+                                {alianzestrtgha.map((src, index) => (
+                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                        <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </section>
+
                 </div>
                 <Footer />
             </div>
