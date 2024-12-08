@@ -7,6 +7,8 @@ import { Footer } from '../components/footer';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
+import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
 import ViajesGaleria from 'components/viajesgaleria';
 import hockeyacademycampimagen01 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_01.jpg';
@@ -95,7 +97,20 @@ export default function Page() {
     return (
 
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
-            <Portadacabecera />
+
+            <section className={` block relative w-full h-screen bg-black `}>
+                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
+                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
+                    </video>
+                </div>
+                <div className={` absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-40 `} >
+                    <Image className={` w-2/5 md:w-1/5 h-auto `} src={hockeyacademylogo} alt='' />
+                    <Image className={` w-2/5 md:w-1/5 h-auto `} src={hockeyacademylogob} alt='' />
+                </div>
+            </section>
+
+            {/* <Portadacabecera /> */}
             <div className={` relative bg-otoFondo `}>
                 <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
                 <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />

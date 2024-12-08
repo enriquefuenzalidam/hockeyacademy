@@ -1,21 +1,24 @@
 
 import NosotrosFoto from 'components/nosotrosFoto';
 import { Footer } from 'components/footer';
+import Image from 'next/image';
 
+import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
+import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
 export default function Quienessomos() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
-            <section className={` block relative w-full aspect-[16/7] bg-white z-30 `}>
-                <div className={` absolute z-10 top-0 left-0 w-full h-full bg-[url('/images/6.jpg')] bg-center bg-cover opacity-60`} />
-                <div className={` absolute z-20 top-0 left-0 w-full h-full bg-otoFondoNosotrosGradient bg-center bg-cover opacity-70 `} />
-
+            <section className={` block relative w-full h-[50vh] bg-black `}>
+                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
+                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
+                    </video>
+                </div>
+                <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                 <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
-
-                    <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#00445f] text-6xl mx-8`}>Quiénes Somos</h2>
-
-
+                    <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#ffffff] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Quiénes Somos</h2>
                 </div>
             </section>
 

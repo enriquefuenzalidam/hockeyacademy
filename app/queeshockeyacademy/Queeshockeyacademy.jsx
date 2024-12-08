@@ -6,10 +6,10 @@ export default function Queeshockeyacademy() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
-            <section className={` block relative w-full aspect-[9/10] sm:aspect-[16/7] bg-black z-30 `}>
-                <div className={` absolute top-0 left-0 w-full h-full `}>
-                    <video poster='images/euroHockey2025F.webp' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Hockey-2022.mp4' type="video/mp4" />
+            <section className={` block relative w-full h-[50vh] bg-black `}>
+                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
+                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
                     </video>
                 </div>
                 <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
@@ -18,15 +18,14 @@ export default function Queeshockeyacademy() {
                     <p className={` inline-block relative text-center mx-auto w-[16rem] lg:w-[28rem] gx:w-[35rem] mb-4 transition-all ease-in-out duration-100`}>
                         <img data-aos-once="true" data-aos="zoom-in" className={` w-1/2 h-auto mx-auto`} src='hockeyacademycamp/hockeyacademycamp_logo.png' alt=''/>
                     </p>
-                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>Hockey Academy</h2>
+                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
+                        Qué es Hockey Academy</h2>
 
                 </div>
             </section>
 
             <section className={`block mx-8`}>
                 <div className={`block mx-auto max-w-5xl mt-8`}>
-                    <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Qué es Hockey Academy</h2>
-                    <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
                     <p className={` text-blue-950 font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                         Hockey Academy es una institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey. Nos enfocamos en mejorar de manera personalizada y detallada tanto la técnica individual como las capacidades físicas, lo que garantiza un avance significativo en el rendimiento y ejecución de cada uno de nuestros participantes.
                     </p>

@@ -1,7 +1,7 @@
 import Eventosproximos from "./Eventosproximos";
 
 export const metadata = {
-    title: 'Eventos Próximos'
+    title: 'Próximos Eventos'
 };
 
 export default function Page() {

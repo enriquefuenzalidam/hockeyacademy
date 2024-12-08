@@ -17,7 +17,7 @@ import youtubeIcon from 'public/images/youtube.svg';
 
 const navItems = [
     { linkText: 'Inicio', href: '/' },
-    { linkText: 'Eventos próximos', href: '/eventosproximos' },
+    { linkText: 'Próximos Eventos', href: '/eventosproximos' },
     { linkText: 'Campus Tecnificación Europa',
         subTitulos: [,
             { linkText: 'Campus Eurohockey', href: '/eurohockey' },
@@ -27,7 +27,7 @@ const navItems = [
     { linkText: 'Benefecios HA Card', href: '/beneficioshacard' },
     { linkText: 'Quiénes somos', href: '/quienessomos' },
     { linkText: 'Staff', href: '/staff' },
-    { linkText: 'Alianzas Estratégicas', href: '/sponsors' },
+    { linkText: 'Sponsors y Alianzas', href: '/sponsors' },
     { linkText: 'Qué es Hockey Academy', href: '/queeshockeyacademy' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }
