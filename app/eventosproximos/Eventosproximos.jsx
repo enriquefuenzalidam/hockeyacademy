@@ -114,22 +114,22 @@ export default function Eventosproximos() {
 
                 <div className={` relative z-30 pt-16 `}>
                     <section className={` relative text-white text-center max-w-5xl mx-auto `} >
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Próximos Eventos</h2>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Próximos Eventos</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
                         <div className={` flex flex-col md:flex-row gap-0 md:gap-5 mb-24 items-center md:items-start justify-center `}>
                             <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 20 hasta el 22.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Enero de 2025<br />desde 10 hasta el 13.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Diciembre de 2024<br />desde 20 hasta el 22.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Enero de 2025<br />desde 10 hasta el 13.</p>
                                 </div>
                                 <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Actividad Especial</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Febrero de 2025<br />desde 17 en adelante.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Marzo de 2025, lunes 3.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Actividad Especial</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Febrero de 2025<br />desde 17 en adelante.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Marzo de 2025, lunes 3.</p>
                             </div>
                         </div>
                         <p className={` font-RobotoCondensed font-bold text-md sm:text-lg md:text-xl uppercase leading-loose mt-6 mb-24 `}>
@@ -138,26 +138,26 @@ export default function Eventosproximos() {
                                 <svg className={` inline-block w-6 sm:w-8 md:w-12 ml-4`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                                     <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></svg></Link></p>
 
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Convenios y Descuentos en Tiendas</h2>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Convenios y Descuentos en Tiendas</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
                                 <div className={` flex flex-col md:flex-row gap-0 md:gap-5 mb-24 items-center md:items-start justify-center `}>
                             <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>MUNICH</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional de<br/>Zapatillas MUNICH Comprando en HA.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>SmellWell</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional por<br/>compras de SmellWell en HA.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>The Candyland</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en tiendas<br/>The Candyland.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Uni-ko</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en Uni-ko web<br/>(código web HACADEMY).</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>MUNICH</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional de<br/>Zapatillas MUNICH Comprando en HA.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>SmellWell</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional por<br/>compras de SmellWell en HA.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>The Candyland</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en tiendas<br/>The Candyland.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Uni-ko</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en Uni-ko web<br/>(código web HACADEMY).</p>
                                 </div>
                                 <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Full Hockey</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off Full Hockey.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Sportika</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off en tienda Sportika y<br/>en la web (código web HA10%).</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Identity Campus</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Descuento en los Camp de<br/>Europa con Identity Campus.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Full Hockey</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off Full Hockey.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Sportika</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off en tienda Sportika y<br/>en la web (código web HA10%).</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Identity Campus</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Descuento en los Camp de<br/>Europa con Identity Campus.</p>
                             </div>
                         </div>
                     </section>

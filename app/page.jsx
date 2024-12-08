@@ -120,26 +120,26 @@ export default function Page() {
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
                         <div className={` flex flex-col md:flex-row gap-24 md:gap-5 mb-24 items-center md:items-start justify-center `}>
                             <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 mb-6 text-[#000] `}>Eventos próximos</h2>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 mb-6 text-[#000] `}>Eventos próximos</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Diciembre de 2024<br />desde 20 hasta el 22.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Enero de 2025<br />desde 10 hasta el 13.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Actividad Especial</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Febrero de 2025<br />desde 17 en adelante.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Marzo de 2025, lunes 3.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp +13</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Diciembre de 2024<br />desde 20 hasta el 22.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Summer Camp</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Enero de 2025<br />desde 10 hasta el 13.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Actividad Especial</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Febrero de 2025<br />desde 17 en adelante.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Comienzo Academia 2025</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Marzo de 2025, lunes 3.</p>
                             </div>
                             <div>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Fechas de viajes 2025</h2>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Fechas de viajes 2025</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] `}>Campus de Tecnificación</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Julio de 2025<br />desde 12 hasta el 23.</p>
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Campus Eurohockey Alemania</h2>
-                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Agosto de 2025<br />desde 9 hasta el 20.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] `}>Campus de Tecnificación</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Julio de 2025<br />desde 12 hasta el 23.</p>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#5fd2ff] mt-6 `}>Campus Eurohockey Alemania</h2>
+                                <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Agosto de 2025<br />desde 9 hasta el 20.</p>
                             </div>
                         </div>
 
@@ -204,9 +204,9 @@ export default function Page() {
 
                 <div className={` relative z-30 pt-24 `}>
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6`}>Campus de Hockey Hierba en Europa y EEUU</h2>
+                        <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6`}>Campus de Hockey Hierba en Europa y EEUU</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-6 `} />
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mb-6`}>Tecnificaciones - Deportistas olímpicos - Turismo deportivo</h2>
+                        <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 italic text-[#F6BB0E] mb-6`}>Tecnificaciones - Deportistas olímpicos - Turismo deportivo</h2>
                         <p className={` font-Roboto text-xl mx-8 leading-relaxed text-justify  hyphens-auto `} >Nuestras viajes y campus son experiencias de vida inolvidables para jóvenes amantes del hockey. En ellos combinamos la asistencia a los mejores eventos, entrenamientos a nivel profesional, diferentes competiciones con la participación de deportistas olímpicos y con el objetivo de que todos los deportistas adquieran conocimientos nuevos y perfeccionamientos técnicos y logren un mayor entendimiento del juego.</p>
                     </section>
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto my-24`} >
@@ -237,7 +237,7 @@ export default function Page() {
                         </div>
                     </section>
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center mx-auto mt-28 max-w-5xl `} >
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 text-[#F6BB0E] mb-6`}>¿Qué campus de Hockey Tecnificación preferís?</h2>
+                        <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-8 text-[#F6BB0E] mb-6`}>¿Qué campus de Hockey Tecnificación preferís?</h2>
                         <p className={` font-Roboto text-2xl mx-auto mb-6 leading-normal max-w-xl w-full `} >Si estas en Europa y queres ser parte del mejor Campus de Hockey esta es tu oportunidad.</p>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-6 `} />
                         <div className={` mt-16 mx-8 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 max-w-7xl `}>

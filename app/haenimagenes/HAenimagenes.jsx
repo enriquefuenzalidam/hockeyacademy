@@ -76,7 +76,7 @@ export default function HAenimagenes() {
                 <div className={`  bg-whiteFadedFondo`}>
 
                     <section className={` relative mx-auto max-w-5xl pt-16 text-center `}>
-                        <Image className={` w-2/5 md:w-2/5 h-auto mx-auto `} src={hockeyacademylogob} alt='' />
+                        <Image data-aos-once="true" data-aos="fade-up" className={` w-2/5 md:w-2/5 h-auto mx-auto `} src={hockeyacademylogob} alt='' />
                     </section>
 
                     <section className={` block relative max-w-5xl w-full bg-transparent mt-14 mx-auto px-4 gx:px-0 `}>
@@ -119,7 +119,7 @@ export default function HAenimagenes() {
                     </section>
 
                     <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-32 `}>
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<br/>Hockey Academy</h2>
+                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
 
                         <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-center px-6 w-3xl mx-auto mb-8`}>
