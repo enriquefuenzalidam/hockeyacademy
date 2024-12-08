@@ -98,7 +98,7 @@ export default function Page() {
 
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
-            <section className={` block relative w-full h-screen bg-black `}>
+            <section className={` block relative w-full md:h-screen h-[calc(100vh-5rem)] bg-black `}>
                 <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
                     <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline >
                         <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
