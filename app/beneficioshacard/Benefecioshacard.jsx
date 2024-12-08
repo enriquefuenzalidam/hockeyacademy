@@ -56,9 +56,9 @@ export default function BenefeciosHaCard() {
                             {!!sponsors && (
                                 <div className={` grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 mx-auto max-w-sm md:max-w-2xl lg:max-w-5xl text-center overflow-hidden py-12 px-6 `}>
                                     {sponsors.map((src, index) => (
-                                        <div class={` flex flex-col md:flex-row mx-auto  w-full`}>
+                                        <div key={index} class={` flex flex-col md:flex-row mx-auto  w-full`}>
                                             <div className={` flex flex-col md:mr-8  mt-6 sm:mt-7 md:mt-0  mb-2 sm:mb-4 md:mb-0 justify-center items-center `}>
-                                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block bg-[#76b2cc] rounded-full mx-auto w-36 md:w-44 h-36 md:h-44`}>
+                                                <span data-aos-once="true" data-aos="zoom-in" className={` relative inline-block bg-[#76b2cc] rounded-full mx-auto w-36 md:w-44 h-36 md:h-44`}>
                                                     <Image className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9/12 h-auto `} src={src.imagen} alt='' />
                                                 </span>
                                             </div>
