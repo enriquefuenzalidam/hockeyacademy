@@ -94,11 +94,15 @@ export default function Eventosproximos() {
 
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
-            <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
-                <div className={` absolute top-0 left-0 w-full h-full `}>
-                    <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
+            <section className={` block relative w-full h-[50vh] bg-black `}>
+                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
+                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
                     </video>
+                </div>
+                <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
+                <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
+                    <h2 data-aos-once="true" data-aos="zoom-out-down" className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#BAECFF] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Próximos Eventos</h2>
                 </div>
             </section>
 
@@ -128,7 +132,28 @@ export default function Eventosproximos() {
                                 <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Marzo de 2025, lunes 3.</p>
                             </div>
                         </div>
-
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>Convenios y Descuentos</h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
+                                <div className={` flex flex-col md:flex-row gap-0 md:gap-5 mb-24 items-center md:items-start justify-center `}>
+                            <div>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>MUNICH</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional de<br/>Zapatillas MUNICH Comprando en HA.</p>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>SmellWell</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Precio promocional por<br/>compras de SmellWell en HA.</p>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>The Candyland</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en tiendas<br/>The Candyland.</p>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Uni-ko</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >15% Off en Uni-ko web<br/>(código web HACADEMY).</p>
+                                </div>
+                                <div>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 md:mt-0 `}>Full Hockey</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off Full Hockey.</p>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Sportika</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >10% Off en tienda Sportika y<br/>en la web (código web HA10%).</p>
+                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] mt-6 `}>Identity Campus</h2>
+                                <p className={` font-Roboto text-xl mx-8 leading-relaxed text-center hyphens-auto `} >Descuento en los Camp de<br/>Europa con Identity Campus.</p>
+                            </div>
+                        </div>
                         <p className={` font-RobotoCondensed font-bold text-md sm:text-lg md:text-xl uppercase leading-loose mt-6 mb-24 `}>
                             <Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-3 sm:px-4 md:px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="mailto:hockeyacademychile@gmail.com">
                                 Escríbenos y reserva tu cupo

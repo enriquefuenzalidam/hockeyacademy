@@ -24,11 +24,17 @@ const navItems = [
             { linkText: 'Hockey de Tecnificación', href: '/hockeytecnificacion' }
         ]
      },
+     { linkText: 'Qué es Hockey Academy',
+         subTitulos: [,
+            { linkText: 'Acerca de HA', href: '/queeshockeyacademy' },
+            { linkText: 'Quiénes somos', href: '/quienessomos' },
+            { linkText: 'Nuestro Staff', href: '/staff' },
+         ]
+      },
     { linkText: 'Benefecios HA Card', href: '/beneficioshacard' },
-    { linkText: 'Quiénes somos', href: '/quienessomos' },
-    { linkText: 'Staff', href: '/staff' },
+    { linkText: 'HA en Imágenes', href: '/haenimagenes' },
+    { linkText: 'Capacitaciones', href: '/' },
     { linkText: 'Sponsors y Alianzas', href: '/sponsors' },
-    { linkText: 'Qué es Hockey Academy', href: '/queeshockeyacademy' },
 //    { linkText: 'Novedades', href: '/novedades' },
     { linkText: 'Contacto', href: '/contacto' }
 ];
