@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
 
                 <meta property="og:title" content="Hockey Academy" />
                 <meta property="og:description" content="Hockey Academy. Institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey." />
-                <meta property="og:image" content="/hockeyacademycamp/hockeyacademycamp_sponsor_09.png" />
+                <meta property="og:image" content="/hockeyacademycamp/hockeyacademycamp_ogimage.png" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Hockey Academy" />
                 <meta property="og:locale" content="es_ES" />
