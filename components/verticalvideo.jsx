@@ -20,18 +20,10 @@ const VerticalVideo = ({ videoSrc }) => {
     return (
         <div className={` aspect-[9/16] relative `} >
 
-            <video ref={videoRef} className={` w-full h-full relative `} preload="auto" autoPlay="autoplay" muted loop playsInline>
+            <video ref={videoRef} className={` w-full h-full relative `} preload="auto" autoPlay="autoplay" muted loop playsInline controls >
                 <source src={videoSrc} type="video/mp4" />
             </video>
 
-            <div className={`
-                absolute top-0 left-0 w-full h-full cursor-pointer
-                flex items-center justify-center
-                hover:[text-shadow:_0_0_0.6em_black,_0_0_1em_black,_0_0_2em_black]
-                text-white text-opacity-0 hover:text-opacity-100 font-RobotoCondensed font-bold uppercase text-center
-                transition-all ease-in-out duration-300 `} onClick={handleFullscreen}>
-                    Ver en Pantalla completa
-            </div>
 
         </div>
     );

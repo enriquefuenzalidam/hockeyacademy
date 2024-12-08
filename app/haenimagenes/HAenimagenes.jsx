@@ -1,5 +1,11 @@
+"use client";
 
 import { Footer } from 'components/footer';
+import Link from 'next/link';
+import Image from 'next/image';
+
+import VerticalVideo from 'components/verticalvideo';
+import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademylogob.png';
 
 import hockeyacademycampimagen01 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_01.jpg';
 import hockeyacademycampimagen02 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_02.jpg';
@@ -69,14 +75,48 @@ export default function HAenimagenes() {
 
                 <div className={`  bg-whiteFadedFondo`}>
 
+                    <section className={` relative mx-auto max-w-5xl pt-16 text-center `}>
+                        <Image className={` w-2/5 md:w-2/5 h-auto mx-auto `} src={hockeyacademylogob} alt='' />
+                    </section>
+
+                    <section className={` block relative max-w-5xl w-full bg-transparent mt-14 mx-auto px-4 gx:px-0 `}>
+                        <div className={` bg-black w-full shadow-lg shadow-[rgba(0,0,0,0.5)] rounded-md overflow-hidden `}>
+                            <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='w-full aspect-[24/11]' preload="auto" autoPlay="autoplay" loop playsInline controls >
+                                <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
+                            </video>
+                        </div>
+                    </section>
+
+                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 `}>
+                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
+
+                        <div className={` grid grid-cols-1 grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-2 px-4 gx:px-0 `}>
+
+                            {['hockeyacademycamp/hockeyacademycamp_video_01.mp4',
+                                'hockeyacademycamp/hockeyacademycamp_video_02.mp4',
+                                'hockeyacademycamp/hockeyacademycamp_video_03.mp4',
+                                'hockeyacademycamp/hockeyacademycamp_video_04.mp4'
+                            ].map((videoSrc, index) => (<VerticalVideo key={index} videoSrc={videoSrc} />))}
+
+                        </div>
+                    </section>
                     <section className={` relative mx-auto max-w-5xl z-30 pb-32 pt-32`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-                        <div className={` block text-center `}>
 
-                            
 
-                        </div>
+                        {!!hockeyacademycampimagenes && (
+                            <div className={`  relative text-center w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 gx:p-0`}>
+                                {hockeyacademycampimagenes.map((imgn, index) => (
+                                    <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-lg shadow-[rgba(0,0,0,0.5)] rounded-sm m-0 p-0 border-0 hover:scale-125 z-10 hover:z-50 transition-all ease-in-out duration-700 `}>
+                                        <Image data-aos-once="true" data-aos="fade" src={imgn} alt='' className={` object-center object-cover w-full h-full `} />
+                                    </Link>
+                                ))}
+                            </div>
+
+                        )}
+
                     </section>
                 </div>
                 <Footer />

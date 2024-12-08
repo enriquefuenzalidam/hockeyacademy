@@ -22,7 +22,9 @@ export default function Quienessomos() {
                 </div>
             </section>
 
-            <section className={` mt-11 `}>
+            <section className={` relative pt-11 `}>
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
+                <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
                 <div className={` mx-auto max-w-5xl p-6 items-start justify-start align-top `}>
                         <p data-aos-once="true" data-aos="fade-up" className={`  font-Roboto text-lg text-blue-950 leading-relaxed text-justify hyphens-auto gap-6 columns-1 md:columns-2 `}>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Somos un equipo de profesionales de la Educación Física, especializados en hockey sobre césped, con una vasta trayectoria en el deporte y una experiencia internacional que abarca países como Argentina, España, Francia y Chile. Nuestra pasión por el hockey y el compromiso con el desarrollo integral de nuestros jugadores nos define.
