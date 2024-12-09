@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from 'components/footer';
+import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -69,23 +70,23 @@ export default function HAenimagenes() {
 
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
+<HockeyAcademyVideoA alto={` h-56 `} >
+
+<div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
+<div className={` relative z-30 flex flex-col justify-center items-center w-full h-full max-w-5xl mx-auto `}>
+
+    <h2 data-aos-once="true" data-aos="zoom-in" className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
+        Hockey Academy en Imágenes</h2>
+</div>
+
+</HockeyAcademyVideoA>
+
             <div className={` relative bg-otoFondo `}>
-                <div className={` absolute inset-0 opacity-15 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
+                <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
                 <div className={`  bg-whiteFadedFondo`}>
-
-                    <section className={` relative mx-auto max-w-5xl pt-16 text-center `}>
-                        <Image data-aos-once="true" data-aos="fade-up" className={` w-2/5 md:w-2/5 h-auto mx-auto `} src={hockeyacademylogob} alt='' />
-                    </section>
-
-                    <section className={` block relative max-w-5xl w-full bg-transparent mt-14 mx-auto px-4 gx:px-0 `}>
-                        <div className={` bg-black w-full shadow-lg shadow-[rgba(0,0,0,0.5)] rounded-md overflow-hidden `}>
-                            <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='w-full aspect-[24/11]' preload="auto" autoPlay="autoplay" loop playsInline controls >
-                                <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
-                            </video>
-                        </div>
-                    </section>
 
                     <section className={` relative mx-auto max-w-5xl z-30 pt-28 `}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
@@ -109,7 +110,7 @@ export default function HAenimagenes() {
                         {!!hockeyacademycampimagenes && (
                             <div className={`  relative text-center w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 gx:p-0`}>
                                 {hockeyacademycampimagenes.map((imgn, index) => (
-                                    <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-lg shadow-[rgba(0,0,0,0.5)] rounded-sm m-0 p-0 border-0 hover:scale-125 z-10 hover:z-50 transition-all ease-in-out duration-700 `}>
+                                    <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm m-0 p-0 border-0 hover:scale-110 z-10 hover:z-50 transition-all ease-in-out duration-700 `}>
                                         <Image data-aos-once="true" data-aos="fade" src={imgn} alt='' className={` object-center object-cover w-full h-full `} />
                                     </Link>
                                 ))}
@@ -125,7 +126,7 @@ export default function HAenimagenes() {
                         <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-center px-6 w-3xl mx-auto mb-8`}>
                             Disfruta de Hockey Academy en imágenes de alta definición.</p>
 
-                        <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/15xdClWddp3us1h7s5f3qItpNh9aH2tYE?usp=sharing' className={`flex items-center justify-center bg-white bg-opacity-60 w-2/5 md:w-1/5 aspect-1 mx-auto cursor-pointer rounded-full border-8 border-[#00b3f9] `} >
+                        <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' className={`flex items-center justify-center bg-white bg-opacity-60 w-2/5 md:w-1/5 aspect-1 mx-auto cursor-pointer rounded-full border-8 border-[#00b3f9] `} >
                             <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
                                 <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />

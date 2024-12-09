@@ -18,7 +18,7 @@ const VerticalVideo = ({ videoSrc }) => {
     };
 
     return (
-        <div className={` aspect-[9/16] relative `} >
+        <div className={` aspect-[9/16] relative shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} >
 
             <video ref={videoRef} className={` w-full h-full relative `} preload="auto" autoPlay="autoplay" muted loop playsInline controls >
                 <source src={videoSrc} type="video/mp4" />

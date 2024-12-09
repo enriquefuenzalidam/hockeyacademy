@@ -27,7 +27,7 @@ const navItems = [
      { linkText: 'Qué es Hockey Academy',
          subTitulos: [,
             { linkText: 'Acerca de HA', href: '/queeshockeyacademy' },
-            { linkText: 'Quiénes somos', href: '/quienessomos' },
+            { linkText: 'Quiénes Somos', href: '/quienessomos' },
             { linkText: 'Nuestro Staff', href: '/staff' },
          ]
       },
