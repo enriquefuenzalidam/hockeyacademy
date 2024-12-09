@@ -1,6 +1,4 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { Footer } from 'components/footer';
 
 import ExperienciaGaleria from 'components/experienciaGaleria';
@@ -11,12 +9,7 @@ import ViajesGaleria from 'components/viajesgaleria';
 import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 
 import calendarioIcono from 'public/images/calendar-days.svg';
-import calendarioCheckIcono from 'public/images/calendar-check.svg';
-
-import eurohockey2023 from 'public/images/IDentity-Campus-Eurohockey-2023.mp4';
-
 import citasFondo from 'public/images/citasFondoEuroHockey.jpg';
-
 import euroHockeyForm from 'public/images/euroHockeyForm.webp';
 
 import euroHockey2025A from 'public/images/euroHockey2025A.webp';
@@ -137,7 +130,7 @@ export default function Eurohockey() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0`}>
 
-            <section className={` block relative w-full aspect-[16/7] bg-black z-30 mb-12 `}>
+            <section className={` block relative w-full aspect-[16/7] bg-black `}>
                 <div className={` absolute top-0 left-0 w-full h-full overflow-hidden`}>
                     <video poster='images/Hockey-22-Entrenamiento.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center' preload="auto" autoPlay="autoplay" muted loop playsInline>
                         <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
@@ -145,8 +138,9 @@ export default function Eurohockey() {
                 </div>
             </section>
 
-            <section className={` block relative w-full max-w-5xl z-30 my-12 px-4 gx:px-0  text-neutral-700 mx-auto `}>
-                <div className={` flex flex-col gx:flex-row `}>
+            <section className={` block relative w-full pt-12 mb-12 px-4 gx:px-0 text-neutral-700 `}>
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
+                <div className={` relative flex flex-col gx:flex-row max-w-5xl mx-auto `}>
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br/><span className={` text-nowrap text-[#3998be] `}>Alemania 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />

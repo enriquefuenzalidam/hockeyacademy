@@ -1,11 +1,11 @@
 "use client";
 import VerticalVideo from 'components/verticalvideo';
-import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { Footer } from 'components/footer';
 import Image from 'next/image';
 
 import ViajesGaleria from 'components/viajesgaleria';
+import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 
 import hockeyacademycampimagen01 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_01.jpg';
 import hockeyacademycampimagen02 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_02.jpg';
@@ -94,21 +94,17 @@ export default function Eventosproximos() {
 
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
-            <section className={` block relative w-full h-[50vh] bg-black `}>
-                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
-                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
-                    </video>
-                </div>
+            <HockeyAcademyVideoA alto={` h-[50vh] `} >
+
                 <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                 <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
                     <h2 data-aos-once="true" data-aos="zoom-out-down" className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#BAECFF] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Próximos Eventos</h2>
                 </div>
-            </section>
+
+            </HockeyAcademyVideoA>
 
             <div className={` relative bg-otoFondo `}>
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
-                <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
                 <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 

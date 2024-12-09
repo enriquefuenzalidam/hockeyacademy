@@ -1,31 +1,23 @@
 
-import NosotrosFoto from 'components/nosotrosFoto';
 import { Footer } from 'components/footer';
-import Image from 'next/image';
-
-import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
-import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
+import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 
 export default function Quienessomos() {
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
 
-            <section className={` block relative w-full h-[50vh] bg-black `}>
-                <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
-                    <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='hockeyacademycamp/hockeyacademyinicio_b.mp4' type="video/mp4" />
-                    </video>
-                </div>
+            <HockeyAcademyVideoA alto={` h-[38vh] `} >
+
                 <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                 <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
                     <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#ffffff] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Quiénes Somos</h2>
                 </div>
-            </section>
+
+            </HockeyAcademyVideoA>
 
             <section className={` relative pt-11 `}>
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
-                <div className={` absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)] `} />
-                <div className={` mx-auto max-w-5xl p-6 items-start justify-start align-top `}>
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
+                <div className={` relative mx-auto max-w-5xl p-6 items-start justify-start align-top `}>
                         <p data-aos-once="true" data-aos="fade-up" className={`  font-Roboto text-lg text-blue-950 leading-relaxed text-justify hyphens-auto gap-6 columns-1 md:columns-2 `}>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Somos un equipo de profesionales de la Educación Física, especializados en hockey sobre césped, con una vasta trayectoria en el deporte y una experiencia internacional que abarca países como Argentina, España, Francia y Chile. Nuestra pasión por el hockey y el compromiso con el desarrollo integral de nuestros jugadores nos define.
                         <br/><br/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Nos distingue nuestra profunda vocación, que va más allá de la técnica deportiva, para centrarnos en la persona en su totalidad. Cada proyecto, cada entrenamiento y cada momento de nuestra academia está impregnado por nuestra energía emprendedora, entusiasmo y, sobre todo, una auténtica pasión por lo que hacemos, valores que buscamos transmitir en cada acción.
