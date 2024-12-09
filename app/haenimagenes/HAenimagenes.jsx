@@ -88,7 +88,45 @@ export default function HAenimagenes() {
 
                 <div className={`  bg-whiteFadedFondo`}>
 
-                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 `}>
+                <section className={` relative mx-auto max-w-lg sm:max-w-xl md:max-w-3xl transition-all duration-300 ease-in-out pt-32 flex flex-row items-center gap-4`}>
+                    {/*
+                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
+                    */}  
+                            <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' className={` flex items-center justify-center bg-white bg-opacity-60 w-5/12 md:w-1/5 aspect-1 cursor-pointer rounded-full border-4 sm:border-[5px] md:border-[6px] border-[#00b3f9] ml-6 `} >
+                            <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
+                                <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />
+                                <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335" />
+                                <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d" />
+                                <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc" />
+                                <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00" />
+                            </svg>
+                        </Link>
+                          
+                        <p data-aos-once="true" data-aos="fade" className={` flex fle-grow font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 text-left mr-6  `}>
+                            <span className={`  leading-tight sm:leading-snug md:leading-normal `}>En Google Drive podrás encontrar todos eventos y fiestas de Hockey Academy.</span></p>
+
+                    </section>
+
+                    <section className={` relative mx-auto max-w-5xl pt-36`}>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
+                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
+
+
+                        {!!hockeyacademycampimagenes && (
+                            <div className={`  relative text-center w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 gx:p-0`}>
+                                {hockeyacademycampimagenes.map((imgn, index) => (
+                                    <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm m-0 p-0 border-0 hover:scale-110 z-10 hover:z-50 transition-all ease-in-out duration-700 `}>
+                                        <Image data-aos-once="true" data-aos="fade" src={imgn} alt='' className={` object-center object-cover w-full h-full `} />
+                                    </Link>
+                                ))}
+                            </div>
+
+                        )}
+                    </section>
+
+                    <section className={` relative mx-auto max-w-5xl z-30 py-28 `}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
 
@@ -101,42 +139,6 @@ export default function HAenimagenes() {
                             ].map((videoSrc, index) => (<VerticalVideo key={index} videoSrc={videoSrc} />))}
 
                         </div>
-                    </section>
-                    <section className={` relative mx-auto max-w-5xl z-30 pt-32`}>
-                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-
-
-                        {!!hockeyacademycampimagenes && (
-                            <div className={`  relative text-center w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 gx:p-0`}>
-                                {hockeyacademycampimagenes.map((imgn, index) => (
-                                    <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm m-0 p-0 border-0 hover:scale-110 z-10 hover:z-50 transition-all ease-in-out duration-700 `}>
-                                        <Image data-aos-once="true" data-aos="fade" src={imgn} alt='' className={` object-center object-cover w-full h-full `} />
-                                    </Link>
-                                ))}
-                            </div>
-
-                        )}
-                    </section>
-
-                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-32 `}>
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-
-                        <p data-aos-once="true" data-aos="fade-up" className={` font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 leading-normal text-center px-6 w-3xl mx-auto mb-8`}>
-                            Disfruta de Hockey Academy en imágenes de alta definición.</p>
-
-                        <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' className={`flex items-center justify-center bg-white bg-opacity-60 w-2/5 md:w-1/5 aspect-1 mx-auto cursor-pointer rounded-full border-8 border-[#00b3f9] `} >
-                            <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
-                                <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />
-                                <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335" />
-                                <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d" />
-                                <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc" />
-                                <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00" />
-                            </svg>
-                        </Link>
-                            
                     </section>
 
                 </div>

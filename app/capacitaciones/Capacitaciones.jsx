@@ -19,26 +19,21 @@ export default function Capacitaciones() {
 
             </HockeyAcademyVideoA>
 
-            <div className={` relative bg-otoFondo `}>
+            <div className={` relative bg-white`}>
                 <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
                 <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
-                <div className={` relative z-30 pt-16 `}>
-                    <section className={` relative text-white text-center max-w-5xl mx-auto `} >
-                                <h2 data-aos-once="true" data-aos="zoom-out-down" className={` tracking-wide font-BebasNeue text-4xl mx-8 mb-6 text-[#000] `}>En construcción</h2>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
-                    </section>
-                </div>
-                <div className={`  bg-whiteFadedFondo`}>
-                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-10`}>
+                    <section className={` relative mx-auto max-w-5xl z-30 pt-28 pb-10 min-h-[60vh]`}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>En construcción</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
 
                     </section>
 
-                </div>
-                <Footer />
+                    <div className={` bg-otoFondoDos clear-both mt-28 `}>
+                        <Footer />
+                    </div>
+
             </div>
         </main>
 
