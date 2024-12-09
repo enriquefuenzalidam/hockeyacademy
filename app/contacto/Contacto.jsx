@@ -7,11 +7,11 @@ export default function Contacto() {
             <div className={` relative w-full h-auto bg-white `}>
 
                 <div className={`absolute w-full h-full bg-otoContactoGradient `} />
-                <div className={`absolute w-full h-full opacity-20 bg-cover bg-center bg-no-repeat bg-[url('/images/ESTADIO-FC.jpg')] grayscale `} />
+                <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat bg-[url('/hockeyacademycamp/hockeyacademycamp_contacto_fondo_.jpg')] grayscale `} />
 
                 <section className={`relative bg-transparent py-0 z-30 mt-16 md:mt-0 `}>
                     <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
-                        <div className={`bg-[#4698d6] bg-opacity-50 px-8 shadow-lg w-full`}>
+                        <div className={`bg-[#4698d6] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
                             <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-12 mx-8 mb-6 uppercase`}>
                                 Contacto
                             </h2>
@@ -26,9 +26,12 @@ export default function Contacto() {
                                 <div className={`mb-5`}>
                                     <label htmlFor='experiencia' className={`block mb-2 appearance-none`}>¿Qué experiencia deportiva te interesa?</label>
                                     <select id='experiencia' className={`w-full border-b-2 border-solid border-white bg-transparent p-0 lg:p-1 xl:p-2 focus:outline-none appearance-none rounded-none`}>
-                                        <option value='hockey-evento'  >Hockey + Evento + Entrenamiento</option>
-                                        <option value='hockey-personalizado'>Hockey | Experiencia personalizada</option>
-                                        <option value='futbol'>Fútbol</option>
+                                        <option value='hockey-academy-camp'>Camp</option>
+                                        <option value='hockey-academy-camp-europa'>Camp Europa</option>
+                                        <option value='hockey-academy-entrenamiento-academia'>Entrenamientos Academia</option>
+                                        <option value='hockey-academy-capacitaciones'>Capacitaciones</option>
+                                        <option value='hockey-academy-clinicas'>Clínicas</option>
+                                        <option value='hockey-academy-otro'>Otro</option>
                                     </select>
                                 </div>
                                 <textarea className={`block mt-5 w-full border-2 border-solid border-white bg-transparent p-2 md:p-3 lg:p-4 xl:p-4 focus:outline-none placeholder:text-white `} rows='6' placeholder='Mensaje'></textarea>
