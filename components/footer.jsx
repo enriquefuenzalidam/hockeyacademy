@@ -13,7 +13,7 @@ export function Footer() {
                         <p className={` not-italic text-sm font-NotoSerif `}>A. Figueroa 106 Buenos Aires</p>
                         <p className={` not-italic text-sm font-NotoSerif `}><Link href='tel:+5491160379742'>+54 9 11 6037-9742</Link></p>
                         */}
-                        <p className={` not-italic text-sm font-NotoSerif `}>Contacto<Link href='mailto:hockeyacademychile@gmail.com'>hockeyacademychile@gmail.com</Link></p>
+                        <p className={` not-italic text-sm font-NotoSerif `}><Link href='mailto:hockeyacademychile@gmail.com'>hockeyacademychile@gmail.com</Link></p>
                     </address>
                     {/*
                     <address>

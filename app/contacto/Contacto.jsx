@@ -7,16 +7,18 @@ export default function Contacto() {
             <div className={` relative w-full h-auto bg-white `}>
 
                 <div className={`absolute w-full h-full bg-otoContactoGradient `} />
-                <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat bg-[url('/hockeyacademycamp/hockeyacademycamp_contacto_fondo_.jpg')] grayscale `} />
+                <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat bg-[url('/hockeyacademycamp/hockeyacademycamp_contacto_fondo_b_.jpg')] grayscale `} />
 
                 <section className={`relative bg-transparent py-0 z-30 mt-16 md:mt-0 `}>
                     <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
-                        <div className={`bg-[#4698d6] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
+                        <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
                             <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-12 mx-8 mb-6 uppercase`}>
                                 Contacto
                             </h2>
                             <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
-                            <form className={`pb-12 px-6 gx:px-0  text-white font-Roboto text-base gx:text-lg`}>
+                            <form className={`pb-12 px-6 gx:px-0  text-white font-Roboto text-base gx:text-lg`}
+                              action="https://formspree.io/f/mzzbqrly"
+                              method="POST">
                                 <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5`}>
                                     <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='text' placeholder='Nombre' />
                                     <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none placeholder:text-white `} type='text' placeholder='Apellido' />
@@ -54,7 +56,7 @@ export default function Contacto() {
             </div>
 
             <div className={`relative bg-otoFondoDos clear-both `}>
-                <div className={`absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('/images/lineasPatron__.png')` }} />
+                <div className={`absolute inset-0 opacity-10 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('/images/lineasPatron__.png')` }} />
                 <Footer />
             </div>
 
