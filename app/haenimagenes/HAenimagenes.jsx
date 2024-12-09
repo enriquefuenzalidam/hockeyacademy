@@ -86,14 +86,14 @@ export default function HAenimagenes() {
                 <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
 
-                <div className={`  bg-whiteFadedFondo`}>
+                <div className={` relative bg-whiteFadedFondo`}>
 
                 <section className={` relative mx-auto max-w-lg sm:max-w-xl md:max-w-3xl transition-all duration-300 ease-in-out pt-32 flex flex-row items-center gap-4`}>
                     {/*
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
                     */}  
-                            <Link data-aos-once="true" data-aos="zoom-in" href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' className={` flex items-center justify-center bg-white bg-opacity-60 w-5/12 md:w-1/5 aspect-1 cursor-pointer rounded-full border-4 sm:border-[5px] md:border-[6px] border-[#00b3f9] ml-6 `} >
+                        <Link href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' data-aos-once="true" data-aos="zoom-in" className={` flex items-center justify-center bg-white bg-opacity-60 w-5/12 md:w-1/5 aspect-1 cursor-pointer rounded-full border-4 sm:border-[5px] md:border-[6px] border-[#00b3f9] ml-6 `} >
                             <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
                                 <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />
@@ -104,8 +104,8 @@ export default function HAenimagenes() {
                             </svg>
                         </Link>
                           
-                        <p data-aos-once="true" data-aos="fade" className={` flex fle-grow font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 text-left mr-6  `}>
-                            <span className={`  leading-tight sm:leading-snug md:leading-normal `}>En Google Drive podrás encontrar todos eventos y fiestas de Hockey Academy.</span></p>
+                        <Link href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' data-aos-once="true" data-aos="fade" className={` flex fle-grow font-Roboto font-medium text-lg sm:text-xl md:text-2xl text-blue-950 text-left mr-6  `}>
+                            <span className={`  leading-tight sm:leading-snug md:leading-normal `}>En Google Drive podrás encontrar todos eventos y fiestas de Hockey Academy.</span></Link>
 
                     </section>
 

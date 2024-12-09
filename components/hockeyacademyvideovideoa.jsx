@@ -1,7 +1,5 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const HockeyAcademyVideoA = ({ silencio = true, controles = false, ancho = 'w-full' , alto = 'md:h-screen h-[calc(100vh-4.5rem)]', children }) => {
 
@@ -25,7 +23,7 @@ const HockeyAcademyVideoA = ({ silencio = true, controles = false, ancho = 'w-fu
     return (
         <section className={` block relative bg-black ${alto} ${ancho} `}>
             <div className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}>
-                <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' preload="auto" autoPlay="autoplay" {...videoAttributes} loop playsInline >
+                <video poster='hockeyacademycamp/hockeyacademyinicio.jpg' className='object-cover object-center w-full h-full aspect-[24/11]' {...videoAttributes} >
                     <source src={videoSrc} type="video/mp4" />
                 </video>
             </div>
