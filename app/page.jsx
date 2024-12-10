@@ -115,7 +115,7 @@ export default function Page() {
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto `} >
                         <div className={` flex flex-col md:flex-row gap-24 md:gap-5 mb-24 items-center md:items-start justify-center `}>
                             <div>
-                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 mb-6 text-[#000] `}>Eventos próximos</h2>
+                                <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 mb-6 text-[#000] `}>Próximos Eventos</h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#BAECFF] mb-6 `} />
                                 <h2 data-aos-once="true" data-aos="slide-up" className={` tracking-wide font-BebasNeue text-4xl mx-4 italic text-[#5fd2ff] `}>Summer Camp sub-13</h2>
                                 <p data-aos-once="true" data-aos="fade" className={` font-Roboto text-xl mx-8 leading-relaxed text-center  hyphens-auto `} >Diciembre de 2024<br />desde 16 hasta el 19.</p>
