@@ -111,7 +111,6 @@ export default function Hockeytecnificacion() {
                 </div>
             </section>
 
-
             <section className={` block relative w-full pt-12 mb-12 px-4 gx:px-0 text-neutral-700 `}>
                 <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
                 <div className={` relative flex flex-col gx:flex-row max-w-5xl mx-auto `}>

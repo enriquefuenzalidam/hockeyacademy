@@ -103,7 +103,7 @@ export default function Eventosproximos() {
 
             </HockeyAcademyVideoA>
 
-            <div className={` relative bg-otoFondo `}>
+            <div className={` relative bg-otoFondo w-full bg-fixed`}>
                 <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
                 <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
 
