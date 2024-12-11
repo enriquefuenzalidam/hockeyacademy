@@ -1,5 +1,5 @@
 "use client";
-import { Footer } from 'components/footer';
+import PlantillaUno from 'components/plantillauno';
 
 import ExperienciaGaleria from 'components/experienciaGaleria';
 import PagoCondiciones from 'components/pagocondiciones';
@@ -74,7 +74,7 @@ const eurohockeyviajesgaleria = [
     eurohockeyviajesgaleria21,
     eurohockeyviajesgaleria22,
     eurohockeyviajesgaleria23,
-    eurohockeyviajesgaleria24 ]
+    eurohockeyviajesgaleria24]
 
 
 import mejorExperienciaA from 'public/images/mejorExperienciaA.png';
@@ -128,116 +128,117 @@ const citasEurohockey2025 = [
 export default function Eurohockey() {
 
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0`}>
-
-            <section className={` block relative w-full aspect-[16/7] bg-black `}>
-                <div className={` absolute top-0 left-0 w-full h-full overflow-hidden`}>
-                    <video poster='images/Hockey-22-Entrenamiento.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
-                    </video>
-                </div>
-            </section>
-
-            <section className={` block relative w-full pt-12 mb-12 px-4 gx:px-0 text-neutral-700 `}>
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
-                <div className={` relative flex flex-col gx:flex-row max-w-5xl mx-auto `}>
-                    <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br/><span className={` text-nowrap text-[#3998be] `}>Alemania 2025</span></h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
-                        <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
-                        <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 20 de agosto</h2>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
-                            Nuestro Campus de Hockey con Evento, está orientado a jóvenes de 12 a 17 años. Proponemos un viaje inolvidable a Barcelona (España) y Monchengladbach (Alemania), donde combinamos 9 tecnificaciones deportivas con las asistencia al principal Torneo de Hockey de toda Europa.
-                        </p>
-                        <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
-                            Una oportunidad única para mejorar tu hockey, convivir con una deportista Olímpica, conocer Europa y vivir el Eurohockey 2025 desde dentro.
-                        </p>
-                        {/* <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
+        <PlantillaUno
+            contenta={
+                <section className={` relative w-full aspect-[16/7] bg-black `}>
+                    <div className={` absolute top-0 left-0 w-full h-full overflow-hidden`}>
+                        <video poster='images/Hockey-22-Entrenamiento.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                            <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
+                        </video>
+                    </div>
+                </section>
+            }
+            contentc={
+                <>
+                    <section className={` relative w-full pt-12 mb-12 px-4 gx:px-0 text-neutral-700 `}>
+                        
+                        <div className={`  flex flex-col gx:flex-row max-w-5xl mx-auto `}>
+                            <div className={`  gx:w-8/12 `} data-aos-once="true">
+                                <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br /><span className={` text-nowrap text-[#3998be] `}>Alemania 2025</span></h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
+                                <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
+                                <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 20 de agosto</h2>
+                                <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
+                                    Nuestro Campus de Hockey con Evento, está orientado a jóvenes de 12 a 17 años. Proponemos un viaje inolvidable a Barcelona (España) y Monchengladbach (Alemania), donde combinamos 9 tecnificaciones deportivas con las asistencia al principal Torneo de Hockey de toda Europa.
+                                </p>
+                                <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
+                                    Una oportunidad única para mejorar tu hockey, convivir con una deportista Olímpica, conocer Europa y vivir el Eurohockey 2025 desde dentro.
+                                </p>
+                                {/* <p className={` font-Roboto font-normal text-md mt-6 text-center text-white pb-12`}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="https://calendly.com/identity-campus">
                                 Agendá tu reunión 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className={` inline-block h-4 w-auto ml-2`} fill="currentColor">
                                 <path fill="white" d="M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
                                 </Link></p> */}
-                    </div>
-                    <LateralImagenesCuadro
-                        imagenesCuadro={imagenesCuadro} />
+                            </div>
+                            <LateralImagenesCuadro
+                                imagenesCuadro={imagenesCuadro} />
 
-                </div>
-            </section>
+                        </div>
+                    </section>
 
-            <ExperienciaGaleria
-                ExperienciaImgs={mejorExperienciaImgs}
-                title="La mejor experiencia de hockey de vida" />
+                    <ExperienciaGaleria
+                        ExperienciaImgs={mejorExperienciaImgs}
+                        title="La mejor experiencia de hockey de vida" />
 
-            <AllInclusiveExperiencia
-                list={allInclusiveExperienci} />
+                    <AllInclusiveExperiencia
+                        list={allInclusiveExperienci} />
 
-            <section className={` max-w-5xl w-full mx-auto `}>
-                <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
-                    <div className={` w-full md:w-6/12 justify-start items-start`}>
-                        <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
-                        <h3 className={` text-left font-BebasNeue text-t-[#000] text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
-                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
-                    </div>
-                    <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
-                    </p>
-                </div>
-                <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
-                    <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                        <img data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
-                    </p>
-                    <div className={` w-full md:w-6/12 justify-start items-start`}>
-                        <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
-                        <h3 className={` text-left font-BebasNeue text-[#000] text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
-                        <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
-                    </div>
-                </div>
-            </section>
+                    <section className={` max-w-5xl w-full mx-auto `}>
+                        <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
+                            <div className={` w-full md:w-6/12 justify-start items-start`}>
+                                <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                                <h3 className={` text-left font-BebasNeue text-t-[#000] text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
+                                <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
+                            </div>
+                            <p className={` w-full md:w-6/12 flex justify-center items-center`}>
+                                <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
+                            </p>
+                        </div>
+                        <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
+                            <p className={` w-full md:w-6/12 flex justify-center items-center`}>
+                                <img data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
+                            </p>
+                            <div className={` w-full md:w-6/12 justify-start items-start`}>
+                                <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                                <h3 className={` text-left font-BebasNeue text-[#000] text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
+                                <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
+                            </div>
+                        </div>
+                    </section>
 
-            <PagoCondiciones
-                pagoCondiciones={pagoCondiciones} />
+                    <PagoCondiciones
+                        pagoCondiciones={pagoCondiciones} />
 
-            <CitasBlock
-                citaslista={citasEurohockey2025}
-                citasfondo={citasFondo} />
-            
-            <ViajesGaleria
-                viajesgalerialist={eurohockeyviajesgaleria} />
+                    <CitasBlock
+                        citaslista={citasEurohockey2025}
+                        citasfondo={citasFondo} />
 
-            <section id='reservas' className={` bg-white py-0 px-0 gx:px-4 `}>
-                <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
-                    <div className={`  w-full `}>
-                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
-                        <form className={` pb-12 px-6 gx:px-0  font-Roboto text-lg text-neutral-500`}>
-                            <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
-                            <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
-                            <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='tel' placeholder='Número de teléfono' />
-                            <textarea className={` block mt-5 w-full border-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} rows='8' placeholder='Mensaje'></textarea>
+                    <ViajesGaleria
+                        viajesgalerialist={eurohockeyviajesgaleria} />
 
-                            <label className={` mt-5 whitespace-normal flex flex-row `} htmlFor='privacidadPoliticas'>
-                                <span className={` mr-3 block w-5 h-5 border-2 border-solid border-black border-opacity-40 bg-transparent `}>
-                                    <input className={` m-0 p-0 block border-0 w-full h-full bg-transparent focus:outline-none`} type='checkbox' name='privacidadPoliticas' id='privacidadPoliticas' /></span>
-                                <span className={`block hyphens-auto font-RobotoCondensed leading-tight `}>
-                                    Sí, acepto la política de privacidad y los términos y condiciones.</span></label>
-                            <p className={` block align-bottom mt-8 text-center `}>
-                                <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
+                    <section id='reservas' className={`  py-0 px-0 gx:px-4 `}>
+                        <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
+                            <div className={`  w-full `}>
+                                <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
+                                <form className={` pb-12 px-6 gx:px-0  font-Roboto text-lg text-neutral-500`}>
+                                    <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
+                                    <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
+                                    <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='tel' placeholder='Número de teléfono' />
+                                    <textarea className={` block mt-5 w-full border-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} rows='8' placeholder='Mensaje'></textarea>
 
-                        </form>
-                    </div>
-                    <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                        <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm.src} alt='' /></p>
-                </div>
-            </section>
+                                    <label className={` mt-5 whitespace-normal flex flex-row `} htmlFor='privacidadPoliticas'>
+                                        <span className={` mr-3 block w-5 h-5 border-2 border-solid border-black border-opacity-40 bg-transparent `}>
+                                            <input className={` m-0 p-0 block border-0 w-full h-full bg-transparent focus:outline-none`} type='checkbox' name='privacidadPoliticas' id='privacidadPoliticas' /></span>
+                                        <span className={`block hyphens-auto font-RobotoCondensed leading-tight `}>
+                                            Sí, acepto la política de privacidad y los términos y condiciones.</span></label>
+                                    <p className={` block align-bottom mt-8 text-center `}>
+                                        <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
 
-            <div className={` relative bg-otoFondoDos clear-both `}>
-                <div className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
-                <Footer />
-            </div>
-        </main>
+                                </form>
+                            </div>
+                            <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
+                                <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm.src} alt='' /></p>
+                        </div>
+                    </section>
+                </>
+            }
+
+        />
+
     );
 }
 

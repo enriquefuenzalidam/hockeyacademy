@@ -1,26 +1,18 @@
-import { Footer } from "components/footer";
 import HockeyAcademyVideoA from "components/hockeyacademyvideovideoa";
+import PlantillaUno from "components/plantillauno";
 
 export default function Queeshockeyacademy() {
     return (
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0 `}>
-
-            <div className={` relative bg-otoFondo bg-fixed w-full `}>
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
-                <div className={` absolute inset-0 opacity-15 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
-
-                <div className={` relative w-full py-32 `}>
-                    <div className={` absolute inset-0 bg-repeat bg-whiteFadedFondo `} />
-
-                    <section className={` block relative max-w-5xl w-full mx-auto px-4 `}>
-
+        <PlantillaUno
+            contentc={
+                <>
+                    <section className={` block relative max-w-5xl w-full mx-auto px-4 pt-32 `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` relative text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Qué es Hockey Academy</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` relative block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] `} />
-
                     </section>
 
                     <section className={`relative block mx-8`}>
-                        <div className={`block mx-auto max-w-5xl pt-16`}>
+                        <div className={`block mx-auto max-w-5xl pt-16 pb-32`}>
                             <p className={` text-blue-950 font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
                                 Hockey Academy es una institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey. Nos enfocamos en mejorar de manera personalizada y detallada tanto la técnica individual como las capacidades físicas, lo que garantiza un avance significativo en el rendimiento y ejecución de cada uno de nuestros participantes.
                             </p>
@@ -41,10 +33,9 @@ export default function Queeshockeyacademy() {
                             </p>
                         </div>
                     </section>
-                    </div>
-                    <Footer />
-            </div>
-        </main>
+                </>
+            }
+        />
     );
 }
 

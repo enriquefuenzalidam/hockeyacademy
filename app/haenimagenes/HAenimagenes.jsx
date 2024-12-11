@@ -1,14 +1,11 @@
 "use client";
 
-import { Footer } from 'components/footer';
 import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 import Link from 'next/link';
-import Image from 'next/image';
+import PlantillaUno from 'components/plantillauno';
 
 import VerticalVideo from 'components/verticalvideo';
 import ImagenesGrid from 'components/imagenesgrid';
-
-import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademylogob.png';
 
 import hockeyacademycampimagen01 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_01.jpg';
 import hockeyacademycampimagen02 from 'public/hockeyacademycamp/hockeyacademycamp_imagen_02.jpg';
@@ -69,28 +66,19 @@ const hockeyacademycampimagenes = [
 export default function HAenimagenes() {
     return (
 
+        <PlantillaUno
+            contenta={
+                <HockeyAcademyVideoA alto={` h-56 `} >
+                    <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
+                    <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full max-w-5xl mx-auto `}>
 
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
-
-            <HockeyAcademyVideoA alto={` h-56 `} >
-
-                <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
-                <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full max-w-5xl mx-auto `}>
-
-                    <h2 data-aos-once="true" data-aos="zoom-in" className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
-                        Hockey Academy en Imágenes</h2>
-                </div>
-
-            </HockeyAcademyVideoA>
-
-            <div className={` relative bg-otoFondo w-full bg-fixed `}>
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
-                <div className={` absolute inset-0 opacity-10 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
-
-
-                <div className={` relative `}>
-                    <div className={` absolute inset-0 bg-repeat bg-whiteFadedFondo `} />
-
+                        <h2 data-aos-once="true" data-aos="zoom-in" className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
+                            Hockey Academy en Imágenes</h2>
+                    </div>
+                </HockeyAcademyVideoA>
+            }
+            contentc={
+                <>
                     <section className={` relative mx-auto max-w-lg sm:max-w-xl md:max-w-3xl transition-all duration-300 ease-in-out pt-32 flex flex-row items-center gap-4`}>
                         {/*
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
@@ -111,7 +99,7 @@ export default function HAenimagenes() {
                             <span className={`  leading-tight sm:leading-snug md:leading-normal `}>En Google Drive podrás encontrar todos los eventos y fiestas de Hockey Academy.</span></Link>
 
                     </section>
-{/*
+                    {/*
                     <section className={` w-full text-center `} >
                         <p className={` font-RobotoCondensed font-bold text-md sm:text-lg md:text-xl uppercase leading-loose mt-6 mb-24 mx-auto `}>
                             <Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-3 sm:px-4 md:px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing">
@@ -131,32 +119,23 @@ export default function HAenimagenes() {
                     <section className={` relative mx-auto max-w-5xl pt-36`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-
                         <ImagenesGrid imageneslista={hockeyacademycampimagenes} />
-                        
                     </section>
 
                     <section className={` relative mx-auto max-w-5xl z-30 py-28 `}>
                         <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-
                         <div className={` grid grid-cols-1 grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-2 px-4 gx:px-0 `}>
-
                             {['hockeyacademycamp/hockeyacademycamp_video_01.mp4',
                                 'hockeyacademycamp/hockeyacademycamp_video_02.mp4',
                                 'hockeyacademycamp/hockeyacademycamp_video_03.mp4',
                                 'hockeyacademycamp/hockeyacademycamp_video_04.mp4'
                             ].map((videoSrc, index) => (<VerticalVideo key={index} videoSrc={videoSrc} />))}
-
                         </div>
                     </section>
-
-                </div>
-                <Footer />
-            </div>
-        </main>
-
-
+                </>
+            }
+        />
     );
 }
 

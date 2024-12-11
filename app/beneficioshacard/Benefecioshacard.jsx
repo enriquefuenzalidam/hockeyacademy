@@ -1,5 +1,6 @@
 
-import { Footer } from 'components/footer';
+import PlantillaUno from 'components/plantillauno';
+
 import Image from 'next/image';
 
 import HACard01 from 'public/hacard/hacard_01.png';
@@ -26,25 +27,20 @@ const sponsors = [
 
 export default function BenefeciosHaCard() {
     return (
+        <PlantillaUno
+            contenta={
 
-
-        <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
-
-            <div className={` relative bg-otoFondo `}>
-
-                <section className={` block relative w-full aspect-[16/5] z-30 `}>
-                    <div className={` absolute z-10 top-0 left-0 w-full h-full bg-[url('/hacard/fiestacierreha.png')] bg-center bg-cover `} />
-                    <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full `}>
+                <section className={` block relative w-full aspect-[16/5] `}>
+                    <div className={` absolute top-0 left-0 w-full h-full bg-[url('/hacard/fiestacierreha.png')] bg-center bg-cover `} />
+                    <div className={` relative flex flex-col justify-center items-center w-full h-full `}>
                         <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl sm:text-5xl md:text-6xl mx-8`} style={{ textShadow: `0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black` }}>Beneficios HA Card</h2>
                     </div>
                 </section>
 
-                <div className={` absolute inset-0 opacity-5 bg-center bg-repeat`} style={{ backgroundImage: `url('images/lineasPatron__.png')` }} />
-
-
-                <div className={`  bg-whiteFadedFondo`}>
-
-                    <section className={` relative mx-auto max-w-5xl z-30 pb-16 pt-24`}>
+            }
+            contentc={
+                <>
+                    <section className={` relative mx-auto max-w-5xl pb-16 pt-24`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Beneficios</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-3 `} />
                         <div className={` block text-center `}>
@@ -73,7 +69,7 @@ export default function BenefeciosHaCard() {
                         </div>
                     </section>
 
-                    <section className={` relative mx-auto max-w-5xl z-30 pb-32 `}>
+                    <section className={` relative mx-auto max-w-5xl pb-32 `}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>HA Card</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-3 `} />
                         <div className={` block text-center `}>
@@ -91,12 +87,8 @@ export default function BenefeciosHaCard() {
 
                         </div>
                     </section>
-
-                </div>
-                <Footer />
-            </div>
-        </main>
-
-
+                </>
+            }
+        />
     );
 }

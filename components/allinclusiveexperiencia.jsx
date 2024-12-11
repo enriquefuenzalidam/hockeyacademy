@@ -66,7 +66,8 @@ const AllInclusiveExperiencia = ({ list = [] }) => {
 
   return (
     
-    <section className={` bg-neutral-100 mb-12 `}>
+    <section className={`relative mb-12 `}>
+            <div className={` absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.05)_2rem,rgba(0,0,0,0.02)_calc(100%_-_2rem),rgba(0,0,0,0.15)_100%)] `} />
     <div className={` max-w-5xl w-full mx-auto `}>
         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Experiencia All Inclusive</h2>
         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
@@ -76,8 +77,8 @@ const AllInclusiveExperiencia = ({ list = [] }) => {
             {list.map((item, index) => (
                 <li key={item.id} data-aos-once="true" data-aos="zoom-out" >
                     <div className={` overflow-hidden border-2 border-solid border-black border-opacity-10 `} onClick={() => infoBoxToggle(index)}>
-                        <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[#2aade1]' : 'text-blue-950'} text-3xl  cursor-pointer z-30  overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
-                        <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 z-20 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 indent-5 hyphens-auto text-justify tracking-tight `}>{item.contenido}</p>
+                        <h4 className={` px-4 py-2 font-BebasNeue  ${openIndex === index ? 'text-[#2aade1]' : 'text-blue-950'} text-3xl  cursor-pointer overflow-hidden `} ><span className={` inline-block w-6`}>{openIndex === index ? `—` : `+`}</span> {item.titulo}</h4>
+                        <p ref={el => infoBoxRefs.current[index] = el} className={` opacity-0 h-0 px-6 text-neutral-500 text-lg font-Roboto leading-relaxed border-t-2 border-solid border-black border-opacity-10 indent-5 hyphens-auto text-justify tracking-tight `}>{item.contenido}</p>
                     </div>
                 </li>
             ))}

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import hockeyAcademyLogoB from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
-import hockeyAcademyLogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import facebookIcon from 'public/images/facebook.svg';
 import instagramIcon from 'public/images/instagram.svg';
 import tiktokIcon from 'public/images/tiktok.svg';
@@ -120,8 +119,8 @@ export function Navigation() {
 
             <div className={` h-min inline-flex flex-row bg-[#12214d] z-50 md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-500 w-full `}>
 
-                <div className={` py-2 px-4 flex     md:p-2 md:inline-block md:aspect-1 md:w-full `}>
-                    <Link href='.\'>
+                <div className={` py-2 px-4 flex md:p-2 md:inline-block md:aspect-1 md:w-full  `}>
+                    <Link href='.\' className={` cursor-pointer `}>
                         <Image src={hockeyAcademyLogoB} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
                     </Link>
                 </div>

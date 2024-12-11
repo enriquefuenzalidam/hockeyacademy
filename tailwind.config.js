@@ -6,10 +6,8 @@ module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
-            clipPath: {
-              'triangle': 'polygon(0 0, calc(50% - 25px) 0, 50% 10%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%)',
-            },
             backgroundImage: {
+                'lineasPatron': "url('/images/lineasPatron__.png')",
                 'otoFondo': 'linear-gradient(to bottom, rgb(88, 119, 155), rgb(119, 172, 212), rgb(143, 184, 217), rgb(119, 172, 212), rgb(88, 119, 155))',
                 'otoFondoDos': 'linear-gradient(to bottom, rgb(119, 172, 212), rgb(88, 119, 155))',
                 'otoFondoRatioFondo': 'radial-gradient(ellipse at 0 0 , rgb(119, 172, 212), rgb(88, 119, 155))',
@@ -30,6 +28,9 @@ module.exports = {
                 'fucsiaAzulRatioFondo': 'radial-gradient(ellipse at 0 0 , rgb(211, 0, 126), rgb(18, 33, 77))',
                 'citasFondo': 'linear-gradient(240deg, rgb(246, 187, 14) 0%, rgb(242, 41, 91) 100%)',
                 'nosotrosGradient': 'linear-gradient(220deg, rgb(18, 33, 77) 44%, rgb(242, 41, 91) 80%)'
+            },
+            clipPath: {
+              'triangle': 'polygon(0 0, calc(50% - 25px) 0, 50% 10%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%)',
             },
             colors: {
                 'fucsiaFundo': 'rgb(211, 0, 126)',
