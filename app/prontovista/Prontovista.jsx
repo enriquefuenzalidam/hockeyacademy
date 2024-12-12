@@ -77,25 +77,24 @@ const ProntoVista = ({ imagenesLista = hockeyacademycampimagenes }) => {
     const listaPosicion = ((currentImageIndex+1) * -88)+32;
 
     return (
-        <main className={` relative w-screen h-screen flex justify-end items-end overflow-hidden bg-black `} >
+        <main className={` relative w-screen h-screen flex flex-col justify-end items-center overflow-hidden bg-black `} >
 
             {!!hockeyacademycampimagenes.length && (
-                <>
+                    <section className={` absolute inset-0 `} >
                     {hockeyacademycampimagenes.map((img, index) => (
-                        <section key={index} className={` absolute inset-0 w-full h-full bg-black ${index === currentImageIndex ? `opacity-100` : `opacity-0` } transition-all ease-in-out duration-300 `} >
-                            <Image className={` w-full h-full object-center object-contain `} src={img} alt='' />
-                        </section>
+                            <Image key={index} className={` absolute w-full h-full object-center object-contain ${index === currentImageIndex ? `opacity-100` : `opacity-0` } transition-all ease-in-out duration-300 `} src={img} alt='' />
+
                     ))}
-                </>
+                </section>
             )}
 
             <section className={` absolute inset-0 w-full h-full `} >
-                <Link href='/haenimagenes' className={` ml-12 mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm `}>
+                <Link href='/haenimagenes' className={` ml-3 sm:ml-6 md:ml-12 mt-3 sm:mt-6 md:mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm transition-all ease-in-out duration-300 `}>
                     Volver
                 </Link>
             </section>
 
-            <section className={` relative block w-[calc(100vw-3rem)] text-center ${thumbnailsVisible ? `h-44` : `h-16 ` } transform-all ease-in-out duration-700 `} >
+            <section className={` relative block w-[calc(100vw-3rem)] text-center ${thumbnailsVisible ? `h-44` : `h-16 ` } transform-all ease-in-out duration-700 overflow-x-hidden `} >
 
                 <span className={` relative cursor-pointer mx-auto inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-base text-black bg-[#5fd2ff] uppercase rounded-sm `}
                         onClick={() => setThumbnailsVisible(!thumbnailsVisible)}>
