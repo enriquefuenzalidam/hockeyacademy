@@ -28,7 +28,7 @@ const ProntoVista = ({ }) => {
         }
       }, [initialIndex, imagenesLista.length]);
     
-    const listaPosicion = ((currentImageIndex+1) * -88)+32;
+    const listaPosicion = currentImageIndex * -88;
 
     return (
         <main className={` relative w-dvw h-dvh flex flex-col justify-end items-center overflow-hidden bg-black `} >
@@ -55,9 +55,9 @@ const ProntoVista = ({ }) => {
                 </span>
 
                 {!!imagenesLista.length && (
-                    <div style={{ translate: `${listaPosicion}px 0` }} className={` absolute top-10 left-1/2 h-36 whitespace-nowrap pt-6 px-3 transition-all ease-in-out duration-700 ${thumbnailsVisible ? `opacity-100` : `opacity-0` } `} >
+                    <div style={{ translate: `${listaPosicion}px 0` }} className={` absolute top-10 left-[calc(50%_-_56px)] h-36 whitespace-nowrap pt-6 px-3 transition-all ease-in-out duration-700 ${thumbnailsVisible ? `opacity-100` : `opacity-0` } `} >
                         {imagenesLista.map((item, index) => (
-                            <span onClick={() => setCurrentImageIndex(index)} key={index} className={` cursor-pointer relative inline-block shadow-lg shadow-black/70 hover:shadow-lg hover:shadow-black/70 rounded-sm overflow-hidden ${thumbnailsVisible ? `opacity-100` : `opacity-0` } aspect-1 h-20 mx-1 hover:scale-125 hover:z-50 transition-all ease-in-out duration-300 `}>
+                            <span onClick={() => setCurrentImageIndex(index)} key={index} className={` cursor-pointer relative inline-block shadow-lg shadow-black/70 hover:shadow-lg rounded-sm overflow-hidden ${thumbnailsVisible ? `opacity-100` : `opacity-0` } aspect-1 h-20 mx-1 hover:scale-125 hover:z-50 transition-all ease-in-out duration-300 `}>
                                 <Image className={` relative w-full h-full object-center object-cover `} src={item} alt='' />
                                 <div className={` absolute top-0 left-0 w-full h-full border-4 border-solid ${identityCampus === 1 ? `border-[rgb(211,0,126)]` : `border-[#5fd2ff]` } ${index === currentImageIndex ? `` : `hidden` } `} />
                                 <div className={` absolute top-0 left-0 w-full h-full backdrop-grayscale ${index === currentImageIndex ? `hidden` : ` opacity-70 hover:opacity-0` } `} />
