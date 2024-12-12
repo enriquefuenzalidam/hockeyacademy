@@ -59,7 +59,6 @@ const hockeyacademycampimagenes = [
     hockeyacademycampimagen23,
     hockeyacademycampimagen24,
     hockeyacademycampimagen25
-
 ]
 
 

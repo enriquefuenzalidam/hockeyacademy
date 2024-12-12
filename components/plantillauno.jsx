@@ -1,10 +1,11 @@
 
 import { Footer } from 'components/footer';
+import { Navigation } from '../components/navigation';
 
 const PlantillaUno = ({ contenta, contentb, contentc }) => {
     return (
 
-
+<>
         <main className={`block relative z-0 w-full pl-0 md:pl-32 mt-[4.4rem] md:mt-0`}>
 
             <div className={` relative z-30 `}>
@@ -31,7 +32,8 @@ const PlantillaUno = ({ contenta, contentb, contentc }) => {
                 <div className={` absolute inset-0 opacity-5 bg-center bg-repeat bg-lineasPatron `} />
             </div>
         </main>
-
+        <Navigation />
+        </>
 
     );
 }

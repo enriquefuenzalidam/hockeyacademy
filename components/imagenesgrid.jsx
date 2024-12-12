@@ -7,7 +7,7 @@ const ImagenesGrid = ({ imageneslista = [] }) => {
             {!!imageneslista && (
                 <div className={` relative text-center w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 gx:p-0 `}>
                     {imageneslista.map((imgn, index) => (
-                        <Link key={index} href={imgn.src} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm m-0 p-0 border-0 hover:scale-110 transition-all hover:z-50 ease-in-out duration-700 `}>
+                        <Link key={index} href={`./prontovista?index=${index}`} className={` cursor-pointer inline-block relative w-full aspect-1 overflow-hidden shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm m-0 p-0 border-0 hover:scale-110 transition-all hover:z-50 ease-in-out duration-700 `}>
                             <Image data-aos-once="true" data-aos="fade" src={imgn} alt='' className={` relative object-center object-cover w-full h-full `} />
                             {/*
                             <span className={` absolute top-0 left-0 w-full h-full flex items-end justify-end `}>

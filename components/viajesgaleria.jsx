@@ -49,7 +49,6 @@ const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros 
                     <div ref={galleryRef} className={`  block overflow-hidden whitespace-nowrap scroll-smooth no-scrollbar`}>
                         {viajesgalerialist.map((item, index) => (
 
-                            /* This block should have `border-opacity-100` when is current */
                             <div className={` inline-block relative h-96 aspect-1 mx-1 shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} key={index} ref={el => viajesGaleriaRefs.current[index] = el}>
                                 <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
                                 {index !== currentGalleryIndex && ( <div className={` absolute inset-0  backdrop-grayscale-[60%] `} /> )}
