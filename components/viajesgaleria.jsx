@@ -1,5 +1,5 @@
 'use Client';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ImagenesListas from "components/imageneslistas";
@@ -11,25 +11,26 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes' }
 
     const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
     const galleryRef = useRef(null);
-    const intervalRef = useRef(null); // To track the interval ID
+    const intervalRef = useRef(null);
 
-    const startInterval = () => {
+    // Memoize the startInterval function
+    const startInterval = useCallback(() => {
         intervalRef.current = setInterval(() => {
             setCurrentGalleryIndex((prevIndex) => (prevIndex + 1) % imagenesLista.length);
         }, 4000);
-    };
+    }, [imagenesLista.length]);
 
-    const clearIntervalTimer = () => {
+    const clearIntervalTimer = useCallback(() => {
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
-    };
+    }, []);
 
     // Start the interval on mount
     useEffect(() => {
         startInterval();
         return () => clearIntervalTimer(); // Cleanup on unmount
-    }, [imagenesLista.length]);
+    }, [startInterval, clearIntervalTimer]);
 
     const handleNavClick = (index) => {
         setCurrentGalleryIndex(index);
