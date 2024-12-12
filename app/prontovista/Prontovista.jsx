@@ -77,7 +77,7 @@ const ProntoVista = ({ imagenesLista = hockeyacademycampimagenes }) => {
     const listaPosicion = ((currentImageIndex+1) * -88)+32;
 
     return (
-        <main className={` relative w-screen h-screen flex flex-col justify-end items-center overflow-hidden bg-black `} >
+        <main className={` relative w-svw h-svh flex flex-col justify-end items-center overflow-hidden bg-black `} >
 
             {!!hockeyacademycampimagenes.length && (
                     <section className={` absolute inset-0 `} >
