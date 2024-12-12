@@ -1,5 +1,5 @@
 "use client";
-import PlantillaUno from 'components/plantillauno';
+import PlantillaDos from 'components/plantillados';
 
 import ExperienciaGaleria from 'components/experienciaGaleria';
 import PagoCondiciones from 'components/pagocondiciones';
@@ -11,18 +11,6 @@ import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 import calendarioIcono from 'public/images/calendar-days.svg';
 import citasFondo from 'public/images/citasFondoEuroHockey.jpg';
 import euroHockeyForm from 'public/images/euroHockeyForm.webp';
-
-import euroHockey2025A from 'public/images/euroHockey2025A.webp';
-import euroHockey2025B from 'public/images/euroHockey2025B.webp';
-import euroHockey2025C from 'public/images/euroHockey2025C.webp';
-import euroHockey2025D from 'public/images/euroHockey2025D.webp';
-import euroHockey2025E from 'public/images/euroHockey2025E.webp';
-import euroHockey2025F from 'public/images/euroHockey2025F.webp';
-import euroHockey2025G from 'public/images/euroHockey2025G.webp';
-
-const imagenesCuadro = [
-    euroHockey2025A, euroHockey2025B, euroHockey2025C, euroHockey2025D, euroHockey2025E, euroHockey2025F, euroHockey2025G
-];
 
 import mejorExperienciaA from 'public/images/mejorExperienciaA.png';
 import mejorExperienciaB from 'public/images/mejorExperienciaB.png';
@@ -49,21 +37,6 @@ import equipamientoA from 'public/images/equipamientoA.png';
 import equipamientoB from 'public/images/equipamientoB.png';
 
 
-import pagoCondicionesSaldo from 'public/images/pagoCondicionesSaldo.svg';
-import pagoCondicionesPlane from 'public/images/pagoCondicionesPlane.svg';
-import pagoCondicionesPen from 'public/images/pagoCondicionesPen.svg';
-import pagoCondicionesCard from 'public/images/pagoCondicionesCard.svg';
-import pagoCondicionesBill from 'public/images/pagoCondicionesBill.svg';
-
-const pagoCondiciones = [
-    { icono: pagoCondicionesPen, titulo: 'Seña', descripcion: 'Permite reservar el cupo del deportista contra la firma del contrato.' },
-    { icono: pagoCondicionesPlane, titulo: 'Aereo', descripcion: 'No incluido. Debe contratarse 90 días antes de la fecha del viaje.' },
-    { icono: pagoCondicionesSaldo, titulo: 'Saldo', descripcion: 'Financiación en cuotas sin interés. Cancelación hasta 30 días antes del viaje.' },
-    { icono: pagoCondicionesCard, titulo: 'Medios de pago', descripcion: 'Efectivo, transferencia/deposito bancario y transferencia internacional.' },
-    { icono: pagoCondicionesBill, titulo: 'Flexibilidad', descripcion: 'Posibilidad de abonar el 100% del Campus en cuotas fijas acordadas en el contrato.' },
-]
-
-
 const citasEurohockey2025 = [
     { autor: 'Laura, mamá de Delfi', cita: 'El trabajo de coordinar el viaje fue impecable..no solo el disfrute del deporte en sí, sino los paseos alternativos para que no desperdiciaran un solo segundo de su estadía…¡Gracias por la calidez como personas!' },
     { autor: 'Carolina Van Bebber, mamá de Martu', cita: 'Soy mamá de Martina de Chile. Les quería contar que lo que vi ayer al ir a buscar a Marti fue increíble. Las chicas felices de la experiencia, todas muy cariñosas entre ellas. Despidieron a Marti como si hubiesen sido compañeras del colegio o el club de toda la vida…Martina lloró en el taxi y me decía: “mamá fue maravilloso, una experiencia que jamás pensé que iba a ser así…gracias por regalármela' },
@@ -75,7 +48,7 @@ const citasEurohockey2025 = [
 export default function Eurohockey() {
 
     return (
-        <PlantillaUno
+        <PlantillaDos
             contenta={
                 <section className={` relative w-full aspect-[16/7] bg-black `}>
                     <div className={` absolute top-0 left-0 w-full h-full overflow-hidden`}>
@@ -91,8 +64,8 @@ export default function Eurohockey() {
                         
                         <div className={`  flex flex-col gx:flex-row max-w-5xl mx-auto `}>
                             <div className={`  gx:w-8/12 `} data-aos-once="true">
-                                <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br /><span className={` text-nowrap text-[#3998be] `}>Alemania 2025</span></h2>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
+                                <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br /><span className={` text-nowrap text-[rgb(246,187,14)] `}>Alemania 2025</span></h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                                 <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
                                 <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 20 de agosto</h2>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
@@ -109,24 +82,26 @@ export default function Eurohockey() {
                                 </Link></p> */}
                             </div>
                             <LateralImagenesCuadro
-                                imagenesCuadro={imagenesCuadro} />
+                                imageneslista='6' />
 
                         </div>
                     </section>
 
                     <ExperienciaGaleria
+                        identitycampus
                         ExperienciaImgs={mejorExperienciaImgs}
                         title="La mejor experiencia de hockey de vida" />
 
                     <AllInclusiveExperiencia
+                        identitycampus
                         list={allInclusiveExperienci} />
 
                     <section className={` max-w-5xl w-full mx-auto `}>
                         <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
                             <div className={` w-full md:w-6/12 justify-start items-start`}>
-                                <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                                <h4 className={` text-left font-BebasNeue text-[rgb(246,187,14)] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                                 <h3 className={` text-left font-BebasNeue text-t-[#000] text-4xl mb-6 md:mr-12 `}>Kit de Viaje</h3>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
                                 <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                             </div>
                             <p className={` w-full md:w-6/12 flex justify-center items-center`}>
@@ -138,29 +113,31 @@ export default function Eurohockey() {
                                 <img data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
                             </p>
                             <div className={` w-full md:w-6/12 justify-start items-start`}>
-                                <h4 className={` text-left font-BebasNeue text-[#2a738f] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
+                                <h4 className={` text-left font-BebasNeue text-[rgb(246,187,14)] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
                                 <h3 className={` text-left font-BebasNeue text-[#000] text-4xl mb-6 md:mr-12 `}>Monitoreo y control de pasajeros</h3>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[#5fd2ff] mb-8 `} />
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block h-1 w-8 border-none bg-[rgb(211,0,126)] mb-8 `} />
                                 <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>EFESUR es un sistema desarrollado para la industria del turismo estudiantil, que comprende una plataforma de última tecnología en monitoreo y control de pasajeros. Lleva adelante el control y la seguridad de los pasajeros, prioriza la agilidad y eficiencia en los puntos de control y garantiza la información clara y trasparente para todos los actores del circuito.</p>
                             </div>
                         </div>
                     </section>
 
-                    <PagoCondiciones
-                        pagoCondiciones={pagoCondiciones} />
+                    <PagoCondiciones 
+                        identitycampus />
 
                     <CitasBlock
+                        identitycampus
                         citaslista={citasEurohockey2025}
                         citasfondo={citasFondo} />
 
                     <ViajesGaleria
+                        identitycampus
                         imageneslista="0" />
 
                     <section id='reservas' className={`  py-0 px-0 gx:px-4 `}>
                         <div className={` max-w-5xl mx-auto grid grid-cols-1 gx:grid-cols-2 gap-6`}>
                             <div className={`  w-full `}>
                                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Solicitá más información</h2>
-                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
+                                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
                                 <form className={` pb-12 px-6 gx:px-0  font-Roboto text-lg text-neutral-500`}>
                                     <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none  p-2`} type='text' placeholder='Nombre y apellido' />
                                     <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
@@ -173,7 +150,7 @@ export default function Eurohockey() {
                                         <span className={`block hyphens-auto font-RobotoCondensed leading-tight `}>
                                             Sí, acepto la política de privacidad y los términos y condiciones.</span></label>
                                     <p className={` block align-bottom mt-8 text-center `}>
-                                        <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
+                                        <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-fucsiaAzulRatioFondo hover:bg-fucsiaAzulRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
 
                                 </form>
                             </div>

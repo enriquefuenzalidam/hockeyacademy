@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ImagenesListas from "components/imageneslistas";
 
-const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes' }) => {
+const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', identitycampus }) => {
 
     const imagenesListaNumero = Number.isInteger(parseInt(imageneslista, 10)) ? parseInt(imageneslista, 10) : 0;
     const imagenesLista = ImagenesListas[imagenesListaNumero] || ImagenesListas[0];
@@ -45,7 +45,7 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes' }
             <div className={` absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.05)_2rem,rgba(0,0,0,0.02)_calc(100%_-_2rem),rgba(0,0,0,0.15)_100%)] `} />
             <div className={` max-w-5xl w-full mx-auto relative`}>
                 <h2 data-aos-once="true" data-aos="fade-up" className={` text-center font-BebasNeue text-[#000] text-4xl mx-8 mb-6 pt-12 `}>{titulo}</h2>
-                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
+                <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none ${identitycampus ? `bg-[rgb(211,0,126)]` : `bg-[#5fd2ff]`} mb-8 `} />
             </div>
 
             <div className={` relative max-w-5xl w-full mx-auto px-4 gx:px-0 rounded-md h-auto `}>
@@ -70,7 +70,8 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes' }
                 {!!imagenesLista.length && (
                     <div>
                         {imagenesLista.map((_, index) => (
-                            <span key={index} onClick={() => handleNavClick(index)} className={` m-1.5 gx:m-2 inline-block rounded-full h-3 gx:h-4 cursor-pointer ${index === currentGalleryIndex ? 'bg-[#33b4f5] w-12 gx:w-16' : 'bg-black bg-opacity-20 w-3 gx:w-4'} transition-all ease-in-out duration-300 `} />
+                            <span key={index} onClick={() => handleNavClick(index)}
+                                    className={` ${ index === currentGalleryIndex ? identitycampus ? 'bg-[rgb(211,0,126)] w-12 gx:w-16' : 'bg-[#33b4f5] w-12 gx:w-16' : 'bg-black bg-opacity-20 w-3 gx:w-4' } m-1.5 gx:m-2 inline-block rounded-full h-3 gx:h-4 cursor-pointer transition-all ease-in-out duration-300 `} />
                         ))}
                     </div>
                 )}

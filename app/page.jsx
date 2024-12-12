@@ -9,7 +9,6 @@ import Image from 'next/image';
 import ViajesGaleria from 'components/viajesgaleria';
 
 import { SponsorsHA, AlianzEstrtgHA } from 'components/hockeyacademysponsorslista';
-import ImagenesListas from 'components/imageneslistas';
 
 import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';

@@ -71,7 +71,8 @@ const Hockeyhierbabarcelona = () => {
                                 </svg>
                             </Link></p>*/}
                     </div>
-                    <LateralImagenesCuadro imageneslista="5" />
+                    <LateralImagenesCuadro
+                        imageneslista="5" />
 
                 </div>
             </section>
