@@ -42,30 +42,24 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
     useEffect(() => {
         const calculatePosition = () => {
             if (typeof window !== "undefined") {
-                const isLargeScreen = window.innerWidth >= 870;
-                const position = isLargeScreen
-                    ? currentGalleryIndex * -392
-                    : currentGalleryIndex * -328;
+                const isMedScreen = window.innerWidth >= 640;
+                const position = isMedScreen ? currentGalleryIndex * -392 : currentGalleryIndex * -296;
                 setListaPosicion(position);
             }
         };
 
-        // Calculate position on mount
         calculatePosition();
 
-        // Add resize listener
         if (typeof window !== "undefined") {
             window.addEventListener("resize", calculatePosition);
         }
 
-        // Cleanup listener on unmount
         return () => {
             if (typeof window !== "undefined") {
                 window.removeEventListener("resize", calculatePosition);
             }
         };
     }, [currentGalleryIndex]); // Recalculate when currentGalleryIndex changes
-
 
     const identityCampus = identitycampus ? 1 : 0;
 
@@ -78,11 +72,11 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
             </div>
 
             <div className={` relative max-w-5xl w-full mx-auto px-4 gx:px-0 rounded-md h-auto `}>
-                <div className={` relative w-full overflow-y-visible overflow-x-hidden h-[24.5rem] md:h-[28rem] `}> {/*  */}
+                <div className={` relative w-full overflow-y-visible overflow-x-hidden h-[22rem] sm:h-[28rem] `}> {/*  */}
                     {!!imagenesLista.length && (
-                        <div ref={galleryRef} style={{ translate: `${listaPosicion}px 0` }} className={` absolute left-[calc(50%_-_170px)] md:left-[calc(50%_-_202px)] top-5 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>  {/*  */}
+                        <div ref={galleryRef} style={{ translate: `${listaPosicion}px 0` }} className={` absolute left-[calc(50%_-_156px)] sm:left-[calc(50%_-_202px)] top-5 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>  {/*  */}
                             {imagenesLista.map((item, index) => (
-                                <span  className={` ${index === currentGalleryIndex ? `scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-80 md:h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 `} key={index} > {/*  */}
+                                <span  className={` ${index === currentGalleryIndex ? `scale-105 sm:scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-72 sm:h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 `} key={index} > {/*  */}
                                     <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
                                     
                                     <div className={` absolute inset-0 backdrop-grayscale transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? `opacity-0` : `opacity-80 bg-white/40` } `} />
