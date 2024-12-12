@@ -1,40 +1,43 @@
 'use Client';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import ImagenesListas from "components/imageneslistas";
 
-const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros viajes' }) => {
+const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes' }) => {
+
+    const imagenesListaNumero = Number.isInteger(parseInt(imageneslista, 10)) ? parseInt(imageneslista, 10) : 0;
+    const imagenesLista = ImagenesListas[imagenesListaNumero] || ImagenesListas[0];
 
     const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
-    const viajesGaleriaRefs = useRef([]);
     const galleryRef = useRef(null);
+    const intervalRef = useRef(null); // To track the interval ID
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentGalleryIndex((prevIndex) => (prevIndex + 1) % viajesgalerialist.length);
-        }, 4000); // Change image every 6 seconds
-    
-        return () => clearInterval(interval);
-    }, [viajesgalerialist.length]);
+    const startInterval = () => {
+        intervalRef.current = setInterval(() => {
+            setCurrentGalleryIndex((prevIndex) => (prevIndex + 1) % imagenesLista.length);
+        }, 4000);
+    };
 
-    useEffect(() => {
-        if (galleryRef.current && viajesGaleriaRefs.current[currentGalleryIndex]) {
-            const gallery = galleryRef.current;
-            const selectedImage = viajesGaleriaRefs.current[currentGalleryIndex];
-            const galleryWidth = gallery.offsetWidth;
-            const imageWidth = selectedImage.offsetWidth;
-            const imageLeftPosition = selectedImage.offsetLeft;
-
-            const scrollPosition = imageLeftPosition - (galleryWidth / 2) + (imageWidth / 2);
-            gallery.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
+    const clearIntervalTimer = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
         }
-    }, [currentGalleryIndex]);
+    };
+
+    // Start the interval on mount
+    useEffect(() => {
+        startInterval();
+        return () => clearIntervalTimer(); // Cleanup on unmount
+    }, [imagenesLista.length]);
 
     const handleNavClick = (index) => {
         setCurrentGalleryIndex(index);
+        clearIntervalTimer(); // Clear the existing interval
+        startInterval(); // Restart the interval
     };
+
+    const listaPosicion = currentGalleryIndex * -392;
 
     return (
         <section className={` relative `}>
@@ -44,26 +47,28 @@ const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros 
                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
             </div>
 
-            <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 relative rounded-md overflow-hidden  `}>
-                {!!viajesgalerialist?.length && (
-                    <div ref={galleryRef} className={`  block overflow-hidden whitespace-nowrap scroll-smooth no-scrollbar`}>
-                        {viajesgalerialist.map((item, index) => (
-
-                            <div className={` inline-block relative h-96 aspect-1 mx-1 shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} key={index} ref={el => viajesGaleriaRefs.current[index] = el}>
-                                <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
-                                {index !== currentGalleryIndex && ( <div className={` absolute inset-0  backdrop-grayscale-[60%] `} /> )}
-                            </div>
-                        ))}
-                        <div className={`ml-4 gx:ml-0 h-96 w-1/6 bg-gradient-to-r from-black/30 to-transparent absolute top-0 left-0 `} />
-                        <div className={`mr-4 gx:mr-0 h-96 w-1/6 bg-gradient-to-l from-black/30 to-transparent absolute top-0 right-0 `} />
-                    </div>
-                )}
+            <div className={` relative max-w-5xl w-full mx-auto px-4 gx:px-0 rounded-md h-auto `}>
+                <div className={` relative w-full overflow-y-visible overflow-x-hidden h-[24.5rem] `}>
+                    {!!imagenesLista.length && (
+                        <div ref={galleryRef} style={{ translate: `${listaPosicion}px` }} className={` absolute left-[calc(50%_-_202px)] top-0 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>
+                            {imagenesLista.map((item, index) => (
+                                <span className={` inline-block relative h-96 aspect-1 mx-1 shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} key={index} >
+                                    <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
+                                    {index === currentGalleryIndex ?
+                                        (<Link className={` absolute inset-0 `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}`} />) :
+                                        (<div className={` absolute inset-0 backdrop-grayscale-[60%] `} />)
+                                    }
+                                </span>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center py-10 relative `}>
-                {!!viajesgalerialist?.length && (
+                {!!imagenesLista.length && (
                     <div>
-                        {viajesgalerialist.map((_, index) => (
+                        {imagenesLista.map((_, index) => (
                             <span key={index} onClick={() => handleNavClick(index)} className={` m-1.5 gx:m-2 inline-block rounded-full h-3 gx:h-4 cursor-pointer ${index === currentGalleryIndex ? 'bg-[#33b4f5] w-12 gx:w-16' : 'bg-black bg-opacity-20 w-3 gx:w-4'} transition-all ease-in-out duration-300 `} />
                         ))}
                     </div>
@@ -74,3 +79,9 @@ const ViajesGaleria = ({ viajesgalerialist = [], titulo = 'Galería de nuestros 
 };
 
 export default ViajesGaleria;
+
+{/*
+
+                            <div className={` h-96 w-1/6 bg-gradient-to-r from-black/30 to-transparent absolute top-0 left-3 `} />
+                            <div className={` h-96 w-1/6 bg-gradient-to-l from-black/30 to-transparent absolute top-0 right-3 `} /> 
+    */}
