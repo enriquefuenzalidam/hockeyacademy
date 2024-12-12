@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import ProntoVista from "./prontovista";
+import ProntoVista from "./Prontovista";
 
 export const metadata = {
     title: 'Vista'

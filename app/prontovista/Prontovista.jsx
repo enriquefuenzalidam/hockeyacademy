@@ -60,7 +60,7 @@ const hockeyacademycampimagenes = [
 ]
 
 
-const ProntoVista = ({ inicialImagen = 0, imagenesLista = hockeyacademycampimagenes }) => {
+const ProntoVista = ({ imagenesLista = hockeyacademycampimagenes }) => {
 
     const searchParams = useSearchParams();
     const initialIndex = parseInt(searchParams.get("index"), 10) || 0;
@@ -90,7 +90,7 @@ const ProntoVista = ({ inicialImagen = 0, imagenesLista = hockeyacademycampimage
             )}
 
             <section className={` absolute inset-0 w-full h-full `} >
-                <Link href='./' className={` ml-12 mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm `}>
+                <Link href='/haenimagenes' className={` ml-12 mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm `}>
                     Volver
                 </Link>
             </section>
