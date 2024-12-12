@@ -21,7 +21,7 @@ export default function Queeshockeyacademy() {
                                 Hockey Academy es una institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey. Nos enfocamos en mejorar de manera personalizada y detallada tanto la técnica individual como las capacidades físicas, lo que garantiza un avance significativo en el rendimiento y ejecución de cada uno de nuestros participantes.
                             </p>
 
-                            <div className={` rounded-md overflow-hidden relative shadow-md shadow-[rgba(0,0,0,0.6)] mx-auto my-12 w-full md:w-4/5 aspect-[24/11] `}>
+                            <div className={` rounded-md overflow-hidden relative shadow-md shadow-[rgba(0,0,0,0.6)] mx-auto my-12 w-full md:w-4/5 aspect-[16/11] md:aspect-[24/11] `}>
                                 <HockeyAcademyVideoA controles={true} silencio={false} alto={` h-full `} />
                             </div>
 
@@ -35,8 +35,8 @@ export default function Queeshockeyacademy() {
                             <p className={` text-blue-950 font-Roboto text-lg md:text-xl leading-relaxed text-justify hyphens-auto indent-8 `} style={{ lineHeight: `1.6em` }}>
                                 Creemos firmemente que la combinación de estos factores es clave para lograr un desarrollo óptimo y potenciar el rendimiento de nuestros jugadores.
                             </p>
-                            <p data-aos-once="true" data-aos="fade-up"  className={` mx-auto w-full md:w-4/5 relative aspect-[16/5] overflow-hidden rounded-md shadow-black/30 shadow-md my-12 `} >
-                                <Image src={imagenC} alt='' className={`text-blue-950 object-cover absolute top-0 left-0 w-full h-full `}  />
+                            <p data-aos-once="true" data-aos="fade-up"  className={` mx-auto w-full md:w-4/5 relative aspect-[6/5] md:aspect-[16/5] overflow-hidden rounded-md shadow-black/30 shadow-md my-12 `} >
+                                <Image src={imagenC} alt='' className={`text-blue-950 object-cover object-center w-full h-full `}  />
                             </p>
                         </div>
                     </section>
