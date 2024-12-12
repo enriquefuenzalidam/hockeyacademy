@@ -23,7 +23,7 @@ const mejorExperienciaImgs = [
     mejorExperienciaA, mejorExperienciaB, mejorExperienciaC, mejorExperienciaD, mejorExperienciaE, mejorExperienciaF
 ]
 
-const allInclusiveExperienci = [
+const allInclusiveExperiencia = [
     { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
     { id: 1, titulo: 'Transporte', contenido: 'Desde nuestra llegada al aeropuerto de El Prat, en las afueras de la ciudad Condal, contamos con un transfer privado a exclusiva disposición que nos transportará de manera segura y rápida hacia el alojamiento. También durante toda la estadía en Barcelona y en París, ya sea para acudir a los puntos turísticos, los eventos deportivos, entrenamientos, etc. nos trasladaremos en transporte privado (24 hs. disponible).' },
     { id: 2, titulo: 'Asistencia Médica', contenido: 'Nuestros campus cuentan con un cuerpo médico encabezado por el Dr. Hernán Santiago Boccolini especializados en el área deportiva y traumatología. A diario, al margen de la actividad estrictamente deportiva, el médico visitará nuestro alojamiento a los fines de atender cualquier tipo de necesidad que se presente en los días del viaje. Nos complace contar con el apoyo de Farmacias Briera para cualquier imprevisto o necesidad de medicamentos.' },
@@ -94,7 +94,7 @@ export default function Eurohockey() {
 
                     <AllInclusiveExperiencia
                         identitycampus
-                        list={allInclusiveExperienci} />
+                        list={allInclusiveExperiencia} />
 
                     <section className={` max-w-5xl w-full mx-auto `}>
                         <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>

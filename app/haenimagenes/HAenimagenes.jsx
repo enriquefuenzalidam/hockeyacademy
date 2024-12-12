@@ -7,9 +7,6 @@ import PlantillaUno from 'components/plantillauno';
 import VerticalVideo from 'components/verticalvideo';
 import ImagenesGrid from 'components/imagenesgrid';
 
-import HockeyAcademyImagenesImports from "components/hockeyacademyimageneslista";
-
-
 export default function HAenimagenes() {
     return (
 
