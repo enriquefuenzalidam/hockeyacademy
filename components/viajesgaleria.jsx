@@ -40,6 +40,8 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
 
     const listaPosicion = currentGalleryIndex * -392;
 
+    const identityCampus = identitycampus ? 1 : 0;
+
     return (
         <section className={` relative `}>
             <div className={` absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.05)_2rem,rgba(0,0,0,0.02)_calc(100%_-_2rem),rgba(0,0,0,0.15)_100%)] `} />
@@ -56,7 +58,7 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
                                 <span className={` inline-block relative h-96 aspect-1 mx-1 shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} key={index} >
                                     <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
                                     {index === currentGalleryIndex ?
-                                        (<Link className={` absolute inset-0 `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}`} />) :
+                                        (<Link className={` absolute inset-0 `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}&identityCampus=${identityCampus}`} />) :
                                         (<div className={` absolute inset-0 backdrop-grayscale-[60%] `} />)
                                     }
                                 </span>
