@@ -9,7 +9,7 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
     const imagenesListaNumero = Number.isInteger(parseInt(imageneslista, 10)) ? parseInt(imageneslista, 10) : 0;
     const imagenesLista = ImagenesListas[imagenesListaNumero] || ImagenesListas[0];
 
-    const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
+    const [currentGalleryIndex, setCurrentGalleryIndex] = useState(2);
     const galleryRef = useRef(null);
     const intervalRef = useRef(null);
 
@@ -39,7 +39,6 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
     };
 
     const listaPosicion = currentGalleryIndex * -392;
-
     const identityCampus = identitycampus ? 1 : 0;
 
     return (
@@ -51,16 +50,16 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
             </div>
 
             <div className={` relative max-w-5xl w-full mx-auto px-4 gx:px-0 rounded-md h-auto `}>
-                <div className={` relative w-full overflow-y-visible overflow-x-hidden h-[24.5rem] `}>
+                <div className={` relative w-full overflow-y-visible overflow-x-hidden h-[28rem] `}>
                     {!!imagenesLista.length && (
-                        <div ref={galleryRef} style={{ translate: `${listaPosicion}px` }} className={` absolute left-[calc(50%_-_202px)] top-0 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>
+                        <div ref={galleryRef} style={{ translate: `${listaPosicion}px` }} className={` absolute left-[calc(50%_-_202px)] top-5 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>
                             {imagenesLista.map((item, index) => (
-                                <span className={` inline-block relative h-96 aspect-1 mx-1 shadow-md shadow-[rgba(0,0,0,0.3)] rounded-sm overflow-hidden `} key={index} >
+                                <span className={` ${index === currentGalleryIndex ? `scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 `} key={index} >
                                     <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
-                                    {index === currentGalleryIndex ?
-                                        (<Link className={` absolute inset-0 `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}&identityCampus=${identityCampus}`} />) :
-                                        (<div className={` absolute inset-0 backdrop-grayscale-[60%] `} />)
-                                    }
+                                    
+                                    <div className={` absolute inset-0 backdrop-grayscale transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? `opacity-0` : `opacity-80 bg-white/40` } `} />
+                                    <Link className={` absolute inset-0 ${index === currentGalleryIndex ? `` : `hidden` } `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}&identityCampus=${identityCampus}`} />
+                                    
                                 </span>
                             ))}
                         </div>
@@ -68,7 +67,7 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
                 </div>
             </div>
 
-            <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center py-10 relative `}>
+            <div className={` max-w-5xl w-full mx-auto px-4 gx:px-0 text-center py-5 pb-10 relative `}>
                 {!!imagenesLista.length && (
                     <div>
                         {imagenesLista.map((_, index) => (

@@ -2,13 +2,12 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import ImagenesListas from "components/imageneslistas";
 
 const ProntoVista = ({ }) => {
 
     const router = useRouter();
-    const volverBoton = () => window.history.length > 1 ? router.back() : router.push("/");
+    const volverBoton = () => router.back();
 
     const searchParams = useSearchParams();
     const initialIndex = parseInt(searchParams.get("index"), 10) || 0;
@@ -27,7 +26,7 @@ const ProntoVista = ({ }) => {
           setCurrentImageIndex(initialIndex);
         }
       }, [initialIndex, imagenesLista.length]);
-    
+
     const listaPosicion = currentImageIndex * -88;
 
     return (
