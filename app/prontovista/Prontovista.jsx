@@ -77,7 +77,7 @@ const ProntoVista = ({ imagenesLista = hockeyacademycampimagenes }) => {
     const listaPosicion = ((currentImageIndex+1) * -88)+32;
 
     return (
-        <main className={` relative w-svw h-svh flex flex-col justify-end items-center overflow-hidden bg-black `} >
+        <main className={` relative w-dvw h-dvh flex flex-col justify-end items-center overflow-hidden bg-black `} >
 
             {!!hockeyacademycampimagenes.length && (
                     <section className={` absolute inset-0 `} >
@@ -89,12 +89,12 @@ const ProntoVista = ({ imagenesLista = hockeyacademycampimagenes }) => {
             )}
 
             <section className={` absolute inset-0 w-full h-full `} >
-                <Link href='/haenimagenes' className={` ml-3 sm:ml-6 md:ml-12 mt-3 sm:mt-6 md:mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm transition-all ease-in-out duration-300 `}>
+                <Link href='/haenimagenes' className={` ml-6 sm:ml-8 md:ml-12 mt-6 sm:mt-8 md:mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black bg-[#5fd2ff] uppercase rounded-sm transition-all ease-in-out duration-300 `}>
                     Volver
                 </Link>
             </section>
 
-            <section className={` relative block w-[calc(100vw-3rem)] text-center ${thumbnailsVisible ? `h-44` : `h-16 ` } transform-all ease-in-out duration-700 overflow-x-hidden `} >
+            <section className={` relative block w-[calc(100vw-3rem)] text-center ${thumbnailsVisible ? `h-44` : `h-16 ` } transform-all ease-in-out duration-700 overflow-hidden `} >
 
                 <span className={` relative cursor-pointer mx-auto inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-base text-black bg-[#5fd2ff] uppercase rounded-sm `}
                         onClick={() => setThumbnailsVisible(!thumbnailsVisible)}>
