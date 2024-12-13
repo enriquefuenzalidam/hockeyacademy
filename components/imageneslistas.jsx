@@ -1,5 +1,5 @@
 
-import { EurohockeyViajesGaleria } from './eurohockeyimageneslista';
+import EurohockeyViajesGaleria from './eurohockeyimageneslista';
 import HockeyAcademyImagenesImports from './hockeyacademyimageneslista';
 import { SponsorsHA, AlianzEstrtgHA } from './hockeyacademysponsorslista';
 import FutbolViajes from './futbolimagenes';

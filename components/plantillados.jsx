@@ -14,7 +14,7 @@ const PlantillaDos = ({ contenta, contentb, contentc }) => {
 
             <div className={` relative w-full `}>
                 <div className={` absolute inset-0 bg-fucsiaAzulFondo bg-cover `} />
-                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.6)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
+                <div className={` absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[rgba(0,0,0,0.4)] from-0% via-[rgba(0,0,0,0.2)] via-35% to-transparent `} />
 
                     <div className={` relative z-30 `}>
                         {contentb}

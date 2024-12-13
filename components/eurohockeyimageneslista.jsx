@@ -24,7 +24,7 @@ import eurohockeyviajesgaleria22 from 'public/eurohockeyviajesgaleria/euroHockey
 import eurohockeyviajesgaleria23 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria23.webp';
 import eurohockeyviajesgaleria24 from 'public/eurohockeyviajesgaleria/euroHockeyViajesGaleria24.webp';
 
-export const EurohockeyViajesGaleria = [
+const EurohockeyViajesGaleria = [
     eurohockeyviajesgaleria01,
     eurohockeyviajesgaleria02,
     eurohockeyviajesgaleria03,
@@ -50,3 +50,5 @@ export const EurohockeyViajesGaleria = [
     eurohockeyviajesgaleria23,
     eurohockeyviajesgaleria24
 ]
+
+export default EurohockeyViajesGaleria;
