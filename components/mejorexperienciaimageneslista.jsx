@@ -38,3 +38,12 @@ export const MejorExperienciaImgsB = [
     mejorExperienciaG,
     mejorExperienciaC
 ]
+
+export const MejorExperienciaImgsC =  [
+    mejorExperienciaA,
+    mejorExperienciaB,
+    mejorExperienciaC,
+    mejorExperienciaD,
+    mejorExperienciaE,
+    mejorExperienciaF
+]

@@ -13,6 +13,8 @@ import ViajesGaleria from 'components/viajesgaleria';
 
 import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
+import videofondoa from 'public/hockeyacademycamp/hockeyacademyfondoa.jpg';
+import videofondob from 'public/hockeyacademycamp/hockeyacademyfondob.jpg';
 
 export default function Page() {
 
@@ -23,6 +25,8 @@ export default function Page() {
         const imageSources = [
             hockeyacademylogo,
             hockeyacademylogob,
+            videofondoa,
+            videofondob,
             ...ImagenesListas[1],
             ...ImagenesListas[2],
             ...ImagenesListas[3]

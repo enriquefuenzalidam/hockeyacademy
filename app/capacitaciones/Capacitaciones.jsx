@@ -1,9 +1,53 @@
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import Image from 'next/image';
+import videofondoa from 'public/hockeyacademycamp/hockeyacademyfondoa.jpg';
+import videofondob from 'public/hockeyacademycamp/hockeyacademyfondob.jpg';
 
 import PlantillaUno from 'components/plantillauno';
 import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 
 export default function Capacitaciones() {
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+
+        const imageSources = [
+            videofondoa,
+            videofondob
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <PlantillaUno

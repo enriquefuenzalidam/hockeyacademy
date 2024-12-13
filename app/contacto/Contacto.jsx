@@ -1,13 +1,57 @@
-import { Footer } from "components/footer";
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import Image from 'next/image';
+import contactoFondo from 'public/hockeyacademycamp/hockeyacademycamp_contacto_fondo_b_.jpg';
+
 import PlantillaUno from "components/plantillauno";
 
 export default function Contacto() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            contactoFondo
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
+
     return (
         <PlantillaUno
             contentc={
                 <>
                     <div className={`absolute w-full h-full bg-otoContactoGradient `} />
-                    <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat bg-[url('/hockeyacademycamp/hockeyacademycamp_contacto_fondo_b_.jpg')] grayscale `} />
+                    <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat grayscale `} style={{ backgroundImage: `url(${contactoFondo.src})` }} />
 
                     <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
                         <div className={`max-w-3xl mx-auto flex justify-center items-center`}>

@@ -16,17 +16,9 @@ import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 import calendarioIcono from 'public/images/calendar-days.svg';
 import citasFondo from 'public/images/citasFondoEuroHockey.jpg';
 import euroHockeyForm from 'public/images/euroHockeyForm.webp';
-
-import mejorExperienciaA from 'public/images/mejorExperienciaA.png';
-import mejorExperienciaB from 'public/images/mejorExperienciaB.png';
-import mejorExperienciaC from 'public/images/mejorExperienciaC.png';
-import mejorExperienciaD from 'public/images/mejorExperienciaD.png';
-import mejorExperienciaE from 'public/images/mejorExperienciaE.png';
-import mejorExperienciaF from 'public/images/mejorExperienciaF.png';
-
-const mejorExperienciaImgs = [
-    mejorExperienciaA, mejorExperienciaB, mejorExperienciaC, mejorExperienciaD, mejorExperienciaE, mejorExperienciaF
-]
+import videoFondo from 'public/images/Hockey-22-Entrenamiento.jpg';
+import equipamientoA from 'public/images/equipamientoA.png';
+import equipamientoB from 'public/images/equipamientoB.png';
 
 const allInclusiveExperiencia = [
     { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
@@ -36,11 +28,6 @@ const allInclusiveExperiencia = [
     { id: 4, titulo: 'Autorización Médica', contenido: 'Como en todo Campus deportivo, es menester requerir previamente el alta médica para la actividad física, la cual deberá ser entregada en papel y suscripta por el profesional correspondiente. Asimismo se entregará a cada viajero una Ficha Médica que deberá completar con sus padres y también ser suscripta por el médico. Dicha información se cargará digitalmente, conjuntamente con las preferencias alimenticias y los números de contactos en las pulseras de monitoreo de cada pasajero a los efectos de poder contar con ella en todo momento.' },
     { id: 5, titulo: 'Equipaje Sugerido', contenido: 'Brindaremos un KIT de viaje en el cual se incluye camisetas, shorts, mochila y sudadera para la actividad deportiva (solo restará llevar medias y calzado apropiado). Se recomienda llevar una valija grande (con candado o identificación) y una mochila o equipaje de mano. Es recomendable incluir en el equipaje en cuanto sea posible, trajes de baño, calzado de playa, protector, gorra o sombrero, ropa casual y shorts, camisetas, jeans, abrigo, campera, indumentaria de tu equipo favorito, medias de algodón y ropa interior cómoda.' }
 ]
-
-
-import equipamientoA from 'public/images/equipamientoA.png';
-import equipamientoB from 'public/images/equipamientoB.png';
-
 
 const citasEurohockey2025 = [
     { autor: 'Laura, mamá de Delfi', cita: 'El trabajo de coordinar el viaje fue impecable..no solo el disfrute del deporte en sí, sino los paseos alternativos para que no desperdiciaran un solo segundo de su estadía…¡Gracias por la calidez como personas!' },
@@ -56,9 +43,13 @@ export default function Eurohockey() {
     useEffect(() => {
 
         const imageSources = [
+            calendarioIcono,
+            citasFondo,
+            euroHockeyForm,
+            videoFondo,
             equipamientoA,
             equipamientoB,
-            ...mejorExperienciaImgs,
+            ...ImagenesListas[13],
             ...ImagenesListas[6],
             ...ImagenesListas[0],
           ];
@@ -99,7 +90,7 @@ export default function Eurohockey() {
             contenta={
                 <section className={` relative w-full aspect-[16/7] bg-black `}>
                     <div className={` absolute top-0 left-0 w-full h-full overflow-hidden`}>
-                        <video poster='images/Hockey-22-Entrenamiento.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <video poster={videoFondo.src} className='absolute top-0 left-0 w-full h-full object-cover object-center' preload="auto" autoPlay="autoplay" muted loop playsInline>
                             <source src='images/IDentity-Campus-Eurohockey-2023.mp4' type="video/mp4" />
                         </video>
                     </div>
@@ -136,7 +127,7 @@ export default function Eurohockey() {
 
                     <ExperienciaGaleria
                         identitycampus
-                        ExperienciaImgs={mejorExperienciaImgs}
+                        ExperienciaImgs={ImagenesListas[13]}
                         title="La mejor experiencia de hockey de vida" />
 
                     <AllInclusiveExperiencia
