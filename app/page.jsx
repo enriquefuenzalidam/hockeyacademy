@@ -23,6 +23,7 @@ export default function Page() {
         const imageSources = [
             hockeyacademylogo,
             hockeyacademylogob,
+            ...ImagenesListas[1],
             ...ImagenesListas[2],
             ...ImagenesListas[3]
           ];

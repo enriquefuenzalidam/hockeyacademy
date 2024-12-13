@@ -17,6 +17,7 @@ export default function Eventosproximos() {
     useEffect(() => {
 
         const imageSources = [
+            ...ImagenesListas[1],
             ...ImagenesListas[2],
             ...ImagenesListas[3],
           ];
