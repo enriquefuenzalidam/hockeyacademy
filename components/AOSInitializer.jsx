@@ -1,17 +1,25 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const AOSInitializer = () => {
+  const [hydrated, setHydrated] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true
-    });
-    AOS.refresh();
+    setHydrated(true); // Mark as hydrated
   }, []);
+
+  useEffect(() => {
+    if (hydrated) {
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+      AOS.refresh();
+    }
+  }, [hydrated]);
 
   return null;
 };
