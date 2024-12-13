@@ -1,6 +1,15 @@
-"use client";
+
 import '../styles/globals.css';
 import AOSInitializer from '../components/AOSInitializer';
+import logoA from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
+import Head from 'next/head';
+
+export const metadata = {
+    title: {
+        template: '%s | Hockey Academy',
+        default: 'Hockey Academy'
+    }
+};
 
 export default function RootLayout({ children }) {
 
@@ -8,7 +17,7 @@ export default function RootLayout({ children }) {
 
         <html lang="es" className={` scroll-smooth antialiased `} >
 
-            <head>
+            <Head>
 
                 <meta name="description" content="Proveedores. Desarrollo de aplicaciones móviles. Diseño de páginas web. Base de datos. Venta y suscripción de software. E-commerce." />
                 <meta name="keywords" content="Hockey Academy, Hockey, Campus, Campus Identity" />
@@ -32,7 +41,9 @@ export default function RootLayout({ children }) {
                 <link rel="icon" type="image/png" sizes="85x85" href="/images/hockeyacademy_h_logo_85x85.png" />
                 <link rel="icon" type="image/png" sizes="230x230" href="/images/hockeyacademy_h_logo_230x230.png" />
 
-            </head>
+                <link rel="preload" as="image" href={logoA} />
+
+            </Head>
 
             <body className={` antialiased text-black bg-[#12214d] font-Cabin `} >
                 <AOSInitializer />
