@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Loading from 'app/loading';
+// import Loading from 'app/loading';
+import Cargador from 'components/cargador';
 
 import HockeyAcademyVideoA from "components/hockeyacademyvideovideoa";
 import PlantillaUno from "components/plantillauno";
@@ -46,7 +47,7 @@ export default function Queeshockeyacademy() {
       };
 
     if (loading) {
-        return <Loading />;
+        return <Cargador />;
     }
 
     return (

@@ -53,6 +53,10 @@ module.exports = {
               'gx': '1160px',
               'xl': '1280px',
               '2xl': '1536px',
+            },
+            boxShadow: {
+              'navVertical': '0.8rem 0 1rem -0.2rem rgb( 0, 0, 0, 0.3), 0.25rem 0 0.3rem -0.25rem rgb( 0, 0, 0, 0.3);',
+              'navHorizontal': '0 0.8rem 1rem -0.2rem rgb( 0, 0, 0, 0.5), 0 0.25rem 0.3rem -0.25rem rgb( 0, 0, 0, 0.5);',
             }
         }
     },

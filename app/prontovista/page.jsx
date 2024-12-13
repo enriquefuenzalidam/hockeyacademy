@@ -1,6 +1,5 @@
 import ProntoVista from "./Prontovista";
 import { Suspense } from "react";
-import Loading from "app/loading";
 
 export const metadata = {
     title: 'Vista'
@@ -8,7 +7,7 @@ export const metadata = {
 
 const Page = ({}) => {
     return (
-        <Suspense fallback={<Loading />}>
+        <Suspense>
             <ProntoVista />
         </Suspense>
     )

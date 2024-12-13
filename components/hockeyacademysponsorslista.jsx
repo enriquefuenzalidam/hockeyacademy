@@ -7,6 +7,7 @@ import hockeyacademycampsponsor05 from 'public/hockeyacademycamp/hockeyacademyca
 import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_06.png';
 import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_07.png';
 import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_08.png';
+import hockeyacademycampsponsor09 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
 import HACard01 from 'public/hacard/hacard_01.jpg';
 import HACard02 from 'public/hacard/hacard_02.jpg';
@@ -26,7 +27,7 @@ export const SponsorsHA = [
     hockeyacademycampsponsor04,
     hockeyacademycampsponsor05,
     hockeyacademycampsponsor06,
-    hockeyacademycampsponsor07
+    hockeyacademycampsponsor07,
 ];
 
 export const AlianzEstrtgHA = [
@@ -43,3 +44,5 @@ export const BeneficiosHACard = [
     { imagen: hockeyacademycampsponsor06, titulo: 'Sportika', descripcion: '10% Off en tienda Sportika y en la web (código web HA10%)' },
     { imagen: hockeyacademycampsponsor07, titulo: 'Identity Campus', descripcion: 'Descuento en los Camp de Europa con Identity Campus' }
 ];
+
+export const TextoLogo = hockeyacademycampsponsor09;

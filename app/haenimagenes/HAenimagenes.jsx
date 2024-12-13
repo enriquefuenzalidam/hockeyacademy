@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import Loading from 'app/loading';
+// import Loading from 'app/loading';
+import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 
 import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
@@ -47,7 +48,7 @@ export default function HAenimagenes() {
       };
 
     if (loading) {
-        return <Loading />;
+        return <Cargador />;
     }
 
     return (

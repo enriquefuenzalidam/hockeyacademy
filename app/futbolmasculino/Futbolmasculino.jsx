@@ -85,6 +85,7 @@ const futbolProximasSalidas = [
 ]
 
 import FutbolViajes from 'components/futbolimagenes';
+import Cargador from 'components/cargador';
 
 const Futbolmasculino = () => {
 

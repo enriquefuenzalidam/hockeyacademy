@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Loading from 'app/loading';
+// import Loading from 'app/loading';
+import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -81,7 +82,7 @@ export default function Hockeytecnificacion() {
       };
 
     if (loading) {
-        return <Loading />;
+        return <Cargador />;
     }
 
     return (

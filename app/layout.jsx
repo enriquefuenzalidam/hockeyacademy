@@ -1,8 +1,8 @@
 
 import '../styles/globals.css';
 import AOSInitializer from '../components/AOSInitializer';
-import logoA from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 import Head from 'next/head';
+import ImagenesListas from 'components/imageneslistas';
 
 export const metadata = {
     title: {
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
                 <link rel="icon" type="image/png" sizes="85x85" href="/images/hockeyacademy_h_logo_85x85.png" />
                 <link rel="icon" type="image/png" sizes="230x230" href="/images/hockeyacademy_h_logo_230x230.png" />
 
-                <link rel="preload" as="image" href={logoA} />
+                <link rel="preload" as="image" href={ImagenesListas[14].src} />
 
             </Head>
 

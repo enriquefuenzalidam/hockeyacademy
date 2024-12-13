@@ -1,7 +1,7 @@
 
 import EurohockeyViajesGaleria from './eurohockeyimageneslista';
 import HockeyAcademyImagenesImports from './hockeyacademyimageneslista';
-import { SponsorsHA, AlianzEstrtgHA, HACards, BeneficiosHACard } from './hockeyacademysponsorslista';
+import { SponsorsHA, AlianzEstrtgHA, HACards, BeneficiosHACard, TextoLogo } from './hockeyacademysponsorslista';
 import FutbolViajes from './futbolimagenes';
 import HockeyTecnificacion from './hockeytecnificacionimageneslista';
 import EuroHockey2025Imagenes from './eurohockey2025imageneslista';
@@ -22,7 +22,8 @@ const ImagenesListas = {
     10: MejorExperienciaImgsB,
     11: StuffImagenes,
     12: StuffPerfiles,
-    13: MejorExperienciaImgsC
+    13: MejorExperienciaImgsC,
+    14: TextoLogo
 }
 
 export default ImagenesListas;

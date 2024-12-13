@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import ImagenesListas from './imageneslistas';
 import hockeyAcademyLogoB from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 import facebookIcon from 'public/images/facebook.svg';
 import instagramIcon from 'public/images/instagram.svg';
@@ -118,10 +119,9 @@ export function Navigation() {
         <nav className={` bg-transparent fixed top-0 left-0 inline-flex font-Cabin w-full h-20 md:w-min md:h-screen `}>
 
             <div className={` h-min inline-flex flex-row bg-[#12214d] z-50 md:pb-6 md:w-32 md:h-full md:flex-col transition-all ease-in-out duration-500 w-full `}>
-
                 <div className={` py-2 px-4 flex md:p-2 md:inline-block md:aspect-1 md:w-full  `}>
                     <Link href='.\' className={` cursor-pointer `}>
-                        <Image src={hockeyAcademyLogoB} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
+                        <Image src={ImagenesListas[14]} alt={` `} className={` object-cover object-center h-14 w-auto md:w-24 md:h-auto md:mx-auto`} />
                     </Link>
                 </div>
                 <div className={` queverguenzaMenu pr-3 h-auto flex flex-grow items-center justify-end    md:flex-col md:p-0 md:justify-center `}>
@@ -140,7 +140,6 @@ export function Navigation() {
                     <Link href={` https://www.tiktok.com/@hockeyacademyok `} className={`inline-block `}><Image src={tiktokIcon} alt={` `} className={` mx-auto `} /></Link>
                     <Link href={` https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A `} className={` inline-block `}><Image src={youtubeIcon} alt={` `} className={` mx-auto `} /></Link>
                 </div>
-
             </div>
 
             {!!navItems?.length && (

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Loading from 'app/loading';
+// import Loading from 'app/loading';
+import Cargador from 'components/cargador';
 import Image from 'next/image';
 import contactoFondo from 'public/hockeyacademycamp/hockeyacademycamp_contacto_fondo_b_.jpg';
 
@@ -43,7 +44,7 @@ export default function Contacto() {
       };
 
     if (loading) {
-        return <Loading />;
+        return <Cargador />;
     }
 
     return (

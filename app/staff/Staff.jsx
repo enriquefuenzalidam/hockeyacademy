@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Loading from 'app/loading';
+// import Loading from 'app/loading';
+import Cargador from 'components/cargador';
 import ImagenesListas from "components/imageneslistas";
 
 import NosotrosFoto from 'components/nosotrosFoto';
@@ -45,7 +46,7 @@ export default function Staff() {
       };
 
     if (loading) {
-        return <Loading />;
+        return <Cargador />;
     }
 
     return (
