@@ -17,6 +17,7 @@ import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 import calendarioIcono from 'public/images/calendar-days.svg';
 import hockeyTecnificacionForm from 'public/images/hockeyTecnificacionForm.webp';
 import citasFondo from 'public/images/citasFondoHockeyTecnificacion.jpg';
+import equipamientoA from 'public/images/equipamientoA.png';
 
 const allInclusiveExperiencia = [
     { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
@@ -27,21 +28,6 @@ const allInclusiveExperiencia = [
     { id: 5, titulo: 'Equipaje Sugerido', contenido: 'Brindaremos un KIT de viaje en el cual se incluye camisetas, shorts, mochila y sudadera para la actividad deportiva (solo restará llevar medias y calzado apropiado). Se recomienda llevar una valija grande (con candado o identificación) y una mochila o equipaje de mano. Es recomendable incluir en el equipaje en cuanto sea posible, trajes de baño, calzado de playa, protector, gorra o sombrero, ropa casual y shorts, camisetas, jeans, abrigo, campera, indumentaria de tu equipo favorito, medias de algodón y ropa interior cómoda.' }
 ]
 
-import equipamientoA from 'public/images/equipamientoA.png';
-
-import pagoCondicionesSaldo from 'public/images/pagoCondicionesSaldo.svg';
-import pagoCondicionesPlane from 'public/images/pagoCondicionesPlane.svg';
-import pagoCondicionesPen from 'public/images/pagoCondicionesPen.svg';
-import pagoCondicionesCard from 'public/images/pagoCondicionesCard.svg';
-import pagoCondicionesBill from 'public/images/pagoCondicionesBill.svg';
-
-const pagoCondiciones = [
-    { icono: pagoCondicionesPen, titulo: 'Seña', descripcion: 'Permite reservar el cupo del deportista contra la firma del contrato.' },
-    { icono: pagoCondicionesPlane, titulo: 'Aereo', descripcion: 'No incluido. Debe contratarse 90 días antes de la fecha del viaje.' },
-    { icono: pagoCondicionesSaldo, titulo: 'Saldo', descripcion: 'Financiación en cuotas sin interés. Cancelación hasta 30 días antes del viaje.' },
-    { icono: pagoCondicionesCard, titulo: 'Medios de pago', descripcion: 'Efectivo, transferencia/deposito bancario y transferencia internacional.' },
-    { icono: pagoCondicionesBill, titulo: 'Flexibilidad', descripcion: 'Posibilidad de abonar el 100% del Campus en cuotas fijas acordadas en el contrato.' },
-]
 
 const citasTecnificacion = [
     { autor: 'Costanza Asrin, mamá de Alfo Moyano', cita: 'Alfi volvió feliz de la clínica, sin ganas de que se termine. Se sintió comodísima a pesar de ser la más chica del grupo. Fascinada con Paco y Agustina, y tranquila y respaldada por Fer de manera permanente. Le encantó el hotel, la experiencia del mundial, la unión con el grupo, conocer chicas de otro lado, etc etc. Ella brilló en esa experiencia.' },
@@ -59,6 +45,7 @@ export default function Hockeytecnificacion() {
     useEffect(() => {
 
         const imageSources = [
+            equipamientoA,
             calendarioIcono,
             hockeyTecnificacionForm,
             citasFondo,
@@ -169,8 +156,7 @@ export default function Hockeytecnificacion() {
                     </section>
 
                     <PagoCondiciones
-                        identitycampus
-                        pagoCondiciones={pagoCondiciones} />
+                        identitycampus />
 
                     <CitasBlock
                         identitycampus
