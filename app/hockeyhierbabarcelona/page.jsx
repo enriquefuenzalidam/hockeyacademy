@@ -1,4 +1,6 @@
 import Hockeyhierbabarcelona from "./Hockeyhierbabarcelona";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Hockey Barcelona'
@@ -6,7 +8,9 @@ export const metadata = {
 const Page = () => {
 
     return (
-        <Hockeyhierbabarcelona />
+        <Suspense fallback={<Loading />}>
+            <Hockeyhierbabarcelona />
+        </Suspense>
     );
 }
 

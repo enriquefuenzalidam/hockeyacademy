@@ -1,5 +1,6 @@
-
 import Staff from "./Staff";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Staff'
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <Staff />
+        <Suspense fallback={<Loading />}>
+            <Staff />
+        </Suspense>
     );
 }
 

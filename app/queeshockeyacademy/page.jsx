@@ -1,5 +1,6 @@
-
 import Queeshockeyacademy from "./Queeshockeyacademy";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Qué es Hockey Academy'
@@ -7,7 +8,9 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <Queeshockeyacademy />
+        <Suspense fallback={<Loading />}>
+            <Queeshockeyacademy />
+        </Suspense>
     );
 }
 

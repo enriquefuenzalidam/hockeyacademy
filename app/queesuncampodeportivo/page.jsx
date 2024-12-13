@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Footer } from "components/footer";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Qué es un Campo Deportivo'

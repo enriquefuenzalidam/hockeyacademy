@@ -13,10 +13,13 @@ import { SponsorsHA, AlianzEstrtgHA } from 'components/hockeyacademysponsorslist
 import hockeyacademylogo from 'public/hockeyacademycamp/hockeyacademycamp_logo.png';
 import hockeyacademylogob from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
 
+import Loading from 'components/loading';
+import { Suspense } from "react";
 
 export default function Page() {
 
     return (
+        <Suspense fallback={<Loading />}>
         <PlantillaUno
             contenta={
                 <HockeyAcademyVideoA>
@@ -112,6 +115,7 @@ export default function Page() {
                 </>
             }
         />
+        </Suspense>
                 
 
     );

@@ -1,5 +1,7 @@
 
 import HAenimagenes from "./HAenimagenes";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Imágenes y Videos'
@@ -8,7 +10,9 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <HAenimagenes />
+        <Suspense fallback={<Loading />}>
+            <HAenimagenes />
+        </Suspense>
     );
 }
 

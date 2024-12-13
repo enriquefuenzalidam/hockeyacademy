@@ -1,4 +1,6 @@
 import Eurohockey from "./Eurohockey";
+import Loading from "components/loading";
+import { Suspense } from "react";
 
 export const metadata = {
     title: 'Eurohockey'
@@ -6,7 +8,11 @@ export const metadata = {
 
 export default function Page() {
 
-    return ( <Eurohockey /> );
+    return ( 
+        <Suspense fallback={<Loading />}>
+            <Eurohockey /> 
+        </Suspense>
+    );
 }
 
 

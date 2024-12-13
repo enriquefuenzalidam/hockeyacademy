@@ -1,7 +1,5 @@
 
-import { Footer } from 'components/footer';
 import PlantillaUno from 'components/plantillauno';
-
 import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 
 export default function Capacitaciones() {
