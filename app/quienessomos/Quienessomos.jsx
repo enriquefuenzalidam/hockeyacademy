@@ -75,15 +75,15 @@ export default function Quienessomos() {
                         <p data-aos-once="true" data-aos="fade-up" className={` indent-8 font-Roboto text-lg md:text-xl text-blue-950 text-justify hyphens-auto my-6 `} style={{ lineHeight: `1.6em` }}>
                             Nos distingue nuestra profunda vocación, que va más allá de la técnica deportiva, para centrarnos en la persona en su totalidad. Cada proyecto, cada entrenamiento y cada momento de nuestra academia está impregnado por nuestra energía emprendedora, entusiasmo y, sobre todo, una auténtica pasión por lo que hacemos, valores que buscamos transmitir en cada acción.
                         </p>
-                        <div className={` flex flex-col-reverse md:flex-row gap-0 md:gap-16 w-full my-12 mx-auto `}>
+                        <div className={` flex flex-col-reverse md:flex-row gap-0 md:gap-14 w-full my-12 mx-auto `}>
                             <div className={` w-full md:w-1/2 flex items-center `}>
                             <p data-aos-once="true" data-aos="fade-up" className={` indent-8 font-Roboto text-lg md:text-xl text-blue-950 text-justify hyphens-auto mt-12 md:mt-0 `} style={{ lineHeight: `1.6em` }}>
                                 Lo que realmente caracteriza nuestra metodología es el ambiente humano que cultivamos: un espacio donde la calidez, la amistad, la diversión y la distensión son elementos fundamentales. Creemos firmemente que un entorno positivo y motivador es clave para un aprendizaje verdaderamente significativo. En Hockey Academy, nos aseguramos de que cada entrenamiento sea una experiencia enriquecedora, tanto en el plano deportivo como en el personal, fomentando el crecimiento integral de cada jugador.
                             </p>
                             </div>
-                            <div className={` w-full md:w-1/2 `}>
-                            <p data-aos-once="true" data-aos="fade-up"  className={` mx-auto  relative aspect-[4/3] overflow-hidden rounded-md shadow-black/30 shadow-md `} >
-                                <Image src={imagenB} alt='' className={`text-blue-950 object-cover absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full `}  />
+                            <div className={` w-full md:w-1/2 flex items-center `} data-aos-once="true" data-aos="fade-up">
+                            <p className={` mx-auto w-full aspect-[4/3] md:aspect-[7/8] lg:aspect-[4/3] relative overflow-hidden rounded-md shadow-black/30 shadow-md transition-all ease-in-out duration-300 `} >
+                                <Image src={imagenB} alt='' className={` absolute object-cover object-center w-full h-full `}  />
                             </p>
                             </div>
                         </div>
