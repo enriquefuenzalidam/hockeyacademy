@@ -1,15 +1,9 @@
-
+"use client";
 import '../styles/globals.css';
 import AOSInitializer from '../components/AOSInitializer';
 
-export const metadata = {
-    title: {
-        template: '%s | Hockey Academy',
-        default: 'Hockey Academy'
-    }
-};
-
 export default function RootLayout({ children }) {
+
     return (
 
         <html lang="es" className={` scroll-smooth antialiased `} >

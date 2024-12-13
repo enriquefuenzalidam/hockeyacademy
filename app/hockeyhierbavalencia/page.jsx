@@ -1,6 +1,4 @@
 import Hockeyhierbavalencia from "./Hockeyhierbavalencia";
-import Loading from "components/loading";
-import { Suspense } from "react";
 
 
 export const metadata = {
@@ -9,9 +7,7 @@ export const metadata = {
 const Page = () => {
 
     return (
-        <Suspense fallback={<Loading />}>
             <Hockeyhierbavalencia />
-        </Suspense>
     );
 }
 

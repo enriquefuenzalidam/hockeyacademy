@@ -1,6 +1,6 @@
 import ProntoVista from "./Prontovista";
 import { Suspense } from "react";
-import Loading from "components/loading";
+import Loading from "app/loading";
 
 export const metadata = {
     title: 'Vista'

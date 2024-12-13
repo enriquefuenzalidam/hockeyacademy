@@ -1,6 +1,4 @@
 import Futbolmasculino from "./Futbolmasculino";
-import Loading from "components/loading";
-import { Suspense } from "react";
 
 export const metadata = {
     title: 'Fútbol Masculino'
@@ -8,11 +6,9 @@ export const metadata = {
 
 const Page = () => {
 
-    
+
     return (
-        <Suspense fallback={<Loading />}>
-        <Futbolmasculino />
-        </Suspense>
+            <Futbolmasculino />
     );
 }
 
