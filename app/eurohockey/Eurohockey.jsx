@@ -1,4 +1,9 @@
-"use client";
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import ImagenesListas from 'components/imageneslistas';
+import Image from 'next/image';
+
 import PlantillaDos from 'components/plantillados';
 
 import ExperienciaGaleria from 'components/experienciaGaleria';
@@ -46,6 +51,48 @@ const citasEurohockey2025 = [
 
 
 export default function Eurohockey() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            equipamientoA,
+            equipamientoB,
+            ...mejorExperienciaImgs,
+            ...ImagenesListas[6],
+            ...ImagenesListas[0],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <PlantillaDos
@@ -66,7 +113,7 @@ export default function Eurohockey() {
                             <div className={`  gx:w-8/12 `} data-aos-once="true">
                                 <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus Eurohockey<br /><span className={` text-nowrap text-[rgb(246,187,14)] `}>Alemania 2025</span></h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                                <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
+                                <p className={` text-center mb-6 h-auto`} ><Image className={` mx-auto w-8 `} src={calendarioIcono} alt='' /></p>
                                 <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 9 al martes 20 de agosto</h2>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                                     Nuestro Campus de Hockey con Evento, está orientado a jóvenes de 12 a 17 años. Proponemos un viaje inolvidable a Barcelona (España) y Monchengladbach (Alemania), donde combinamos 9 tecnificaciones deportivas con las asistencia al principal Torneo de Hockey de toda Europa.
@@ -105,12 +152,12 @@ export default function Eurohockey() {
                                 <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 text-justify hyphens-auto indent-5 `}>Proponemos un viaje inolvidable, por lo que deseamos te lleves muchos recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (Faldas, camisetas, buzo, mochila). Asimismo, en la cena despedida llevaremos a cabo distintos sorteos. <strong>¡No te lo puedes perder!</strong></p>
                             </div>
                             <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                                <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
+                                <Image data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA} alt='' />
                             </p>
                         </div>
                         <div className={` flex md:flex-row flex-col-reverse px-8 gap-8 md:gap-0 my-20`}>
                             <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                                <img data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB.src} alt='' />
+                                <Image data-aos-once="true" data-aos="fade-down" className={` max-w-sm w-full `} src={equipamientoB} alt='' />
                             </p>
                             <div className={` w-full md:w-6/12 justify-start items-start`}>
                                 <h4 className={` text-left font-BebasNeue text-[rgb(246,187,14)] text-2xl mb-2 md:mr-12 `}>Equipamiento</h4>
@@ -155,7 +202,7 @@ export default function Eurohockey() {
                                 </form>
                             </div>
                             <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                                <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm.src} alt='' /></p>
+                                <Image data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm} alt='' /></p>
                         </div>
                     </section>
                 </>

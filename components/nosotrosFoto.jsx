@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 
 
@@ -9,10 +10,10 @@ const NosotrosFoto = ({nombre, foto, linkedinEnlace, dimension = 'h-full w-auto'
         <div className={`inline-block w-80 m-2  `}>
             <div data-aos-once="true" data-aos="zoom-in" className={`  relative aspect-1 h-80 rounded-full border-8 border-solid border-[#257caa] overflow-hidden bg-otoFondoDos`}>
             {!!foto ? (
-                <img className={` absolute ${dimension} `} src={foto} alt='' />
+                <Image className={` absolute ${dimension} `} src={foto} alt='' />
                 ):
             (
-                <img className={` absolute inset-0 h-full aspect-1 `} src='nosotros/avatar.jpg' alt='' />
+                <Image className={` absolute inset-0 h-full aspect-1 `} src='nosotros/avatar.jpg' alt='' />
             )}
             </div>
             <p className={`  block w-full text-center font-RobotoCondensed font-bold text-4xl text-black mt-6 `}>{nombre}</p>

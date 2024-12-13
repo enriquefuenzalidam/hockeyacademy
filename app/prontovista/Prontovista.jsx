@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import ImagenesListas from "components/imageneslistas";
+import Loading from 'app/loading';
 
 const ProntoVista = ({ }) => {
 
@@ -28,6 +29,45 @@ const ProntoVista = ({ }) => {
       }, [initialIndex, imagenesLista.length]);
 
     const listaPosicion = currentImageIndex * -88;
+
+
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const imageSources = [
+            ...imagenesLista,
+          ];
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, [imagenesLista]);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <main className={` relative w-dvw h-dvh flex flex-col justify-end items-center overflow-hidden bg-black `} >

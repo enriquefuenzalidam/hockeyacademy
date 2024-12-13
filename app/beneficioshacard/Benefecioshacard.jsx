@@ -1,8 +1,9 @@
 'use client';
-import PlantillaUno from 'components/plantillauno';
-import NextImage from 'next/image';
 import { useState, useEffect } from 'react';
 import Loading from 'app/loading';
+
+import PlantillaUno from 'components/plantillauno';
+import Image from 'next/image';
 import ImagenesListas from 'components/imageneslistas';
 
 export default function BenefeciosHaCard() {
@@ -51,7 +52,7 @@ export default function BenefeciosHaCard() {
             contenta={
 
                 <section className={` block relative w-full aspect-[16/5] `}>
-                    <NextImage src={ImagenesListas[7][2]} className={` absolute w-full h-full object-center object-cover `} alt='' />
+                    <Image src={ImagenesListas[7][2]} className={` absolute w-full h-full object-center object-cover `} alt='' />
                     <div className={` relative flex flex-col justify-center items-center w-full h-full `}>
                         <h2 className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl sm:text-5xl md:text-6xl mx-8 `} style={{ textShadow: `0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black, 0 0 1em black` }}>HA Card</h2>
                     </div>
@@ -75,7 +76,7 @@ export default function BenefeciosHaCard() {
                                         <div key={index} className={` flex flex-col md:flex-row mx-auto  w-full`}>
                                             <div className={` flex flex-col md:mr-8  mt-6 sm:mt-7 md:mt-0  mb-2 sm:mb-4 md:mb-0 justify-center items-center `}>
                                                 <span data-aos-once="true" data-aos="zoom-in" className={` relative inline-block bg-[#76b2cc] rounded-full mx-auto w-36 md:w-44 h-36 md:h-44`}>
-                                                    <NextImage className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9/12 h-auto `} src={src.imagen} alt='' />
+                                                    <Image className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9/12 h-auto `} src={src.imagen} alt='' />
                                                 </span>
                                             </div>
                                             <div className={` flex flex-col flex-grow justify-center items-center md:items-start`}>
@@ -101,8 +102,8 @@ export default function BenefeciosHaCard() {
                             </div>
 
                             <div className={` grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-6 p-6`}>
-                                <NextImage data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][0]} alt='Beneficios' />
-                                <NextImage data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][1]} alt='Fiesta HA ' />
+                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][0]} alt='Beneficios' />
+                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][1]} alt='Fiesta HA ' />
                             </div>
 
                         </div>
@@ -111,4 +112,4 @@ export default function BenefeciosHaCard() {
             }
         />
     );
-}
+};

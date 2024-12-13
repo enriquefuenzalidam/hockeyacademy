@@ -1,10 +1,54 @@
+"use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Loading from 'app/loading';
+
 import HockeyAcademyVideoA from "components/hockeyacademyvideovideoa";
 import PlantillaUno from "components/plantillauno";
-import Image from "next/image";
 
 import imagenC from 'public/hockeyacademycamp/hockeyacademycamp_imagen_24.jpg';
 
 export default function Queeshockeyacademy() {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            imagenC,
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
+
     return (
         <PlantillaUno
             contentc={

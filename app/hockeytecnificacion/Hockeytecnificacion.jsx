@@ -1,5 +1,10 @@
-"use client";
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import ImagenesListas from 'components/imageneslistas';
+import Image from 'next/image';
 import Link from 'next/link';
+
 import PlantillaDos from 'components/plantillados';
 
 import ExperienciaGaleria from 'components/experienciaGaleria';
@@ -11,26 +16,9 @@ import LateralImagenesCuadro from 'components/LateralImagenesCuadro';
 
 import calendarioIcono from 'public/images/calendar-days.svg';
 import hockeyTecnificacionForm from 'public/images/hockeyTecnificacionForm.webp';
-
 import citasFondo from 'public/images/citasFondoHockeyTecnificacion.jpg';
 
-import mejorExperienciaA from 'public/images/mejorExperienciaA.png';
-import mejorExperienciaC from 'public/images/mejorExperienciaC.png';
-import mejorExperienciaD from 'public/images/mejorExperienciaD.png';
-import mejorExperienciaG from 'public/images/mejorExperienciaG.png';
-import mejorExperienciaH from 'public/images/mejorExperienciaH.png';
-import mejorExperienciaI from 'public/images/mejorExperienciaI.png';
-
-const mejorExperienciaImgs = [
-    mejorExperienciaI,
-    mejorExperienciaH,
-    mejorExperienciaD,
-    mejorExperienciaA,
-    mejorExperienciaG,
-    mejorExperienciaC
-]
-
-const allInclusiveExperienci = [
+const allInclusiveExperiencia = [
     { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
     { id: 1, titulo: 'Transporte', contenido: 'Desde nuestra llegada al aeropuerto de El Prat, en las afueras de la ciudad Condal, contamos con un transfer privado a exclusiva disposición que nos transportará de manera segura y rápida hacia el alojamiento. También durante toda la estadía en Barcelona y en París, ya sea para acudir a los puntos turísticos, los eventos deportivos, entrenamientos, etc. nos trasladaremos en transporte privado (24 hs. disponible).' },
     { id: 2, titulo: 'Asistencia Médica', contenido: 'Nuestros campus cuentan con un cuerpo médico encabezado por el Dr. Hernán Santiago Boccolini especializados en el área deportiva y traumatología. A diario, al margen de la actividad estrictamente deportiva, el médico visitará nuestro alojamiento a los fines de atender cualquier tipo de necesidad que se presente en los días del viaje. Nos complace contar con el apoyo de Farmacias Briera para cualquier imprevisto o necesidad de medicamentos.' },
@@ -66,6 +54,49 @@ const citasTecnificacion = [
 
 export default function Hockeytecnificacion() {
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            calendarioIcono,
+            hockeyTecnificacionForm,
+            citasFondo,
+            ...ImagenesListas[5],
+            ...ImagenesListas[10],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
+
     return (
         <PlantillaDos
             contenta={
@@ -84,7 +115,7 @@ export default function Hockeytecnificacion() {
                             <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                                 <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Viaje de Hockey Tecnificación<br /><span className={` text-nowrap text-[rgb(246,187,14)] `}>Barcelona 2025</span></h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[rgb(211,0,126)] mb-8 `} />
-                                <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
+                                <p className={` text-center mb-6 h-auto`} ><Image className={` mx-auto w-8 `} src={calendarioIcono} alt='' /></p>
                                 <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>Del sábado 12 al miércoles 23 de julio</h2>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >
                                     Experiencia orientada a deportistas de 12 a 18 años. Realizamos 14 sesiones de entrenamientos intensivos de perfeccionamiento técnico a cargo de entrenadores  y formadores europeos a los cuáles los avala mucha experiencia en la corrección analítica y de reconocimiento internacional.
@@ -109,7 +140,7 @@ export default function Hockeytecnificacion() {
 
                     <ExperienciaGaleria
                         identitycampus
-                        ExperienciaImgs={mejorExperienciaImgs}
+                        ExperienciaImgs={ImagenesListas[10]}
                         title="La mejor experiencia de hockey de vida"
                         introtext="En nuestro campus de hockey nos enfocamos en mejorar la performance de juego. Trabajaremos en gestos de definición tanto de área chica como área grande, quites para potenciar la recuperación, gestos de despido tanto para definir cómo pasar bola, y el contenido estelar del desarrollo y perfeccionamiento de la arrastrada. Sin dudas será una oportunidad de crecimiento técnico personal para las deportistas en grupos reducidos y nivelados para lograr un mayor enfoque en la corrección y así asegurarnos una mejora." />
 
@@ -121,7 +152,7 @@ export default function Hockeytecnificacion() {
 
                     <AllInclusiveExperiencia
                         identitycampus
-                        list={allInclusiveExperienci} />
+                        list={allInclusiveExperiencia} />
 
                     <section className={` max-w-5xl w-full mx-auto `}>
                         <div className={` flex md:flex-row flex-col px-8 gap-8 md:gap-0 my-20`}>
@@ -132,7 +163,7 @@ export default function Hockeytecnificacion() {
                                 <p className={` font-Roboto text-lg text-neutral-500 leading-relaxed md:mr-12 indent-5 text-justify hyphens-auto `}>Queremos que tu viaje sea inolvidable, y lleno de recuerdos. Incluimos la indumentaria deportiva para realizar las tecnificaciones (shorts / faldas, camisetas de entreno, buzo, mochila). En la cena despedida llevaremos a cabo distintos sorteos. <br /><strong className={` whitespace-nowrap `}>¡No te lo puedes perder!</strong></p>
                             </div>
                             <p className={` w-full md:w-6/12 flex justify-center items-center`}>
-                                <img data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA.src} alt='' />
+                                <Image data-aos-once="true" data-aos="fade-down" className={` max-w-md w-full `} src={equipamientoA} alt='' />
                             </p>
                         </div>
                     </section>

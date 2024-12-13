@@ -1,4 +1,8 @@
-"use client";
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import ImagenesListas from 'components/imageneslistas';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Footer } from 'components/footer';
@@ -11,25 +15,50 @@ import calendarioCheckIcono from 'public/images/calendar-check.svg';
 
 import hockeyTecnificacionForm from 'public/images/proximoEvento2024_hockeyTecnificacionBarcelonaJulio2024.jpg';
 
-import mejorExperienciaJ from 'public/images/mejorExperienciaJ.png';
-import mejorExperienciaK from 'public/images/mejorExperienciaK.png';
-import mejorExperienciaL from 'public/images/mejorExperienciaL.png';
-import mejorExperienciaM from 'public/images/mejorExperienciaM.png';
-import mejorExperienciaN from 'public/images/mejorExperienciaN.png';
-import mejorExperienciaO from 'public/images/mejorExperienciaO.png';
-
-const mejorExperienciaImgs = [
-    mejorExperienciaO,
-    mejorExperienciaN,
-    mejorExperienciaM,
-    mejorExperienciaL,
-    mejorExperienciaK,
-    mejorExperienciaJ
-]
-
-
 
 const Hockeyhierbabarcelona = () => {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            calendarioIcono,
+            calendarioCheckIcono,
+            ...ImagenesListas[5],
+            ...ImagenesListas[9],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <main className={`block relative z-0 w-full pl-0 md:pl-32 bg-white mt-[4.4rem] md:mt-0 `}>
@@ -47,7 +76,7 @@ const Hockeyhierbabarcelona = () => {
                     <div className={` gx:w-8/12 `} data-aos-once="true" data-aos="fade-up">
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>Campus de Verano Hockey Hierba<br/><span className={` text-nowrap text-[#3998be] `}>Barcelona 2025</span></h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8 `} />
-                        <p className={` text-center mb-6 h-auto`} ><img className={` mx-auto w-8 `} src={calendarioIcono.src} alt='' /></p>
+                        <p className={` text-center mb-6 h-auto`} ><Image className={` mx-auto w-8 `} src={calendarioIcono} alt='' /></p>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-0 `}>Del lunes 14 al martes 22 de julio</h2>
                         <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 `}>12 sesiones de entrenamiento</h2>
                         <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify hyphens-auto indent-5`} >
@@ -64,7 +93,7 @@ const Hockeyhierbabarcelona = () => {
                         </p>
                         {/*<p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-6 `}>
                             <Link className={` inline-block mx-auto py-2 px-8 bg-[rgb(188,0,121)] bg-fucsiaAzulRatioFondo hover:bg-none rounded-md border-black border-solid border-1 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 `} href="#reservas">
-                                Información <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
+                                Información <Image className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link>
                             <Link className={` inline-block mx-8 text-[#25D366] hover:text-sky-900 transition-all ease-in-out duration-200 `} href='https://api.whatsapp.com/send/?phone=34653783576' >
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className={`inline-block h-14 w-auto `} fill="currentColor">
                                     <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
@@ -78,7 +107,7 @@ const Hockeyhierbabarcelona = () => {
             </section>
 
             <ExperienciaGaleria
-                ExperienciaImgs={mejorExperienciaImgs}
+                ExperienciaImgs={ImagenesListas[9]}
                 title="La mejor experiencia de hockey hierba de vida" />
 
             <section data-aos-once="true" data-aos="fade-up" className={` relative max-w-5xl w-full mx-auto `}>
@@ -103,7 +132,7 @@ const Hockeyhierbabarcelona = () => {
                 </div>
                 <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-8 `}>
                     <Link className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} href="#reservas">
-                        Información <img className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono.src} alt='' /></Link>
+                        Información <Image className={` align-text-top inline-block h-4 w-auto ml-2`} src={calendarioCheckIcono} alt='' /></Link>
                 </p>
             </section>
 
@@ -134,7 +163,7 @@ const Hockeyhierbabarcelona = () => {
                         </form>
                     </div>
                     <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                        <img className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
+                        <Image className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm} alt='' /></p>
                 </div>
             </section>
 

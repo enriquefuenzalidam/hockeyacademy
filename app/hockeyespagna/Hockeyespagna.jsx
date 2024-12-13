@@ -1,5 +1,9 @@
-"use client";
-import { useEffect, useState } from 'react';
+'use client';
+import { useState, useEffect } from 'react';
+import Loading from 'app/loading';
+import ImagenesListas from 'components/imageneslistas';
+import Image from 'next/image';
+
 import Link from 'next/link';
 import { Footer } from 'components/footer';
 
@@ -12,24 +16,50 @@ import cabeceraFoto from 'public/images/Hockey-22-Entrenamiento.jpg';
 import chevronRight from 'public/images/chevronRight.svg';
 
 
-import mejorExperienciaJ from 'public/images/mejorExperienciaJ.png';
-import mejorExperienciaK from 'public/images/mejorExperienciaK.png';
-import mejorExperienciaL from 'public/images/mejorExperienciaL.png';
-import mejorExperienciaM from 'public/images/mejorExperienciaM.png';
-import mejorExperienciaN from 'public/images/mejorExperienciaN.png';
-import mejorExperienciaO from 'public/images/mejorExperienciaO.png';
-
-const mejorExperienciaImgs = [
-    mejorExperienciaO,
-    mejorExperienciaN,
-    mejorExperienciaM,
-    mejorExperienciaL,
-    mejorExperienciaK,
-    mejorExperienciaJ
-]
-
 
 export default function Hockeyespagna() {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        const imageSources = [
+            cabeceraFoto,
+            chevronRight,
+            ...ImagenesListas[5],
+            ...ImagenesListas[9],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
+    const preloadImages = (imageSources) => {
+        return Promise.all(
+          imageSources.map((src) => {
+            return new Promise((resolve, reject) => {
+              // Extract the src if the image is an object (imported asset)
+              const imageSrc = typeof src === 'string' ? src : src?.src;
+              if (!imageSrc) {
+                console.error('Invalid image source:', src);
+                resolve(); // Resolve even if invalid to avoid blocking
+                return;
+              }
+      
+              const img = new window.Image();
+              img.src = imageSrc;
+              img.onload = resolve;
+              img.onerror = (error) => {
+                console.error(`Failed to preload image: ${imageSrc}`, error);
+                resolve(); // Resolve even on error to avoid blocking
+              };
+            });
+          })
+        );
+      };
+
+    if (loading) {
+        return <Loading />;
+    }
 
 
     return (
@@ -37,7 +67,7 @@ export default function Hockeyespagna() {
 
             <section className={` block relative w-full aspect-[16/7] bg-black z-30 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
-                    <img src={cabeceraFoto.src} className='object-cover object-center w-full h-full' alt='' />
+                    <Image src={cabeceraFoto} className='object-cover object-center w-full h-full' alt='' />
                 </div>
             </section>
 
@@ -53,21 +83,21 @@ export default function Hockeyespagna() {
                             <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#BAECFF] mb-6 `} />
                             <p className={` font-Roboto text-md font-bold leading-relaxed mb-4 uppercase `} >Julio 2025</p>
                             <p className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >Experiencia orientada a deportistas de 12 a 18 años. Campus de verano con 10 sesiones de entrenamientos con entrenadores internacionales y la participación especial de  3 jugadoras olímpicas, en las instalaciones del Polideportivo Virgen del Carmen Beteró, Valencia.</p>
-                            <p className={` font-Roboto font-bold text-lg leading-loose mt-6`}><Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="./hockeyhierbavalencia">Más información <img className={` inline-block h-8 w-auto `} src={chevronRight.src} alt='' /></Link></p>
+                            <p className={` font-Roboto font-bold text-lg leading-loose mt-6`}><Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="./hockeyhierbavalencia">Más información <Image className={` inline-block h-8 w-auto `} src={chevronRight} alt='' /></Link></p>
                         </div>
                         <div>
                             <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 text-[#5fd2ff] `}>Hockey Hierba Barcelona</h3>
                             <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#BAECFF] mb-6 `} />
                             <p className={` font-Roboto text-md font-bold leading-relaxed mb-4 uppercase `} >Julio 2025</p>
                             <p className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `} >Experiencia orientada a deportistas de 12 a 18 años. Campus de verano con 14 sesiones de entrenamientos con entrenadores de selección y la participación especial de  jugadoras de talla mundial, olímpicas y/o mundialistas, en las instalaciones del Real Club de Polo de Barcelona.</p>
-                            <p className={` font-Roboto font-bold text-lg leading-loose mt-6`}><Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="./hockeyhierbabarcelona">Más información <img className={` inline-block h-8 w-auto`} src={chevronRight.src} alt='' /></Link></p>
+                            <p className={` font-Roboto font-bold text-lg leading-loose mt-6`}><Link className={` text-white text-opacity-80 hover:text-opacity-100 hover:text-black inline-block py-1 px-6 bg-blue-950 hover:bg-[#BAECFF] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="./hockeyhierbabarcelona">Más información <Image className={` inline-block h-8 w-auto`} src={chevronRight} alt='' /></Link></p>
                         </div>
                     </div>
                 </section>
             </div>
 
             <ExperienciaGaleria
-                ExperienciaImgs={mejorExperienciaImgs}
+                ExperienciaImgs={ImagenesListas[9]}
                 title="La mejor experiencia de hockey de vida" />
 
             <section className={` relative pb-0 gx:pb-24`}>

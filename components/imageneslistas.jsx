@@ -5,6 +5,8 @@ import { SponsorsHA, AlianzEstrtgHA, HACards, BeneficiosHACard } from './hockeya
 import FutbolViajes from './futbolimagenes';
 import HockeyTecnificacion from './hockeytecnificacionimageneslista';
 import EuroHockey2025Imagenes from './eurohockey2025imageneslista';
+import { MejorExperienciaImgsA, MejorExperienciaImgsB } from './mejorexperienciaimageneslista';
+import { StuffImagenes, StuffPerfiles } from './stuffimageneslista';
 
 const ImagenesListas = {
     0: EurohockeyViajesGaleria,
@@ -15,7 +17,11 @@ const ImagenesListas = {
     5: HockeyTecnificacion,
     6: EuroHockey2025Imagenes,
     7: HACards,
-    8: BeneficiosHACard
+    8: BeneficiosHACard,
+    9: MejorExperienciaImgsA,
+    10: MejorExperienciaImgsB,
+    11: StuffImagenes,
+    12: StuffPerfiles
 }
 
 export default ImagenesListas;
