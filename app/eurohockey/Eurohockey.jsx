@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-// import Loading from 'app/loading';
+
 import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 import Image from 'next/image';
@@ -182,7 +182,6 @@ export default function Eurohockey() {
                                     <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='email' placeholder='Correo electrónico' />
                                     <input className={` block mt-5 w-full border-b-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} type='tel' placeholder='Número de teléfono' />
                                     <textarea className={` block mt-5 w-full border-2 border-solid border-black border-opacity-40 bg-transparent appearance-none hover:appearance-none focus:outline-none p-2 `} rows='8' placeholder='Mensaje'></textarea>
-
                                     <label className={` mt-5 whitespace-normal flex flex-row `} htmlFor='privacidadPoliticas'>
                                         <span className={` mr-3 block w-5 h-5 border-2 border-solid border-black border-opacity-40 bg-transparent `}>
                                             <input className={` m-0 p-0 block border-0 w-full h-full bg-transparent focus:outline-none`} type='checkbox' name='privacidadPoliticas' id='privacidadPoliticas' /></span>
@@ -190,7 +189,6 @@ export default function Eurohockey() {
                                             Sí, acepto la política de privacidad y los términos y condiciones.</span></label>
                                     <p className={` block align-bottom mt-8 text-center `}>
                                         <input type='submit' className={` cursor-pointer inline-block mx-auto py-2 px-8 bg-fucsiaAzulRatioFondo hover:bg-fucsiaAzulRatioFondoHover rounded-md border-black border-solid border-1 border-opacity-0 no-underline shadow-black shadow-sm transition-all ease-in-out duration-500 text-white hover:border-opacity-10 `} value='Enviar mensaje' /></p>
-
                                 </form>
                             </div>
                             <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
@@ -199,9 +197,7 @@ export default function Eurohockey() {
                     </section>
                 </>
             }
-
         />
-
     );
 }
 

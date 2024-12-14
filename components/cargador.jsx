@@ -33,8 +33,8 @@ export default function Cargador() {
 
 
     return (
-      <div className=" absolute h-full w-full inset-0 flex items-center justify-center bg-[rgb(107,191,255)]" style={{ zIndex: `60` }} >
-        <div className={` relative w-[45%] h-full flex items-center justify-center `}>
+      <main className=" absolute h-full w-full inset-0 flex items-center justify-center bg-[rgb(107,191,255)]" style={{ zIndex: `60` }} >
+        <section className={` relative w-[45%] h-full flex items-center justify-center `}>
             <div className={` relative w-full h-[45%] flex items-center justify-center `}>
               <div id='cuadrado' className={` relative rounded-full flex items-center justify-center overflow-hidden `} >
                 <div className={` absolute w-full h-full animate-spin-cw bg-white `} style={{ clipPath: `polygon(0 0, 100% 0, 50% 50%, 100% 100%, 0 100%, 50% 50%)` }} />
@@ -44,8 +44,8 @@ export default function Cargador() {
                 </div>
               </div>
             </div>
-          </div>
-      </div>
+          </section>
+      </main>
 )}
 
 {/*

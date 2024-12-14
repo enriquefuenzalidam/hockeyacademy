@@ -36,7 +36,6 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
         startInterval();
     };
 
-
     const [listaPosicion, setListaPosicion] = useState(0);
 
     useEffect(() => {
@@ -78,10 +77,8 @@ const ViajesGaleria = ({ imageneslista, titulo = 'Galería de nuestros viajes', 
                             {imagenesLista.map((item, index) => (
                                 <span  className={` ${index === currentGalleryIndex ? `scale-105 sm:scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-72 sm:h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 `} key={index} > {/*  */}
                                     <Image className={` w-full h-full object-center object-cover `} src={item} alt='' />
-                                    
                                     <div className={` absolute inset-0 backdrop-grayscale transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? `opacity-0` : `opacity-80 bg-white/40` } `} />
                                     <Link className={` absolute inset-0 ${index === currentGalleryIndex ? `` : `hidden` } `} href={`./prontovista?index=${index}&imagenesListaNumero=${imagenesListaNumero}&identityCampus=${identityCampus}`} />
-                                    
                                 </span>
                             ))}
                         </div>

@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-// import Loading from 'app/loading';
 import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 

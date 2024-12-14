@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-// import Loading from 'app/loading';
 import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 import Image from 'next/image';
@@ -19,6 +18,7 @@ import calendarioIcono from 'public/images/calendar-days.svg';
 import hockeyTecnificacionForm from 'public/images/hockeyTecnificacionForm.webp';
 import citasFondo from 'public/images/citasFondoHockeyTecnificacion.jpg';
 import equipamientoA from 'public/images/equipamientoA.png';
+import videoFondo from 'public/images/Hockey-22-Entrenamiento-II.jpg';
 
 const allInclusiveExperiencia = [
     { id: 0, titulo: 'Comida', contenido: 'El Campus incluye pensión completa (4 comidas diarias de todos los días). Así también los complementos alimenticios pre y post entrenamientos con su necesaria hidratación. Para los casos que lo requieran, contamos con la posibilidad de adaptar los menús a vegetarianos, veganos y celíacos. Visitaremos diversos restaurantes sudamericanos (Ej: “El Chalito” de Luís Suárez, como también el Mercado de la Boquería).' },
@@ -46,6 +46,7 @@ export default function Hockeytecnificacion() {
     useEffect(() => {
 
         const imageSources = [
+            videoFondo,
             equipamientoA,
             calendarioIcono,
             hockeyTecnificacionForm,
@@ -90,7 +91,7 @@ export default function Hockeytecnificacion() {
             contenta={
                 <section className={` block relative w-full aspect-[16/7] bg-black `}>
                     <div className={` absolute top-0 left-0 w-full h-full `}>
-                        <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
+                        <video poster={videoFondo.src} className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
                             <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
                         </video>
                     </div>

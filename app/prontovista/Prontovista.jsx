@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import ImagenesListas from "components/imageneslistas";
-// import Loading from 'app/loading';
 import Cargador from 'components/cargador';
 
 const ProntoVista = ({ }) => {
