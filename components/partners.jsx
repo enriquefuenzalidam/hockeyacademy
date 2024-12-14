@@ -19,7 +19,7 @@ export function Partners() {
     return (
         <>
                                 {partnersLogos.map((src, index) => (
-                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-white rounded-full w-36 overflow-hidden m-8`}>
+                                    <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-white rounded-full w-36 overflow-hidden m-8`}>
                                         <Image className={` w-full h-full object-contain object-center `} src={src} alt='' />
                                     </span>
                                 ))}

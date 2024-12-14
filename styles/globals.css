@@ -72,7 +72,7 @@ html { font-size: 16px; }
 }
 
 
-@keyframes spin {
+@keyframes spin-cw {
     from {
       transform: rotate(0deg);
     }
@@ -80,9 +80,21 @@ html { font-size: 16px; }
       transform: rotate(360deg);
     }
   }
+
+  @keyframes spin-acw {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+  }
   
-  .animate-spin {
-    animation: spin 1s linear infinite;
+  .animate-spin-cw {
+    animation: spin-cw 2s linear infinite;
+  }
+  .animate-spin-acw {
+    animation: spin-acw 2s linear infinite;
   }
   
   .bg-opacity-50 {

@@ -194,7 +194,7 @@ export default function Eurohockey() {
                                 </form>
                             </div>
                             <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                                <Image data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={euroHockeyForm} alt='' /></p>
+                                <Image data-aos-once="true" data-aos="fade-up" className={` object-cover object-center w-full h-full `} src={euroHockeyForm} alt='' /></p>
                         </div>
                     </section>
                 </>

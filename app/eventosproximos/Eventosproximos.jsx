@@ -60,7 +60,7 @@ export default function Eventosproximos() {
                 <HockeyAcademyVideoA alto={` h-[50vh] `} >
                     <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                     <div className={` relative flex flex-col justify-center items-center w-full h-full `}>
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#BAECFF] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Próximos Eventos</h2>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` block w-full relative text-center tracking-wide font-BebasNeue text-[#BAECFF] text-6xl mx-8 `} style={{ textShadow: `0 0 1rem rgba(0,0,0,1),0 0 2rem rgba(0,0,255,0.5)` }}>Próximos Eventos</h2>
                     </div>
                 </HockeyAcademyVideoA>
             }
@@ -141,7 +141,7 @@ export default function Eventosproximos() {
                         {!!ImagenesListas[2].length && (
                             <div className={` mx-auto text-center overflow-visible `}>
                                 {ImagenesListas[2].map((src, index) => (
-                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                    <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                         <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                     </span>
                                 ))}
@@ -154,7 +154,7 @@ export default function Eventosproximos() {
                         {!!ImagenesListas[3].length && (
                             <div className={` mx-auto text-center overflow-visible `}>
                                 {ImagenesListas[3].map((src, index) => (
-                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                    <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                         <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                     </span>
                                 ))}

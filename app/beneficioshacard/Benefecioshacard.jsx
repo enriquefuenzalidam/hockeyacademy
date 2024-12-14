@@ -76,7 +76,7 @@ export default function BenefeciosHaCard() {
                                     {ImagenesListas[8].map((src, index) => (
                                         <div key={index} className={` flex flex-col md:flex-row mx-auto  w-full`}>
                                             <div className={` flex flex-col md:mr-8  mt-6 sm:mt-7 md:mt-0  mb-2 sm:mb-4 md:mb-0 justify-center items-center `}>
-                                                <span data-aos-once="true" data-aos="zoom-in" className={` relative inline-block bg-[#76b2cc] rounded-full mx-auto w-36 md:w-44 h-36 md:h-44`}>
+                                                <span data-aos-once="true" data-aos="fade-up" className={` relative inline-block bg-[#76b2cc] rounded-full mx-auto w-36 md:w-44 h-36 md:h-44`}>
                                                     <Image className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9/12 h-auto `} src={src.imagen} alt='' />
                                                 </span>
                                             </div>
@@ -103,8 +103,8 @@ export default function BenefeciosHaCard() {
                             </div>
 
                             <div className={` grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-6 p-6`}>
-                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][0]} alt='Beneficios' />
-                                <Image data-aos-once="true" data-aos="zoom-in" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][1]} alt='Fiesta HA ' />
+                                <Image data-aos-once="true" data-aos="fade-up" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][0]} alt='Beneficios' />
+                                <Image data-aos-once="true" data-aos="fade-up" className={` shadow-lg shadow-[rgba(0,0,0,0.5)] `} src={ImagenesListas[7][1]} alt='Fiesta HA ' />
                             </div>
 
                         </div>

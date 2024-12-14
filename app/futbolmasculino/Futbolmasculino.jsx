@@ -142,7 +142,7 @@ const Futbolmasculino = () => {
             </section>
 
             <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto mt-20 max-w-5xl z-30 pb-12`}>
-                            <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Próximos eventos deportivos</h2>
+                            <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Próximos eventos deportivos</h2>
                             <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-12 `} />
                             {!!futbolProximasSalidas?.length && (
                             <div className={` mx-auto text-center overflow-hidden pb-6 px-6 gx:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gx:grid-cols-4 gap-8 md:gap-8 lg:gap-4`}>

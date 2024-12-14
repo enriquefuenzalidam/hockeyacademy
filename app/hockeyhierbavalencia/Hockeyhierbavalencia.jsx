@@ -164,7 +164,7 @@ const Hockeyhierbavalencia = () => {
                         </form>
                     </div>
                     <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                        <Image data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm} alt='' /></p>
+                        <Image data-aos-once="true" data-aos="fade-up" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm} alt='' /></p>
                 </div>
             </section>
 

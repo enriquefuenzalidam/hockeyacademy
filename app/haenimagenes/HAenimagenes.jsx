@@ -59,7 +59,7 @@ export default function HAenimagenes() {
                     <div className={` block absolute left-0 top-0 w-full h-full bg-black opacity-60 `} />
                     <div className={` relative z-30 flex flex-col justify-center items-center w-full h-full max-w-5xl mx-auto `}>
 
-                        <h2 data-aos-once="true" data-aos="zoom-in" className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` block w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
                             Hockey Academy en Imágenes</h2>
                     </div>
                 </HockeyAcademyVideoA>
@@ -68,10 +68,10 @@ export default function HAenimagenes() {
                 <>
                     <section className={` relative mx-auto max-w-lg sm:max-w-xl md:max-w-3xl transition-all duration-300 ease-in-out pt-32 flex flex-row items-center gap-4`}>
                         {/*
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-[#000] text-4xl mx-8 mb-6`}>Visita el Google Drive de<span className={` sm:hidden inline `}> </span><br className={` hidden sm:inline `} />Hockey Academy</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
                     */}
-                        <Link href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' data-aos-once="true" data-aos="zoom-in" className={` flex items-center justify-center bg-white bg-opacity-60 w-5/12 md:w-1/5 aspect-1 cursor-pointer rounded-full border-4 sm:border-[5px] md:border-[6px] border-[#00b3f9] ml-6 `} >
+                        <Link href='https://drive.google.com/drive/folders/17HRZP2jq2Jb0WESaVAU7WlQ6M6haTCyZ?usp=sharing' data-aos-once="true" data-aos="fade-up" className={` flex items-center justify-center bg-white bg-opacity-60 w-5/12 md:w-1/5 aspect-1 cursor-pointer rounded-full border-4 sm:border-[5px] md:border-[6px] border-[#00b3f9] ml-6 `} >
                             <svg className={` w-3/5 h-auto mx-auto cursor-pointer `} viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
                                 <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47" />

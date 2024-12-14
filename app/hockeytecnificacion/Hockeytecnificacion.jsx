@@ -134,7 +134,7 @@ export default function Hockeytecnificacion() {
 
                     <section data-aos-once="true" data-aos="fade-up" className={` block relative py-12 bg-center bg-cover clip-triangle `} style={{ backgroundImage: `url('images/hockey05.jpg')`, clipPath: 'polygon(0 0, calc(50% - 25px) 0, 50% 10%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%)' }}>
                         <div className={` absolute inset-0 opacity-90 bg-nosotrosGradient bg-center bg-cover `} />
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` relative text-center tracking-wide font-BebasNeue text-white text-5xl italic mx-8`}>Si eres un club o una institución deportiva,<br className={` hidden gx:inline `} /> armámos tu experiencia a medida</h2>
+                        <h2 data-aos-once="true" data-aos="fade-up" className={` relative text-center tracking-wide font-BebasNeue text-white text-5xl italic mx-8`}>Si eres un club o una institución deportiva,<br className={` hidden gx:inline `} /> armámos tu experiencia a medida</h2>
                         <p className={` relative text-center font-Roboto font-bold text-md text-white leading-loose mt-6`}><Link className={` mx-auto text-white text-opacity-80 hover:text-opacity-100 inline-block py-1 px-6 bg-[rgb(188,0,121)] hover:bg-[rgb(156,0,101)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300 `} href="/contacto">Contactanos</Link></p>
                     </section>
 
@@ -190,7 +190,7 @@ export default function Hockeytecnificacion() {
                                 </form>
                             </div>
                             <p className={` w-full h-72 gx:min-h-full overflow-hidden `}>
-                                <img data-aos-once="true" data-aos="zoom" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
+                                <img data-aos-once="true" data-aos="fade-up" className={` object-cover object-center w-full h-full `} src={hockeyTecnificacionForm.src} alt='' /></p>
                         </div>
                     </section>
                 </>

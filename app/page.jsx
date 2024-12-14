@@ -137,7 +137,7 @@ export default function Page() {
                             {!!ImagenesListas[2].length && (
                                 <div className={` mx-auto text-center overflow-visible `}>
                                     {ImagenesListas[2].map((src, index) => (
-                                        <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                        <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                             <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                         </span>
                                     ))}
@@ -151,7 +151,7 @@ export default function Page() {
                             {!!ImagenesListas[3].length && (
                                 <div className={` mx-auto text-center overflow-visible `}>
                                     {ImagenesListas[3].map((src, index) => (
-                                        <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                        <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                             <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                         </span>
                                     ))}
@@ -175,25 +175,25 @@ export default function Page() {
                         <p className={` font-Roboto text-xl mx-8 leading-relaxed text-justify  hyphens-auto `} >Nuestras viajes y campus son experiencias de vida inolvidables para jóvenes amantes del hockey. En ellos combinamos la asistencia a los mejores eventos, entrenamientos a nivel profesional, diferentes competiciones con la participación de deportistas olímpicos y con el objetivo de que todos los deportistas adquieran conocimientos nuevos y perfeccionamientos técnicos y logren un mayor entendimiento del juego.</p>
                     </section>
                     <section data-aos-once="true" data-aos="fade-up" className={` text-white text-center max-w-5xl mx-auto my-24`} >
-                        <h2 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl text-[#F6BB0E] mx-8 mb-6`}>¿Qué Viaje de Hockey preferís?</h2>
+                        <h2 data-aos-once="true" data-aos=fade-up" className={` font-BebasNeue text-4xl text-[#F6BB0E] mx-8 mb-6`}>¿Qué Viaje de Hockey preferís?</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-6 `} />
                         <div className={` my-16 mx-8 grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-8 max-w-7xl `}>
                             <div>
-                                <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey con <br />Evento</h3>
+                                <h3 data-aos-once="true" data-aos="fade-up" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey con <br />Evento</h3>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#72efdd] mb-6 `} />
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Campus deportivo para jóvenes de 12 a 17 años en Barcelona y Monchengladbach (Alemania), combinando la práctica deportiva con la asistencia al EuroHockey en agosto 2025.</p>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Entrenamientos en las instalaciones del Real Club de Polo y en clubes alemanes, deportista de élite invitada y visitas a las principales atracciones turísticas de ambas ciudades.</p>
                                 <p className={` font-Roboto font-bold text-md leading-loose mt-6`}><Link className={` inline-block py-1 px-6 bg-blue-950 hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300`} href="./eurohockey">Más información <Image className={` inline-block `} src={chevronRight} alt='' /></Link></p>
                             </div>
                             <div>
-                                <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey <br />Tecnificación</h3>
+                                <h3 data-aos-once="true" data-aos="fade-up" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey <br />Tecnificación</h3>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#72efdd] mb-6 `} />
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Campus deportivo para jóvenes de 12 a 17 años en el mes de julio. Viajamos a Barcelona para realizar 14 sesiones de entrenamiento técnico en las instalaciones del Real Club de Polo.</p>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Participan 4 deportistas de Olímpicos y entrenadores europeos. Visitamos las principales atracciones turísticas de la ciudad Condal y Port Aventura World.</p>
                                 <p className={` font-Roboto font-bold text-md leading-loose mt-6`}><Link className={` inline-block py-1 px-6 bg-blue-950 hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black shadow-sm transition-all ease-in-out duration-300`} href="./hockeytecnificacion">Más información <Image className={` inline-block `} src={chevronRight} alt='' /></Link></p>
                             </div>
                             <div>
-                                <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Torneos <br />Internacionales</h3>
+                                <h3 data-aos-once="true" data-aos="fade-up" className={` font-BebasNeue text-4xl italic mb-6 `}>Torneos <br />Internacionales</h3>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#72efdd] mb-6 `} />
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >En Barcelona participaremos del Torneo Inmaculada, en el cual 1200 deportistas de todo Europa compiten en las categorías U10 - U12 y U14.</p>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >En el ESPN Complex de Orlando, EEUU, nuestro equipo participará del torneo de Disney que ofrece Becas en las universidades más prestigiosas de USA, en Sub 16 y sub 14.</p>
@@ -207,14 +207,14 @@ export default function Page() {
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-6 `} />
                         <div className={` mt-16 mx-8 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 max-w-7xl `}>
                             <div>
-                                <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey Hierba Valencia</h3>
+                                <h3 data-aos-once="true" data-aos="fade-up" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey Hierba Valencia</h3>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#72efdd] mb-6 `} />
                                 <p className={` font-Roboto font-bold text-md leading-relaxed mb-4 uppercase `} >Julio 2025</p>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Experiencia orientada a deportistas de 12 a 18 años. Campus de verano con 10 sesiones de entrenamientos con entrenadores internacionales y la participación especial de  3 jugadoras olímpicas, en las instalaciones del Polideportivo Virgen del Carmen Beteró, Valencia.</p>
                                 <p className={` font-Roboto font-bold text-md leading-loose mt-6`}><Link className={` inline-block py-1 px-6 bg-blue-950 hover:bg-[rgb(188,0,121)] rounded-md border-black border-solid border-2 border-opacity-0 hover:border-opacity-10 no-underline shadow-black  shadow-sm transition-all ease-in-out duration-300 `} href="./hockeyhierbavalencia">Más información <Image className={` inline-block `} src={chevronRight} alt='' /></Link></p>
                             </div>
                             <div>
-                                <h3 data-aos-once="true" data-aos="zoom-out-down" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey Hierba Barcelona</h3>
+                                <h3 data-aos-once="true" data-aos="fade-up" className={` font-BebasNeue text-4xl italic mb-6 `}>Hockey Hierba Barcelona</h3>
                                 <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-28 border-none bg-[#72efdd] mb-6 `} />
                                 <p className={` font-Roboto font-bold text-md leading-relaxed mb-4 uppercase `} >Julio 2025</p>
                                 <p className={` font-Roboto text-md leading-relaxed mb-4 text-justify  hyphens-auto `} >Experiencia orientada a deportistas de 12 a 18 años. Campus de verano con 14 sesiones de entrenamientos con entrenadores de selección y la participación especial de  jugadoras de talla mundial, olímpicas y/o mundialistas, en las instalaciones del Real Club de Polo de Barcelona.</p>
@@ -229,7 +229,7 @@ export default function Page() {
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-12 `} />
                         <div className={` mx-auto text-center overflow-hidden pb-6 `}>
                             {[proximoEvento2024A, proximoEvento2024B, proximoEvento2024C].map((src, index) => (
-                                <span data-aos-once="true" data-aos="zoom-in" key={index} className={` inline-block rounded-full md:w-64 lg:w-72 overflow-hidden m-8 md:m-8 lg:m-4 `}>
+                                <span data-aos-once="true" data-aos="fade-up" key={index} className={` inline-block rounded-full md:w-64 lg:w-72 overflow-hidden m-8 md:m-8 lg:m-4 `}>
                                     <Image src={src} alt='' />
                                 </span>
 

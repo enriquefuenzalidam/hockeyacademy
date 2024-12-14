@@ -59,7 +59,7 @@ export default function Sponsors() {
                         {!!ImagenesListas[2].length && (
                             <div className={` mx-auto text-center overflow-visible `}>
                                 {ImagenesListas[2].map((src, index) => (
-                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                    <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                         <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                     </span>
                                 ))}
@@ -72,7 +72,7 @@ export default function Sponsors() {
                         {!!ImagenesListas[3].length && (
                             <div className={` mx-auto text-center overflow-visible `}>
                                 {ImagenesListas[3].map((src, index) => (
-                                    <span data-aos-once="true" data-aos="zoom-in" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
+                                    <span data-aos-once="true" data-aos="fade-up" key={index} className={` relative inline-block aspect-1 bg-[#76b2cc] rounded-full w-36 overflow-hidden m-2 sm:m-6 md:m-8`}>
                                         <Image className={` absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 w-9/12 h-auto `} src={src} alt='' />
                                     </span>
                                 ))}
