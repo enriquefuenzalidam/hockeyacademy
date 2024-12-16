@@ -81,7 +81,7 @@ const ProntoVista = ({ }) => {
             )}
 
             <section className={` absolute inset-0 w-full h-full `} >
-                <p onClick={volverBoton} className={` tracking-tight cursor-pointer ml-6 sm:ml-8 md:ml-12 mt-6 sm:mt-8 md:mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black text-opacity-60 hover:text-opacity-100  ${identityCampus === 1 ? `bg-[rgb(211,0,126)] text-white` : `bg-[#5fd2ff] text-black` } uppercase rounded-sm transition-all ease-in-out duration-300 `}>
+                <p onClick={volverBoton} className={` tracking-tight cursor-pointer ml-3 sm:ml-4 md:ml-6 mt-6 sm:mt-8 md:mt-12 inline-block shadow-md shadow-black/70 px-4 py-1 font-black text-xl text-black text-opacity-60 hover:text-opacity-100  ${identityCampus === 1 ? `bg-[rgb(211,0,126)] text-white` : `bg-[#5fd2ff] text-black` } uppercase rounded-sm transition-all ease-in-out duration-300 `}>
                     Volver
                 </p>
             </section>

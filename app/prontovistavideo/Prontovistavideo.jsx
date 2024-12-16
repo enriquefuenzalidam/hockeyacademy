@@ -91,7 +91,7 @@ const Prontovistavideo = ({ }) => {
                 </video>
             </section>
 
-            <section className={` absolute top-0 left-0 flex flex-col text-center h-full w-20 md:w-24 py-6 sm:py-8 md:py-12 ml-6 sm:ml-8 md:ml-12 gap-4 sm:gap-6 md:gap-8 transition-all ease-in-out duration-300 `} >
+            <section className={` absolute left-3 sm:left-4 md:left-6 top-0 flex flex-col text-center h-full w-20 md:w-24 py-6 sm:py-8 md:py-12 gap-4 sm:gap-6 md:gap-8 transition-all ease-in-out duration-300 `} >
 
                 <div className={` flex-shrink `} >
                     <p onClick={volverBoton} className={` tracking-tight h-auto w-full text-center relative cursor-pointer inline-block shadow-md shadow-black/70 py-1 font-black text-base sm:text-lg md:text-xl text-black text-opacity-60 hover:text-opacity-100  ${identityCampus === 1 ? `bg-[rgb(211,0,126)] text-white` : ` bg-[#5fd2ff] text-black`} uppercase rounded-sm transition-all ease-in-out duration-300 `}>
