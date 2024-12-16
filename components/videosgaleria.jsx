@@ -83,7 +83,7 @@ const VideosGaleria = ({ imageneslista, titulo = 'Hockey Academy en Videos', ide
                                     <Image className={` absolute w-full h-full object-top object-cover `} src={item.poster} alt='' />
                                     )}
                                     <div className={` absolute inset-0 backdrop-grayscale transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? `opacity-0` : `opacity-80 bg-white/40` } `} />
-                                    <Link className={` absolute inset-0 ${index === currentGalleryIndex ? `` : `hidden` } `} href={`./prontovistavideo?videoindex=${index}&identityCampus=${identityCampus}`} />
+                                    <Link className={` absolute inset-0 ${index === currentGalleryIndex ? `` : `hidden` } `} href={`./prontovistavideo?videoindex=${index}&identityCampus=${identityCampus}&consinaudio=${item.audio}`} />
                                 </div>
                             ))}
                         </div>
