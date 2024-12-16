@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Cargador from 'components/cargador';
 import ImagenesListas from 'components/imageneslistas';
 
-import VerticalVideo from 'components/verticalvideo';
+import VideosGaleria from 'components/videosgaleria';
 import Link from 'next/link';
 import Image from 'next/image';
 import PlantillaUno from 'components/plantillauno';
@@ -115,20 +115,10 @@ export default function Eventosproximos() {
             }
             contentc={
                 <>
-                    <section className={` relative mx-auto max-w-5xl pt-28 pb-10`}>
-                        <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy Camp en Videos</h2>
-                        <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-
-                        <div className={` grid grid-cols-1 grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-2 px-4 gx:px-0 `}>
-
-                            {['hockeyacademycamp/hockeyacademycamp_video_01.mp4',
-                                'hockeyacademycamp/hockeyacademycamp_video_02.mp4',
-                                'hockeyacademycamp/hockeyacademycamp_video_03.mp4',
-                                'hockeyacademycamp/hockeyacademycamp_video_04.mp4'
-                            ].map((videoSrc, index) => (<VerticalVideo key={index} videoSrc={videoSrc} />))}
-
-                        </div>
-                    </section>
+ 
+                    <VideosGaleria
+                            imageneslista="15"
+                            titulo="Hockey Academy Camp en Videos" />
 
                     <ViajesGaleria
                         imageneslista="1"

@@ -53,6 +53,7 @@ export default function Eurohockey() {
             ...ImagenesListas[13],
             ...ImagenesListas[6],
             ...ImagenesListas[0],
+            ...ImagenesListas[16],
           ];
 
         preloadImages(imageSources).then(() => setLoading(false));
