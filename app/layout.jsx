@@ -7,7 +7,7 @@ export const metadata = {
         template: '%s | Hockey Academy',
         default: 'Hockey Academy'
     },
-    description: 'Proveedores. Desarrollo de aplicaciones móviles. Diseño de páginas web. Base de datos. Venta y suscripción de software. E-commerce.',
+    description: 'Hockey Academy. Institución de entrenamiento especializada en el desarrollo integral de jugadoras y jugadores de hockey.',
     keywords: 'Hockey Academy, Hockey, Campus, Campus Identity',
     icons: {
       icon: [
