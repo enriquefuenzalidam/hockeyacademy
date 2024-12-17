@@ -74,14 +74,14 @@ const VideosGaleria = ({ imageneslista, titulo = 'Hockey Academy en Videos', ide
                     {!!imagenesLista.length && (
                         <div ref={galleryRef} style={{ translate: `${listaPosicion}px 0` }} className={` absolute left-[calc(50%_-_156px)] sm:left-[calc(50%_-_202px)] top-5 w-full whitespace-nowrap no-scrollbar transition-all ease-in-out duration-1000 px-2 `}>  {/*  */}
                             {imagenesLista.map((item, index) => (
-                                <div  className={` ${index === currentGalleryIndex ? `scale-105 sm:scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-72 sm:h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 `} key={index} >
+                                <div  className={` ${index === currentGalleryIndex ? `scale-105 sm:scale-110 z-50 shadow-black/70` : ` shadow-black/40` } aspect-1 inline-block relative h-72 sm:h-96 mx-1 shadow-lg rounded-sm overflow-hidden transition-all ease-in-out duration-700 bg-black `} key={index} >
 
-                                    {index === currentGalleryIndex ? (
-                                    <video poster={item.poster.src} className={` w-full h-full object-center object-cover aspect-[9/16] `} preload="auto" autoPlay="autoplay" loop playsInline muted  >
+
+                                    <video poster={item.poster.src} className={` w-full h-full object-center object-cover aspect-[9/16] ${index === currentGalleryIndex ? '' : 'hidden' } `} preload="auto" autoPlay="autoplay" loop playsInline muted  >
                                         <source src={item.video} type="video/mp4" />
-                                    </video>) : (
-                                    <Image className={` absolute w-full h-full object-top object-cover `} src={item.poster} alt='' />
-                                    )}
+                                    </video>
+                                    <Image className={` absolute w-full h-full object-top object-cover transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? 'opacity-0' : 'opacity-100' } `} src={item.poster} alt='' />
+
                                     <div className={` absolute inset-0 backdrop-grayscale transition-all ease-in-out duration-700 ${index === currentGalleryIndex ? `opacity-0` : `opacity-80 bg-white/40` } `} />
                                     <Link className={` absolute inset-0 ${index === currentGalleryIndex ? `` : `hidden` } `} href={`./prontovistavideo?videoindex=${index}&identityCampus=${identityCampus}&consinaudio=${item.audio}`} />
                                 </div>
