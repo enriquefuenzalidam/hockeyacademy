@@ -13,16 +13,6 @@ export default function Quienessomos() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            imagenA,
-            imagenB
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -46,6 +36,16 @@ export default function Quienessomos() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            imagenA,
+            imagenB
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

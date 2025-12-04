@@ -39,12 +39,12 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans],
-                Cabin: ['Cabin', ...defaultTheme.fontFamily.sans],
-                BebasNeue:  ['Bebas Neue', ...defaultTheme.fontFamily.sans],
-                Roboto:  ['Roboto', ...defaultTheme.fontFamily.sans],
-                RobotoCondensed:  ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
-                NotoSerif:  ['Noto Serif', ...defaultTheme.fontFamily.sans]
+                sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+                Cabin: ['var(--font-cabin)', ...defaultTheme.fontFamily.sans],
+                BebasNeue:  ['var(--font-bebas-neue)', ...defaultTheme.fontFamily.sans],
+                Roboto:  ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
+                RobotoCondensed:  ['var(--font-roboto-condensed)', ...defaultTheme.fontFamily.sans],
+                NotoSerif:  ['var(--font-noto-serif)', ...defaultTheme.fontFamily.sans]
             },
             screens: {
               'sm': '640px',

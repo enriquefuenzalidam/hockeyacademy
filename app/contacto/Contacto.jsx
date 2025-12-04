@@ -12,15 +12,6 @@ export default function Contacto() {
     const [state, handleSubmit] = useForm("mzzbqrly");
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            contactoFondo
-        ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
             imageSources.map((src) => {
@@ -44,6 +35,15 @@ export default function Contacto() {
             })
         );
     };
+
+    useEffect(() => {
+
+        const imageSources = [
+            contactoFondo
+        ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

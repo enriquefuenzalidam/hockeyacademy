@@ -41,24 +41,6 @@ const citasEurohockey2025 = [
 export default function Eurohockey() {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            calendarioIcono,
-            citasFondo,
-            euroHockeyForm,
-            videoFondo,
-            equipamientoA,
-            equipamientoB,
-            ...ImagenesListas[13],
-            ...ImagenesListas[6],
-            ...ImagenesListas[0],
-            ...ImagenesListas[16],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -82,6 +64,24 @@ export default function Eurohockey() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            calendarioIcono,
+            citasFondo,
+            euroHockeyForm,
+            videoFondo,
+            equipamientoA,
+            equipamientoB,
+            ...ImagenesListas[13],
+            ...ImagenesListas[6],
+            ...ImagenesListas[0],
+            ...ImagenesListas[16],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

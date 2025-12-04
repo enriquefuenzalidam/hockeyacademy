@@ -43,21 +43,6 @@ export default function Hockeytecnificacion() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            videoFondo,
-            equipamientoA,
-            calendarioIcono,
-            hockeyTecnificacionForm,
-            citasFondo,
-            ...ImagenesListas[5],
-            ...ImagenesListas[10],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -82,6 +67,21 @@ export default function Hockeytecnificacion() {
         );
       };
 
+    useEffect(() => {
+
+        const imageSources = [
+            videoFondo,
+            equipamientoA,
+            calendarioIcono,
+            hockeyTecnificacionForm,
+            citasFondo,
+            ...ImagenesListas[5],
+            ...ImagenesListas[10],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
     if (loading) {
         return <Cargador />;
     }
@@ -92,7 +92,7 @@ export default function Hockeytecnificacion() {
                 <section className={` block relative w-full aspect-[16/7] bg-black `}>
                     <div className={` absolute top-0 left-0 w-full h-full `}>
                         <video poster={videoFondo.src} className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                            <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
+                            <source src='/images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
                         </video>
                     </div>
                 </section>

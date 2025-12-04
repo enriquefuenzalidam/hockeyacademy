@@ -11,15 +11,6 @@ export default function Staff() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            ...ImagenesListas[12].map((item) => item.imagen),
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -43,6 +34,15 @@ export default function Staff() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            ...ImagenesListas[12].map((item) => item.imagen),
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

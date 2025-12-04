@@ -12,15 +12,6 @@ export default function Queeshockeyacademy() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            imagenC,
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -44,6 +35,15 @@ export default function Queeshockeyacademy() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            imagenC,
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

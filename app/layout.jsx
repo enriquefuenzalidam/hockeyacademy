@@ -1,4 +1,12 @@
 
+import {
+  inter,
+  bebasNeue,
+  cabin,
+  notoSerif,
+  roboto,
+  robotoCondensed,
+} from 'fonts';
 import '../styles/globals.css';
 import AOSInitializer from '../components/AOSInitializer';
 
@@ -41,7 +49,7 @@ export default function RootLayout({ children }) {
 
     return (
 
-        <html lang="es" className={` scroll-smooth antialiased `} >
+        <html lang="es" className={`scroll-smooth antialiased ${inter.variable} ${bebasNeue.variable} ${cabin.variable} ${notoSerif.variable} ${roboto.variable} ${robotoCondensed.variable}`}>
             <body className={` antialiased text-black bg-[#12214d] font-Cabin `} >
                 <AOSInitializer />
                 {children}

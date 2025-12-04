@@ -10,16 +10,6 @@ export default function Sponsors() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            ...ImagenesListas[2],
-            ...ImagenesListas[3]
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -43,6 +33,16 @@ export default function Sponsors() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            ...ImagenesListas[2],
+            ...ImagenesListas[3]
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

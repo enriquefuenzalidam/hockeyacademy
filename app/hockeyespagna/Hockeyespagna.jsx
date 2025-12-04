@@ -10,7 +10,6 @@ import { Footer } from 'components/footer';
 import ExperienciaGaleria from 'components/experienciaGaleria';
 import ViajesGaleria from 'components/viajesgaleria';
 
-import hockeytecnificacionVid from 'public/images/IDentity-Campus-Tecnificacion-2023.mp4';
 
 import cabeceraFoto from 'public/images/Hockey-22-Entrenamiento.jpg';
 import chevronRight from 'public/images/chevronRight.svg';
@@ -20,18 +19,6 @@ import chevronRight from 'public/images/chevronRight.svg';
 export default function Hockeyespagna() {
 
     const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-
-        const imageSources = [
-            cabeceraFoto,
-            chevronRight,
-            ...ImagenesListas[5],
-            ...ImagenesListas[9],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
 
     const preloadImages = (imageSources) => {
         return Promise.all(
@@ -56,6 +43,18 @@ export default function Hockeyespagna() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            cabeceraFoto,
+            chevronRight,
+            ...ImagenesListas[5],
+            ...ImagenesListas[9],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;
@@ -109,7 +108,7 @@ export default function Hockeyespagna() {
                 </div>
                 <div className={`relative max-w-5xl w-full mx-auto aspect-[16/9] overflow-hidden `}>
                     <video poster='images/Hockey-22-Entrenamiento-II.jpg' className='absolute top-0 left-0 w-full h-full object-cover object-center transition-opacity duration-700' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src={hockeytecnificacionVid} type="video/mp4" /> 
+                        <source src="/images/IDentity-Campus-Tecnificacion-2023.mp4" type="video/mp4" /> 
                     </video>
                     </div>
             </section>

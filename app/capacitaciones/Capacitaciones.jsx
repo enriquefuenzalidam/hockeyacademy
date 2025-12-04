@@ -11,16 +11,6 @@ import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 export default function Capacitaciones() {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            videofondoa,
-            videofondob
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -44,6 +34,16 @@ export default function Capacitaciones() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            videofondoa,
+            videofondob
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

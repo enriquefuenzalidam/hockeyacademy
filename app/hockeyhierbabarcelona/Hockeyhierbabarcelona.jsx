@@ -20,18 +20,6 @@ const Hockeyhierbabarcelona = () => {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            calendarioIcono,
-            calendarioCheckIcono,
-            ...ImagenesListas[5],
-            ...ImagenesListas[9],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -56,6 +44,18 @@ const Hockeyhierbabarcelona = () => {
         );
       };
 
+    useEffect(() => {
+
+        const imageSources = [
+            calendarioIcono,
+            calendarioCheckIcono,
+            ...ImagenesListas[5],
+            ...ImagenesListas[9],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
     if (loading) {
         return <Cargador />;
     }
@@ -66,7 +66,7 @@ const Hockeyhierbabarcelona = () => {
             <section className={` block relative w-full aspect-[16/7] bg-black z-30 mb-12 `}>
                 <div className={` absolute top-0 left-0 w-full h-full `}>
                     <video poster='images/Hockey-22-Entrenamiento.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
+                        <source src='/images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
                     </video>
                 </div>
             </section>
@@ -127,7 +127,7 @@ const Hockeyhierbabarcelona = () => {
 
                 <div className={` relative max-w-5xl mx-auto `}>
                     <video poster='images/Hockey-tecificacion-barcelona-2023.jpg' className='object-cover object-center w-full h-full' preload="auto" autoPlay="autoplay" muted loop playsInline>
-                        <source src='images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
+                        <source src='/images/IDentity-Campus-Tecnificacion-2023.mp4' type="video/mp4" />
                     </video>
                 </div>
                 <p className={` font-Roboto font-normal text-md text-white pb-12 text-center mt-8 `}>

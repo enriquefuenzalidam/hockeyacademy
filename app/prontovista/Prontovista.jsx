@@ -34,13 +34,6 @@ const ProntoVista = ({ }) => {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const imageSources = [
-            ...imagenesLista,
-          ];
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, [imagenesLista]);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -64,6 +57,13 @@ const ProntoVista = ({ }) => {
           })
         );
       };
+
+    useEffect(() => {
+        const imageSources = [
+            ...imagenesLista,
+          ];
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, [imagenesLista]);
 
     if (loading) {
         return <Cargador />;

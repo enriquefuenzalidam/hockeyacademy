@@ -9,16 +9,6 @@ import ImagenesListas from 'components/imageneslistas';
 export default function BenefeciosHaCard() {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            ...ImagenesListas[7],
-            ...ImagenesListas[8].map((item) => item.imagen),
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -42,6 +32,18 @@ export default function BenefeciosHaCard() {
           })
         );
       };
+
+
+    useEffect(() => {
+
+        const imageSources = [
+            ...ImagenesListas[7],
+            ...ImagenesListas[8].map((item) => item.imagen),
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
+
 
     if (loading) {
         return <Cargador />;

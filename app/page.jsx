@@ -20,22 +20,6 @@ export default function Page() {
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            hockeyacademylogo,
-            hockeyacademylogob,
-            videofondoa,
-            videofondob,
-            ...ImagenesListas[1],
-            ...ImagenesListas[2],
-            ...ImagenesListas[3],
-            ...ImagenesListas[16]
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -59,6 +43,22 @@ export default function Page() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            hockeyacademylogo,
+            hockeyacademylogob,
+            videofondoa,
+            videofondob,
+            ...ImagenesListas[1],
+            ...ImagenesListas[2],
+            ...ImagenesListas[3],
+            ...ImagenesListas[16]
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

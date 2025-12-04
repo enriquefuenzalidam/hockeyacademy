@@ -14,17 +14,6 @@ import HockeyAcademyVideoA from 'components/hockeyacademyvideovideoa';
 export default function Eventosproximos() {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            ...ImagenesListas[1],
-            ...ImagenesListas[2],
-            ...ImagenesListas[3],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -48,6 +37,17 @@ export default function Eventosproximos() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            ...ImagenesListas[1],
+            ...ImagenesListas[2],
+            ...ImagenesListas[3],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;

@@ -3,40 +3,20 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 
-/*
-*/
+  // You’re exporting a static site
   output: 'export',
-  images: { unoptimized: true, }, // Disable Image Optimization API for static export
-  
 
-
-  // Webpack custom configuration
-  webpack(config, options) {
-    // Disable caching temporarily
-    config.cache = false;
-    
-    // Existing file loader rules
-    config.module.rules.push({
-      test: /\.(mp4|webm|ogg|swf|ogv)$/, // Include the file types you need
-      use: {
-        loader: 'file-loader',
-        options: {
-          publicPath: '/_next/static/videos',
-          outputPath: 'static/videos',
-          name: '[name].[hash].[ext]',
-          esModule: false,
-        },
-      },
-    });
-
-    return config;
+  // Disable Image Optimization API for static export
+  images: {
+    unoptimized: true,
   },
 
+  // Explicit Turbopack config (even empty) tells Next "yes, this is intentional"
+  turbopack: {},
 
-  //
-  // Redirect configuration
+  // If you ever want these redirects again, you can re-enable them,
+  // but they don't affect Turbopack itself.
   /*
-
   async redirects() {
     return [
       {
@@ -48,7 +28,7 @@ const nextConfig = {
           },
         ],
         destination: 'https://hockeyacademy.cl/:path*',
-        permanent: true, // This makes it a 301 redirect from www to non-www
+        permanent: true,
       },
       {
         source: '/(.*)',
@@ -59,15 +39,11 @@ const nextConfig = {
           },
         ],
         destination: 'https://www.hockeyacademy.cl/:path*',
-        permanent: true, // Swap this based on your preference
+        permanent: true,
       },
     ];
   },
-
   */
-  // Redirect configuration ends
-  //
-
 };
 
 module.exports = nextConfig;

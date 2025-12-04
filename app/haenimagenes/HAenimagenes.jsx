@@ -13,15 +13,6 @@ import ImagenesGrid from 'components/imagenesgrid';
 export default function HAenimagenes() {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        const imageSources = [
-            ...ImagenesListas[1],
-          ];
-
-        preloadImages(imageSources).then(() => setLoading(false));
-    }, []);
-
     const preloadImages = (imageSources) => {
         return Promise.all(
           imageSources.map((src) => {
@@ -45,6 +36,15 @@ export default function HAenimagenes() {
           })
         );
       };
+
+    useEffect(() => {
+
+        const imageSources = [
+            ...ImagenesListas[1],
+          ];
+
+        preloadImages(imageSources).then(() => setLoading(false));
+    }, []);
 
     if (loading) {
         return <Cargador />;
